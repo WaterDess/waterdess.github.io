@@ -12,8 +12,6 @@ window.TANG_SITE = {
     phone: "+86-10-62773029",
     website: "https://faculty.dess.tsinghua.edu.cn/tangqiuhong/en/index.htm",
     portrait: "./public/assets/tang-qiuhong-1.jpg",
-    portraitSource: "Tsinghua Alumni Association article image",
-    portraitSourceZh: "图片来源：清华校友网公开文章",
     taglineZh: "全球变化背景下的水循环、水资源与极端水文过程研究",
     taglineEn: "Water cycle, water resources, and hydrological extremes under global change",
     introZh: "课题组聚焦全球变化水文学、水循环失衡、水风险监测预报与跨境水治理，发展水文模拟、遥感观测、数据融合和风险评估方法，服务水资源安全与气候变化适应。",

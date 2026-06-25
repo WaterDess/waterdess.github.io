@@ -346,7 +346,6 @@
         <div class="people-layout">
           <figure class="portrait-card">
             <img src="${esc(profile.portrait)}" alt="${esc(lang === "zh" ? profile.piNameZh : profile.piNameEn)}" />
-            <figcaption>${esc(lang === "zh" ? profile.portraitSourceZh : profile.portraitSource)}</figcaption>
           </figure>
           <div class="pi-content">
             <span class="eyebrow">${esc(copy.people.role)}</span>
