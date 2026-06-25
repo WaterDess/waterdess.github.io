@@ -1,4 +1,4 @@
-# Tang Research Group Website
+# Global Change Hydrology Group Website
 
 这是后续准备上传到 GitHub Pages 的课题组介绍网站工作目录。
 
@@ -9,7 +9,7 @@
 
 ## 当前阶段
 
-当前目录已经包含一个浅色、简约、适合 GitHub Pages 的多页面静态网站初版。
+当前目录已经包含一个浅色、简约、适合 GitHub Pages 的多页面静态网站。当前版本为英文-only。
 
 入口：
 
@@ -24,28 +24,20 @@ index.html
 ```text
 index.html          # Home
 about.html          # About
-research.html       # Research
 people.html         # People
+research.html       # Research
 publications.html   # Publications
 news.html           # News
-contact.html        # Contact
+join.html           # How to join?
+person-*.html       # Member profile pages
 ```
 
 每个页面是独立 HTML 文件，不是单页锚点跳转。
 
-## 中英文切换
-
-网站默认显示中文。页面右上角有语言切换按钮：
-
-- 中文页面：`?lang=zh`
-- English pages: `?lang=en`
-
-语言选择会保存在浏览器本地，下次访问会延续上次选择。
-
 建议先确认：
 
 1. 网站栏目是否合适
-2. 中英文内容比例
+2. 英文内容是否完整
 3. 是否需要单独的成员页、论文页、项目页
 4. GitHub Pages 仓库名称和最终访问路径
 5. 头像、邮箱、论文列表是否确认可正式发布
@@ -55,20 +47,19 @@ contact.html        # Contact
 主要内容在：
 
 ```text
-data/site.js
+data/site-20260625.js
 ```
 
 包括：
 
 - 课题组简介
-- 中英文文案
 - 导师信息
 - 教育和工作经历
 - 研究方向
 - 论文
 - 新闻
 - 联系方式
-- 信息来源
+- How to join 信息
 
 ## 信息来源
 

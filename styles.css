@@ -38,7 +38,7 @@ a {
   top: 0;
   z-index: 10;
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: minmax(260px, 1fr) auto minmax(120px, 1fr);
   align-items: center;
   gap: 24px;
   min-height: 68px;
@@ -56,6 +56,7 @@ a {
 
 .brand span {
   font-size: 18px;
+  line-height: 1.2;
 }
 
 .brand small {
@@ -67,7 +68,7 @@ a {
 .site-header nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 22px;
   grid-column: 2;
   justify-content: center;
   color: var(--muted);
@@ -117,6 +118,10 @@ a {
   padding: 58px 0 64px;
 }
 
+.hero-home {
+  grid-template-columns: minmax(0, 0.86fr) minmax(420px, 0.9fr);
+}
+
 .eyebrow,
 .section-header span {
   color: var(--teal);
@@ -153,6 +158,82 @@ html[lang="en"] .hero h1 {
   color: var(--muted);
   font-size: 17px;
   line-height: 1.78;
+}
+
+.gch-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+.gch-logo svg {
+  width: 64px;
+  height: 64px;
+  fill: none;
+  stroke: var(--teal);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.gch-logo svg circle {
+  fill: var(--gold);
+  stroke: none;
+}
+
+.gch-logo strong {
+  display: block;
+  color: var(--purple);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.gch-logo span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hydro-hero-image {
+  min-height: 430px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hydro-hero-image svg {
+  width: 100%;
+  height: 100%;
+  min-height: 430px;
+}
+
+.hydro-hero-image path {
+  fill: none;
+  stroke: rgba(22, 120, 111, 0.32);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.hydro-hero-image .basin {
+  stroke: rgba(22, 120, 111, 0.78);
+  stroke-width: 6;
+}
+
+.hydro-hero-image .contour {
+  stroke: rgba(75, 37, 114, 0.12);
+  stroke-width: 3;
+}
+
+.hydro-hero-image circle {
+  fill: var(--gold);
+  stroke: none;
 }
 
 .keyword-row {
@@ -377,6 +458,11 @@ html[lang="en"] .hero h1 {
   gap: 24px;
 }
 
+.about-page {
+  display: grid;
+  gap: 34px;
+}
+
 .quiet-card,
 .theme-card,
 .publication,
@@ -404,6 +490,34 @@ html[lang="en"] .hero h1 {
   margin-top: 22px;
   color: var(--muted);
   font-size: 17px;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.mission-grid article {
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.mission-grid span,
+.research-hub span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mission-grid strong {
+  display: block;
+  margin-top: 48px;
+  font-size: 19px;
+  line-height: 1.35;
 }
 
 .metric-grid {
@@ -487,6 +601,108 @@ html[lang="en"] .hero h1 {
   align-items: start;
 }
 
+.people-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.person-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.person-card img,
+.person-detail aside img {
+  width: 96px;
+  height: 96px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  display: grid;
+  width: 96px;
+  height: 96px;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--teal-soft);
+  color: var(--purple);
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.avatar-placeholder.large {
+  width: 240px;
+  height: 240px;
+  font-size: 74px;
+}
+
+.person-card h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.person-card p,
+.person-card span {
+  display: block;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.person-detail {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 56px;
+}
+
+.person-detail aside {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.person-detail aside img {
+  width: 240px;
+  height: 240px;
+}
+
+.person-detail aside p,
+.person-detail aside a {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.detail-sections {
+  display: grid;
+  gap: 34px;
+}
+
+.detail-sections section {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-sections h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.detail-sections ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
 .portrait-card {
   margin: 0;
   padding: 0;
@@ -556,6 +772,41 @@ html[lang="en"] .hero h1 {
 .publication-list {
   display: grid;
   gap: 14px;
+}
+
+.research-hub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.research-hub article,
+.join-page article {
+  min-height: 270px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.research-hub h2,
+.join-page h2 {
+  margin: 44px 0 16px;
+  color: var(--purple);
+  font-size: 30px;
+}
+
+.research-hub p,
+.join-page p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.research-hub small {
+  display: block;
+  margin-top: 34px;
+  color: var(--gold);
+  font-weight: 700;
 }
 
 .publication-feature-grid {
@@ -647,6 +898,62 @@ html[lang="en"] .hero h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+}
+
+.news-list {
+  display: grid;
+  gap: 0;
+}
+
+.news-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 26px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.news-row time {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.news-row span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.news-row h2 {
+  margin: 8px 0;
+  font-size: 22px;
+}
+
+.news-row h2 a {
+  color: var(--purple);
+}
+
+.news-row p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.compact-news .news-row {
+  grid-template-columns: 120px 1fr;
+}
+
+.join-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.join-page a {
+  color: var(--purple);
+  font-weight: 800;
 }
 
 .news-card {
@@ -817,7 +1124,12 @@ html[lang="en"] .hero h1 {
 
   .theme-grid,
   .news-grid,
-  .timeline-columns {
+  .timeline-columns,
+  .mission-grid,
+  .people-list,
+  .research-hub,
+  .join-page,
+  .person-detail {
     grid-template-columns: 1fr;
   }
 
