@@ -265,6 +265,18 @@ img {
   font-weight: 800;
 }
 
+.text-link.secondary {
+  color: var(--muted);
+}
+
+.link-row {
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-content: start !important;
+  padding: 0 !important;
+}
+
 .section {
   padding: 78px 0;
   border-top: 1px solid var(--line);

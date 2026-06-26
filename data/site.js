@@ -99,20 +99,20 @@ window.TANG_SITE = {
   research: [
     {
       title: "Projects",
-      text: "Research projects on global change hydrology, hydrosphere prediction, and water security will be organized here.",
-      status: "Coming soon",
+      text: "",
+      status: "To be updated",
       image: "./public/assets/visual-research.svg"
     },
     {
       title: "Code",
-      text: "Open-source model tools, analysis workflows, and reproducible notebooks will be listed here.",
-      status: "Coming soon",
+      text: "",
+      status: "To be updated",
       image: "./public/assets/hero-hydrosphere.svg"
     },
     {
       title: "Data",
-      text: "Hydrological datasets, benchmark products, and curated data resources will be listed here.",
-      status: "Coming soon",
+      text: "",
+      status: "To be updated",
       image: "./public/assets/visual-publications.svg"
     }
   ],
@@ -133,7 +133,9 @@ window.TANG_SITE = {
       type: "Call for Papers",
       title: "Advances in Observation, Modeling, and Prediction of the Hydrosphere",
       text: "npj Hydrosphere is calling for papers for a Collection on advances in observation, modeling, and prediction of the hydrosphere. Submission deadline: 31 March 2027.",
-      url: "./public/assets/npj-hydrosphere-aomph-flyer.pdf",
+      url: "https://www.nature.com/collections/aicidajahb",
+      urlLabel: "Open collection",
+      flyerUrl: "./public/assets/npj-hydrosphere-aomph-flyer.pdf",
       image: "./public/assets/visual-news.svg"
     },
     {
@@ -141,7 +143,8 @@ window.TANG_SITE = {
       type: "Congratulations",
       title: "Dr. Ruiyu Zhao selected as the Shuimu Tsinghua Scholar",
       text: "Congratulations to Dr. Ruiyu Zhao on being selected as a Shuimu Tsinghua Scholar.",
-      url: "",
+      url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174",
+      urlLabel: "Read announcement",
       image: "./public/assets/visual-join.svg"
     },
     {
@@ -149,48 +152,55 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Prof. Xu Liang: Land Surface Modeling at a Crossroads",
       text: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm",
+      urlLabel: "Open seminar page"
     },
     {
       date: "Forum 563",
       type: "Seminar",
-      title: "Global Change Science Bauhinia Forum",
+      title: "Global Change Science Bauhinia Forum No. 563",
       text: "Historical seminar item to be linked to the Department of Earth System Science event page.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm",
+      urlLabel: "Open seminar page"
     },
     {
       date: "Forum 562",
       type: "Seminar",
-      title: "Global Change Science Bauhinia Forum",
+      title: "Global Change Science Bauhinia Forum No. 562",
       text: "Historical seminar item to be linked to the Department of Earth System Science event page.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm",
+      urlLabel: "Open seminar page"
     },
     {
       date: "Forum 561",
       type: "Seminar",
-      title: "Global Change Science Bauhinia Forum",
+      title: "Global Change Science Bauhinia Forum No. 561",
       text: "Historical seminar item to be linked to the Department of Earth System Science event page.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm",
+      urlLabel: "Open seminar page"
     },
     {
       date: "Forum 549",
       type: "Seminar",
-      title: "Global Change Science Bauhinia Forum",
+      title: "Global Change Science Bauhinia Forum No. 549",
       text: "Historical seminar item to be linked to the Department of Earth System Science event page.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm",
+      urlLabel: "Open seminar page"
     },
     {
       date: "Forum 539",
       type: "Seminar",
-      title: "Global Change Science Bauhinia Forum",
+      title: "Global Change Science Bauhinia Forum No. 539",
       text: "Historical seminar item to be linked to the Department of Earth System Science event page.",
-      url: ""
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm",
+      urlLabel: "Open seminar page"
     }
   ],
   join: {
     title: "How to join?",
     text: "The Tsinghua University Global Research Program provides a 6+ week immersive research experience for outstanding undergraduates and graduate students from top universities outside the Chinese Mainland, including those in Hong Kong, Macao, and Taiwan.",
     program: "2026 Tsinghua University Global Research Program",
+    programUrl: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
     phd: "For admission to the PhD program, please contact Prof. Qiuhong Tang."
   }
 };

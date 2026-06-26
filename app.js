@@ -197,7 +197,7 @@
             <div>
               <span>${String(index + 1).padStart(2, "0")} / ${esc(item.status)}</span>
               <h2>${esc(item.title)}</h2>
-              <p>${esc(item.text)}</p>
+              ${item.text ? `<p>${esc(item.text)}</p>` : ""}
             </div>
           </article>
         `)}
@@ -257,7 +257,10 @@
           <span>${esc(item.type)} / ${esc(item.date)}</span>
           <h2>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}</h2>
           <p>${esc(item.text)}</p>
-          ${item.url ? `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener">Open PDF</a>` : ""}
+          <div class="link-row">
+            ${item.url ? `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.urlLabel || "Learn more")}</a>` : ""}
+            ${item.flyerUrl ? `<a class="text-link secondary" href="${esc(item.flyerUrl)}" target="_blank" rel="noopener">Open flyer PDF</a>` : ""}
+          </div>
         </div>
       </article>
     `;
@@ -280,8 +283,9 @@
       ${pageHero("How to join?", data.join.title, "Opportunities for students and visiting researchers.", data.visuals.join)}
       <section class="section join-layout">
         <article>
-          <h2>${esc(data.join.program)}</h2>
+          <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener">${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
           <p>${esc(data.join.text)}</p>
+          ${data.join.programUrl ? `<a class="text-link" href="${esc(data.join.programUrl)}" target="_blank" rel="noopener">Open program page</a>` : ""}
         </article>
         <article>
           <h2>PhD admission</h2>
