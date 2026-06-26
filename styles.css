@@ -252,6 +252,16 @@ body[data-page="home"] .image-hero img {
   object-position: center center;
 }
 
+.image-hero-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0.72;
+  pointer-events: none;
+}
+
 .image-hero::after {
   display: none;
 }
@@ -266,6 +276,7 @@ body[data-page="home"] .image-hero img {
   color: #fff;
   text-align: center;
   pointer-events: none;
+  z-index: 2;
 }
 
 .image-hero-content::before {
@@ -564,6 +575,16 @@ body[data-page="home"] .image-hero img {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-hero {
+    animation: none;
+  }
+
+  .image-hero-ambient {
+    display: none;
   }
 }
 

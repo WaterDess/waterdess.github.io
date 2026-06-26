@@ -71,6 +71,7 @@
     return `
       <section class="image-hero home-landing">
         <img src="${esc(data.visuals.hero)}" alt="" />
+        <canvas class="image-hero-ambient" aria-hidden="true"></canvas>
         <div class="image-hero-content">
           <h1>${esc(data.site.name)}</h1>
           <strong>${esc(data.site.tagline)}</strong>
@@ -288,6 +289,166 @@
     return;
   }
 
+  function createRandom(seed) {
+    let state = seed >>> 0;
+    return function random() {
+      state += 0x6d2b79f5;
+      let value = state;
+      value = Math.imul(value ^ (value >>> 15), value | 1);
+      value ^= value + Math.imul(value ^ (value >>> 7), value | 61);
+      return ((value ^ (value >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function initHeroAtmosphere() {
+    const canvas = document.querySelector(".image-hero-ambient");
+    const hero = document.querySelector(".home-landing");
+    const motionOff = new URLSearchParams(window.location.search).get("motion") === "off";
+
+    if (!canvas || !hero || motionOff || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const ctx = canvas.getContext("2d", { alpha: true });
+    if (!ctx) {
+      return;
+    }
+
+    window.__heroAtmosphere = {
+      active: true,
+      frames: 0,
+      width: 0,
+      height: 0,
+      lastTime: 0
+    };
+
+    const random = createRandom(20260626);
+    const clouds = Array.from({ length: 16 }, () => ({
+      x: random(),
+      y: 0.07 + random() * 0.46,
+      r: 0.12 + random() * 0.18,
+      speed: 0.0012 + random() * 0.0022,
+      phase: random() * Math.PI * 2,
+      alpha: 0.018 + random() * 0.028
+    }));
+    const ripples = Array.from({ length: 18 }, (_, index) => ({
+      y: 0.58 + index * 0.018 + random() * 0.018,
+      amp: 1.4 + random() * 2.6,
+      speed: 0.16 + random() * 0.22,
+      alpha: 0.018 + random() * 0.025,
+      phase: random() * Math.PI * 2
+    }));
+
+    let width = 0;
+    let height = 0;
+    let dpr = 1;
+    let frameId = 0;
+
+    function resize() {
+      const rect = hero.getBoundingClientRect();
+      dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      width = Math.max(1, Math.floor(rect.width));
+      height = Math.max(1, Math.floor(rect.height));
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      window.__heroAtmosphere.width = width;
+      window.__heroAtmosphere.height = height;
+    }
+
+    function drawClouds(time) {
+      ctx.save();
+      ctx.globalCompositeOperation = "screen";
+
+      clouds.forEach((cloud) => {
+        const drift = (cloud.x + time * cloud.speed) % 1.28 - 0.14;
+        const bob = Math.sin(time * 0.09 + cloud.phase) * 7;
+        const x = drift * width;
+        const y = cloud.y * height + bob;
+        const rx = cloud.r * width;
+        const ry = cloud.r * height * 0.36;
+        const gradient = ctx.createRadialGradient(x, y, 0, x, y, rx);
+
+        gradient.addColorStop(0, `rgba(236, 246, 242, ${cloud.alpha})`);
+        gradient.addColorStop(0.45, `rgba(198, 222, 218, ${cloud.alpha * 0.58})`);
+        gradient.addColorStop(1, "rgba(236, 246, 242, 0)");
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.restore();
+    }
+
+    function drawWater(time) {
+      const waterTop = height * 0.56;
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(0, waterTop, width, height - waterTop);
+      ctx.clip();
+      ctx.globalCompositeOperation = "screen";
+
+      ripples.forEach((ripple) => {
+        const y = ripple.y * height + Math.sin(time * 0.12 + ripple.phase) * 4;
+        const gradient = ctx.createLinearGradient(0, y, width, y);
+        gradient.addColorStop(0, "rgba(220, 244, 238, 0)");
+        gradient.addColorStop(0.36, `rgba(218, 245, 240, ${ripple.alpha})`);
+        gradient.addColorStop(0.54, `rgba(255, 255, 255, ${ripple.alpha * 0.74})`);
+        gradient.addColorStop(0.78, `rgba(186, 220, 218, ${ripple.alpha * 0.65})`);
+        gradient.addColorStop(1, "rgba(220, 244, 238, 0)");
+
+        ctx.strokeStyle = gradient;
+        ctx.lineWidth = 0.65;
+        ctx.beginPath();
+        for (let x = 0; x <= width; x += 18) {
+          const wave =
+            Math.sin(x * 0.013 + time * ripple.speed + ripple.phase) * ripple.amp +
+            Math.sin(x * 0.031 - time * ripple.speed * 0.72 + ripple.phase) * ripple.amp * 0.34;
+          if (x === 0) {
+            ctx.moveTo(x, y + wave);
+          } else {
+            ctx.lineTo(x, y + wave);
+          }
+        }
+        ctx.stroke();
+      });
+
+      const sheenX = (Math.sin(time * 0.055) * 0.5 + 0.5) * width;
+      const sheen = ctx.createRadialGradient(sheenX, height * 0.7, 0, sheenX, height * 0.7, width * 0.32);
+      sheen.addColorStop(0, "rgba(210, 235, 230, 0.045)");
+      sheen.addColorStop(1, "rgba(210, 235, 230, 0)");
+      ctx.fillStyle = sheen;
+      ctx.fillRect(0, waterTop, width, height - waterTop);
+      ctx.restore();
+    }
+
+    function render(timestamp) {
+      const time = timestamp / 1000;
+      ctx.clearRect(0, 0, width, height);
+      drawClouds(time);
+      drawWater(time);
+      window.__heroAtmosphere.frames += 1;
+      window.__heroAtmosphere.lastTime = time;
+      canvas.dataset.frames = String(window.__heroAtmosphere.frames);
+      canvas.dataset.lastTime = time.toFixed(3);
+      frameId = window.requestAnimationFrame(render);
+    }
+
+    resize();
+    window.addEventListener("resize", resize, { passive: true });
+    frameId = window.requestAnimationFrame(render);
+
+    window.addEventListener("pagehide", () => {
+      window.cancelAnimationFrame(frameId);
+    }, { once: true });
+  }
+
   setupChrome();
   app.innerHTML = (renderers[page] || renderHome)();
+  if (page === "home") {
+    initHeroAtmosphere();
+  }
 })();
