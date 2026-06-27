@@ -88,23 +88,51 @@
   }
 
   function renderPeople() {
+    const lead = data.people.find(isPrincipalInvestigator);
+    const members = data.people.filter((person) => person !== lead);
+
     return `
       ${pageHero("People", "People", "Members of the Global Change Hydrology Group.")}
-      <section class="section people-grid">
-        ${list(data.people, renderPersonCard)}
+      <section class="section people-layout">
+        ${lead ? renderLeadPerson(lead) : ""}
+        ${members.length ? `
+          <div class="member-index" aria-label="Group members">
+            ${list(members, renderMemberRow)}
+          </div>
+        ` : ""}
       </section>
     `;
   }
 
-  function renderPersonCard(person) {
+  function isPrincipalInvestigator(person) {
+    return person.slug === "qiuhong-tang" || /principal investigator/i.test(person.position || "");
+  }
+
+  function renderLeadPerson(person) {
     return `
-      <a class="person-card" href="person-${esc(person.slug)}.html">
+      <a class="lead-person" href="person-${esc(person.slug)}.html">
         ${person.photo ? `<img src="${esc(person.photo)}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder">${esc(person.name.charAt(0))}</div>`}
+        <div>
+          <span>Principal Investigator</span>
+          <h2>${esc(person.name)}</h2>
+          <p>${esc(person.position)}</p>
+          <small>${esc(person.email)}</small>
+        </div>
+      </a>
+    `;
+  }
+
+  function renderMemberRow(person) {
+    const hasEmail = person.email.includes("@");
+
+    return `
+      <a class="member-row" href="person-${esc(person.slug)}.html">
         <div>
           <h2>${esc(person.name)}</h2>
           <p>${esc(person.position)}</p>
-          <span>${esc(person.email)}</span>
         </div>
+        <span>${hasEmail ? esc(person.email) : ""}</span>
+        <small>Profile</small>
       </a>
     `;
   }
