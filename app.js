@@ -3,6 +3,7 @@
   const app = document.getElementById("app");
   const page = document.body.dataset.page || "home";
   const personSlug = document.body.dataset.person || "";
+  const SITE_VERSION = "toc-nav-2";
 
   const nav = [
     ["news", "News"],
@@ -27,14 +28,19 @@
   }
 
   function href(pageName) {
-    return pageName === "home" ? "index.html" : `${pageName}.html`;
+    const fileName = pageName === "home" ? "index.html" : `${pageName}.html`;
+    return versioned(fileName);
+  }
+
+  function versioned(url) {
+    return `${url}${url.includes("?") ? "&" : "?"}v=${SITE_VERSION}`;
   }
 
   function setupChrome() {
     document.documentElement.lang = "en";
     document.querySelector(".brand span").textContent = data.site.name;
     document.querySelector(".brand small").textContent = data.site.unit;
-    document.querySelector(".brand").setAttribute("href", "index.html");
+    document.querySelector(".brand").setAttribute("href", href("home"));
 
     const navEl = document.querySelector(".site-header nav");
     navEl.innerHTML = list(nav, ([key, label]) => {
@@ -159,7 +165,7 @@
 
   function renderLeadPerson(person) {
     return `
-      <a class="lead-person" href="person-${esc(person.slug)}.html">
+      <a class="lead-person" href="${esc(versioned(`person-${person.slug}.html`))}">
         ${person.photo ? `<img src="${esc(person.photo)}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder">${esc(person.name.charAt(0))}</div>`}
         <div>
           <span>Principal Investigator</span>
@@ -175,7 +181,7 @@
     const hasEmail = person.email.includes("@");
 
     return `
-      <a class="member-row" href="person-${esc(person.slug)}.html">
+      <a class="member-row" href="${esc(versioned(`person-${person.slug}.html`))}">
         <div>
           <h2>${esc(person.name)}</h2>
           <p>${esc(person.position)}</p>
