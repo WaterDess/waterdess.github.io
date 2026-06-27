@@ -55,6 +55,32 @@
     `;
   }
 
+  function renderToc(items) {
+    return `
+      <aside class="toc-sidebar" aria-label="On this page">
+        <h2>On this page</h2>
+        <nav>
+          ${list(items, (item) => `<a href="#${esc(item.id)}">${esc(item.label)}</a>`)}
+        </nav>
+      </aside>
+    `;
+  }
+
+  function renderTocLayout(items, content) {
+    return `
+      <section class="section toc-layout">
+        ${renderToc(items)}
+        <div class="toc-content">
+          ${content}
+        </div>
+      </section>
+    `;
+  }
+
+  function sectionId(prefix, value) {
+    return `${prefix}-${String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+  }
+
   function renderHome() {
     return `
       <section class="image-hero home-landing">
@@ -90,17 +116,40 @@
   function renderPeople() {
     const lead = data.people.find(isPrincipalInvestigator);
     const members = data.people.filter((person) => person !== lead);
+    const scholars = members.filter((person) => /scholar/i.test(person.position || ""));
+    const generalMembers = members.filter((person) => !scholars.includes(person));
+    const tocItems = [
+      lead ? { id: "principal-investigator", label: "Principal Investigator" } : null,
+      scholars.length ? { id: "scholars", label: "Scholars" } : null,
+      generalMembers.length ? { id: "members", label: "Members" } : null
+    ].filter(Boolean);
 
     return `
       ${pageHero("People", "People", "Members of the Global Change Hydrology Group.")}
-      <section class="section people-layout">
-        ${lead ? renderLeadPerson(lead) : ""}
-        ${members.length ? `
-          <div class="member-index" aria-label="Group members">
-            ${list(members, renderMemberRow)}
-          </div>
+      ${renderTocLayout(tocItems, `
+        ${lead ? `
+          <section class="content-section people-section" id="principal-investigator">
+            <h2>Principal Investigator</h2>
+            ${renderLeadPerson(lead)}
+          </section>
         ` : ""}
-      </section>
+        ${scholars.length ? `
+          <section class="content-section people-section" id="scholars">
+            <h2>Scholars</h2>
+            <div class="member-index" aria-label="Scholars">
+              ${list(scholars, renderMemberRow)}
+            </div>
+          </section>
+        ` : ""}
+        ${generalMembers.length ? `
+          <section class="content-section people-section" id="members">
+            <h2>Members</h2>
+            <div class="member-index" aria-label="Group members">
+              ${list(generalMembers, renderMemberRow)}
+            </div>
+          </section>
+        ` : ""}
+      `)}
     `;
   }
 
@@ -167,31 +216,42 @@
   }
 
   function renderResearch() {
+    const tocItems = data.research.map((item) => ({
+      id: sectionId("research", item.title),
+      label: item.title
+    }));
+
     return `
       ${pageHero("Research", "Research", "Projects, code, and data for global change hydrology will be updated as the group website develops.")}
-      <section class="section research-grid">
-        ${list(data.research, (item, index) => `
-          <article class="visual-card">
+      ${renderTocLayout(tocItems, list(data.research, (item) => `
+        <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
+          <div>
+            <span>${esc(item.status)}</span>
+            <h2>${esc(item.title)}</h2>
+            ${item.text ? `<p>${esc(item.text)}</p>` : `<p>Content will be updated as the group website develops.</p>`}
+          </div>
+          <figure>
             <img src="${esc(item.image || data.visuals.research)}" alt="" />
-            <div>
-              <span>${String(index + 1).padStart(2, "0")} / ${esc(item.status)}</span>
-              <h2>${esc(item.title)}</h2>
-              ${item.text ? `<p>${esc(item.text)}</p>` : ""}
-            </div>
-          </article>
-        `)}
-      </section>
+          </figure>
+        </section>
+      `))}
     `;
   }
 
   function renderPublications() {
+    const years = [...new Set(data.publications.map((paper) => paper.year))].sort((a, b) => Number(b) - Number(a));
+    const tocItems = years.map((year) => ({ id: `year-${year}`, label: String(year) }));
+
     return `
       ${pageHero("Publications", "Publications", "Only papers affiliated with Department of Earth System Science, Tsinghua University will be listed here.")}
-      <section class="section publication-layout">
-        <div class="publication-list">
-          ${list(data.publications, renderPublication)}
-        </div>
-      </section>
+      ${renderTocLayout(tocItems, list(years, (year) => `
+        <section class="content-section publication-year" id="year-${esc(year)}">
+          <h2>${esc(year)}</h2>
+          <div class="publication-list">
+            ${list(data.publications.filter((paper) => paper.year === year), renderPublication)}
+          </div>
+        </section>
+      `))}
     `;
   }
 
@@ -255,19 +315,24 @@
   }
 
   function renderJoin() {
+    const tocItems = [
+      { id: "global-research-program", label: "Global Research Program" },
+      { id: "phd-admission", label: "PhD Admission" }
+    ];
+
     return `
       ${pageHero("How to join?", data.join.title, "Opportunities for students and visiting researchers.")}
-      <section class="section join-layout">
-        <article>
+      ${renderTocLayout(tocItems, `
+        <article class="content-section join-section" id="global-research-program">
           <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener">${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
           <p>${esc(data.join.text)}</p>
         </article>
-        <article>
+        <article class="content-section join-section" id="phd-admission">
           <h2>PhD admission</h2>
           <p>${esc(data.join.phd)}</p>
           <a class="text-link" href="mailto:${esc(data.site.email)}">${esc(data.site.email)}</a>
         </article>
-      </section>
+      `)}
     `;
   }
 

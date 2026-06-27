@@ -346,6 +346,65 @@ body[data-page="home"] .image-hero img {
   padding: 1.6em 0 2em;
 }
 
+.toc-layout {
+  display: grid;
+  width: min(100% - 2em, var(--grid-rail));
+  grid-template-columns: 11em minmax(0, var(--content-rail));
+  gap: 2.2em;
+  align-items: start;
+}
+
+.toc-sidebar {
+  position: sticky;
+  top: calc(var(--masthead-height) + 1.25em);
+  align-self: start;
+}
+
+.toc-sidebar h2 {
+  margin: 0 0 1.25em;
+  color: var(--text);
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+.toc-sidebar nav {
+  padding-top: 0.7em;
+  border-top: 1px solid var(--border);
+}
+
+.toc-sidebar a {
+  display: block;
+  width: fit-content;
+  padding: 0.18em 0;
+  color: var(--muted);
+  font-size: 0.68em;
+  line-height: 1.45;
+}
+
+.toc-sidebar a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+.toc-content {
+  min-width: 0;
+}
+
+.content-section {
+  padding: 1.15em 0 1.35em;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: calc(var(--masthead-height) + 1em);
+}
+
+.content-section:first-child {
+  padding-top: 0;
+}
+
+.content-section > h2 {
+  margin: 0 0 0.9em;
+  font-size: 1.12em;
+}
+
 .about-layout,
 .publication-layout,
 .news-layout,
@@ -551,6 +610,53 @@ body[data-page="home"] .image-hero img {
   font-weight: 700;
 }
 
+.people-section .lead-person {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.research-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 13em;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.research-section span {
+  display: block;
+  margin-bottom: 0.35em;
+  color: var(--muted);
+  font-size: 0.65em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.research-section h2 {
+  margin: 0 0 0.45em;
+  font-size: 1.08em;
+}
+
+.research-section p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.75em;
+}
+
+.research-section figure {
+  margin: 0;
+}
+
+.research-section img {
+  width: 100%;
+  height: 7.4em;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.publication-year > h2 {
+  margin-bottom: 0.65em;
+}
+
 .person-detail {
   display: grid;
   width: min(100% - 2em, var(--detail-rail));
@@ -705,8 +811,24 @@ body[data-page="home"] .image-hero img {
   .news-feature,
   .person-detail,
   .lead-person,
-  .member-row {
+  .member-row,
+  .toc-layout,
+  .research-section {
     grid-template-columns: 1fr;
+  }
+
+  .toc-layout {
+    gap: 1.4rem;
+  }
+
+  .toc-sidebar {
+    position: static;
+  }
+
+  .toc-sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
   }
 
   .lead-person {
