@@ -1,7 +1,7 @@
 window.TANG_SITE = {
   site: {
     name: "Global Change Hydrology Group",
-    shortName: "GCG",
+    shortName: "GCHG",
     unit: "Department of Earth System Science, Tsinghua University",
     tagline: "Advancing water sciences for planetary health and sustainable development",
     summary: "THU Global Change Hydrology (GCH) Group is an interdisciplinary research group at the Department of Earth System Science, Tsinghua University, dedicated to deepening understanding of the impacts of global change on water systems and solutions.",
