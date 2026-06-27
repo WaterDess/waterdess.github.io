@@ -37,7 +37,10 @@
     document.querySelector(".brand").setAttribute("href", "index.html");
 
     const navEl = document.querySelector(".site-header nav");
-    navEl.innerHTML = list(nav, ([key, label]) => `<a class="${key === page ? "active" : ""}" href="${href(key)}">${esc(label)}</a>`);
+    navEl.innerHTML = list(nav, ([key, label]) => {
+      const active = key === page || (page === "person" && key === "people");
+      return `<a class="${active ? "active" : ""}" href="${href(key)}">${esc(label)}</a>`;
+    });
   }
 
   function logoMark() {
