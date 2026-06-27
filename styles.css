@@ -26,7 +26,6 @@ html {
   min-height: 100%;
   background: var(--bg);
   font-size: 16px;
-  scrollbar-gutter: stable both-edges;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -129,7 +128,7 @@ li {
   display: grid;
   place-items: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: var(--masthead-height);
   min-height: var(--masthead-height);
   margin: 0;
