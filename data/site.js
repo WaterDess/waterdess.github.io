@@ -16,26 +16,6 @@ window.TANG_SITE = {
     join: "./public/assets/visual-join.svg",
     pi: "./public/assets/tang-qiuhong-1.jpg"
   },
-  homeCards: [
-    {
-      title: "Research",
-      text: "Water-cycle change, hydrological extremes, remote sensing, modeling, and risk prediction.",
-      url: "research.html",
-      image: "./public/assets/visual-research.svg"
-    },
-    {
-      title: "News",
-      text: "Seminars, calls for papers, group announcements, and academic updates.",
-      url: "news.html",
-      image: "./public/assets/visual-news.svg"
-    },
-    {
-      title: "Publications",
-      text: "Selected papers and outputs affiliated with the Department of Earth System Science.",
-      url: "publications.html",
-      image: "./public/assets/visual-publications.svg"
-    }
-  ],
   mission: [
     "Pursue rigorous, impactful water science research",
     "Develop innovative technologies and datasets for hydrosphere research",

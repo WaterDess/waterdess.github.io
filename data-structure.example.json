@@ -5,22 +5,7 @@
     "tagline": "Advancing water sciences for planetary health and sustainable development",
     "summary": "Short group introduction."
   },
-  "navigation": [
-    "About",
-    "People",
-    "Research",
-    "Publications",
-    "News",
-    "How to join?"
-  ],
-  "homeCards": [
-    {
-      "title": "Research",
-      "text": "Short entry description.",
-      "url": "research.html",
-      "image": "./public/assets/visual-research.svg"
-    }
-  ],
+  "navigation": ["News", "Research", "Publications", "People", "About", "How to join?"],
   "people": [
     {
       "slug": "example",

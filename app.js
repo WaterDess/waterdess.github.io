@@ -43,21 +43,7 @@
     });
   }
 
-  function logoMark() {
-    return `
-      <div class="gch-mark" aria-label="Global Change Hydrology Group">
-        <svg viewBox="0 0 92 92" role="presentation">
-          <path d="M10 57C29 33 47 64 65 40s22-15 27-6" />
-          <path d="M22 70c20-17 39 9 59-12" />
-          <circle cx="30" cy="35" r="5" />
-          <circle cx="65" cy="40" r="5" />
-        </svg>
-        <span>GCH</span>
-      </div>
-    `;
-  }
-
-  function pageHero(kicker, title, subtitle, image) {
+  function pageHero(kicker, title, subtitle) {
     return `
       <section class="page-hero">
         <div>
@@ -65,7 +51,6 @@
           <h1>${esc(title)}</h1>
           ${subtitle ? `<p>${esc(subtitle)}</p>` : ""}
         </div>
-        ${image ? `<img src="${esc(image)}" alt="" />` : ""}
       </section>
     `;
   }
@@ -82,22 +67,9 @@
     `;
   }
 
-  function renderFeatureCard(card) {
-    return `
-      <a class="feature-card" href="${esc(card.url)}">
-        <img src="${esc(card.image)}" alt="" />
-        <div>
-          <h2>${esc(card.title)}</h2>
-          <p>${esc(card.text)}</p>
-          <span>Learn more</span>
-        </div>
-      </a>
-    `;
-  }
-
   function renderAbout() {
     return `
-      ${pageHero("About", "THU Global Change Hydrology Group", "A research group focused on water-cycle change and water security.", data.visuals.research)}
+      ${pageHero("About", "THU Global Change Hydrology Group", "A research group focused on water-cycle change and water security.")}
       <section class="section about-layout">
         <article class="large-copy">
           <p>${esc(data.site.summary)}</p>
@@ -117,7 +89,7 @@
 
   function renderPeople() {
     return `
-      ${pageHero("People", "People", "Members of the Global Change Hydrology Group.", data.visuals.pi)}
+      ${pageHero("People", "People", "Members of the Global Change Hydrology Group.")}
       <section class="section people-grid">
         ${list(data.people, renderPersonCard)}
       </section>
@@ -140,7 +112,7 @@
   function renderPersonDetail() {
     const person = data.people.find((item) => item.slug === personSlug) || data.people[0];
     return `
-      ${pageHero("People", person.name, person.position, person.photo || data.visuals.research)}
+      ${pageHero("People", person.name, person.position)}
       <section class="section person-detail">
         <aside>
           ${person.photo ? `<img src="${esc(person.photo)}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder large">${esc(person.name.charAt(0))}</div>`}
@@ -168,7 +140,7 @@
 
   function renderResearch() {
     return `
-      ${pageHero("Research", "Research", "Projects, code, and data for global change hydrology will be updated as the group website develops.", data.visuals.research)}
+      ${pageHero("Research", "Research", "Projects, code, and data for global change hydrology will be updated as the group website develops.")}
       <section class="section research-grid">
         ${list(data.research, (item, index) => `
           <article class="visual-card">
@@ -186,11 +158,8 @@
 
   function renderPublications() {
     return `
-      ${pageHero("Publications", "Publications", "Only papers affiliated with Department of Earth System Science, Tsinghua University will be listed here.", data.visuals.publications)}
+      ${pageHero("Publications", "Publications", "Only papers affiliated with Department of Earth System Science, Tsinghua University will be listed here.")}
       <section class="section publication-layout">
-        <div class="publication-visual">
-          <img src="${esc(data.visuals.publications)}" alt="" />
-        </div>
         <div class="publication-list">
           ${list(data.publications, renderPublication)}
         </div>
@@ -218,7 +187,7 @@
   function renderNews() {
     const [first, ...rest] = data.news;
     return `
-      ${pageHero("News", "News", "Seminars, announcements, and group updates.", data.visuals.news)}
+      ${pageHero("News", "News", "Seminars, announcements, and group updates.")}
       <section class="section news-layout">
         ${first ? renderNewsFeature(first) : ""}
         <div class="news-lines">
@@ -259,7 +228,7 @@
 
   function renderJoin() {
     return `
-      ${pageHero("How to join?", data.join.title, "Opportunities for students and visiting researchers.", data.visuals.join)}
+      ${pageHero("How to join?", data.join.title, "Opportunities for students and visiting researchers.")}
       <section class="section join-layout">
         <article>
           <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener">${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
@@ -277,7 +246,7 @@
 
   function renderContact() {
     return `
-      ${pageHero("Contact", "Contact", data.site.unit, data.visuals.join)}
+      ${pageHero("Contact", "Contact", data.site.unit)}
       <section class="section join-layout">
         <article>
           <h2>Email</h2>

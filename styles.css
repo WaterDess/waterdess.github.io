@@ -342,10 +342,6 @@ body[data-page="home"] .image-hero img {
   font-size: 0.9em;
 }
 
-.page-hero img {
-  display: none;
-}
-
 .section {
   padding: 1.6em 0 2em;
 }
@@ -353,8 +349,7 @@ body[data-page="home"] .image-hero img {
 .about-layout,
 .publication-layout,
 .news-layout,
-.join-layout,
-.content-layout {
+.join-layout {
   display: block;
   width: min(100% - 2em, var(--content-rail));
 }
@@ -507,10 +502,6 @@ body[data-page="home"] .image-hero img {
 .detail-sections ul {
   margin: 0;
   padding-left: 1.1em;
-}
-
-.publication-visual {
-  display: none;
 }
 
 .publication footer {

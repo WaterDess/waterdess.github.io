@@ -17,7 +17,7 @@ research.html       # Research
 publications.html   # Publications
 news.html           # News
 join.html           # How to join?
-contact.html        # Compatibility redirect-style page for How to join?
+contact.html        # Contact page
 person-*.html       # Member profile pages
 data/site.js        # Editable site content
 public/assets/      # Local images, SVG visuals, and PDF assets
@@ -45,10 +45,7 @@ Most editable content is stored in:
 
 ```text
 data/site.js
-data/site-20260625.js
 ```
-
-Update both files when editing content because some pages may still reference the dated compatibility file.
 
 Editable content includes:
 
