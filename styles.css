@@ -518,9 +518,9 @@ body[data-page="home"] .image-hero img {
 
 .people-layout {
   display: grid;
-  width: min(100% - 2em, 1060px);
-  grid-template-columns: 9.5em minmax(0, 740px);
-  gap: clamp(2.2em, 5vw, 4em);
+  width: min(100% - 2em, 820px);
+  grid-template-columns: 9em minmax(0, 560px);
+  gap: clamp(1.6em, 3.4vw, 2.4em);
   align-items: start;
 }
 
@@ -529,10 +529,8 @@ body[data-page="home"] .image-hero img {
 }
 
 .people-block {
-  display: grid;
-  grid-template-columns: 8em minmax(0, 1fr);
-  gap: clamp(1.4em, 3vw, 2.2em);
-  padding: 1.55em 0;
+  display: block;
+  padding: 1.35em 0;
   border-bottom: 1px solid var(--border);
   scroll-margin-top: calc(var(--masthead-height) + 1em);
 }
@@ -542,14 +540,17 @@ body[data-page="home"] .image-hero img {
 }
 
 .people-block-heading {
-  padding-top: 0.1em;
+  display: flex;
+  gap: 0.75em;
+  align-items: baseline;
+  margin-bottom: 0.85em;
+  padding-top: 0;
 }
 
 .people-block-heading span {
   display: block;
-  margin-bottom: 0.7em;
   color: var(--border-dark);
-  font-size: 0.58em;
+  font-size: 0.56em;
   font-weight: 800;
   line-height: 1;
 }
@@ -557,7 +558,7 @@ body[data-page="home"] .image-hero img {
 .people-block-heading h2 {
   margin: 0;
   color: var(--muted);
-  font-size: 0.72em;
+  font-size: 0.66em;
   font-weight: 800;
   line-height: 1.25;
   text-transform: uppercase;
@@ -570,8 +571,8 @@ body[data-page="home"] .image-hero img {
 
 .lead-person img,
 .lead-person .avatar-placeholder {
-  width: 7.6em;
-  height: 7.6em;
+  width: 6.9em;
+  height: 6.9em;
   object-fit: cover;
   border-radius: 4px;
 }
@@ -588,7 +589,7 @@ body[data-page="home"] .image-hero img {
 
 .lead-person h2 {
   margin: 0 0 0.2em;
-  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+  font-size: clamp(1.25rem, 1.55vw, 1.55rem);
   letter-spacing: -0.01em;
   line-height: 1.12;
 }
@@ -618,11 +619,11 @@ body[data-page="home"] .image-hero img {
 
 .member-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.2em;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 0.28em;
+  align-items: start;
   color: inherit;
-  padding: 0.88em 0;
+  padding: 0.7em 0;
   border-bottom: 1px solid var(--border);
 }
 
