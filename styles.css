@@ -436,6 +436,7 @@ body[data-page="about"] .page-hero p {
   background: transparent;
   color: var(--link-hover);
   text-decoration: none;
+  text-shadow: none;
 }
 
 .toc-content {
