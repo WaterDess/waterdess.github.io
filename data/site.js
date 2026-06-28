@@ -9,7 +9,7 @@ window.TANG_SITE = {
     website: "https://faculty.dess.tsinghua.edu.cn/tangqiuhong/en/index.htm"
   },
   visuals: {
-    logo: "./public/assets/logo-gchg.svg?v=logo-stream-wave-1",
+    logo: "./public/assets/logo-gchg.svg?v=people-scholar-glow-1",
     hero: "./public/assets/home-hydrosphere-landscape-textured-3840w.jpg",
     research: "./public/assets/visual-research.svg",
     publications: "./public/assets/visual-publications.svg",
@@ -62,6 +62,18 @@ window.TANG_SITE = {
       interests: ["Hydrology", "Earth system science", "Global change"],
       education: ["To be updated"],
       positions: ["Shuimu Tsinghua Scholar, Tsinghua University"],
+      publications: ["To be updated"]
+    },
+    {
+      slug: "dawei-peng",
+      name: "Dawei Peng",
+      position: "Scholar",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "To be updated",
+      photo: "",
+      interests: ["To be updated"],
+      education: ["To be updated"],
+      positions: ["To be updated"],
       publications: ["To be updated"]
     },
     {

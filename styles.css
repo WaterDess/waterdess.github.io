@@ -613,7 +613,7 @@ body[data-page="about"] .page-hero p {
 .lead-person:hover h2,
 .member-row:hover h2 {
   color: var(--link-hover);
-  text-shadow: 0 0 0.75em var(--link-glow);
+  text-shadow: none;
 }
 
 .people-layout {
