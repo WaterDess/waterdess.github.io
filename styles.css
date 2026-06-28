@@ -73,6 +73,10 @@ body[data-page="people"] {
   --toc-main: 860px;
 }
 
+body[data-page="about"] {
+  --content-rail: 1060px;
+}
+
 a {
   color: var(--link);
   text-decoration: none;
@@ -442,11 +446,18 @@ body[data-page="home"] .image-hero img {
   font-weight: 720;
 }
 
-.about-layout,
 .news-layout,
 .join-layout {
   display: block;
   width: min(100% - 2em, var(--content-rail));
+}
+
+.about-layout {
+  display: grid;
+  width: min(100% - 2em, var(--content-rail));
+  grid-template-columns: minmax(0, 1.18fr) minmax(18em, 0.82fr);
+  gap: clamp(2em, 4.5vw, 4em);
+  align-items: start;
 }
 
 .large-copy {
@@ -456,8 +467,37 @@ body[data-page="home"] .image-hero img {
 
 .large-copy p {
   color: var(--text);
-  font-size: 0.88em;
-  line-height: 1.56;
+  font-size: 0.86em;
+  line-height: 1.62;
+}
+
+.about-side {
+  min-width: 0;
+}
+
+.about-keywords {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55em;
+  margin-bottom: 1.1em;
+}
+
+.about-keywords span {
+  display: block;
+  padding: 0.7em 0.75em;
+  color: #526762;
+  background: rgba(251, 253, 252, 0.82);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.72em;
+  font-weight: 760;
+}
+
+.about-side .mission-list {
+  background: rgba(251, 253, 252, 0.58);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .mission-list,
@@ -495,6 +535,19 @@ body[data-page="home"] .image-hero img {
   display: block;
   font-size: 0.9em;
   line-height: 1.35;
+}
+
+.about-side .mission-list article {
+  padding: 0.9em 1em;
+}
+
+.about-side .mission-list article:last-child {
+  border-bottom: 0;
+}
+
+.about-side .mission-list strong {
+  font-size: 0.78em;
+  line-height: 1.42;
 }
 
 .avatar-placeholder,
@@ -976,6 +1029,7 @@ body[data-page="home"] .image-hero img {
   }
 
   .news-feature,
+  .about-layout,
   .person-detail,
   .lead-person,
   .member-row,
