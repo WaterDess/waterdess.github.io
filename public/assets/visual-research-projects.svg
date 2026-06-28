@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">Projects visual</title>
+  <desc id="desc">Minimal watershed project map with catchment boundaries, river paths, and monitoring nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef6f3"/>
+      <stop offset="1" stop-color="#fbfdfc"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1">
+      <stop offset="0" stop-color="#1f7d78"/>
+      <stop offset="1" stop-color="#7abdb5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="560" fill="url(#bg)"/>
+  <g fill="none" stroke="#d7e6e2" stroke-width="1.2">
+    <path d="M96 112h708M96 224h708M96 336h708M96 448h708"/>
+    <path d="M214 72v416M332 72v416M450 72v416M568 72v416M686 72v416"/>
+  </g>
+  <g fill="#ffffff" stroke="#d5e3df" stroke-width="2">
+    <path d="M214 126 354 80l128 54 154-34 88 92-40 160-156 74-164-42-132 70-104-118Z"/>
+    <path d="M402 160 512 124l112 42 46 96-72 96-136 8-86-86Z" opacity=".76"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M164 356c78-54 138-43 202-101 58-52 112-54 182-36 63 17 116 1 188-54" stroke="url(#water)" stroke-width="8"/>
+    <path d="M361 255c45 30 78 66 97 116M548 219c34 42 70 69 121 82" stroke="#5caea6" stroke-width="4"/>
+    <path d="M202 214c88-38 149-31 218-5 92 34 162 17 252-46" stroke="#4b2572" stroke-opacity=".16" stroke-width="4"/>
+  </g>
+  <g fill="#9a7a35">
+    <circle cx="366" cy="255" r="10"/>
+    <circle cx="548" cy="219" r="10"/>
+    <circle cx="458" cy="371" r="8"/>
+    <circle cx="669" cy="301" r="8"/>
+  </g>
+  <g fill="none" stroke="#233532" stroke-opacity=".2" stroke-width="2">
+    <path d="M132 86h116M132 474h116M652 86h116M652 474h116"/>
+  </g>
+</svg>

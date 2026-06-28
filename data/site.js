@@ -82,19 +82,19 @@ window.TANG_SITE = {
       title: "Projects",
       text: "",
       status: "To be updated",
-      image: "./public/assets/visual-research.svg"
+      image: "./public/assets/visual-research-projects.svg"
     },
     {
       title: "Code",
       text: "",
       status: "To be updated",
-      image: "./public/assets/hero-hydrosphere.svg"
+      image: "./public/assets/visual-research-code.svg"
     },
     {
       title: "Data",
       text: "",
       status: "To be updated",
-      image: "./public/assets/visual-publications.svg"
+      image: "./public/assets/visual-research-data.svg"
     }
   ],
   publications: [
