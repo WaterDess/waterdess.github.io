@@ -9,7 +9,7 @@ window.TANG_SITE = {
     website: "https://faculty.dess.tsinghua.edu.cn/tangqiuhong/en/index.htm"
   },
   visuals: {
-    logo: "./public/assets/logo-gchg-wordmark.png?v=logo-image-1",
+    logo: "./public/assets/logo-gchg-wordmark.png?v=logo-image-2",
     hero: "./public/assets/home-hydrosphere-landscape-textured-3840w.jpg",
     research: "./public/assets/visual-research.svg",
     publications: "./public/assets/visual-publications.svg",
