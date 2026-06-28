@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">GCHG logo options</title>
+  <desc id="desc">Nine minimalist character-based logo options for Global Change Hydrology Group.</desc>
+  <defs>
+    <style>
+      .label{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:18px;font-weight:700;fill:#8fa6a0}
+      .card{fill:#0a1415;stroke:#233b3a;stroke-width:1.4}
+      .word{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:800;fill:#f5fbf8}
+      .muted{fill:#9fbab4}
+      .accent{stroke:#a9d3cc}
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="#f5f9f7"/>
+  <text x="72" y="64" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="28" font-weight="800" fill="#233532">GCHG logo directions</text>
+  <text x="72" y="96" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="16" font-weight="600" fill="#667873">Character-only concepts for review</text>
+
+  <g transform="translate(72 132)">
+    <g transform="translate(0 0)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">01 / spaced wordmark</text>
+      <text class="word" x="48" y="112" font-size="54" letter-spacing="15">GCHG</text>
+      <path class="accent" d="M50 136h214" fill="none" stroke-width="2" opacity=".7"/>
+    </g>
+    <g transform="translate(368 0)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">02 / compact block</text>
+      <text class="word" x="68" y="122" font-size="64" letter-spacing="2">GCHG</text>
+      <rect x="62" y="80" width="196" height="58" fill="none" stroke="#a9d3cc" stroke-width="2"/>
+    </g>
+    <g transform="translate(736 0)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">03 / split rhythm</text>
+      <text class="word" x="56" y="112" font-size="58" letter-spacing="6">GC</text>
+      <text class="word" x="178" y="112" font-size="58" letter-spacing="6">HG</text>
+      <path d="M154 70v74" stroke="#a9d3cc" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(0 238)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">04 / vertical mark</text>
+      <text class="word" x="88" y="126" font-size="54" letter-spacing="4">GC</text>
+      <text class="word" x="184" y="126" font-size="54" letter-spacing="4">HG</text>
+      <path d="M74 62v84M246 62v84" stroke="#a9d3cc" stroke-width="2" opacity=".7"/>
+    </g>
+    <g transform="translate(368 238)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">05 / editorial serif</text>
+      <text x="54" y="120" font-family="Georgia,'Times New Roman',serif" font-size="62" font-weight="700" letter-spacing="8" fill="#f5fbf8">GCHG</text>
+      <circle cx="246" cy="96" r="5" fill="#a9d3cc"/>
+    </g>
+    <g transform="translate(736 238)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">06 / monogram grid</text>
+      <g class="word" font-size="46" font-weight="850">
+        <text x="95" y="91">G</text><text x="170" y="91">C</text>
+        <text x="95" y="145">H</text><text x="170" y="145">G</text>
+      </g>
+      <path d="M156 56v102M72 108h176" stroke="#a9d3cc" stroke-width="1.8" opacity=".55"/>
+    </g>
+
+    <g transform="translate(0 476)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">07 / low contrast</text>
+      <text class="word" x="54" y="122" font-size="60" letter-spacing="10">GCHG</text>
+      <text x="58" y="145" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#9fbab4">GLOBAL CHANGE HYDROLOGY</text>
+    </g>
+    <g transform="translate(368 476)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">08 / bracketed</text>
+      <path d="M58 66h24v86H58M262 66h-24v86h24" fill="none" stroke="#a9d3cc" stroke-width="4"/>
+      <text class="word" x="92" y="123" font-size="58" letter-spacing="5">GCHG</text>
+    </g>
+    <g transform="translate(736 476)">
+      <rect class="card" width="320" height="190" rx="10"/>
+      <text class="label" x="24" y="36">09 / narrow technical</text>
+      <text class="word" x="60" y="124" font-size="62" letter-spacing="4" transform="scale(.84 1)">GCHG</text>
+      <g stroke="#a9d3cc" stroke-width="2" opacity=".72">
+        <path d="M58 142h198"/><path d="M58 66h198"/>
+      </g>
+    </g>
+  </g>
+</svg>

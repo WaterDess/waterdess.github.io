@@ -3,7 +3,7 @@
   const app = document.getElementById("app");
   const page = document.body.dataset.page || "home";
   const personSlug = document.body.dataset.person || "";
-  const SITE_VERSION = "about-balance-1";
+  const SITE_VERSION = "ui-refine-1";
 
   const nav = [
     ["news", "News"],
@@ -109,22 +109,14 @@
           <p>${esc(data.site.summary)}</p>
           <p>The group studies global change hydrology, water-cycle imbalance, water-risk monitoring and prediction, and transboundary water governance through modeling, remote sensing, data integration, and risk assessment.</p>
         </article>
-        <aside class="about-side" aria-label="Research mission">
-          <div class="about-keywords">
-            <span>Hydrology</span>
-            <span>Climate</span>
-            <span>Risk</span>
-            <span>Data</span>
-          </div>
-          <div class="mission-list">
-            ${list(data.mission, (item, index) => `
-              <article>
-                <span>${String(index + 1).padStart(2, "0")}</span>
-                <strong>${esc(item)}</strong>
-              </article>
-            `)}
-          </div>
-        </aside>
+        <div class="mission-list">
+          ${list(data.mission, (item, index) => `
+            <article>
+              <span>${String(index + 1).padStart(2, "0")}</span>
+              <strong>${esc(item)}</strong>
+            </article>
+          `)}
+        </div>
       </section>
     `;
   }

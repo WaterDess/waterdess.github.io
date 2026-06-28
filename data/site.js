@@ -66,7 +66,7 @@ window.TANG_SITE = {
     },
     {
       slug: "ying",
-      name: "Ying",
+      name: "Ying Yan",
       position: "Group member",
       address: "Department of Earth System Science, Tsinghua University",
       email: "To be updated",

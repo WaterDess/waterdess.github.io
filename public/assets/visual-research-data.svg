@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" role="img" aria-labelledby="title desc">
   <title id="title">Data visual</title>
-  <desc id="desc">A minimal hydrology data product visual with a database, gridded observations, and a time-series curve.</desc>
+  <desc id="desc">A minimal data platform visual with databases, tables, raster grids, and metadata records.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#f8fbfa"/>
@@ -9,10 +9,6 @@
     <linearGradient id="cell" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#d9f0ec"/>
       <stop offset="1" stop-color="#ffffff"/>
-    </linearGradient>
-    <linearGradient id="teal" x1="0" x2="1">
-      <stop offset="0" stop-color="#1f7d78"/>
-      <stop offset="1" stop-color="#76bcb4"/>
     </linearGradient>
     <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#2e6f73" flood-opacity=".08"/>
@@ -26,38 +22,41 @@
   <g filter="url(#soft)">
     <rect x="126" y="78" width="648" height="294" rx="12" fill="#ffffff" stroke="#d9e7e3"/>
   </g>
-  <g transform="translate(164 116)">
+  <g transform="translate(164 118)">
     <g fill="url(#cell)" stroke="#dbe8e4">
-      <rect x="0" y="0" width="82" height="46" rx="5"/>
-      <rect x="96" y="0" width="82" height="46" rx="5"/>
-      <rect x="192" y="0" width="82" height="46" rx="5"/>
-      <rect x="288" y="0" width="82" height="46" rx="5"/>
-      <rect x="384" y="0" width="82" height="46" rx="5"/>
-      <rect x="0" y="62" width="82" height="46" rx="5"/>
-      <rect x="96" y="62" width="82" height="46" rx="5"/>
-      <rect x="192" y="62" width="82" height="46" rx="5"/>
-      <rect x="288" y="62" width="82" height="46" rx="5"/>
-      <rect x="384" y="62" width="82" height="46" rx="5"/>
+      <rect x="0" y="0" width="76" height="46" rx="5"/>
+      <rect x="90" y="0" width="76" height="46" rx="5"/>
+      <rect x="180" y="0" width="76" height="46" rx="5"/>
+      <rect x="270" y="0" width="76" height="46" rx="5"/>
+      <rect x="0" y="60" width="76" height="46" rx="5"/>
+      <rect x="90" y="60" width="76" height="46" rx="5"/>
+      <rect x="180" y="60" width="76" height="46" rx="5"/>
+      <rect x="270" y="60" width="76" height="46" rx="5"/>
+      <rect x="0" y="120" width="76" height="46" rx="5"/>
+      <rect x="90" y="120" width="76" height="46" rx="5"/>
+      <rect x="180" y="120" width="76" height="46" rx="5"/>
+      <rect x="270" y="120" width="76" height="46" rx="5"/>
+    </g>
+    <g fill="#8aa19b">
+      <rect x="0" y="196" width="150" height="9" rx="5"/>
+      <rect x="172" y="196" width="94" height="9" rx="5" opacity=".62"/>
+      <rect x="288" y="196" width="58" height="9" rx="5" opacity=".38"/>
     </g>
   </g>
-  <g transform="translate(662 116)" fill="none" stroke="#8aa19b" stroke-width="2">
-    <ellipse cx="58" cy="18" rx="58" ry="18" fill="#f7fbf8"/>
-    <path d="M0 18v82c0 10 26 18 58 18s58-8 58-18V18"/>
-    <path d="M0 59c0 10 26 18 58 18s58-8 58-18"/>
-    <path d="M0 99c0 10 26 18 58 18s58-8 58-18"/>
+  <g transform="translate(566 110)" fill="none" stroke="#8aa19b" stroke-width="2">
+    <ellipse cx="76" cy="22" rx="76" ry="22" fill="#f7fbf8"/>
+    <path d="M0 22v124c0 12 34 22 76 22s76-10 76-22V22"/>
+    <path d="M0 64c0 12 34 22 76 22s76-10 76-22"/>
+    <path d="M0 106c0 12 34 22 76 22s76-10 76-22"/>
+    <path d="M0 146c0 12 34 22 76 22s76-10 76-22"/>
   </g>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M164 292c55-34 99-27 145-62 42-32 84-32 130-8 54 28 108 17 176-30" stroke="url(#teal)" stroke-width="6"/>
-    <path d="M184 170c82 44 161 56 238 34 68-19 130-60 190-105" stroke="#4b2572" stroke-opacity=".18" stroke-width="4"/>
-    <path d="M164 326h186M382 326h118M532 326h150" stroke="#8aa19b" stroke-opacity=".55" stroke-width="7"/>
+  <g transform="translate(558 310)" fill="#ffffff" stroke="#d9e7e3" stroke-width="2">
+    <rect width="180" height="44" rx="8"/>
+    <rect x="22" y="16" width="56" height="8" rx="4" fill="#d7eee9" stroke="none"/>
+    <rect x="92" y="16" width="62" height="8" rx="4" fill="#8aa19b" opacity=".48" stroke="none"/>
   </g>
-  <g fill="#9a7a35">
-    <circle cx="309" cy="230" r="8"/>
-    <circle cx="439" cy="222" r="8"/>
-    <circle cx="615" cy="192" r="8"/>
-  </g>
-  <g fill="#233532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="18" font-weight="700" opacity=".72">
-    <text x="674" y="287">records</text>
-    <text x="674" y="318">grids</text>
+  <g fill="#233532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-weight="760" opacity=".72">
+    <text x="596" y="146" font-size="22">database</text>
+    <text x="582" y="338" font-size="18">metadata</text>
   </g>
 </svg>

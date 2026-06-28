@@ -1,14 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" role="img" aria-labelledby="title desc">
   <title id="title">Code visual</title>
-  <desc id="desc">A minimal hydrological code workspace with model modules, syntax lines, and a simulated discharge curve.</desc>
+  <desc id="desc">A minimal code editor and software modules for hydrological modeling tools.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#f8fbfa"/>
       <stop offset="1" stop-color="#edf6f3"/>
-    </linearGradient>
-    <linearGradient id="teal" x1="0" x2="1">
-      <stop offset="0" stop-color="#1f7d78"/>
-      <stop offset="1" stop-color="#76bcb4"/>
     </linearGradient>
     <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#2e6f73" flood-opacity=".08"/>
@@ -20,52 +16,48 @@
     <path d="M180 58v334M350 58v334M520 58v334M690 58v334"/>
   </g>
   <g filter="url(#soft)">
-    <rect x="126" y="84" width="648" height="282" rx="12" fill="#ffffff" stroke="#d9e7e3"/>
+    <rect x="126" y="76" width="648" height="298" rx="12" fill="#ffffff" stroke="#d9e7e3"/>
   </g>
   <g fill="#eff7f4">
-    <rect x="126" y="84" width="648" height="48" rx="12"/>
-    <rect x="126" y="118" width="648" height="14"/>
+    <rect x="126" y="76" width="648" height="50" rx="12"/>
+    <rect x="126" y="112" width="648" height="14"/>
   </g>
   <g fill="#8aa19b">
-    <circle cx="162" cy="108" r="6"/>
-    <circle cx="184" cy="108" r="6"/>
-    <circle cx="206" cy="108" r="6"/>
+    <circle cx="162" cy="101" r="6"/>
+    <circle cx="184" cy="101" r="6"/>
+    <circle cx="206" cy="101" r="6"/>
   </g>
-  <g fill="none" stroke="#d9e7e3" stroke-width="2">
-    <path d="M312 132v234"/>
-    <path d="M126 132h648"/>
+  <path d="M292 126v248" fill="none" stroke="#d9e7e3" stroke-width="2"/>
+  <g font-family="Consolas, Menlo, monospace" font-size="20" font-weight="700">
+    <text x="154" y="168" fill="#90a39e">01</text>
+    <text x="154" y="206" fill="#90a39e">02</text>
+    <text x="154" y="244" fill="#90a39e">03</text>
+    <text x="154" y="282" fill="#90a39e">04</text>
+    <text x="198" y="168" fill="#233532">import hydro</text>
+    <text x="198" y="206" fill="#2e6f73">basin = load()</text>
+    <text x="198" y="244" fill="#667873">model.fit(x, y)</text>
+    <text x="198" y="282" fill="#9a7a35">forecast.run()</text>
   </g>
-  <g font-family="Consolas, Menlo, monospace" font-size="19" font-weight="700">
-    <text x="156" y="172" fill="#7b8f8a">01</text>
-    <text x="156" y="214" fill="#7b8f8a">02</text>
-    <text x="156" y="256" fill="#7b8f8a">03</text>
-    <text x="198" y="172" fill="#233532">model.run</text>
-    <text x="198" y="214" fill="#2e6f73">( basin, forcing )</text>
-    <text x="198" y="256" fill="#667873">return discharge</text>
-  </g>
-  <g transform="translate(356 162)">
+  <g transform="translate(342 158)">
     <g fill="#ffffff" stroke="#d9e7e3" stroke-width="2">
-      <rect x="0" y="0" width="126" height="54" rx="8"/>
-      <rect x="178" y="0" width="126" height="54" rx="8"/>
-      <rect x="356" y="0" width="126" height="54" rx="8"/>
+      <rect x="0" y="0" width="170" height="70" rx="9"/>
+      <rect x="208" y="0" width="170" height="70" rx="9"/>
+      <rect x="104" y="112" width="170" height="70" rx="9"/>
     </g>
-    <g fill="#233532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-size="17" font-weight="700">
-      <text x="23" y="34">input</text>
-      <text x="204" y="34">model</text>
-      <text x="382" y="34">output</text>
+    <g fill="#233532" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif" font-weight="760">
+      <text x="27" y="42" font-size="22">model.py</text>
+      <text x="235" y="42" font-size="22">utils</text>
+      <text x="134" y="154" font-size="22">tests</text>
     </g>
-    <g fill="none" stroke="#8ac8c0" stroke-width="3" stroke-linecap="round">
-      <path d="M126 27h52"/>
-      <path d="M304 27h52"/>
+    <g fill="none" stroke="#8ac8c0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M170 35h38"/>
+      <path d="M248 70v42"/>
+      <path d="M188 112v-42"/>
     </g>
-  </g>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M356 300c54-36 94-29 140-64 46-35 89-35 138-11 42 21 78 19 116-5" stroke="url(#teal)" stroke-width="6"/>
-    <path d="M496 236c28 22 44 46 56 76M634 225c24 28 49 45 84 53" stroke="#8ac8c0" stroke-width="3.5"/>
-  </g>
-  <g fill="#9a7a35">
-    <circle cx="496" cy="236" r="8"/>
-    <circle cx="634" cy="225" r="8"/>
-    <circle cx="552" cy="312" r="7"/>
+    <g fill="#d7eee9">
+      <rect x="27" y="50" width="90" height="8" rx="4"/>
+      <rect x="235" y="50" width="66" height="8" rx="4"/>
+      <rect x="134" y="162" width="72" height="8" rx="4"/>
+    </g>
   </g>
 </svg>
