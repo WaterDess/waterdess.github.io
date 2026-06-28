@@ -3,7 +3,7 @@
   const app = document.getElementById("app");
   const page = document.body.dataset.page || "home";
   const personSlug = document.body.dataset.person || "";
-  const SITE_VERSION = "people-cards-1";
+  const SITE_VERSION = "hover-links-1";
 
   const nav = [
     ["news", "News"],
