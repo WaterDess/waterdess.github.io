@@ -77,6 +77,10 @@ body[data-page="about"] {
   --content-rail: 1060px;
 }
 
+body[data-page="person"] {
+  --content-rail: var(--detail-rail);
+}
+
 a {
   color: var(--link);
   text-decoration: none;
