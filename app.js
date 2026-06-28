@@ -3,7 +3,7 @@
   const app = document.getElementById("app");
   const page = document.body.dataset.page || "home";
   const personSlug = document.body.dataset.person || "";
-  const SITE_VERSION = "research-figures-1";
+  const SITE_VERSION = "people-card-links-1";
 
   const nav = [
     ["news", "News"],
@@ -181,10 +181,11 @@
   function renderLeadPerson(person) {
     return `
       <article class="lead-person">
+        <a class="card-link" href="${esc(versioned(`person-${person.slug}.html`))}" aria-label="Open ${esc(person.name)} profile"></a>
         <div>
-          <h2><a href="${esc(versioned(`person-${person.slug}.html`))}">${esc(person.name)}</a></h2>
+          <h2>${esc(person.name)}</h2>
           <p>${esc(person.position)}</p>
-          <small><a href="${person.email.includes("@") ? `mailto:${esc(person.email)}` : "#"}">${esc(person.email)}</a></small>
+          <small><a class="email-link" href="${person.email.includes("@") ? `mailto:${esc(person.email)}` : "#"}">${esc(person.email)}</a></small>
         </div>
         ${person.photo ? `<img src="${esc(person.photo)}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder">${esc(person.name.charAt(0))}</div>`}
       </article>
@@ -194,8 +195,9 @@
   function renderMemberRow(person) {
     return `
       <article class="member-row">
+        <a class="card-link" href="${esc(versioned(`person-${person.slug}.html`))}" aria-label="Open ${esc(person.name)} profile"></a>
         <div>
-          <h2><a href="${esc(versioned(`person-${person.slug}.html`))}">${esc(person.name)}</a></h2>
+          <h2>${esc(person.name)}</h2>
           <p>${esc(person.position)}</p>
         </div>
       </article>
