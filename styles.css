@@ -684,6 +684,12 @@ body[data-page="about"] .page-hero p {
 .news-line h3 a,
 .join-section h2 a {
   color: var(--text);
+  background-image: none;
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.08em;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease, text-shadow 0.18s ease;
 }
 
 .lead-person .email-link,
@@ -698,6 +704,7 @@ body[data-page="about"] .page-hero p {
 .person-detail aside a:hover,
 .text-link:hover {
   color: var(--link-hover);
+  text-decoration-color: currentColor;
   text-shadow: 0 0 0.75em var(--link-glow);
 }
 
