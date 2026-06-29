@@ -49,10 +49,7 @@ window.TANG_SITE = {
         "2010-2025: Professor, Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences",
         "2006-2010: Research Associate, Department of Civil and Environmental Engineering, University of Washington"
       ],
-      publications: [
-        "Global change exacerbates water cycle imbalances and intensifies water resource crises. Science China Earth Sciences, 2025.",
-        "Global mapping of potential hydropolitical system archetypes in international transboundary basins. Journal of Hydrology, 2026."
-      ]
+      publications: ["To be updated"]
     },
     {
       slug: "ruiyu-zhao",
