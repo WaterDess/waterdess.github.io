@@ -148,13 +148,10 @@
     const lead = data.people.find(isPrincipalInvestigator);
     const members = data.people.filter((person) => person !== lead);
     const researchStaff = members.filter((person) => (person.group || "").toLowerCase() === "research-staff");
-    const graduateStudents = members.filter((person) => (person.group || "").toLowerCase() === "graduate-student");
-    const generalMembers = members.filter((person) => !researchStaff.includes(person) && !graduateStudents.includes(person));
     const tocItems = [
       lead ? { id: "faculty", label: "Faculty" } : null,
       researchStaff.length ? { id: "postdoctoral-fellow-and-research-associate", label: "Postdoctoral Fellow and Research Associate" } : null,
-      { id: "graduate-student", label: "Graduate Student" },
-      generalMembers.length ? { id: "members", label: "Members" } : null
+      { id: "graduate-student", label: "Graduate Student" }
     ].filter(Boolean);
 
     return `
@@ -179,14 +176,6 @@
           ${renderPeopleBlockHeading("03", "Graduate Student")}
           <p class="empty-note">To be updated.</p>
         </section>
-        ${generalMembers.length ? `
-          <section class="people-block" id="members">
-            ${renderPeopleBlockHeading("04", "Members")}
-            <div class="member-grid" aria-label="Group members">
-              ${list(generalMembers, renderMemberRow)}
-            </div>
-          </section>
-        ` : ""}
         </div>
       </section>
     `;
