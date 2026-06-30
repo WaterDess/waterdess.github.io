@@ -160,8 +160,7 @@ window.TANG_SITE = {
       title: "Dr. Ruiyu Zhao selected as the Shuimu Tsinghua Scholar",
       text: "Congratulations to Dr. Ruiyu Zhao on being selected as a Shuimu Tsinghua Scholar.",
       url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174",
-      urlLabel: "Read announcement",
-      image: "./public/assets/visual-join.svg"
+      urlLabel: "Read announcement"
     }
   ],
   join: {
