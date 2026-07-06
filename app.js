@@ -279,9 +279,6 @@
               ? `<h2 class="research-link-title"><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2>`
               : `<h2>${esc(item.title)}</h2>${item.text ? `<p>${esc(item.text)}</p>` : ""}`}
           </div>
-          <figure>
-            <img src="${esc(assetUrl(item.image || data.visuals.research))}" alt="" />
-          </figure>
         </section>
       `))}
     `;
