@@ -242,9 +242,9 @@
           ${renderProfileLinks(person.links)}
         </aside>
         <div class="detail-sections">
-          ${renderDetailBlock("Research Interests", person.interests)}
           ${renderDetailBlock("Education", person.education)}
           ${renderDetailBlock("Positions Held", person.positions)}
+          ${renderDetailBlock("Research Interests", person.interests)}
           ${renderDetailBlock("Publications", person.publications)}
         </div>
       </section>
