@@ -6,7 +6,7 @@ window.TANG_SITE = {
     tagline: "Advancing water sciences for planetary health and sustainable development",
     summary: "THU Global Change Hydrology (GCH) Group is an interdisciplinary research group at the Department of Earth System Science, Tsinghua University, dedicated to deepening understanding of the impacts of global change on water systems and solutions.",
     missionIntro: "Our mission is to advance water sciences for planetary health and sustainable development. To deliver on this mission and achieve our core objectives, we commit to the following priorities:",
-    email: "tangqh@tsinghua.edu.cn",
+    email: "tangqh (at) tsinghua.edu.cn",
     website: "https://faculty.dess.tsinghua.edu.cn/tangqiuhong/en/index.htm"
   },
   visuals: {
@@ -31,7 +31,7 @@ window.TANG_SITE = {
       position: "Professor; Principal Investigator",
       group: "faculty",
       address: "Department of Earth System Science, Tsinghua University",
-      email: "tangqh@tsinghua.edu.cn",
+      email: "tangqh (at) tsinghua.edu.cn",
       photo: "./public/assets/tang-qiuhong-1.jpg",
       interests: [
         "Global change hydrology",
@@ -106,8 +106,10 @@ window.TANG_SITE = {
     },
     {
       title: "Data",
-      text: "",
-      status: "To be updated",
+      text: "A Long-Term Land Surface Hydrologic Fluxes and States Dataset for China.",
+      status: "Dataset",
+      url: "https://zenodo.org/records/6548153",
+      urlLabel: "Open dataset",
       image: "./public/assets/visual-research-data.svg"
     }
   ],

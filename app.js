@@ -47,16 +47,13 @@
   }
 
   function assetUrl(url) {
-    if (!url || IS_FILE_PREVIEW || /^(https?:|mailto:|#)/.test(url)) return url;
+    if (!url || IS_FILE_PREVIEW || /^(https?:|#)/.test(url)) return url;
     return url.startsWith("./") ? `${PUBLIC_BASE}${url.slice(2)}` : url;
   }
 
-  function emailHref(email) {
-    return String(email || "").includes("@") ? `mailto:${esc(email)}` : "#";
-  }
 
   function displayEmail(email) {
-    return String(email || "").includes("@") ? String(email).replace("@", " (at) ") : String(email || "");
+    return String(email || "");
   }
 
   function setupChrome() {
@@ -201,7 +198,7 @@
         <div>
           <h2>${esc(person.name)}</h2>
           <p>${esc(person.position)}</p>
-          <small><a class="email-link" href="${emailHref(person.email)}">${esc(displayEmail(person.email))}</a></small>
+          <small class="email-link">${esc(displayEmail(person.email))}</small>
         </div>
       </article>
     `;
@@ -228,7 +225,7 @@
           ${person.photo ? `<img src="${esc(assetUrl(person.photo))}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder large">${esc(person.name.charAt(0))}</div>`}
           <p class="profile-department">${esc(person.address)}</p>
           ${renderProfileTitles(person.position)}
-          <a href="${emailHref(person.email)}">${esc(displayEmail(person.email))}</a>
+          <p class="profile-email">${esc(displayEmail(person.email))}</p>
         </aside>
         <div class="detail-sections">
           ${renderDetailBlock("Research Interests", person.interests)}
@@ -272,6 +269,7 @@
             <span>${esc(item.status)}</span>
             <h2>${esc(item.title)}</h2>
             ${item.text ? `<p>${esc(item.text)}</p>` : `<p>Content will be updated as the group website develops.</p>`}
+            ${item.url ? `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.urlLabel || "Open link")}</a>` : ""}
           </div>
           <figure>
             <img src="${esc(assetUrl(item.image || data.visuals.research))}" alt="" />
@@ -372,7 +370,7 @@
         <article class="content-section join-section" id="phd-admission">
           <h2>PhD admission</h2>
           <p>${esc(data.join.phd)}</p>
-          <a class="text-link" href="mailto:${esc(data.site.email)}">${esc(displayEmail(data.site.email))}</a>
+          <p class="text-link">${esc(displayEmail(data.site.email))}</p>
         </article>
         <article class="content-section join-section" id="postdoctoral-fellow">
           <h2>Postdoctoral Fellow</h2>
@@ -396,7 +394,7 @@
         <article>
           <h2>Email</h2>
           <p>For academic communication and admission inquiries, please contact the group through Prof. Qiuhong Tang.</p>
-          <a class="text-link" href="mailto:${esc(data.site.email)}">${esc(displayEmail(data.site.email))}</a>
+          <p class="text-link">${esc(displayEmail(data.site.email))}</p>
         </article>
         <article>
           <h2>Faculty profile</h2>
