@@ -1944,3 +1944,46 @@ body:not([data-page="home"]) a {
   min-width: 0;
   overflow-wrap: anywhere;
 }
+
+/* Center standalone editorial pages without side navigation */
+body[data-page="news"] .page-intro,
+body[data-page="about"] .page-intro,
+body[data-page="news"] .news-layout,
+body[data-page="about"] .about-layout {
+  width: min(100% - 2rem, 42rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body[data-page="news"] .page-intro,
+body[data-page="about"] .page-intro,
+body[data-page="about"] .about-layout {
+  display: block;
+}
+
+body[data-page="news"] .page-intro span,
+body[data-page="about"] .page-intro span {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+body[data-page="news"] .news-line,
+body[data-page="news"] .compact-news-line,
+body[data-page="news"] .compact-news-line > div {
+  display: block;
+}
+
+body[data-page="news"] .compact-news-line {
+  padding: 0.76rem 0 0.7rem;
+}
+
+body[data-page="news"] .compact-news-line h3::before {
+  left: 0;
+  top: -0.38rem;
+  width: 1.15rem;
+}
+
+body[data-page="about"] .large-copy,
+body[data-page="about"] .mission-list {
+  grid-column: auto;
+}
