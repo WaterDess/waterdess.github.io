@@ -412,8 +412,7 @@
           <p class="plain-email">${esc(displayEmail(data.site.email))}</p>
         </article>
         <article class="content-section join-section" id="postdoctoral-fellow">
-          <h2>Postdoctoral Fellow</h2>
-          <p>${renderInlineLink(data.join.postdoc, "here", data.join.postdocUrl)}</p>
+          <h2>${data.join.postdocUrl ? `<a href="${esc(assetUrl(data.join.postdocUrl))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>Postdoctoral Fellow</a>` : "Postdoctoral Fellow"}</h2>
         </article>
         <article class="content-section join-section" id="visiting-scholar-domestic">
           <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>

@@ -248,7 +248,7 @@ window.TANG_SITE = {
     program: "2026 Tsinghua University Global Research Program",
     programUrl: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
     phd: "For admission to the PhD program, please contact Prof. Qiuhong Tang.",
-    postdoc: "We are recruiting Postdocs and Research Associate. See details here.",
+    postdoc: "We are recruiting Postdocs and Research Associate.",
     postdocUrl: "./public/assets/water-dessthu-postdoc.pdf",
     visitingScholar: "Visiting Scholar (Domestic)",
     visitingScholarUrl: "https://www.tsinghua.edu.cn/zsjyc/info/1056/1250.htm"
