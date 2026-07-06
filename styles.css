@@ -1097,7 +1097,6 @@ body[data-page="about"] .page-hero p {
   .about-layout,
   .person-detail,
   .lead-person,
-  .member-row,
   .page-hero-with-toc,
   .toc-layout,
   .people-layout,
@@ -1139,8 +1138,127 @@ body[data-page="about"] .page-hero p {
     grid-template-columns: 1fr;
   }
 
+  .compact-person-row {
+    grid-template-columns: 1fr;
+    gap: 0.12rem;
+  }
+
   .member-row span,
   .member-row small {
     justify-self: start;
+  }
+}
+
+
+/* Compact content updates */
+.compact-news-layout .news-lines {
+  border-top: 1px solid var(--border);
+}
+
+.compact-news-line {
+  display: block;
+  padding: 0.62em 0;
+}
+
+.compact-news-line h3 {
+  margin-bottom: 0.18em;
+  font-size: 0.92em;
+  line-height: 1.22;
+}
+
+.compact-news-line p {
+  max-width: 52em;
+  margin-top: 0.16em;
+  font-size: 0.68em;
+  line-height: 1.42;
+}
+
+.compact-person-row {
+  display: grid;
+  grid-template-columns: minmax(11em, 0.42fr) minmax(10em, 0.58fr);
+  gap: 1em;
+  align-items: baseline;
+  min-height: 0;
+  padding: 0.48em 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid var(--border);
+  box-shadow: none;
+  cursor: default;
+  transform: none;
+}
+
+.compact-person-row:hover {
+  background: transparent;
+  border-color: var(--border);
+  box-shadow: none;
+  transform: none;
+}
+
+.compact-person-row h2 {
+  margin: 0;
+  font-size: 0.82em;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.compact-person-row h2 a {
+  color: var(--text);
+  font-weight: 400;
+  text-decoration: none;
+  background-image: none;
+}
+
+.compact-person-row h2 a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+.compact-person-row .plain-email,
+.plain-email {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72em;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.compact-member-list {
+  display: block;
+}
+
+.profile-links {
+  display: grid;
+  gap: 0.2em;
+  margin-top: 0.65em;
+}
+
+.profile-links a {
+  color: var(--text);
+  font-size: 0.72em;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--border-dark);
+  text-underline-offset: 0.12em;
+}
+
+.profile-links a:hover {
+  color: var(--link-hover);
+  text-shadow: none;
+}
+
+.lead-person:hover h2,
+.member-row:hover h2 {
+  color: inherit;
+  text-shadow: none;
+}
+
+
+@media (max-width: 760px) {
+  .compact-person-row {
+    grid-template-columns: 1fr;
+    gap: 0.12rem;
   }
 }

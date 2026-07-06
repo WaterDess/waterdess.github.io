@@ -33,6 +33,10 @@ window.TANG_SITE = {
       address: "Department of Earth System Science, Tsinghua University",
       email: "tangqh (at) tsinghua.edu.cn",
       photo: "./public/assets/tang-qiuhong-1.jpg",
+      links: [
+        { label: "Google Scholar", url: "https://scholar.google.com/citations?user=6TXH9AwAAAAJ" },
+        { label: "ORCID", url: "https://orcid.org/0000-0002-0886-6699" }
+      ],
       interests: [
         "Global change hydrology",
         "Water-cycle imbalance",
@@ -55,7 +59,7 @@ window.TANG_SITE = {
       slug: "ruiyu-zhao",
       name: "Ruiyu Zhao",
       position: "Shuimu Tsinghua Scholar",
-      group: "research-staff",
+      group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
       email: "To be updated",
       photo: "",
@@ -68,7 +72,7 @@ window.TANG_SITE = {
       slug: "dawei-peng",
       name: "Dawei Peng",
       position: "Postdoctoral Fellow",
-      group: "research-staff",
+      group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
       email: "To be updated",
       photo: "",
@@ -80,8 +84,21 @@ window.TANG_SITE = {
     {
       slug: "ying",
       name: "Ying Yan",
-      position: "Group member",
-      group: "research-staff",
+      position: "Research Associate",
+      group: "research-associate",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "To be updated",
+      photo: "",
+      interests: ["To be updated"],
+      education: ["To be updated"],
+      positions: ["To be updated"],
+      publications: ["To be updated"]
+    },
+    {
+      slug: "xiaoliu-yang",
+      name: "Xiaoliu Yang",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
       email: "To be updated",
       photo: "",
@@ -220,6 +237,8 @@ window.TANG_SITE = {
     programUrl: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
     phd: "For admission to the PhD program, please contact Prof. Qiuhong Tang.",
     postdoc: "We are recruiting Postdocs and Research Associate. See details here.",
-    postdocUrl: "./public/assets/water-dessthu-postdoc.pdf"
+    postdocUrl: "./public/assets/water-dessthu-postdoc.pdf",
+    visitingScholar: "Visiting Scholar (Domestic)",
+    visitingScholarUrl: "https://www.tsinghua.edu.cn/zsjyc/info/1056/1250.htm"
   }
 };

@@ -144,10 +144,12 @@
   function renderPeople() {
     const lead = data.people.find(isPrincipalInvestigator);
     const members = data.people.filter((person) => person !== lead);
-    const researchStaff = members.filter((person) => (person.group || "").toLowerCase() === "research-staff");
+    const postdoctoralFellows = members.filter((person) => (person.group || "").toLowerCase() === "postdoctoral-fellow");
+    const researchAssociates = members.filter((person) => (person.group || "").toLowerCase() === "research-associate");
     const tocItems = [
       lead ? { id: "faculty", label: "Faculty" } : null,
-      researchStaff.length ? { id: "postdoctoral-fellow-and-research-associate", label: "Postdoctoral Fellow and Research Associate" } : null,
+      postdoctoralFellows.length ? { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" } : null,
+      researchAssociates.length ? { id: "research-associate", label: "Research Associate" } : null,
       { id: "graduate-student", label: "Graduate Student" }
     ].filter(Boolean);
 
@@ -161,16 +163,24 @@
             ${renderLeadPerson(lead)}
           </section>
         ` : ""}
-        ${researchStaff.length ? `
-          <section class="people-block" id="postdoctoral-fellow-and-research-associate">
-            ${renderPeopleBlockHeading("02", "Postdoctoral Fellow and Research Associate")}
-            <div class="member-grid" aria-label="Postdoctoral Fellow and Research Associate">
-              ${list(researchStaff, renderMemberRow)}
+        ${postdoctoralFellows.length ? `
+          <section class="people-block" id="postdoctoral-fellow">
+            ${renderPeopleBlockHeading("02", "Postdoctoral Fellow")}
+            <div class="member-grid compact-member-list" aria-label="Postdoctoral Fellow">
+              ${list(postdoctoralFellows, renderMemberRow)}
+            </div>
+          </section>
+        ` : ""}
+        ${researchAssociates.length ? `
+          <section class="people-block" id="research-associate">
+            ${renderPeopleBlockHeading("03", "Research Associate")}
+            <div class="member-grid compact-member-list" aria-label="Research Associate">
+              ${list(researchAssociates, renderMemberRow)}
             </div>
           </section>
         ` : ""}
         <section class="people-block" id="graduate-student">
-          ${renderPeopleBlockHeading("03", "Graduate Student")}
+          ${renderPeopleBlockHeading(researchAssociates.length ? "04" : "03", "Graduate Student")}
           <p class="empty-note">To be updated.</p>
         </section>
         </div>
@@ -193,25 +203,18 @@
 
   function renderLeadPerson(person) {
     return `
-      <article class="lead-person text-only-person">
-        <a class="card-link" href="${esc(personHref(person.slug))}" aria-label="Open ${esc(person.name)} profile"></a>
-        <div>
-          <h2>${esc(person.name)}</h2>
-          <p>${esc(person.position)}</p>
-          <small class="email-link">${esc(displayEmail(person.email))}</small>
-        </div>
+      <article class="lead-person text-only-person compact-person-row">
+        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a></h2>
+        <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
   }
 
   function renderMemberRow(person) {
     return `
-      <article class="member-row">
-        <a class="card-link" href="${esc(personHref(person.slug))}" aria-label="Open ${esc(person.name)} profile"></a>
-        <div>
-          <h2>${esc(person.name)}</h2>
-          <p>${esc(person.position)}</p>
-        </div>
+      <article class="member-row compact-person-row">
+        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a></h2>
+        <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
   }
@@ -225,7 +228,8 @@
           ${person.photo ? `<img src="${esc(assetUrl(person.photo))}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder large">${esc(person.name.charAt(0))}</div>`}
           <p class="profile-department">${esc(person.address)}</p>
           ${renderProfileTitles(person.position)}
-          <p class="profile-email">${esc(displayEmail(person.email))}</p>
+          <p class="profile-email plain-email">${esc(displayEmail(person.email))}</p>
+          ${renderProfileLinks(person.links)}
         </aside>
         <div class="detail-sections">
           ${renderDetailBlock("Research Interests", person.interests)}
@@ -235,6 +239,11 @@
         </div>
       </section>
     `;
+  }
+
+  function renderProfileLinks(links) {
+    if (!links || !links.length) return "";
+    return `<div class="profile-links">${list(links, (link) => `<a href="${esc(link.url)}" target="_blank" rel="noopener">${esc(link.label)}</a>`)}</div>`;
   }
 
   function renderProfileTitles(position) {
@@ -313,15 +322,23 @@
   }
 
   function renderNews() {
-    const [first, ...rest] = data.news;
+    const items = [...(data.news || [])].sort((a, b) => newsDateValue(b.date) - newsDateValue(a.date));
     return `
-      <section class="section news-layout">
-        ${first ? renderNewsFeature(first) : ""}
+      <section class="section news-layout compact-news-layout">
         <div class="news-lines">
-          ${list(rest, renderNewsLine)}
+          ${list(items, renderNewsLine)}
         </div>
       </section>
     `;
+  }
+
+  function newsDateValue(date) {
+    const source = String(date || "");
+    const full = source.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (full) return Date.parse(`${full[1]}-${full[2]}-${full[3]}T00:00:00Z`);
+    const year = source.match(/^(\d{4})$/);
+    if (year) return Date.parse(`${year[1]}-01-01T00:00:00Z`);
+    return 0;
   }
 
   function renderNewsFeature(item) {
@@ -343,13 +360,12 @@
 
   function renderNewsLine(item) {
     return `
-      <article class="news-line">
+      <article class="news-line compact-news-line">
         <div>
           <span>${esc(item.type)}${item.date ? ` / ${esc(item.date)}` : ""}</span>
           <h3>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}</h3>
           ${item.text ? `<p>${esc(item.text)}</p>` : ""}
         </div>
-        ${item.image ? `<img src="${esc(assetUrl(item.image))}" alt="" />` : ""}
       </article>
     `;
   }
@@ -358,7 +374,8 @@
     const tocItems = [
       { id: "global-research-program", label: "Research Program" },
       { id: "phd-admission", label: "PhD Admission" },
-      { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" }
+      { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" },
+      { id: "visiting-scholar-domestic", label: "Visiting Scholar" }
     ];
 
     return `
@@ -370,11 +387,14 @@
         <article class="content-section join-section" id="phd-admission">
           <h2>PhD admission</h2>
           <p>${esc(data.join.phd)}</p>
-          <p class="text-link">${esc(displayEmail(data.site.email))}</p>
+          <p class="plain-email">${esc(displayEmail(data.site.email))}</p>
         </article>
         <article class="content-section join-section" id="postdoctoral-fellow">
           <h2>Postdoctoral Fellow</h2>
           <p>${renderInlineLink(data.join.postdoc, "here", data.join.postdocUrl)}</p>
+        </article>
+        <article class="content-section join-section" id="visiting-scholar-domestic">
+          <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener">${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>
         </article>
       `)}
     `;
@@ -394,7 +414,7 @@
         <article>
           <h2>Email</h2>
           <p>For academic communication and admission inquiries, please contact the group through Prof. Qiuhong Tang.</p>
-          <p class="text-link">${esc(displayEmail(data.site.email))}</p>
+          <p class="plain-email">${esc(displayEmail(data.site.email))}</p>
         </article>
         <article>
           <h2>Faculty profile</h2>
