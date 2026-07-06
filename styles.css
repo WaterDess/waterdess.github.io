@@ -1340,3 +1340,99 @@ body[data-page="about"] .page-hero p {
     display: block;
   }
 }
+
+
+/* Refined people directory */
+.people-layout {
+  width: min(100% - 2em, 54rem);
+  grid-template-columns: 9.5rem minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  padding-top: clamp(2.4em, 5vw, 3.8em);
+}
+
+.people-layout .toc-sidebar nav {
+  padding-left: 0.72em;
+  border-left-color: rgba(19, 48, 43, 0.12);
+}
+
+.people-layout .toc-sidebar a {
+  color: rgba(81, 103, 98, 0.72);
+  font-size: 0.72em;
+  line-height: 1.65;
+}
+
+.people-content {
+  max-width: 44rem;
+}
+
+.people-block {
+  padding-top: 1.45em;
+}
+
+.people-block + .people-block {
+  margin-top: 0.4em;
+}
+
+.people-block-heading {
+  margin-bottom: 0.72em;
+  gap: 0.75em;
+}
+
+.people-block-heading span {
+  color: rgba(81, 103, 98, 0.5);
+  font-size: 0.48em;
+  font-weight: 620;
+}
+
+.people-block-heading h2 {
+  color: rgba(0, 28, 24, 0.92);
+  font-size: 0.76em;
+  font-weight: 620;
+  line-height: 1.25;
+}
+
+.compact-person-row {
+  grid-template-columns: minmax(0, 1fr) 12rem;
+  gap: clamp(1.5em, 3vw, 2.5em);
+  padding: 0.45em 0;
+  border-bottom-color: rgba(19, 48, 43, 0.12);
+}
+
+.lead-person.compact-person-row,
+.member-row.compact-person-row {
+  grid-template-columns: minmax(0, 1fr) 12rem;
+}
+
+.compact-person-row h2 {
+  font-size: 0.78em;
+  line-height: 1.45;
+}
+
+.compact-person-row .plain-email,
+.plain-email {
+  color: rgba(81, 103, 98, 0.78);
+  font-size: 0.68em;
+}
+
+.empty-note {
+  color: rgba(81, 103, 98, 0.7);
+  font-size: 0.68em;
+}
+
+@media (max-width: 760px) {
+  .people-layout {
+    width: min(100% - 2em, 54rem);
+    gap: 1.2rem;
+  }
+
+  .people-content {
+    max-width: none;
+  }
+
+  .compact-person-row,
+  .lead-person.compact-person-row,
+  .member-row.compact-person-row {
+    grid-template-columns: minmax(0, 1fr) minmax(7.5rem, max-content);
+    gap: 0.75rem;
+  }
+}
