@@ -709,14 +709,10 @@ body[data-page="about"] .page-hero p {
 .join-section h2 a {
   color: var(--text);
   background-image: none;
-  text-decoration-line: underline;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.08em;
+  text-decoration: none;
   transition: color 0.18s ease, text-decoration-color 0.18s ease, text-shadow 0.18s ease;
 }
 
-.lead-person .email-link,
 .person-detail aside a {
   color: var(--link);
 }
@@ -724,11 +720,10 @@ body[data-page="about"] .page-hero p {
 .news-feature h2 a:hover,
 .news-line h3 a:hover,
 .join-section h2 a:hover,
-.lead-person .email-link:hover,
 .person-detail aside a:hover,
 .text-link:hover {
   color: var(--link-hover);
-  text-decoration-color: currentColor;
+  text-decoration: none;
   text-shadow: 0 0 0.75em var(--link-glow);
 }
 
@@ -820,11 +815,6 @@ body[data-page="about"] .page-hero p {
   pointer-events: none;
 }
 
-.lead-person .email-link {
-  position: relative;
-  z-index: 3;
-  pointer-events: auto;
-}
 
 .member-row p {
   margin: 0;
@@ -1175,8 +1165,8 @@ body[data-page="about"] .page-hero p {
 
 .compact-person-row {
   display: grid;
-  grid-template-columns: minmax(11em, 0.42fr) minmax(10em, 0.58fr);
-  gap: 1em;
+  grid-template-columns: minmax(0, 1fr) max-content;
+  gap: 1.5em;
   align-items: baseline;
   min-height: 0;
   padding: 0.48em 0;
@@ -1212,8 +1202,8 @@ body[data-page="about"] .page-hero p {
 
 .compact-person-row h2 a:hover {
   color: var(--link-hover);
-  text-decoration: underline;
-  text-shadow: none;
+  text-decoration: none;
+  text-shadow: 0 0 0.75em var(--link-glow);
 }
 
 .compact-person-row .plain-email,
@@ -1223,6 +1213,31 @@ body[data-page="about"] .page-hero p {
   font-size: 0.72em;
   font-weight: 400;
   line-height: 1.45;
+}
+
+.compact-person-row > .plain-email {
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.lead-person.compact-person-row,
+.member-row.compact-person-row {
+  grid-template-columns: minmax(0, 1fr) max-content;
+}
+
+.news-line h3 a .link-icon {
+  display: inline-block;
+  margin-right: 0.45em;
+  color: var(--muted);
+  font-size: 0.78em;
+  line-height: 1;
+  transform: translateY(-0.04em);
+}
+
+.news-line h3 a:hover .link-icon {
+  color: var(--link-hover);
+  text-shadow: 0 0 0.75em var(--link-glow);
 }
 
 .compact-member-list {
@@ -1257,8 +1272,10 @@ body[data-page="about"] .page-hero p {
 
 
 @media (max-width: 760px) {
-  .compact-person-row {
-    grid-template-columns: 1fr;
-    gap: 0.12rem;
+  .compact-person-row,
+  .lead-person.compact-person-row,
+  .member-row.compact-person-row {
+    grid-template-columns: minmax(0, 1fr) max-content;
+    gap: 0.75rem;
   }
 }
