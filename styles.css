@@ -1469,3 +1469,23 @@ body[data-page="about"] .page-hero p {
   color: var(--link-hover);
   text-shadow: 0 0 0.75em var(--link-glow);
 }
+
+
+/* Linked headings */
+.join-section h2 a {
+  display: inline-flex;
+  gap: 0.45em;
+  align-items: baseline;
+}
+
+.join-section h2 a .link-icon {
+  color: var(--muted);
+  font-size: 0.72em;
+  line-height: 1;
+  opacity: 0.62;
+}
+
+.join-section h2 a:hover .link-icon {
+  color: var(--link-hover);
+  text-shadow: 0 0 0.75em var(--link-glow);
+}

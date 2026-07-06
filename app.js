@@ -379,7 +379,7 @@
     return `
       ${renderTocLayout(tocItems, `
         <article class="content-section join-section" id="global-research-program">
-          <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener">${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
+          <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
           <p>${esc(data.join.text)}</p>
         </article>
         <article class="content-section join-section" id="phd-admission">
@@ -392,7 +392,7 @@
           <p>${renderInlineLink(data.join.postdoc, "here", data.join.postdocUrl)}</p>
         </article>
         <article class="content-section join-section" id="visiting-scholar-domestic">
-          <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener">${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>
+          <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>
         </article>
       `)}
     `;
