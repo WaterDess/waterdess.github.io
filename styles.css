@@ -1664,6 +1664,56 @@ body:not([data-page="home"]) .person-detail {
   margin: 0.52rem 0 0;
 }
 
+body[data-page="research"] .research-section {
+  display: block;
+  padding: 0 0 1.45rem;
+}
+
+body[data-page="research"] .research-section::before {
+  display: none;
+}
+
+body[data-page="research"] .research-section + .research-section {
+  margin-top: 0.6rem;
+}
+
+body[data-page="research"] .research-section .people-block-heading {
+  margin-bottom: 0.72rem;
+}
+
+body[data-page="research"] .research-section > .empty-note {
+  margin: 0;
+  text-align: left;
+  justify-self: start;
+}
+
+body[data-page="research"] .research-data-row,
+body[data-page="research"] .research-data-row.compact-person-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0.34rem 0;
+}
+
+body[data-page="research"] .research-data-row h2 {
+  margin: 0;
+  font-size: 0.76rem;
+  font-weight: 460;
+  line-height: 1.42;
+}
+
+body[data-page="research"] .research-data-row h2 a {
+  color: var(--ink);
+  font-weight: 460;
+  text-decoration: none;
+  background-image: none;
+}
+
+body[data-page="research"] .research-data-row h2 a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+  text-shadow: 0 0 0.75em var(--link-glow);
+}
+
 .research-section figure,
 .research-section img,
 .news-line img,

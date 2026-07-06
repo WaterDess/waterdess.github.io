@@ -283,14 +283,12 @@
 
     return `
       ${pageIntro("Research", "Work", "Projects, code, and shared hydrologic datasets")}
-      ${renderTocLayout(tocItems, list(data.research, (item) => `
+      ${renderTocLayout(tocItems, list(data.research, (item, index) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
-          <span class="research-kicker">${esc(item.title)}</span>
-          <div>
-            ${item.url
-              ? `<h2 class="research-link-title"><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2>`
-              : `<h2>${esc(item.title)}</h2>${item.text ? `<p>${esc(item.text)}</p>` : ""}`}
-          </div>
+          ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
+          ${item.url
+            ? `<article class="research-data-row compact-person-row"><h2><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`
+            : `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`}
         </section>
       `))}
     `;
