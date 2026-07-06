@@ -2033,13 +2033,11 @@ body[data-page="news"] .compact-news-line > div {
 }
 
 body[data-page="news"] .compact-news-line {
-  padding: 0.76rem 0 0.7rem;
+  padding: 0.54rem 0 0.5rem;
 }
 
 body[data-page="news"] .compact-news-line h3::before {
-  left: 0;
-  top: -0.38rem;
-  width: 1.15rem;
+  display: none;
 }
 
 body[data-page="about"] .large-copy,
