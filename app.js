@@ -364,7 +364,6 @@
         <div>
           <span>${esc(item.type)}${item.date ? ` / ${esc(item.date)}` : ""}</span>
           <h3>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
-          ${item.text ? `<p>${esc(item.text)}</p>` : ""}
         </div>
       </article>
     `;
