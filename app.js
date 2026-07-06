@@ -275,10 +275,9 @@
       ${renderTocLayout(tocItems, list(data.research, (item) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
           <div>
-            <span>${esc(item.status)}</span>
-            <h2>${esc(item.title)}</h2>
-            ${item.text ? `<p>${esc(item.text)}</p>` : `<p>Content will be updated as the group website develops.</p>`}
-            ${item.url ? `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.urlLabel || "Open link")}</a>` : ""}
+            ${item.url
+              ? `<h2 class="research-link-title"><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2>`
+              : `<h2>${esc(item.title)}</h2>${item.text ? `<p>${esc(item.text)}</p>` : ""}`}
           </div>
           <figure>
             <img src="${esc(assetUrl(item.image || data.visuals.research))}" alt="" />
