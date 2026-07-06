@@ -84,6 +84,15 @@
     `;
   }
 
+  function pageIntro(title, kicker, summary = "") {
+    return `
+      <header class="section page-intro">
+        <span>${esc(kicker)}</span>
+        <h1>${esc(title)}</h1>
+        ${summary ? `<p>${esc(summary)}</p>` : ""}
+      </header>
+    `;
+  }
   function renderToc(items) {
     return `
       <aside class="toc-sidebar" aria-label="Section navigation">
@@ -123,7 +132,7 @@
 
   function renderAbout() {
     return `
-      ${pageHero("About", "THU Global Change Hydrology Group", "")}
+      ${pageIntro("About", "Group", "THU Global Change Hydrology Group")}
       <section class="section about-layout">
         <article class="large-copy">
           <p>${esc(data.site.summary)}</p>
@@ -154,6 +163,7 @@
     ].filter(Boolean);
 
     return `
+      ${pageIntro("People", "Directory", "Faculty, postdoctoral fellows, research associates, and students")}
       <section class="section people-layout">
         ${renderToc(tocItems)}
         <div class="people-content">
@@ -222,7 +232,7 @@
   function renderPersonDetail() {
     const person = data.people.find((item) => item.slug === personSlug) || data.people[0];
     return `
-      ${pageHero("People", person.name, "")}
+      ${pageIntro(person.name, "People", person.position || "")}
       <section class="section person-detail">
         <aside class="profile-summary">
           ${person.photo ? `<img src="${esc(assetUrl(person.photo))}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder large">${esc(person.name.charAt(0))}</div>`}
@@ -272,6 +282,7 @@
     }));
 
     return `
+      ${pageIntro("Research", "Work", "Projects, code, and shared hydrologic datasets")}
       ${renderTocLayout(tocItems, list(data.research, (item) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
           <span class="research-kicker">${esc(item.title)}</span>
@@ -290,6 +301,7 @@
     const tocItems = years.map((year) => ({ id: `year-${year}`, label: String(year) }));
 
     return `
+      ${pageIntro("Publications", "Archive", "A curated list will be updated manually")}
       ${renderTocLayout(tocItems, list(years, (year) => `
         <section class="content-section publication-year" id="year-${esc(year)}">
           <h2>${esc(year)}</h2>
@@ -321,6 +333,7 @@
   function renderNews() {
     const items = [...(data.news || [])].sort((a, b) => newsDateValue(b.date) - newsDateValue(a.date));
     return `
+      ${pageIntro("News", "Updates", "Seminars, calls, and group announcements")}
       <section class="section news-layout compact-news-layout">
         <div class="news-lines">
           ${list(items, renderNewsLine)}
@@ -375,6 +388,7 @@
     ];
 
     return `
+      ${pageIntro("How to join?", "Openings", "Research programs, admission, and visitor opportunities")}
       ${renderTocLayout(tocItems, `
         <article class="content-section join-section" id="global-research-program">
           <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
