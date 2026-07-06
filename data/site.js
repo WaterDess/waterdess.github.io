@@ -143,6 +143,14 @@ window.TANG_SITE = {
       image: "./public/assets/seminar-allen-hunt-20260630.jpg"
     },
     {
+      date: "2026-06-15 16:00-17:00",
+      type: "Seminar",
+      title: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness",
+      text: "Prof. Xu Liang will give Global Change Science Zijing Forum No. 565 on land surface modeling progress, complexity, reliability, and robustness.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm",
+      urlLabel: "Read announcement"
+    },
+    {
       date: "2026-06-11 15:00-17:00",
       type: "Seminar",
       title: "Cast3: Translating numerical weather prediction principles into data-driven forecasting",
@@ -155,6 +163,46 @@ window.TANG_SITE = {
       title: "Spatial Generalization Tests for Machine Learning-based Weather Models to Assess Physical Consistency",
       text: "Maren H枚ver will discuss spatial generalization tests for machine learning-based weather and climate models.",
       image: "./public/assets/seminar-maren-hover-20260611.jpg"
+    },
+    {
+      date: "2026-05-29 15:30-17:00",
+      type: "Seminar",
+      title: "澳大利亚水文预报二十年：从大旱到洪灾的应对与启示",
+      text: "Prof. Quanjun Wang will give Global Change Science Zijing Forum No. 563 on two decades of hydrological forecasting in Australia.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm",
+      urlLabel: "Read announcement"
+    },
+    {
+      date: "2026-05-21 16:40-17:40",
+      type: "Seminar",
+      title: "通用陆面模式（CoLM）：水文与农业过程模拟的新进展",
+      text: "Associate Prof. Shulei Zhang will give Global Change Science Zijing Forum No. 562 on recent advances in hydrological and agricultural process simulation with CoLM.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm",
+      urlLabel: "Read announcement"
+    },
+    {
+      date: "2026-05-21 15:30-16:30",
+      type: "Seminar",
+      title: "从信息聚合到知识共创：水文青年科研新方式探索",
+      text: "Dr. Xudong Zhou will give Global Change Science Zijing Forum No. 561 on new modes of youth hydrology research collaboration.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm",
+      urlLabel: "Read announcement"
+    },
+    {
+      date: "2026-02-02 10:00-12:00",
+      type: "Seminar",
+      title: "河流碳横向输移与碳温室气体逃逸协同过程及其精准评估",
+      text: "Dr. Yang Gao will give Global Change Science Zijing Forum No. 549 on riverine lateral carbon transport and greenhouse gas evasion.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm",
+      urlLabel: "Read announcement"
+    },
+    {
+      date: "2025-12-01 10:00-11:30",
+      type: "Seminar",
+      title: "陆-气界面水热传输的模拟与数据同化",
+      text: "Prof. Jianzhi Dong will give Global Change Science Zijing Forum No. 539 on simulation and data assimilation of water and heat transfer across the land-atmosphere interface.",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm",
+      urlLabel: "Read announcement"
     },
     {
       date: "2026",
