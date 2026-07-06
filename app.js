@@ -447,6 +447,28 @@
     `;
   }
 
+  function fitPlainEmails() {
+    document.querySelectorAll(".plain-email").forEach((email) => {
+      email.style.fontSize = "";
+      const baseSize = parseFloat(window.getComputedStyle(email).fontSize);
+      if (!baseSize || email.scrollWidth <= email.clientWidth) return;
+
+      const minSize = 7.5;
+      let nextSize = baseSize;
+      while (nextSize > minSize && email.scrollWidth > email.clientWidth) {
+        nextSize -= 0.5;
+        email.style.fontSize = `${nextSize}px`;
+      }
+    });
+  }
+
+  function setupResponsiveEmailFit() {
+    fitPlainEmails();
+    window.addEventListener("resize", () => {
+      window.clearTimeout(window.__plainEmailFitTimer);
+      window.__plainEmailFitTimer = window.setTimeout(fitPlainEmails, 90);
+    });
+  }
   const renderers = {
     home: renderHome,
     about: renderAbout,
@@ -466,4 +488,5 @@
 
   setupChrome();
   app.innerHTML = (renderers[page] || renderHome)();
+  setupResponsiveEmailFit();
 })();

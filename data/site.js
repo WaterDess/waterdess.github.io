@@ -28,7 +28,7 @@ window.TANG_SITE = {
     {
       slug: "qiuhong-tang",
       name: "Qiuhong Tang",
-      position: "Professor; Principal Investigator",
+      position: "Professor",
       group: "faculty",
       address: "Department of Earth System Science, Tsinghua University",
       email: "tangqh (at) tsinghua.edu.cn",
