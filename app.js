@@ -342,6 +342,14 @@
     `;
   }
 
+  function displayNewsDate(date) {
+    return String(date || "").replace(/\s+\d{1,2}:\d{2}.*$/, "");
+  }
+
+  function renderNewsMeta(item) {
+    const parts = [item.type, item.date ? displayNewsDate(item.date) : "", item.forum || "", item.speaker || ""].filter(Boolean);
+    return parts.join(" / ");
+  }
   function newsDateValue(date) {
     const source = String(date || "");
     const full = source.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -372,8 +380,8 @@
     return `
       <article class="news-line compact-news-line">
         <div>
-          <span>${esc(item.type)}${item.date ? ` / ${esc(item.date)}` : ""}</span>
-          <h3>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}${item.forum ? `<br /><small>${esc(item.forum)}</small>` : ""}</h3>
+          <span>${esc(renderNewsMeta(item))}</span>
+          <h3>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
         </div>
       </article>
     `;

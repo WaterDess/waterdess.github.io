@@ -165,6 +165,7 @@ window.TANG_SITE = {
       title: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness",
       text: "Prof. Xu Liang will give Global Change Science Zijing Forum No. 565 on land surface modeling progress, complexity, reliability, and robustness.",
       forum: "Global Change Science Zijing Forum No. 565",
+      speaker: "Xu Liang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm",
       urlLabel: "Read announcement"
     },
@@ -188,6 +189,7 @@ window.TANG_SITE = {
       title: "Two Decades of Hydrological Forecasting in Australia: Responses and Lessons from Drought to Flood",
       text: "Prof. Quanjun Wang will give Global Change Science Zijing Forum No. 563 on two decades of hydrological forecasting in Australia.",
       forum: "Global Change Science Zijing Forum No. 563",
+      speaker: "Quanjun Wang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm",
       urlLabel: "Read announcement"
     },
@@ -197,6 +199,7 @@ window.TANG_SITE = {
       title: "The Common Land Model (CoLM): Recent Advances in Hydrological and Agricultural Process Simulation",
       text: "Associate Prof. Shulei Zhang will give Global Change Science Zijing Forum No. 562 on recent advances in hydrological and agricultural process simulation with CoLM.",
       forum: "Global Change Science Zijing Forum No. 562",
+      speaker: "Shulei Zhang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm",
       urlLabel: "Read announcement"
     },
@@ -206,6 +209,7 @@ window.TANG_SITE = {
       title: "From Information Aggregation to Knowledge Co-creation: Exploring New Modes of Youth Hydrology Research",
       text: "Dr. Xudong Zhou will give Global Change Science Zijing Forum No. 561 on new modes of youth hydrology research collaboration.",
       forum: "Global Change Science Zijing Forum No. 561",
+      speaker: "Xudong Zhou",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm",
       urlLabel: "Read announcement"
     },
@@ -215,6 +219,7 @@ window.TANG_SITE = {
       title: "Coupled Riverine Lateral Carbon Transport and Greenhouse Gas Evasion: Processes and Assessment",
       text: "Dr. Yang Gao will give Global Change Science Zijing Forum No. 549 on riverine lateral carbon transport and greenhouse gas evasion.",
       forum: "Global Change Science Zijing Forum No. 549",
+      speaker: "Yang Gao",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm",
       urlLabel: "Read announcement"
     },
@@ -224,6 +229,7 @@ window.TANG_SITE = {
       title: "Simulation and Data Assimilation of Water and Heat Transfer Across the Land-Atmosphere Interface",
       text: "Prof. Jianzhi Dong will give Global Change Science Zijing Forum No. 539 on simulation and data assimilation of water and heat transfer across the land-atmosphere interface.",
       forum: "Global Change Science Zijing Forum No. 539",
+      speaker: "Jianzhi Dong",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm",
       urlLabel: "Read announcement"
     },
