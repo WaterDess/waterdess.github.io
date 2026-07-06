@@ -376,12 +376,18 @@
     `;
   }
 
+  function newsLinkTarget(item) {
+    if (item.url) return item.url;
+    if (item.image) return assetUrl(item.image);
+    if (item.flyerUrl) return assetUrl(item.flyerUrl);
+    return "";
+  }
   function renderNewsLine(item) {
     return `
       <article class="news-line compact-news-line">
         <div>
           <span>${esc(renderNewsMeta(item))}</span>
-          <h3>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
+          <h3>${newsLinkTarget(item) ? `<a href="${esc(newsLinkTarget(item))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
         </div>
       </article>
     `;
