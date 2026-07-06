@@ -274,6 +274,7 @@
     return `
       ${renderTocLayout(tocItems, list(data.research, (item) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
+          <span class="research-kicker">${esc(item.title)}</span>
           <div>
             ${item.url
               ? `<h2 class="research-link-title"><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2>`
