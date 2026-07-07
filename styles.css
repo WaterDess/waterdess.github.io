@@ -81,6 +81,12 @@ body[data-page="person"] {
   --content-rail: var(--detail-rail);
 }
 
+body[data-page="publications"] {
+  --toc-aside: 4.2rem;
+  --toc-gap: clamp(1rem, 2vw, 1.45rem);
+  --toc-main: 48rem;
+}
+
 body[data-page="person"] .page-hero {
   text-align: center;
 }
@@ -1625,7 +1631,7 @@ body:not([data-page="home"]) .about-layout {
 
 .compact-person-row h2 {
   margin: 0;
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 460;
   line-height: 1.42;
 }
@@ -1722,7 +1728,7 @@ body:not([data-page="home"]) .about-layout {
 .person-detail aside p,
 .person-detail aside a {
   color: var(--ink-soft);
-  font-size: 0.7rem;
+  font-size: 0.76rem;
   line-height: 1.72;
 }
 
@@ -1827,10 +1833,8 @@ body[data-page="research"] .research-data-row h2 a:hover {
 
 .publication {
   position: relative;
-  display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr);
-  gap: 1.35rem;
-  padding: 0.42rem 0 0.9rem;
+  display: block;
+  padding: 0.32rem 0 0.72rem;
   border-bottom: 0;
 }
 
@@ -1842,7 +1846,7 @@ body[data-page="research"] .research-data-row h2 a:hover {
 .publication time {
   margin: 0;
   color: rgba(12, 36, 31, 0.52);
-  font-size: 0.6rem;
+  font-size: 0.66rem;
   font-weight: 480;
   line-height: 1.5;
 }
@@ -1871,8 +1875,8 @@ body[data-page="research"] .research-data-row h2 a:hover {
   color: var(--ink);
   background: transparent;
   border: 0;
-  font-size: 1.02rem;
-  line-height: 1.66;
+  font-size: 0.82rem;
+  line-height: 1.7;
 }
 
 .large-copy p + p {
@@ -2138,6 +2142,30 @@ body[data-page="news"] .compact-news-line {
 
 body[data-page="news"] .compact-news-line h3::before {
   display: none;
+}
+
+body[data-page="people"] .people-layout {
+  display: block;
+  width: min(100% - 2rem, 42rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body[data-page="people"] .people-content {
+  width: 100%;
+  max-width: none;
+}
+
+body[data-page="people"] .compact-person-row,
+body[data-page="people"] .lead-person.compact-person-row,
+body[data-page="people"] .member-row.compact-person-row {
+  display: block;
+  padding: 0.28rem 0;
+}
+
+body[data-page="people"] .compact-person-row h2 {
+  display: block;
+  margin: 0;
 }
 
 body[data-page="about"] .large-copy,

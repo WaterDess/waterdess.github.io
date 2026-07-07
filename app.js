@@ -154,17 +154,10 @@
     const members = data.people.filter((person) => person !== lead);
     const postdoctoralFellows = members.filter((person) => (person.group || "").toLowerCase() === "postdoctoral-fellow");
     const researchAssociates = members.filter((person) => (person.group || "").toLowerCase() === "research-associate");
-    const tocItems = [
-      lead ? { id: "faculty", label: "Faculty" } : null,
-      postdoctoralFellows.length ? { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" } : null,
-      researchAssociates.length ? { id: "research-associate", label: "Research Associate" } : null,
-      { id: "graduate-student", label: "Graduate Student" }
-    ].filter(Boolean);
 
     return `
       ${pageIntro("People", "Directory", "Faculty, postdoctoral fellows, research associates, and students")}
       <section class="section people-layout">
-        ${renderToc(tocItems)}
         <div class="people-content">
         ${lead ? `
           <section class="people-block people-block-feature" id="faculty">
@@ -213,8 +206,7 @@
   function renderLeadPerson(person) {
     return `
       <article class="lead-person text-only-person compact-person-row">
-        <h2><a href="${esc(personHref(person.slug))}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(person.name)}</a></h2>
-        <small class="plain-email">${esc(displayEmail(person.email))}</small>
+        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a>, ${esc(displayEmail(person.email))}</h2>
       </article>
     `;
   }
@@ -222,8 +214,7 @@
   function renderMemberRow(person) {
     return `
       <article class="member-row compact-person-row">
-        <h2><a href="${esc(personHref(person.slug))}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(person.name)}</a></h2>
-        <small class="plain-email">${esc(displayEmail(person.email))}</small>
+        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a>, ${esc(displayEmail(person.email))}</h2>
       </article>
     `;
   }
@@ -324,7 +315,6 @@
   function renderPublication(paper) {
     return `
       <article class="publication">
-        <time>${esc(paper.year)}</time>
         <div>
           <h2>${esc(paper.title)}</h2>
           <p>${esc(paper.authors)}</p>
@@ -332,7 +322,7 @@
             <span>${esc(paper.journal)}</span>
             ${paper.url ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${esc(paper.doi || "Link")}</a>` : ""}
           </footer>
-          <small>${esc(paper.highlight)}</small>
+          ${paper.highlight ? `<small>${esc(paper.highlight)}</small>` : ""}
         </div>
       </article>
     `;
@@ -355,7 +345,7 @@
   }
 
   function renderNewsMeta(item) {
-    const parts = [item.type, item.date ? displayNewsDate(item.date) : "", item.forum || "", item.speaker || ""].filter(Boolean);
+    const parts = [item.type, item.date ? displayNewsDate(item.date) : "", item.speaker || ""].filter(Boolean);
     return parts.join(" / ");
   }
   function newsDateValue(date) {

@@ -191,13 +191,31 @@ window.TANG_SITE = {
   ],
   publications: [
     {
-      title: "Selected publications affiliated with Department of Earth System Science, Tsinghua University will be updated manually.",
-      authors: "GCH Group",
-      journal: "To be updated",
+      title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",
+      authors: "Wang, J., Zhang, Q., Bao, H., Yun, X., Chang, Y., and Tang, Q.",
+      journal: "Journal of Hydrometeorology, 27(6), 801-821",
       year: 2026,
-      doi: "",
-      url: "",
-      highlight: "This page intentionally lists manually curated publications only."
+      doi: "10.1175/JHM-D-26-0019.1",
+      url: "https://doi.org/10.1175/JHM-D-26-0019.1",
+      highlight: ""
+    },
+    {
+      title: "Unravelling global patterns of drought-flood alternations",
+      authors: "Haile, G. G., Islam, M. S., Tang, Q., and Wood, D.",
+      journal: "Journal of Hydrology, 676, 135718",
+      year: 2026,
+      doi: "10.1016/j.jhydrol.2026.135718",
+      url: "https://doi.org/10.1016/j.jhydrol.2026.135718",
+      highlight: ""
+    },
+    {
+      title: "Rapid decline of ice thickness across Finnish lakes",
+      authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Mahdian, M., Hosseinzadeh, M., Kianmehr, P., Asl-Rousta, B., Zhu, S., Gu, X., Saari, M., Kolehmainen, M., Zhang, Y., Sharma, S., Tang, Q., and Woolway, R. I.",
+      journal: "International Journal of Applied Earth Observation and Geoinformation, 149, 105293",
+      year: 2026,
+      doi: "10.1016/j.jag.2026.105293",
+      url: "https://doi.org/10.1016/j.jag.2026.105293",
+      highlight: ""
     }
   ],
   news: [
@@ -216,6 +234,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Linking Global Cycles Across Scales Based on Ecohydrological Optimality for the Water Balance",
       text: "Allen Hunt will give a seminar on ecohydrological principles, water balance, and global-scale hydrological fluxes.",
+      speaker: "Prof. Allen Hunt",
       image: "./public/assets/seminar-allen-hunt-20260630.jpg"
     },
     {
@@ -223,8 +242,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness",
       text: "Prof. Xu Liang will give Global Change Science Zijing Forum No. 565 on land surface modeling progress, complexity, reliability, and robustness.",
-      forum: "Global Change Science Zijing Forum No. 565",
-      speaker: "Xu Liang",
+      speaker: "Prof. Xu Liang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm",
       urlLabel: "Read announcement"
     },
@@ -233,6 +251,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Cast3: Translating numerical weather prediction principles into data-driven forecasting",
       text: "Congyi Nai will present Cast3, a generative forecasting framework that absorbs numerical weather prediction knowledge for data-driven Earth system modelling.",
+      speaker: "Mr. Congyi Nai",
       image: "./public/assets/seminar-congyi-nai-20260611.jpg"
     },
     {
@@ -240,6 +259,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Spatial Generalization Tests for Machine Learning-based Weather Models to Assess Physical Consistency",
       text: "Maren Hover will discuss spatial generalization tests for machine learning-based weather and climate models.",
+      speaker: "Ms. Maren Höver",
       image: "./public/assets/seminar-maren-hover-20260611.jpg"
     },
     {
@@ -247,8 +267,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Two Decades of Hydrological Forecasting in Australia: Responses and Lessons from Drought to Flood",
       text: "Prof. Quanjun Wang will give Global Change Science Zijing Forum No. 563 on two decades of hydrological forecasting in Australia.",
-      forum: "Global Change Science Zijing Forum No. 563",
-      speaker: "Quanjun Wang",
+      speaker: "Prof. Quanjun Wang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm",
       urlLabel: "Read announcement"
     },
@@ -257,8 +276,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "The Common Land Model (CoLM): Recent Advances in Hydrological and Agricultural Process Simulation",
       text: "Associate Prof. Shulei Zhang will give Global Change Science Zijing Forum No. 562 on recent advances in hydrological and agricultural process simulation with CoLM.",
-      forum: "Global Change Science Zijing Forum No. 562",
-      speaker: "Shulei Zhang",
+      speaker: "Prof. Shulei Zhang",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm",
       urlLabel: "Read announcement"
     },
@@ -267,8 +285,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "From Information Aggregation to Knowledge Co-creation: Exploring New Modes of Youth Hydrology Research",
       text: "Dr. Xudong Zhou will give Global Change Science Zijing Forum No. 561 on new modes of youth hydrology research collaboration.",
-      forum: "Global Change Science Zijing Forum No. 561",
-      speaker: "Xudong Zhou",
+      speaker: "Dr. Xudong Zhou",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm",
       urlLabel: "Read announcement"
     },
@@ -277,8 +294,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Coupled Riverine Lateral Carbon Transport and Greenhouse Gas Evasion: Processes and Assessment",
       text: "Dr. Yang Gao will give Global Change Science Zijing Forum No. 549 on riverine lateral carbon transport and greenhouse gas evasion.",
-      forum: "Global Change Science Zijing Forum No. 549",
-      speaker: "Yang Gao",
+      speaker: "Dr. Yang Gao",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm",
       urlLabel: "Read announcement"
     },
@@ -287,8 +303,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Simulation and Data Assimilation of Water and Heat Transfer Across the Land-Atmosphere Interface",
       text: "Prof. Jianzhi Dong will give Global Change Science Zijing Forum No. 539 on simulation and data assimilation of water and heat transfer across the land-atmosphere interface.",
-      forum: "Global Change Science Zijing Forum No. 539",
-      speaker: "Jianzhi Dong",
+      speaker: "Prof. Jianzhi Dong",
       url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm",
       urlLabel: "Read announcement"
     },
