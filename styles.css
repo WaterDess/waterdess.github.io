@@ -1362,6 +1362,14 @@ body:not([data-page="home"]) .page-hero {
   line-height: 1.72;
 }
 
+body:not([data-page="home"]):not([data-page="person"]) .page-intro {
+  padding-bottom: clamp(0.85rem, 1.7vw, 1.35rem);
+}
+
+body:not([data-page="home"]):not([data-page="person"]) .page-intro h1 {
+  display: none;
+}
+
 body:not([data-page="home"]) .section,
 body:not([data-page="home"]) .toc-layout,
 body:not([data-page="home"]) .people-layout,
