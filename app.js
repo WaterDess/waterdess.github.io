@@ -319,22 +319,13 @@
     const title = paper.url
       ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(paper.title)}</a>`
       : esc(paper.title);
-    const meta = [paper.date || paper.year, paper.journal, paper.authorShort || firstAuthors(paper.authors, 3)].filter(Boolean).join(" / ");
+    const meta = [paper.date || paper.year, paper.journal].filter(Boolean).join(" / ");
     return `
       <article class="publication">
         <span class="publication-meta">${esc(meta)}</span>
         <h2>${title}</h2>
       </article>
     `;
-  }
-
-  function firstAuthors(authors, count) {
-    return String(authors || "")
-      .replace(/,\s+and\s+/g, ", ")
-      .split(", ")
-      .filter(Boolean)
-      .slice(0, count)
-      .join(", ");
   }
 
   function renderNews() {
