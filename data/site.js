@@ -162,8 +162,8 @@ window.TANG_SITE = {
         { text: "Yang, X., Qin, X., and Gao, L. (2026). A Copula-XAI framework for assessing compound typhoon disaster-chain risks and driving mechanisms in coastal mountainous cities: Evidence from Fujian, China. Journal of Hydrology: Regional Studies, 64, 103284. doi: 10.1016/j.ejrh.2026.103284.", url: "https://doi.org/10.1016/j.ejrh.2026.103284" },
         "Yang, X., and Gao, L. Spatiotemporal dynamics and machine learning-driven drivers of urban resilience to typhoon disaster chains in Fujian, China. International Journal of Disaster Risk Science.",
         "Yang, X., and Gao, L. Compound patterns and driving mechanisms of typhoon disaster chains in Southeast Coastal China: A multiscale framework. Climate Services.",
-        { text: "Yang, X., Wang, P., Gao, D., et al. (2020). Accuracy assessment and variation characteristics of MSWEP precipitation data in the Qinba Mountains from 1979 to 2014. Research of Soil and Water Conservation, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.", url: "https://doi.org/10.13869/j.cnki.rswc.2020.06.020" },
-        { text: "Yang, X., Wang, P., and Gao, D. (2019). Climate change characteristics of Wumeng Mountain National Nature Reserve from 1971 to 2015. Journal of Northeast Forestry University, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013.", url: "https://doi.org/10.13759/j.cnki.dlxb.2019.09.013" }
+        { text: "杨晓柳, 王平, 高大威, 等. (2020). 1979-2014年秦巴山区MSWEP降水数据精度评估及变化特征分析. 水土保持研究, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.", url: "https://doi.org/10.13869/j.cnki.rswc.2020.06.020" },
+        { text: "杨晓柳, 王平, 高大威. (2019). 1971-2015年乌蒙山国家级自然保护区气候变化特征. 东北林业大学学报, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013.", url: "https://doi.org/10.13759/j.cnki.dlxb.2019.09.013" }
       ]
     }
   ],
