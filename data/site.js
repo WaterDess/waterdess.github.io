@@ -120,6 +120,9 @@ window.TANG_SITE = {
       address: "Department of Earth System Science, Tsinghua University",
       email: "yanying (at) mail.tsinghua.edu.cn",
       photo: "./public/assets/ying-yan.jpg",
+      links: [
+        { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=gc-TisYAAAAJ" }
+      ],
       interests: ["Hydrology", "Numerical modeling", "Deep learning", "Large language models"],
       education: [
         "M.S. in Urban Water Affairs, Hohai University, 2024",
