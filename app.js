@@ -278,7 +278,7 @@
     if (item && typeof item === "object") {
       const text = item.text || item.title || "";
       const content = item.url
-        ? `<a class="detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(text)}</a>`
+        ? `<a class="detail-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(text)}</a>`
         : esc(text);
       return `<li>${content}</li>`;
     }
