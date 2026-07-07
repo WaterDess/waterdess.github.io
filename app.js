@@ -70,20 +70,6 @@
     });
   }
 
-  function pageHero(kicker, title, subtitle, alignedWithToc = false) {
-    const className = alignedWithToc ? "page-hero page-hero-with-toc" : "page-hero";
-
-    return `
-      <section class="${className}">
-        <div>
-          <span>${esc(kicker)}</span>
-          <h1>${esc(title)}</h1>
-          ${subtitle ? `<p>${esc(subtitle)}</p>` : ""}
-        </div>
-      </section>
-    `;
-  }
-
   function pageIntro(title, kicker, summary = "") {
     return `
       <header class="section page-intro">
@@ -357,23 +343,6 @@
     return 0;
   }
 
-  function renderNewsFeature(item) {
-    return `
-      <article class="news-feature">
-        <div>
-          <span>${esc(item.type)} / ${esc(item.date)}</span>
-          <h2>${item.url ? `<a href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.title)}</a>` : esc(item.title)}</h2>
-          <p>${esc(item.text)}</p>
-          <div class="link-row">
-            ${item.url ? `<a class="text-link" href="${esc(item.url)}" target="_blank" rel="noopener">${esc(item.urlLabel || "Learn more")}</a>` : ""}
-            ${item.flyerUrl ? `<a class="text-link secondary" href="${esc(assetUrl(item.flyerUrl))}" target="_blank" rel="noopener">PDF</a>` : ""}
-          </div>
-        </div>
-        <img src="${esc(assetUrl(item.image || data.visuals.news))}" alt="" />
-      </article>
-    `;
-  }
-
   function newsLinkTarget(item) {
     if (item.url) return item.url;
     if (item.image) return assetUrl(item.image);
@@ -436,31 +405,6 @@
     `;
   }
 
-  function renderInlineLink(text, label, url) {
-    const source = String(text || "");
-    const index = source.lastIndexOf(label);
-    if (!url || index < 0) return esc(source);
-
-    return `${esc(source.slice(0, index))}<a href="${esc(assetUrl(url))}" target="_blank" rel="noopener">${esc(label)}</a>${esc(source.slice(index + label.length))}`;
-  }
-
-  function renderContact() {
-    return `
-      <section class="section join-layout">
-        <article>
-          <h2>Email</h2>
-          <p>For academic communication and admission inquiries, please contact the group through Prof. Qiuhong Tang.</p>
-          <p class="plain-email">${esc(displayEmail(data.site.email))}</p>
-        </article>
-        <article>
-          <h2>Faculty profile</h2>
-          <p>Additional faculty information is available from the official Tsinghua University profile page.</p>
-          <a class="text-link" href="${esc(data.site.website)}" target="_blank" rel="noopener">Open faculty profile</a>
-        </article>
-      </section>
-    `;
-  }
-
   function fitPlainEmails() {
     document.querySelectorAll(".plain-email").forEach((email) => {
       email.style.fontSize = "";
@@ -491,8 +435,7 @@
     research: renderResearch,
     publications: renderPublications,
     news: renderNews,
-    join: renderJoin,
-    contact: renderContact
+    join: renderJoin
   };
 
   if (!data) {
