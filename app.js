@@ -390,33 +390,48 @@
   }
 
   function renderJoin() {
-    const tocItems = [
-      { id: "global-research-program", label: "Research Program" },
-      { id: "phd-admission", label: "PhD Admission" },
-      { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" },
-      { id: "visiting-scholar-domestic", label: "Visiting Scholar" }
+    const joinItems = [
+      {
+        id: "global-research-program",
+        label: "Research Program",
+        title: data.join.program,
+        text: data.join.text,
+        url: data.join.programUrl
+      },
+      {
+        id: "phd-admission",
+        label: "PhD Admission",
+        title: "PhD admission",
+        text: data.join.phd,
+        email: displayEmail(data.site.email)
+      },
+      {
+        id: "postdoctoral-fellow",
+        label: "Postdoctoral Fellow",
+        title: "Postdoctoral Fellow",
+        text: data.join.postdoc,
+        url: assetUrl(data.join.postdocUrl)
+      },
+      {
+        id: "visiting-scholar-domestic",
+        label: "Visiting Scholar",
+        title: data.join.visitingScholar,
+        url: data.join.visitingScholarUrl
+      }
     ];
+    const tocItems = joinItems.map((item) => ({ id: item.id, label: item.label }));
 
     return `
       ${pageIntro("How to join?", "Openings", "Research programs, admission, and visitor opportunities")}
-      ${renderTocLayout(tocItems, `
-        <article class="content-section join-section" id="global-research-program">
-          <h2>${data.join.programUrl ? `<a href="${esc(data.join.programUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.program)}</a>` : esc(data.join.program)}</h2>
-          <p>${esc(data.join.text)}</p>
+      ${renderTocLayout(tocItems, list(joinItems, (item, index) => `
+        <article class="content-section join-section" id="${esc(item.id)}">
+          ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
+          ${item.text || item.url
+            ? `<p>${item.text ? esc(item.text) : ""}${item.url ? ` <a class="inline-detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a>` : ""}</p>`
+            : ""}
+          ${item.email ? `<p class="plain-email join-email">${esc(item.email)}</p>` : ""}
         </article>
-        <article class="content-section join-section" id="phd-admission">
-          <h2>PhD admission</h2>
-          <p>${esc(data.join.phd)}</p>
-          <p class="plain-email">${esc(displayEmail(data.site.email))}</p>
-        </article>
-        <article class="content-section join-section" id="postdoctoral-fellow">
-          <h2>${data.join.postdocUrl ? `<a href="${esc(assetUrl(data.join.postdocUrl))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>Postdoctoral Fellow</a>` : "Postdoctoral Fellow"}</h2>
-          <p>${esc(data.join.postdoc)}</p>
-        </article>
-        <article class="content-section join-section" id="visiting-scholar-domestic">
-          <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>
-        </article>
-      `)}
+      `))}
     `;
   }
 

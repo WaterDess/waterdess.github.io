@@ -1723,6 +1723,24 @@ body[data-page="research"] .research-data-row h2 a:hover {
   text-shadow: 0 0 0.75em var(--link-glow);
 }
 
+.inline-detail-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
+  margin-left: 0.36em;
+  color: rgba(46, 111, 115, 0.92);
+  font-weight: 520;
+  text-decoration: none;
+  background-image: none;
+}
+
+.inline-detail-link:hover,
+.inline-detail-link:focus-visible {
+  color: var(--link-hover);
+  text-decoration: none;
+  text-shadow: 0 0 0.75em var(--link-glow);
+}
+
 .research-section figure,
 .research-section img,
 .news-line img,
@@ -2056,20 +2074,32 @@ body[data-page="about"] .mission-list {
 }
 
 body[data-page="join"] .join-section {
-  grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr);
-  gap: clamp(1.4rem, 3vw, 2.4rem);
+  display: block;
+  padding: 0 0 1.45rem;
 }
 
-body[data-page="join"] .join-section h2 {
-  max-width: none;
-  overflow-wrap: normal;
-  word-break: normal;
+body[data-page="join"] .join-section + .join-section {
+  margin-top: 0.6rem;
 }
 
-@media (max-width: 760px) {
-  body[data-page="join"] .join-section {
-    grid-template-columns: 1fr;
-  }
+body[data-page="join"] .join-section .people-block-heading {
+  margin-bottom: 0.72rem;
+}
+
+body[data-page="join"] .join-section p {
+  max-width: 42rem;
+  margin: 0;
+  text-align: left;
+}
+
+body[data-page="join"] .join-section p + p {
+  margin-top: 0.24rem;
+}
+
+body[data-page="join"] .join-email {
+  justify-self: start;
+  margin-top: 0.18rem;
+  text-align: left;
 }
 
 /* Remove decorative short rules from content pages. */
