@@ -297,33 +297,27 @@
   }
 
   function renderPublications() {
-    const years = [...new Set(data.publications.map((paper) => paper.year))].sort((a, b) => Number(b) - Number(a));
-    const tocItems = years.map((year) => ({ id: `year-${year}`, label: String(year) }));
-
     return `
       ${pageIntro("Publications", "Archive", "A curated list will be updated manually")}
-      ${renderTocLayout(tocItems, list(years, (year) => `
-        <section class="content-section publication-year" id="year-${esc(year)}">
-          <div class="publication-list">
-            ${list(data.publications.filter((paper) => paper.year === year), renderPublication)}
-          </div>
-        </section>
-      `))}
+      <section class="section news-layout publication-layout">
+        <div class="publication-list">
+          ${list(data.publications, renderPublication)}
+        </div>
+      </section>
     `;
   }
 
   function renderPublication(paper) {
+    const title = paper.url
+      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${esc(paper.title)}</a>`
+      : esc(paper.title);
     return `
       <article class="publication">
-        <div>
-          <h2>${esc(paper.title)}</h2>
-          <p>${esc(paper.authors)}</p>
-          <footer>
-            <span>${esc(paper.journal)}</span>
-            ${paper.url ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${esc(paper.doi || "Link")}</a>` : ""}
-          </footer>
-          ${paper.highlight ? `<small>${esc(paper.highlight)}</small>` : ""}
-        </div>
+        <span class="publication-meta">${esc([paper.year, paper.journal].filter(Boolean).join(" / "))}</span>
+        <h2>${title}</h2>
+        <p class="publication-authors">${esc(paper.authors)}</p>
+        ${paper.url ? `<p class="publication-doi"><a href="${esc(paper.url)}" target="_blank" rel="noopener">doi: ${esc(paper.doi || "Link")}</a></p>` : ""}
+        ${paper.highlight ? `<small>${esc(paper.highlight)}</small>` : ""}
       </article>
     `;
   }
