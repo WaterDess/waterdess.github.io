@@ -538,7 +538,6 @@ body[data-page="about"] .page-hero p {
 }
 
 .mission-list span,
-.publication time,
 .news-line time,
 .news-feature span {
   display: block;
@@ -599,8 +598,6 @@ body[data-page="about"] .page-hero p {
   line-height: 1.25;
 }
 
-.publication p,
-.publication small,
 .news-feature p,
 .news-line p,
 .join-layout p,
@@ -889,15 +886,6 @@ body[data-page="about"] .page-hero p {
   line-height: 1.28;
 }
 
-.publication time {
-  color: var(--link);
-}
-
-.publication small {
-  display: block;
-  margin-top: 0.6em;
-}
-
 .join-section h2 {
   margin-bottom: 0.45em;
   font-size: clamp(1.02rem, 1.25vw, 1.28rem);
@@ -967,15 +955,6 @@ body[data-page="about"] .page-hero p {
 .detail-sections ul {
   margin: 0;
   padding-left: 1.1em;
-}
-
-.publication footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75em;
-  margin: 0.35em 0;
-  color: var(--muted);
-  font-size: 0.75em;
 }
 
 .news-feature {
@@ -1542,6 +1521,7 @@ body:not([data-page="home"]) .about-layout {
 }
 
 .compact-news-line h3 a,
+.publication h2 a,
 .research-link-title a,
 .join-section h2 a,
 .compact-person-row h2 a {
@@ -1550,6 +1530,7 @@ body:not([data-page="home"]) .about-layout {
   align-items: baseline;
   color: inherit;
   text-decoration: none;
+  background-image: none;
 }
 
 .link-icon {
@@ -1721,9 +1702,6 @@ body:not([data-page="home"]) .about-layout {
 
 .research-section p,
 .join-section p,
-.publication p,
-.publication small,
-.publication footer,
 .detail-sections li,
 .person-detail aside p,
 .person-detail aside a {
@@ -1843,21 +1821,6 @@ body[data-page="research"] .research-data-row h2 a:hover {
   background: var(--line);
 }
 
-.publication time {
-  margin: 0;
-  color: rgba(12, 36, 31, 0.52);
-  font-size: 0.66rem;
-  font-weight: 480;
-  line-height: 1.5;
-}
-
-.publication footer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 0.18rem 0;
-}
-
 .publication-meta {
   display: block;
   margin: 0 0 0.18rem;
@@ -1867,26 +1830,9 @@ body[data-page="research"] .research-data-row h2 a:hover {
   line-height: 1.45;
 }
 
-.publication h2 a {
-  color: inherit;
-  text-decoration: none;
-  background-image: none;
-}
-
 .publication h2 a:hover {
   color: var(--link-hover);
   text-shadow: 0 0 0.75em var(--link-glow);
-}
-
-.publication-authors,
-.publication-doi {
-  margin: 0.2rem 0 0;
-}
-
-.publication-doi a {
-  color: rgba(46, 111, 115, 0.9);
-  background-image: none;
-  text-decoration: none;
 }
 
 /* About */
@@ -2143,7 +2089,6 @@ body:not([data-page="home"]) a {
 body[data-page="news"] .page-intro,
 body[data-page="about"] .page-intro,
 body[data-page="news"] .news-layout,
-body[data-page="publications"] .publication-layout,
 body[data-page="about"] .about-layout {
   width: min(100% - 2rem, 42rem);
   margin-right: auto;
@@ -2152,7 +2097,6 @@ body[data-page="about"] .about-layout {
 
 body[data-page="news"] .page-intro,
 body[data-page="about"] .page-intro,
-body[data-page="publications"] .publication-layout,
 body[data-page="about"] .about-layout {
   display: block;
 }
