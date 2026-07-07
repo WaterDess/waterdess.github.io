@@ -171,20 +171,21 @@ li {
   height: var(--masthead-height);
   min-height: var(--masthead-height);
   margin: 0;
-  padding: 0 1.05em;
+  padding: 0 1.05rem;
   background:
     linear-gradient(90deg, rgba(3, 8, 9, 0.97), rgba(8, 18, 19, 0.96) 48%, rgba(5, 12, 13, 0.97)),
     var(--masthead-bg);
   border-bottom: 1px solid rgba(169, 211, 204, 0.24);
+  font-size: 1rem;
 }
 
 .brand {
   position: absolute;
   top: 50%;
-  left: 1.05em;
+  left: 1.05rem;
   display: block;
   width: auto;
-  max-width: min(44vw, 30em);
+  max-width: min(44vw, 30rem);
   flex: none;
   min-width: 0;
   color: var(--masthead-text);
@@ -198,7 +199,7 @@ li {
 
 .brand-logo {
   display: block;
-  width: 5.35em;
+  width: 5.35rem;
   height: auto;
 }
 
@@ -207,10 +208,10 @@ li {
   flex: none;
   flex-wrap: wrap;
   justify-content: center;
-  gap: clamp(1.12em, 1.95vw, 1.6em);
+  gap: clamp(1.12rem, 1.95vw, 1.6rem);
   margin: 0;
-  padding: 0 14em;
-  font-size: 1.02em;
+  padding: 0 14rem;
+  font-size: 1.02rem;
   font-weight: 720;
 }
 
