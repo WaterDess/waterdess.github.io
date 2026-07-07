@@ -2072,3 +2072,20 @@ body[data-page="join"] .join-section h2 {
   display: none !important;
   content: none !important;
 }
+
+.profile-summary .avatar-placeholder.large,
+.avatar-placeholder.large {
+  display: grid;
+  place-items: center;
+  font-size: clamp(2.65rem, 5vw, 3.35rem);
+  line-height: 1;
+  font-weight: 560;
+}
+
+body:not([data-page="home"]) .page-intro,
+body:not([data-page="home"]) .toc-layout,
+body:not([data-page="home"]) .people-layout,
+body:not([data-page="home"]) .about-layout,
+body:not([data-page="home"]) .person-detail {
+  justify-content: center;
+}

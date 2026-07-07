@@ -143,7 +143,7 @@ window.TANG_SITE = {
   ],
   news: [
     {
-      date: "2026",
+      date: "2026-06-25",
       type: "Call for Papers",
       title: "Advances in Observation, Modeling, and Prediction of the Hydrosphere",
       text: "npj Hydrosphere is calling for papers for a Collection on advances in observation, modeling, and prediction of the hydrosphere. Submission deadline: 31 March 2027.",
@@ -234,7 +234,7 @@ window.TANG_SITE = {
       urlLabel: "Read announcement"
     },
     {
-      date: "2026",
+      date: "2026-06-10",
       type: "Congratulations",
       title: "Dr. Ruiyu Zhao selected as the Shuimu Tsinghua Scholar",
       text: "Congratulations to Dr. Ruiyu Zhao on being selected as a Shuimu Tsinghua Scholar.",
