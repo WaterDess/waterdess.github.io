@@ -2089,3 +2089,9 @@ body:not([data-page="home"]) .about-layout,
 body:not([data-page="home"]) .person-detail {
   justify-content: center;
 }
+
+.profile-summary .profile-email,
+.person-detail aside .plain-email {
+  justify-self: start;
+  text-align: left;
+}
