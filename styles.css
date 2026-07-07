@@ -1371,6 +1371,11 @@ body[data-page="person"] .page-intro span {
   display: none;
 }
 
+body[data-page="person"] .page-intro {
+  padding-top: clamp(1.7rem, 3.6vw, 2.55rem);
+  padding-bottom: clamp(1.05rem, 2vw, 1.45rem);
+}
+
 body[data-page="person"] .page-intro h1 {
   grid-column: 2;
 }
