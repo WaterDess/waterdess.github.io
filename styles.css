@@ -1390,7 +1390,7 @@ body:not([data-page="home"]) .person-detail {
   position: sticky;
   top: calc(var(--masthead-height) + 1.5rem);
   align-self: start;
-  padding-top: 0.12rem;
+  padding-top: 0;
 }
 
 .toc-sidebar nav {
@@ -1424,6 +1424,13 @@ body:not([data-page="home"]) .person-detail {
   display: block;
   max-width: none;
   padding: 0;
+}
+
+body:not([data-page="home"]) .toc-layout,
+body:not([data-page="home"]) .people-layout,
+body:not([data-page="home"]) .news-layout,
+body:not([data-page="home"]) .about-layout {
+  padding-top: clamp(1.7rem, 3.6vw, 2.55rem);
 }
 
 .news-lines {
