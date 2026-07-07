@@ -2061,3 +2061,14 @@ body[data-page="join"] .join-section h2 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Remove decorative short rules from content pages. */
+.page-intro span::before,
+.compact-news-line h3::before,
+.research-section::before,
+.join-section::before,
+.detail-sections section::before,
+.publication::before {
+  display: none !important;
+  content: none !important;
+}
