@@ -1366,6 +1366,14 @@ body:not([data-page="home"]):not([data-page="person"]) .page-intro {
   display: none;
 }
 
+body[data-page="person"] .page-intro span {
+  display: none;
+}
+
+body[data-page="person"] .page-intro h1 {
+  grid-column: 2;
+}
+
 body:not([data-page="home"]) .section,
 body:not([data-page="home"]) .toc-layout,
 body:not([data-page="home"]) .people-layout,
