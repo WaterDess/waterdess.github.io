@@ -213,7 +213,7 @@
   function renderLeadPerson(person) {
     return `
       <article class="lead-person text-only-person compact-person-row">
-        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a></h2>
+        <h2><a href="${esc(personHref(person.slug))}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(person.name)}</a></h2>
         <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
@@ -222,7 +222,7 @@
   function renderMemberRow(person) {
     return `
       <article class="member-row compact-person-row">
-        <h2><a href="${esc(personHref(person.slug))}">${esc(person.name)}</a></h2>
+        <h2><a href="${esc(personHref(person.slug))}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(person.name)}</a></h2>
         <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
