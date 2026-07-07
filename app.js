@@ -269,9 +269,21 @@
     return `
       <section>
         <h2>${esc(title)}</h2>
-        <ul>${list(items, (item) => `<li>${esc(item)}</li>`)}</ul>
+        <ul>${list(items, renderDetailItem)}</ul>
       </section>
     `;
+  }
+
+  function renderDetailItem(item) {
+    if (item && typeof item === "object") {
+      const text = item.text || item.title || "";
+      const content = item.url
+        ? `<a class="detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(text)}</a>`
+        : esc(text);
+      return `<li>${content}</li>`;
+    }
+
+    return `<li>${esc(item)}</li>`;
   }
 
   function renderResearch() {

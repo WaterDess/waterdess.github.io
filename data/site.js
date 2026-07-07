@@ -77,14 +77,14 @@ window.TANG_SITE = {
         "2025.7-2026.4: Research Associate, Institute of Plateau Meteorology, CMA, Chengdu"
       ],
       publications: [
-        "Zhao, R., Chen, B., Zhang, W., Yu, Y., Huo, J., Xu, X. (2026). Upstream evaporative moisture sources anchor strong persistent heavy precipitation events over Southeastern Tibetan Plateau. Climate Dynamics, 64, 23.",
-        "Zhao, R., Chen, B., Zhao, Y., Zhang, W., Xu, X., & Li, Y. (2025). Rapid Intensification of Persistent Extreme Precipitation Over the Eastern Periphery of the Tibetan Plateau After 2000: The Role of Southwest Vortices. Geophysical Research Letters, 52(18), e2025GL115511.",
-        "Zhao, R., Chen, B., Zhang, W. et al. (2024). Revisiting the dry-to-wet shift of summer precipitation over the Three-River Headwaters region, hinterland of the Tibetan Plateau: a perspective of moisture sources changes. Climate Dynamics, 62, 8827-8847.",
-        "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2024). Formation mechanisms of persistent extreme precipitation events over the eastern periphery of the Tibetan Plateau: Synoptic conditions, moisture transport and the effect of steep terrain. Atmospheric Research, 304, 107341.",
-        "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2023). Moisture source anomalies connected to flood-drought changes over the three-rivers headwater region of Tibetan Plateau. International Journal of Climatology, 43(12), 5303-5316.",
-        "Zhao, R., Chen, B., & Xu, X. (2021). Intensified Moisture Sources of Heavy Precipitation Events Contributed to Interannual Trend in Precipitation Over the Three-Rivers-Headwater Region in China. Frontiers in Earth Science, 9, 674037.",
-        "Chen, B., Zhao, R., Zhang, W., Yang, S., Xu, X., Wang, C., and Huo, J. (2025). Modulation of Anomalous Moisture Uptakes on Weather-Type-Based Daily Extreme Precipitation Events over the Southeastern Edge of the Tibetan Plateau. Journal of Hydrometeorology, 26, 781-799.",
-        "Chen, B., Zhao, R. A multi-source-data-fusion-based method and system for identifying southwest vortices. Chinese invention patent CN121234129B, authorized 2026-04-10."
+        { text: "Zhao, R., Chen, B., Zhang, W., Yu, Y., Huo, J., Xu, X. (2026). Upstream evaporative moisture sources anchor strong persistent heavy precipitation events over Southeastern Tibetan Plateau. Climate Dynamics, 64, 23.", url: "https://doi.org/10.1007/s00382-025-07995-z" },
+        { text: "Zhao, R., Chen, B., Zhao, Y., Zhang, W., Xu, X., & Li, Y. (2025). Rapid Intensification of Persistent Extreme Precipitation Over the Eastern Periphery of the Tibetan Plateau After 2000: The Role of Southwest Vortices. Geophysical Research Letters, 52(18), e2025GL115511.", url: "https://doi.org/10.1029/2025GL115511" },
+        { text: "Zhao, R., Chen, B., Zhang, W. et al. (2024). Revisiting the dry-to-wet shift of summer precipitation over the Three-River Headwaters region, hinterland of the Tibetan Plateau: a perspective of moisture sources changes. Climate Dynamics, 62, 8827-8847.", url: "https://doi.org/10.1007/s00382-024-07362-4" },
+        { text: "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2024). Formation mechanisms of persistent extreme precipitation events over the eastern periphery of the Tibetan Plateau: Synoptic conditions, moisture transport and the effect of steep terrain. Atmospheric Research, 304, 107341.", url: "https://doi.org/10.1016/j.atmosres.2024.107341" },
+        { text: "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2023). Moisture source anomalies connected to flood-drought changes over the three-rivers headwater region of Tibetan Plateau. International Journal of Climatology, 43(12), 5303-5316.", url: "https://doi.org/10.1002/joc.8147" },
+        { text: "Zhao, R., Chen, B., & Xu, X. (2021). Intensified Moisture Sources of Heavy Precipitation Events Contributed to Interannual Trend in Precipitation Over the Three-Rivers-Headwater Region in China. Frontiers in Earth Science, 9, 674037.", url: "https://doi.org/10.3389/feart.2021.674037" },
+        { text: "Chen, B., Zhao, R., Zhang, W., Yang, S., Xu, X., Wang, C., and Huo, J. (2025). Modulation of Anomalous Moisture Uptakes on Weather-Type-Based Daily Extreme Precipitation Events over the Southeastern Edge of the Tibetan Plateau. Journal of Hydrometeorology, 26, 781-799.", url: "https://doi.org/10.1175/JHM-D-24-0066.1" },
+        { text: "Chen, B., Zhao, R. A multi-source-data-fusion-based method and system for identifying southwest vortices. Chinese invention patent CN121234129B, authorized 2026-04-10.", url: "https://patents.google.com/patent/CN121234129B/en" }
       ]
     },
     {
@@ -108,8 +108,8 @@ window.TANG_SITE = {
         "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
       ],
       publications: [
-        "Peng, D., Xie, X., et al. (2024). Improving evapotranspiration partitioning by integrating satellite vegetation parameters into a land surface model. Journal of Hydrology, 643, 131928.",
-        "Peng, D., Zhou, Q., et al. (2022). Changes in soil moisture caused solely by vegetation restoration in the karst region of southwest China. Journal of Hydrology, 613, 128460."
+        { text: "Peng, D., Xie, X., et al. (2024). Improving evapotranspiration partitioning by integrating satellite vegetation parameters into a land surface model. Journal of Hydrology, 643, 131928.", url: "https://doi.org/10.1016/j.jhydrol.2024.131928" },
+        { text: "Peng, D., Zhou, Q., et al. (2022). Changes in soil moisture caused solely by vegetation restoration in the karst region of southwest China. Journal of Hydrology, 613, 128460.", url: "https://doi.org/10.1016/j.jhydrol.2022.128460" }
       ]
     },
     {
@@ -133,9 +133,9 @@ window.TANG_SITE = {
         "2024.6-2025.7: Algorithm Engineer, Seck Intelligent Technology Co., Ltd., Hangzhou"
       ],
       publications: [
-        "Yan, Y., Chen, C., Yang, W., Zheng, Y., Zhao, Y., Zhang, Y., Liu, Y., and Zhang, W. (2024). Enhancing Basin-scale Hydrological Time Series Processing and Modeling with Masked Pre-Trained Encoder. ESS Open Archive. doi: 10.22541/au.172417537.74282767/v1.",
-        "Yan, Y., Zhang, W., Liu, Y., and Li, Z. (2023). Simulated annealing algorithm optimized GRU neural network for urban rainfall-inundation prediction. Journal of Hydroinformatics. doi: 10.2166/hydro.2023.006.",
-        "Liu, Y., Zhang, W., Yan, Y., Li, Z., Xia, Y., and Song, S. (2022). An Effective Rainfall-Ponding Multi-Step Prediction Model Based on LSTM for Urban Waterlogging Points. Applied Sciences, 12(23), 12334. doi: 10.3390/app122312334."
+        { text: "Yan, Y., Chen, C., Yang, W., Zheng, Y., Zhao, Y., Zhang, Y., Liu, Y., and Zhang, W. (2024). Enhancing Basin-scale Hydrological Time Series Processing and Modeling with Masked Pre-Trained Encoder. ESS Open Archive. doi: 10.22541/au.172417537.74282767/v1.", url: "https://doi.org/10.22541/au.172417537.74282767/v1" },
+        { text: "Yan, Y., Zhang, W., Liu, Y., and Li, Z. (2023). Simulated annealing algorithm optimized GRU neural network for urban rainfall-inundation prediction. Journal of Hydroinformatics. doi: 10.2166/hydro.2023.006.", url: "https://doi.org/10.2166/hydro.2023.006" },
+        { text: "Liu, Y., Zhang, W., Yan, Y., Li, Z., Xia, Y., and Song, S. (2022). An Effective Rainfall-Ponding Multi-Step Prediction Model Based on LSTM for Urban Waterlogging Points. Applied Sciences, 12(23), 12334. doi: 10.3390/app122312334.", url: "https://doi.org/10.3390/app122312334" }
       ]
     },
     {
@@ -156,14 +156,14 @@ window.TANG_SITE = {
         "2026.06-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
       ],
       publications: [
-        "Yang, X., Qin, X., and Gao, L. (2024). Assessment of disaster mitigation capability oriented to typhoon disaster chains: A case study of Fujian Province, China. Ecological Indicators, 112621. doi: 10.1016/j.ecolind.2024.112621.",
-        "Yang, X., Li, Y., and Gao, L. (2024). Spatiotemporal pattern of climate change in the China-Myanmar Economic Corridor from 1901 to 2018. Journal of Mountain Science, 21(1), 131-145. doi: 10.1007/s11629-023-8028-3.",
-        "Yang, X., Yan, Y., and Gao, L. (2025). Risk of Compound Typhoon Disaster Chains: Insights from Southeastern China. International Journal of Disaster Risk Science, 16, 870-887. doi: 10.1007/s13753-025-00674-x.",
-        "Yang, X., Qin, X., and Gao, L. (2026). A Copula-XAI framework for assessing compound typhoon disaster-chain risks and driving mechanisms in coastal mountainous cities: Evidence from Fujian, China. Journal of Hydrology: Regional Studies, 64, 103284. doi: 10.1016/j.ejrh.2026.103284.",
+        { text: "Yang, X., Qin, X., and Gao, L. (2024). Assessment of disaster mitigation capability oriented to typhoon disaster chains: A case study of Fujian Province, China. Ecological Indicators, 112621. doi: 10.1016/j.ecolind.2024.112621.", url: "https://doi.org/10.1016/j.ecolind.2024.112621" },
+        { text: "Yang, X., Li, Y., and Gao, L. (2024). Spatiotemporal pattern of climate change in the China-Myanmar Economic Corridor from 1901 to 2018. Journal of Mountain Science, 21(1), 131-145. doi: 10.1007/s11629-023-8028-3.", url: "https://doi.org/10.1007/s11629-023-8028-3" },
+        { text: "Yang, X., Yan, Y., and Gao, L. (2025). Risk of Compound Typhoon Disaster Chains: Insights from Southeastern China. International Journal of Disaster Risk Science, 16, 870-887. doi: 10.1007/s13753-025-00674-x.", url: "https://doi.org/10.1007/s13753-025-00674-x" },
+        { text: "Yang, X., Qin, X., and Gao, L. (2026). A Copula-XAI framework for assessing compound typhoon disaster-chain risks and driving mechanisms in coastal mountainous cities: Evidence from Fujian, China. Journal of Hydrology: Regional Studies, 64, 103284. doi: 10.1016/j.ejrh.2026.103284.", url: "https://doi.org/10.1016/j.ejrh.2026.103284" },
         "Yang, X., and Gao, L. Spatiotemporal dynamics and machine learning-driven drivers of urban resilience to typhoon disaster chains in Fujian, China. International Journal of Disaster Risk Science.",
         "Yang, X., and Gao, L. Compound patterns and driving mechanisms of typhoon disaster chains in Southeast Coastal China: A multiscale framework. Climate Services.",
-        "Yang, X., Wang, P., Gao, D., et al. (2020). Accuracy assessment and variation characteristics of MSWEP precipitation data in the Qinba Mountains from 1979 to 2014. Research of Soil and Water Conservation, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.",
-        "Yang, X., Wang, P., and Gao, D. (2019). Climate change characteristics of Wumeng Mountain National Nature Reserve from 1971 to 2015. Journal of Northeast Forestry University, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013."
+        { text: "Yang, X., Wang, P., Gao, D., et al. (2020). Accuracy assessment and variation characteristics of MSWEP precipitation data in the Qinba Mountains from 1979 to 2014. Research of Soil and Water Conservation, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.", url: "https://doi.org/10.13869/j.cnki.rswc.2020.06.020" },
+        { text: "Yang, X., Wang, P., and Gao, D. (2019). Climate change characteristics of Wumeng Mountain National Nature Reserve from 1971 to 2015. Journal of Northeast Forestry University, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013.", url: "https://doi.org/10.13759/j.cnki.dlxb.2019.09.013" }
       ]
     }
   ],
