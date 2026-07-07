@@ -118,7 +118,7 @@ window.TANG_SITE = {
       position: "Research Associate",
       group: "research-associate",
       address: "Department of Earth System Science, Tsinghua University",
-      email: "To be updated",
+      email: "yanying (at) mail.tsinghua.edu.cn",
       photo: "./public/assets/ying-yan.jpg",
       interests: ["Hydrology", "Numerical modeling", "Deep learning", "Large language models"],
       education: [
