@@ -438,9 +438,8 @@
       ${renderTocLayout(tocItems, list(joinItems, (item, index) => `
         <article class="content-section join-section" id="${esc(item.id)}">
           ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
-          ${item.text || item.url
-            ? `<p>${item.text ? esc(item.text) : ""}${item.url ? ` <a class="inline-detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a>` : ""}</p>`
-            : ""}
+          ${item.text ? `<p>${esc(item.text)}</p>` : ""}
+          ${item.url ? `<p><a class="inline-detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>` : ""}
           ${item.email ? `<p class="plain-email join-email">${esc(item.email)}</p>` : ""}
         </article>
       `))}
