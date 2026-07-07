@@ -2184,7 +2184,7 @@ body[data-page="news"] .compact-news-line h3::before {
 
 body[data-page="people"] .people-layout {
   display: block;
-  width: min(100% - 2rem, 42rem);
+  width: min(100% - 2rem, 40rem);
   margin-right: auto;
   margin-left: auto;
 }
@@ -2197,13 +2197,29 @@ body[data-page="people"] .people-content {
 body[data-page="people"] .compact-person-row,
 body[data-page="people"] .lead-person.compact-person-row,
 body[data-page="people"] .member-row.compact-person-row {
-  display: block;
-  padding: 0.28rem 0;
+  display: grid;
+  grid-template-columns: 9.5rem max-content;
+  column-gap: clamp(0.65rem, 1.4vw, 1rem);
+  justify-content: start;
+  padding: 0.28rem 0 0.28rem 3rem;
 }
 
 body[data-page="people"] .compact-person-row h2 {
-  display: block;
   margin: 0;
+}
+
+body[data-page="people"] .compact-person-row .plain-email {
+  justify-self: start;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  body[data-page="people"] .compact-person-row,
+  body[data-page="people"] .lead-person.compact-person-row,
+  body[data-page="people"] .member-row.compact-person-row {
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
 }
 
 body[data-page="about"] .large-copy,
