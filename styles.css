@@ -2044,3 +2044,20 @@ body[data-page="about"] .large-copy,
 body[data-page="about"] .mission-list {
   grid-column: auto;
 }
+
+body[data-page="join"] .join-section {
+  grid-template-columns: minmax(12rem, 15rem) minmax(0, 1fr);
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+body[data-page="join"] .join-section h2 {
+  max-width: none;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+@media (max-width: 760px) {
+  body[data-page="join"] .join-section {
+    grid-template-columns: 1fr;
+  }
+}

@@ -89,7 +89,6 @@
       <header class="section page-intro">
         <span>${esc(kicker)}</span>
         <h1>${esc(title)}</h1>
-        ${summary ? `<p>${esc(summary)}</p>` : ""}
       </header>
     `;
   }
@@ -302,7 +301,6 @@
       ${pageIntro("Publications", "Archive", "A curated list will be updated manually")}
       ${renderTocLayout(tocItems, list(years, (year) => `
         <section class="content-section publication-year" id="year-${esc(year)}">
-          <h2>${esc(year)}</h2>
           <div class="publication-list">
             ${list(data.publications.filter((paper) => paper.year === year), renderPublication)}
           </div>
@@ -413,6 +411,7 @@
         </article>
         <article class="content-section join-section" id="postdoctoral-fellow">
           <h2>${data.join.postdocUrl ? `<a href="${esc(assetUrl(data.join.postdocUrl))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>Postdoctoral Fellow</a>` : "Postdoctoral Fellow"}</h2>
+          <p>${esc(data.join.postdoc)}</p>
         </article>
         <article class="content-section join-section" id="visiting-scholar-domestic">
           <h2>${data.join.visitingScholarUrl ? `<a href="${esc(data.join.visitingScholarUrl)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(data.join.visitingScholar)}</a>` : esc(data.join.visitingScholar)}</h2>
