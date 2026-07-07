@@ -1384,14 +1384,14 @@ body[data-page="people"] .people-layout {
 }
 
 body[data-page="people"] .people-content {
-  width: 100%;
-  max-width: none;
+  width: fit-content;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 body[data-page="people"] .people-block {
-  width: min(100%, 31rem);
-  margin-right: auto;
-  margin-left: auto;
+  width: 100%;
 }
 
 body[data-page="people"] .people-block + .people-block {
@@ -1402,7 +1402,7 @@ body[data-page="people"] .compact-person-row,
 body[data-page="people"] .lead-person.compact-person-row,
 body[data-page="people"] .member-row.compact-person-row {
   display: grid;
-  grid-template-columns: minmax(8.4rem, 9.4rem) minmax(0, max-content);
+  grid-template-columns: max-content max-content;
   column-gap: clamp(0.85rem, 1.4vw, 1.15rem);
   justify-content: start;
   padding: 0.32rem 0;
