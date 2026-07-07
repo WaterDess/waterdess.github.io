@@ -141,7 +141,7 @@ window.TANG_SITE = {
       position: "Postdoctoral Fellow",
       group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
-      email: "To be updated",
+      email: "xiaoliu-yang (at) mail.tsinghua.edu.cn",
       photo: "./public/assets/xiaoliu-yang.jpg",
       interests: ["Natural hazard risk assessment", "Tropical cyclone-induced compound flood risk and exposure assessment"],
       education: [
