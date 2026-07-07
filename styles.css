@@ -938,7 +938,7 @@ body[data-page="about"] .page-hero p {
 }
 
 .profile-summary .profile-department {
-  margin: 0 0 0.7em;
+  margin: 0 0 clamp(0.5rem, 1.2vw, 0.7rem);
 }
 
 .profile-titles {
@@ -1855,10 +1855,20 @@ body[data-page="research"] .research-data-row h2 a:hover {
 .person-detail aside img,
 .avatar-placeholder.large {
   width: 7.25rem;
-  height: 7.25rem;
   margin: 0 0 0.9rem;
-  object-fit: cover;
   border-radius: 2px;
+}
+
+.profile-summary img,
+.person-detail aside img {
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.profile-summary .avatar-placeholder.large,
+.avatar-placeholder.large {
+  height: 7.25rem;
 }
 
 .avatar-placeholder.large {
@@ -1870,7 +1880,7 @@ body[data-page="research"] .research-data-row h2 a:hover {
 }
 
 .profile-titles {
-  margin: 0 0 0.75rem;
+  margin: 0 0 clamp(0.5rem, 1.2vw, 0.75rem);
   padding-left: 1rem;
   color: var(--ink-soft);
   font-size: 0.68rem;
@@ -1879,8 +1889,8 @@ body[data-page="research"] .research-data-row h2 a:hover {
 
 .profile-links {
   display: grid;
-  gap: 0.25rem;
-  margin-top: 0.72rem;
+  gap: clamp(0.18rem, 0.6vw, 0.25rem);
+  margin-top: clamp(0.5rem, 1.2vw, 0.72rem);
 }
 
 .profile-links a {
@@ -2093,5 +2103,6 @@ body:not([data-page="home"]) .person-detail {
 .profile-summary .profile-email,
 .person-detail aside .plain-email {
   justify-self: start;
+  margin-top: clamp(0.3rem, 0.8vw, 0.5rem);
   text-align: left;
 }

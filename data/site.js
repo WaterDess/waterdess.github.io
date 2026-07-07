@@ -62,7 +62,7 @@ window.TANG_SITE = {
       group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
       email: "zhaoruiyu (at) mail.tsinghua.edu.cn",
-      photo: "",
+      photo: "./public/assets/ruiyu-zhao.jpg",
       links: [
         { label: "ORCID", url: "https://orcid.org/0009-0000-4819-5423" }
       ],
