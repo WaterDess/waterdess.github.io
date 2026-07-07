@@ -1363,10 +1363,6 @@ body:not([data-page="home"]) .page-hero {
 }
 
 body:not([data-page="home"]):not([data-page="person"]) .page-intro {
-  padding-bottom: clamp(0.85rem, 1.7vw, 1.35rem);
-}
-
-body:not([data-page="home"]):not([data-page="person"]) .page-intro h1 {
   display: none;
 }
 
