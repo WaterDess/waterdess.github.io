@@ -571,14 +571,14 @@ body:not([data-page="home"]) {
   --rail: min(100% - 2rem, 65rem);
   --measure: 42rem;
   --side: 8.75rem;
-  --gap: clamp(2.1rem, 3.6vw, 4rem);
+  --gap: clamp(1.3rem, 2vw, 2.4rem);
   background: var(--wash);
   color: var(--ink);
   font-size: 1rem;
 }
 
 body:not([data-page="home"])[data-page="people"] {
-  --measure: 34rem;
+  --measure: 30rem;
 }
 
 body:not([data-page="home"]) #app {
@@ -712,6 +712,15 @@ body:not([data-page="home"]) .person-detail {
 .people-content {
   max-width: var(--measure);
   min-width: 0;
+}
+
+body[data-page="people"] .people-content {
+  justify-self: center;
+  width: fit-content;
+}
+
+body[data-page="people"] .toc-sidebar {
+  transform: translateX(6rem);
 }
 
 /* News: editorial ledger */
@@ -850,8 +859,8 @@ body:not([data-page="home"]) .about-layout {
 .lead-person.compact-person-row,
 .member-row.compact-person-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(8.2rem, 9.5rem);
-  gap: clamp(0.65rem, 1vw, 0.9rem);
+  grid-template-columns: max-content max-content;
+  gap: clamp(0.42rem, 0.6vw, 0.58rem);
   align-items: baseline;
   min-height: 0;
   padding: 0.34rem 0;
@@ -1289,6 +1298,10 @@ body[data-page="research"] .research-data-row h2 a:hover {
   .toc-sidebar {
     position: static;
     margin-bottom: 1.2rem;
+  }
+
+  body[data-page="people"] .toc-sidebar {
+    transform: none;
   }
 
   .toc-sidebar nav {
