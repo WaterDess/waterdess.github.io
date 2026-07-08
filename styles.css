@@ -570,11 +570,15 @@ body:not([data-page="home"]) {
   --paper: #fcfdfc;
   --rail: min(100% - 2rem, 65rem);
   --measure: 42rem;
-  --side: 9.25rem;
-  --gap: clamp(2.5rem, 5vw, 5.5rem);
+  --side: 8.75rem;
+  --gap: clamp(2.1rem, 3.6vw, 4rem);
   background: var(--wash);
   color: var(--ink);
   font-size: 1rem;
+}
+
+body:not([data-page="home"])[data-page="people"] {
+  --measure: 34rem;
 }
 
 body:not([data-page="home"]) #app {
@@ -694,8 +698,8 @@ body:not([data-page="home"]) .person-detail {
   width: fit-content;
   padding: 0.13rem 0;
   color: rgba(12, 36, 31, 0.5);
-  font-size: 0.66rem;
-  line-height: 1.74;
+  font-size: 0.72rem;
+  line-height: 1.68;
   text-decoration: none;
 }
 
@@ -846,8 +850,8 @@ body:not([data-page="home"]) .about-layout {
 .lead-person.compact-person-row,
 .member-row.compact-person-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(8.5rem, 10.5rem);
-  gap: clamp(0.8rem, 1.4vw, 1.15rem);
+  grid-template-columns: minmax(0, 1fr) minmax(8.2rem, 9.5rem);
+  gap: clamp(0.65rem, 1vw, 0.9rem);
   align-items: baseline;
   min-height: 0;
   padding: 0.34rem 0;
