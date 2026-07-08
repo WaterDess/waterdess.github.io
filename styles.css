@@ -719,8 +719,8 @@ body[data-page="people"] .people-content {
   width: fit-content;
 }
 
-body[data-page="people"] .toc-sidebar {
-  transform: translateX(6rem);
+body[data-page="people"] .people-layout {
+  transform: translateX(3rem);
 }
 
 /* News: editorial ledger */
@@ -1300,7 +1300,7 @@ body[data-page="research"] .research-data-row h2 a:hover {
     margin-bottom: 1.2rem;
   }
 
-  body[data-page="people"] .toc-sidebar {
+  body[data-page="people"] .people-layout {
     transform: none;
   }
 
