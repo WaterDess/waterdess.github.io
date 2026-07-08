@@ -577,10 +577,6 @@ body:not([data-page="home"]) {
   font-size: 1rem;
 }
 
-body:not([data-page="home"])[data-page="people"] {
-  --measure: 30rem;
-}
-
 body:not([data-page="home"]) #app {
   min-height: calc(100vh - var(--masthead-height));
   padding-bottom: clamp(5rem, 9vw, 8rem);
@@ -717,9 +713,6 @@ body:not([data-page="home"]) .person-detail {
 body[data-page="people"] .people-content {
   justify-self: center;
   width: fit-content;
-}
-
-body[data-page="people"] .people-layout {
   transform: translateX(-5.5rem);
 }
 
@@ -1324,7 +1317,7 @@ body[data-page="research"] .research-data-row h2 a:hover {
     margin-bottom: 1.2rem;
   }
 
-  body[data-page="people"] .people-layout {
+  body[data-page="people"] .people-content {
     transform: none;
   }
 
