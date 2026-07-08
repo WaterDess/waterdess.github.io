@@ -308,10 +308,10 @@
   }
 
   function renderPublication(paper) {
-    const citation = formatPublicationCitation(paper);
+    const citation = renderPublicationCitation(paper);
     const content = paper.url
-      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${esc(citation)}</a>`
-      : esc(citation);
+      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${citation}</a>`
+      : citation;
     const meta = paper.date || paper.year || "";
     return `
       <article class="publication">
@@ -321,16 +321,28 @@
     `;
   }
 
-  function formatPublicationCitation(paper) {
+  function renderPublicationCitation(paper) {
     const year = paper.year || String(paper.date || "").slice(0, 4);
     const authors = String(paper.authors || "").trim();
     const title = String(paper.title || "").trim();
     const journal = String(paper.journal || "").trim();
+    const firstAuthor = firstCitationAuthor(authors);
+    const remainingAuthors = firstAuthor ? authors.slice(firstAuthor.length) : authors;
+    const authorText = authors
+      ? `<strong>${esc(firstAuthor)}</strong>${esc(remainingAuthors)}${year ? ` (${esc(year)}).` : "."}`
+      : year
+        ? `(${esc(year)}).`
+        : "";
     return [
-      authors ? `${authors} (${year}).` : year ? `(${year}).` : "",
-      title ? `${title}.` : "",
-      journal ? `${journal}.` : "",
+      authorText,
+      title ? `<strong>${esc(title)}.</strong>` : "",
+      journal ? `${esc(journal)}.` : "",
     ].filter(Boolean).join(" ");
+  }
+
+  function firstCitationAuthor(authors) {
+    const parts = String(authors || "").split(", ");
+    return parts.length > 1 ? parts.slice(0, 2).join(", ") : String(authors || "");
   }
 
   function renderNews() {

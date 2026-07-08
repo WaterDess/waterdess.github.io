@@ -949,6 +949,18 @@ body:not([data-page="home"]) .about-layout {
   letter-spacing: 0;
 }
 
+.publication h2 {
+  font-weight: 440;
+}
+
+.publication h2 a {
+  display: inline;
+}
+
+.publication h2 strong {
+  font-weight: 620;
+}
+
 .research-section p,
 .join-section p,
 .detail-sections li,
