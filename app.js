@@ -310,7 +310,7 @@
   function renderPublication(paper) {
     const citation = renderPublicationCitation(paper);
     const content = paper.url
-      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${citation}</a>`
+      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener"><span class="publication-link-icon" aria-hidden="true">&#128279;</span>${citation}</a>`
       : citation;
     const meta = paper.date || paper.year || "";
     return `
@@ -329,14 +329,14 @@
     const firstAuthor = firstCitationAuthor(authors);
     const remainingAuthors = firstAuthor ? authors.slice(firstAuthor.length) : authors;
     const authorText = authors
-      ? `<strong>${esc(firstAuthor)}</strong>${esc(remainingAuthors)}${year ? ` (${esc(year)}).` : "."}`
+      ? `<strong class="publication-first-author">${esc(firstAuthor)}</strong><span class="publication-muted">${esc(remainingAuthors)}${year ? ` (${esc(year)}).` : "."}</span>`
       : year
-        ? `(${esc(year)}).`
+        ? `<span class="publication-muted">(${esc(year)}).</span>`
         : "";
     return [
       authorText,
-      title ? `<strong>${esc(title)}.</strong>` : "",
-      journal ? `${esc(journal)}.` : "",
+      title ? `<strong class="publication-title">${esc(title)}.</strong>` : "",
+      journal ? `<span class="publication-muted">${esc(journal)}.</span>` : "",
     ].filter(Boolean).join(" ");
   }
 

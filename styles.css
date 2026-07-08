@@ -970,8 +970,32 @@ body:not([data-page="home"]) .about-layout {
   display: inline;
 }
 
-.publication h2 strong {
+.publication-link-icon {
+  display: inline-block;
+  margin-right: 0.42em;
+  color: rgba(12, 36, 31, 0.28);
+  font-size: 0.68em;
+  line-height: 1;
+  vertical-align: 0.1em;
+}
+
+.publication-muted {
+  color: rgba(12, 36, 31, 0.5);
+}
+
+.publication-first-author,
+.publication-title {
   font-weight: 620;
+}
+
+.publication-title {
+  color: #087f82;
+  text-shadow: 0 0 0.56em rgba(8, 127, 130, 0.12);
+}
+
+.publication h2 a:hover .publication-title {
+  color: var(--link-hover);
+  text-shadow: 0 0 0.72em var(--link-glow);
 }
 
 .research-section p,
