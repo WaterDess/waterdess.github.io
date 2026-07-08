@@ -846,8 +846,8 @@ body:not([data-page="home"]) .about-layout {
 .lead-person.compact-person-row,
 .member-row.compact-person-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(9rem, 13rem);
-  gap: clamp(1rem, 3vw, 2rem);
+  grid-template-columns: minmax(0, 1fr) minmax(8.5rem, 10.5rem);
+  gap: clamp(0.8rem, 1.4vw, 1.15rem);
   align-items: baseline;
   min-height: 0;
   padding: 0.34rem 0;
@@ -1374,47 +1374,6 @@ body[data-page="news"] .compact-news-line {
 
 body[data-page="news"] .compact-news-line h3::before {
   display: none;
-}
-
-body[data-page="people"] .people-layout {
-  display: block;
-  width: min(100% - 2rem, 42rem);
-  margin-right: auto;
-  margin-left: auto;
-}
-
-body[data-page="people"] .people-content {
-  width: fit-content;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-body[data-page="people"] .people-block {
-  width: 100%;
-}
-
-body[data-page="people"] .people-block + .people-block {
-  margin-top: 0.8rem;
-}
-
-body[data-page="people"] .compact-person-row,
-body[data-page="people"] .lead-person.compact-person-row,
-body[data-page="people"] .member-row.compact-person-row {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  column-gap: clamp(0.85rem, 1.4vw, 1.15rem);
-  justify-content: start;
-  padding: 0.32rem 0;
-}
-
-body[data-page="people"] .compact-person-row h2 {
-  margin: 0;
-}
-
-body[data-page="people"] .compact-person-row .plain-email {
-  justify-self: start;
-  text-align: left;
 }
 
 @media (max-width: 760px) {

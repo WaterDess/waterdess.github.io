@@ -144,6 +144,12 @@
     return `
       ${pageIntro("People", "Directory", "Faculty, postdoctoral fellows, research associates, and students")}
       <section class="section people-layout">
+        ${renderToc([
+          { id: "faculty", label: "Faculty" },
+          { id: "postdoctoral-fellow", label: "Postdoctoral Fellow" },
+          { id: "research-associate", label: "Research Associate" },
+          { id: "graduate-student", label: "Graduate Student" },
+        ])}
         <div class="people-content">
         ${lead ? `
           <section class="people-block people-block-feature" id="faculty">
@@ -302,16 +308,29 @@
   }
 
   function renderPublication(paper) {
-    const title = paper.url
-      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(paper.title)}</a>`
-      : esc(paper.title);
-    const meta = [paper.date || paper.year, paper.journal].filter(Boolean).join(" / ");
+    const citation = formatPublicationCitation(paper);
+    const content = paper.url
+      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${esc(citation)}</a>`
+      : esc(citation);
+    const meta = paper.date || paper.year || "";
     return `
       <article class="publication">
         <span class="publication-meta">${esc(meta)}</span>
-        <h2>${title}</h2>
+        <h2>${content}</h2>
       </article>
     `;
+  }
+
+  function formatPublicationCitation(paper) {
+    const year = paper.year || String(paper.date || "").slice(0, 4);
+    const authors = String(paper.authors || "").trim();
+    const title = String(paper.title || "").trim();
+    const journal = String(paper.journal || "").trim();
+    return [
+      authors ? `${authors} (${year}).` : year ? `(${year}).` : "",
+      title ? `${title}.` : "",
+      journal ? `${journal}.` : "",
+    ].filter(Boolean).join(" ");
   }
 
   function renderNews() {
