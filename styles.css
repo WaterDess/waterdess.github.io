@@ -720,7 +720,7 @@ body[data-page="people"] .people-content {
 }
 
 body[data-page="people"] .people-layout {
-  transform: translateX(3rem);
+  transform: translateX(-5.5rem);
 }
 
 /* News: editorial ledger */
