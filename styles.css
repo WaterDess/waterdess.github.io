@@ -963,7 +963,8 @@ body:not([data-page="home"]) .about-layout {
   display: inline;
 }
 
-.publication-link-icon {
+.publication h2 a::before {
+  content: "\1F517";
   display: inline-block;
   margin-right: 0.42em;
   color: rgba(12, 36, 31, 0.28);
@@ -1107,15 +1108,6 @@ body[data-page="research"] .research-data-row h2 a:hover {
 .publication::before {
   top: 0.86rem;
   background: var(--line);
-}
-
-.publication-meta {
-  display: block;
-  margin: 0 0 0.18rem;
-  color: rgba(12, 36, 31, 0.52);
-  font-size: 0.68rem;
-  font-weight: 480;
-  line-height: 1.45;
 }
 
 .publication h2 a:hover {

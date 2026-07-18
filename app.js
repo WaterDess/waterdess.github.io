@@ -310,12 +310,10 @@
   function renderPublication(paper) {
     const citation = renderPublicationCitation(paper);
     const content = paper.url
-      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener"><span class="publication-link-icon" aria-hidden="true">&#128279;</span>${citation}</a>`
+      ? `<a href="${esc(paper.url)}" target="_blank" rel="noopener">${citation}</a>`
       : citation;
-    const meta = paper.date || paper.year || "";
     return `
       <article class="publication">
-        <span class="publication-meta">${esc(meta)}</span>
         <h2>${content}</h2>
       </article>
     `;
@@ -326,6 +324,7 @@
     const authors = String(paper.authors || "").trim();
     const title = String(paper.title || "").trim();
     const journal = String(paper.journal || "").trim();
+    const details = String(paper.details || "").trim();
     const firstAuthor = firstCitationAuthor(authors);
     const remainingAuthors = firstAuthor ? authors.slice(firstAuthor.length) : authors;
     const authorText = authors
@@ -336,7 +335,7 @@
     return [
       authorText,
       title ? `<strong class="publication-title">${esc(title)}.</strong>` : "",
-      journal ? `<span class="publication-muted">${esc(journal)}.</span>` : "",
+      journal ? `<span class="publication-muted">${esc(journal)}${details ? `, ${esc(details)}` : ""}.</span>` : "",
     ].filter(Boolean).join(" ");
   }
 
