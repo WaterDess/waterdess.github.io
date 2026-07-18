@@ -330,9 +330,10 @@ window.TANG_SITE = {
     text: "The Tsinghua University Global Research Program provides a 6+ week immersive research experience for outstanding undergraduates and graduate students from top universities outside the Chinese Mainland, including those in Hong Kong, Macao, and Taiwan.",
     program: "2026 Tsinghua University Global Research Program",
     programUrl: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
-    phd: "For admission to the PhD program, please contact Prof. Qiuhong Tang.",
-    postdoc: "We are recruiting Postdocs and Research Associate.",
-    postdocUrl: "./public/assets/water-dessthu-postdoc.pdf",
+    phd: "Applications are open for two PhD positions starting in 2027.",
+    phdUrl: "./public/assets/water-dessthu-phd-postdoc.pdf",
+    postdoc: "We are recruiting 1-3 Postdoctoral Fellows.",
+    postdocUrl: "./public/assets/water-dessthu-phd-postdoc.pdf",
     visitingScholar: "Visiting Scholar (Domestic)",
     visitingScholarUrl: "https://www.tsinghua.edu.cn/zsjyc/info/1056/1250.htm"
   }

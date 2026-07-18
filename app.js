@@ -404,6 +404,7 @@
         label: "PhD Admission",
         title: "PhD admission",
         text: data.join.phd,
+        url: assetUrl(data.join.phdUrl),
         email: displayEmail(data.site.email)
       },
       {
