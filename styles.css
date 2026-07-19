@@ -286,47 +286,15 @@ body[data-page="home"] .image-hero img {
   object-position: center center;
 }
 
-.home-earth-fallback,
-.earth-globe {
+.home-earth-image {
   position: absolute;
   inset: 0;
-}
-
-.home-earth-fallback {
   z-index: 0;
-  opacity: 0;
-  visibility: hidden;
-  object-fit: contain !important;
-}
-
-.earth-globe {
-  z-index: 1;
-  opacity: 1;
   overflow: hidden;
-}
-
-.earth-globe canvas {
-  display: block;
   width: 100%;
   height: 100%;
-}
-
-.home-landing.earth-ready .home-earth-fallback {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.home-landing.earth-ready .earth-globe {
-  opacity: 1;
-}
-
-.home-landing.earth-static .home-earth-fallback {
-  opacity: 1;
-  visibility: visible;
-}
-
-.home-landing.earth-static .earth-globe {
-  opacity: 0;
+  object-fit: cover !important;
+  transform: translateY(clamp(12px, 2.2vh, 24px)) scale(1.03);
 }
 
 .image-hero::after {

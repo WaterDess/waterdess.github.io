@@ -106,8 +106,7 @@
   function renderHome() {
     return `
       <section class="image-hero home-landing">
-        <img class="home-earth-fallback" data-src="${esc(assetUrl(data.visuals.hero))}" alt="" />
-        <div class="earth-globe" data-earth-globe data-texture="${esc(assetUrl(data.visuals.earthTexture))}" aria-hidden="true"></div>
+        <img class="home-earth-image" src="${esc(assetUrl(data.visuals.hero))}" alt="" fetchpriority="high" decoding="async" />
         <div class="image-hero-content">
           <div class="home-hero-copy">
             <h1>${esc(data.site.name)}</h1>
@@ -205,32 +204,6 @@
         <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
-  }
-
-  async function setupHomeEarth() {
-    const globe = document.querySelector("[data-earth-globe]");
-    if (!globe) return;
-
-    const landing = globe.closest(".home-landing");
-    const showStaticEarth = () => {
-      const fallback = landing?.querySelector(".home-earth-fallback");
-      if (fallback && !fallback.hasAttribute("src")) fallback.src = fallback.dataset.src;
-      landing?.classList.add("earth-static");
-    };
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (IS_FILE_PREVIEW || prefersReducedMotion) {
-      showStaticEarth();
-      return;
-    }
-
-    try {
-      const { mountEarthGlobe } = await import(assetUrl("./src/earth-globe.js"));
-      const mounted = mountEarthGlobe(globe, { onFallback: showStaticEarth, textureUrl: globe.dataset.texture });
-      if (!mounted) showStaticEarth();
-    } catch (error) {
-      showStaticEarth();
-      console.warn("The animated Earth could not be loaded; using the static image instead.", error);
-    }
   }
 
   function renderMemberRow(person) {
@@ -505,5 +478,4 @@
   setupChrome();
   app.innerHTML = (renderers[page] || renderHome)();
   setupResponsiveEmailFit();
-  if (page === "home") setupHomeEarth();
 })();
