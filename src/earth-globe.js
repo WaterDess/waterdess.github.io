@@ -58,7 +58,7 @@ function createAtmosphere() {
   );
 }
 
-export function mountEarthGlobe(container, { textureUrl }) {
+export function mountEarthGlobe(container, { onFallback, textureUrl }) {
   if (!container || !textureUrl || !window.WebGLRenderingContext) return false;
 
   const scene = new THREE.Scene();
@@ -91,7 +91,7 @@ export function mountEarthGlobe(container, { textureUrl }) {
 
   const showStaticFallback = () => {
     renderer.setAnimationLoop(null);
-    container.closest(".home-landing")?.classList.add("earth-static");
+    onFallback?.();
   };
 
   const texture = new THREE.TextureLoader().load(

@@ -12,7 +12,7 @@ window.TANG_SITE = {
   visuals: {
     logo: "./public/assets/logo-gchg-wordmark.png",
     hero: "./public/assets/home-earth-static.jpg",
-    earthTexture: "./public/assets/earth-blue-marble-texture.jpg",
+    earthTexture: "./public/assets/earth-blue-marble-texture-2k.jpg",
     research: "./public/assets/visual-research.svg",
     publications: "./public/assets/visual-publications.svg",
     news: "./public/assets/visual-news.svg",
