@@ -109,8 +109,10 @@
         <img class="home-earth-fallback" src="${esc(assetUrl(data.visuals.hero))}" alt="" />
         <div class="earth-globe" data-earth-globe data-texture="${esc(assetUrl(data.visuals.earthTexture))}" aria-hidden="true"></div>
         <div class="image-hero-content">
-          <h1>${esc(data.site.name)}</h1>
-          <strong>${esc(data.site.tagline)}</strong>
+          <div class="home-hero-copy">
+            <h1>${esc(data.site.name)}</h1>
+            <strong>${esc(data.site.tagline)}</strong>
+          </div>
         </div>
       </section>
     `;
