@@ -106,7 +106,8 @@
   function renderHome() {
     return `
       <section class="image-hero home-landing">
-        <img src="${esc(assetUrl(data.visuals.hero))}" alt="" />
+        <img class="home-earth-fallback" src="${esc(assetUrl(data.visuals.hero))}" alt="" />
+        <div class="earth-globe" data-earth-globe data-texture="${esc(assetUrl(data.visuals.earthTexture))}" aria-hidden="true"></div>
         <div class="image-hero-content">
           <h1>${esc(data.site.name)}</h1>
           <strong>${esc(data.site.tagline)}</strong>
@@ -202,6 +203,19 @@
         <small class="plain-email">${esc(displayEmail(person.email))}</small>
       </article>
     `;
+  }
+
+  async function setupHomeEarth() {
+    const globe = document.querySelector("[data-earth-globe]");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!globe || IS_FILE_PREVIEW || prefersReducedMotion) return;
+
+    try {
+      const { mountEarthGlobe } = await import(assetUrl("./src/earth-globe.js"));
+      mountEarthGlobe(globe, { textureUrl: globe.dataset.texture });
+    } catch (error) {
+      console.warn("The animated Earth could not be loaded; using the static image instead.", error);
+    }
   }
 
   function renderMemberRow(person) {
@@ -476,4 +490,5 @@
   setupChrome();
   app.innerHTML = (renderers[page] || renderHome)();
   setupResponsiveEmailFit();
+  if (page === "home") setupHomeEarth();
 })();

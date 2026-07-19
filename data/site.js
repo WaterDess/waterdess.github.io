@@ -11,7 +11,8 @@ window.TANG_SITE = {
   },
   visuals: {
     logo: "./public/assets/logo-gchg-wordmark.png",
-    hero: "./public/assets/home-hydrosphere-landscape-textured-3840w.jpg",
+    hero: "./public/assets/home-earth-static.jpg",
+    earthTexture: "./public/assets/earth-blue-marble-texture.jpg",
     research: "./public/assets/visual-research.svg",
     publications: "./public/assets/visual-publications.svg",
     news: "./public/assets/visual-news.svg",

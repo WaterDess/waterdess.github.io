@@ -1,0 +1,4 @@
+Earth texture: NASA Blue Marble, NASA/Goddard Space Flight Center Scientific Visualization Studio.
+Source: https://svs.gsfc.nasa.gov/3615/
+
+The texture was resized for efficient web delivery. No endorsement by NASA is implied.
