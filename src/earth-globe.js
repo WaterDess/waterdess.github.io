@@ -2,7 +2,7 @@ import * as THREE from "../public/vendor/three.module.min.js";
 
 const FULL_TURN_SECONDS = 300;
 
-function createStars({ count, opacity, seed, size }) {
+function createStars({ color, count, opacity, phase, seed, size }) {
   const positions = new Float32Array(count * 3);
   let randomSeed = seed;
 
@@ -21,13 +21,41 @@ function createStars({ count, opacity, seed, size }) {
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
   const material = new THREE.PointsMaterial({
-    color: 0xb8d1d2,
+    color,
     opacity,
     size,
     sizeAttenuation: true,
     transparent: true
   });
-  return new THREE.Points(geometry, material);
+  const stars = new THREE.Points(geometry, material);
+  stars.userData = { baseOpacity: opacity, phase };
+  return stars;
+}
+
+function createAtmosphere() {
+  return new THREE.Mesh(
+    new THREE.SphereGeometry(1.004, 96, 64),
+    new THREE.ShaderMaterial({
+      vertexShader: `
+        varying vec3 vViewNormal;
+        void main() {
+          vViewNormal = normalize(normalMatrix * normal);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragmentShader: `
+        varying vec3 vViewNormal;
+        void main() {
+          float fresnel = pow(1.0 - max(vViewNormal.z, 0.0), 4.8);
+          float alpha = smoothstep(0.18, 0.92, fresnel) * 0.16;
+          gl_FragColor = vec4(0.62, 0.82, 0.88, alpha);
+        }
+      `,
+      blending: THREE.AdditiveBlending,
+      depthWrite: false,
+      transparent: true
+    })
+  );
 }
 
 export function mountEarthGlobe(container, { textureUrl }) {
@@ -46,8 +74,8 @@ export function mountEarthGlobe(container, { textureUrl }) {
   scene.add(globeGroup);
 
   const starLayers = [
-    createStars({ count: 210, opacity: 0.22, seed: 4137, size: 0.006 }),
-    createStars({ count: 42, opacity: 0.3, seed: 9127, size: 0.01 })
+    createStars({ color: 0xa8c7cc, count: 380, opacity: 0.34, phase: 0.4, seed: 4137, size: 0.0075 }),
+    createStars({ color: 0xe4ded0, count: 76, opacity: 0.48, phase: 2.1, seed: 9127, size: 0.012 })
   ];
   starLayers.forEach((layer) => scene.add(layer));
 
@@ -56,6 +84,10 @@ export function mountEarthGlobe(container, { textureUrl }) {
   const earth = new THREE.Mesh(sphereGeometry, earthMaterial);
   earth.visible = false;
   globeGroup.add(earth);
+
+  const atmosphere = createAtmosphere();
+  atmosphere.visible = false;
+  globeGroup.add(atmosphere);
 
   const showStaticFallback = () => {
     renderer.setAnimationLoop(null);
@@ -66,6 +98,7 @@ export function mountEarthGlobe(container, { textureUrl }) {
     textureUrl,
     () => {
       earth.visible = true;
+      atmosphere.visible = true;
       container.closest(".home-landing")?.classList.add("earth-ready");
     },
     undefined,
@@ -101,8 +134,14 @@ export function mountEarthGlobe(container, { textureUrl }) {
 
   renderer.setAnimationLoop(() => {
     const delta = Math.min(clock.getDelta(), 0.05);
+    const elapsed = clock.elapsedTime;
     rotation += delta * radiansPerSecond;
     earth.rotation.y = rotation;
+    atmosphere.rotation.y = rotation;
+    starLayers.forEach((layer) => {
+      const { baseOpacity, phase } = layer.userData;
+      layer.material.opacity = baseOpacity * (0.94 + 0.06 * Math.sin(elapsed * 0.2 + phase));
+    });
     renderer.render(scene, camera);
   });
 
