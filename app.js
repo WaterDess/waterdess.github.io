@@ -110,7 +110,7 @@
         <div class="earth-globe" data-earth-globe data-texture="${esc(assetUrl(data.visuals.earthTexture))}" aria-hidden="true"></div>
         <div class="image-hero-content">
           <div class="home-hero-copy">
-            <h1 data-text="${esc(data.site.name)}">${esc(data.site.name)}</h1>
+            <h1>${esc(data.site.name)}</h1>
             <strong>${esc(data.site.tagline)}</strong>
           </div>
         </div>

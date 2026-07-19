@@ -34,7 +34,7 @@ function createStars({ color, count, opacity, phase, seed, size }) {
 
 function createAtmosphere() {
   return new THREE.Mesh(
-    new THREE.SphereGeometry(1.004, 96, 64),
+    new THREE.SphereGeometry(1.009, 96, 64),
     new THREE.ShaderMaterial({
       vertexShader: `
         varying vec3 vViewNormal;
@@ -46,9 +46,9 @@ function createAtmosphere() {
       fragmentShader: `
         varying vec3 vViewNormal;
         void main() {
-          float fresnel = pow(1.0 - max(vViewNormal.z, 0.0), 4.8);
-          float alpha = smoothstep(0.18, 0.92, fresnel) * 0.16;
-          gl_FragColor = vec4(0.62, 0.82, 0.88, alpha);
+          float fresnel = pow(1.0 - max(vViewNormal.z, 0.0), 3.7);
+          float alpha = smoothstep(0.12, 0.86, fresnel) * 0.28;
+          gl_FragColor = vec4(0.48, 0.76, 0.88, alpha);
         }
       `,
       blending: THREE.AdditiveBlending,
@@ -64,7 +64,7 @@ export function mountEarthGlobe(container, { onFallback, textureUrl }) {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 40);
   const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
-  renderer.setClearColor(0x020708, 1);
+  renderer.setClearColor(0x020a0f, 1);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   container.append(renderer.domElement);
@@ -74,8 +74,9 @@ export function mountEarthGlobe(container, { onFallback, textureUrl }) {
   scene.add(globeGroup);
 
   const starLayers = [
-    createStars({ color: 0xa8c7cc, count: 380, opacity: 0.34, phase: 0.4, seed: 4137, size: 0.0075 }),
-    createStars({ color: 0xe4ded0, count: 76, opacity: 0.48, phase: 2.1, seed: 9127, size: 0.012 })
+    createStars({ color: 0x9bbfc7, count: 720, opacity: 0.42, phase: 0.4, seed: 4137, size: 0.0065 }),
+    createStars({ color: 0xe4ded0, count: 148, opacity: 0.64, phase: 2.1, seed: 9127, size: 0.012 }),
+    createStars({ color: 0xf3f6f2, count: 34, opacity: 0.78, phase: 4.3, seed: 1783, size: 0.018 })
   ];
   starLayers.forEach((layer) => scene.add(layer));
 
