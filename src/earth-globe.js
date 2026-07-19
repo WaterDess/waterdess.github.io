@@ -1,6 +1,6 @@
 import * as THREE from "../public/vendor/three.module.min.js";
 
-const FULL_TURN_SECONDS = 180;
+const FULL_TURN_SECONDS = 300;
 
 function createStars({ count, opacity, seed, size }) {
   const positions = new Float32Array(count * 3);
