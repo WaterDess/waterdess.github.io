@@ -124,7 +124,7 @@ window.TANG_SITE = {
       links: [
         { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=gc-TisYAAAAJ" }
       ],
-      interests: ["Hydrology", "Numerical modeling", "Deep learning", "Large language models"],
+      interests: ["Hydrology", "Numerical modeling", "Deep learning", "AI agents"],
       education: [
         "M.S. in Urban Water Affairs, Hohai University, 2024",
         "B.S. in Water Engineering, Hohai University, 2021"
