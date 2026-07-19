@@ -2,21 +2,13 @@ window.TANG_SITE = {
   site: {
     name: "Global Change Hydrology Group",
     shortName: "GCHG",
-    unit: "Department of Earth System Science, Tsinghua University",
     tagline: "Advancing water sciences for planetary health and sustainable development",
     summary: "THU Global Change Hydrology (GCH) Group is an interdisciplinary research group at the Department of Earth System Science, Tsinghua University, dedicated to deepening understanding of the impacts of global change on water systems and solutions.",
-    missionIntro: "Our mission is to advance water sciences for planetary health and sustainable development. To deliver on this mission and achieve our core objectives, we commit to the following priorities:",
-    email: "tangqh (at) tsinghua.edu.cn",
-    website: "https://faculty.dess.tsinghua.edu.cn/tangqiuhong/en/index.htm"
+    missionIntro: "Our mission is to advance water sciences for planetary health and sustainable development. To deliver on this mission and achieve our core objectives, we commit to the following priorities:"
   },
   visuals: {
     logo: "./public/assets/logo-gchg-wordmark.png",
-    hero: "./public/assets/home-earth-static.jpg",
-    research: "./public/assets/visual-research.svg",
-    publications: "./public/assets/visual-publications.svg",
-    news: "./public/assets/visual-news.svg",
-    join: "./public/assets/visual-join.svg",
-    pi: "./public/assets/tang-qiuhong-1.jpg"
+    hero: "./public/assets/home-earth-static.jpg"
   },
   mission: [
     "Pursue rigorous, impactful water science research",
@@ -170,61 +162,45 @@ window.TANG_SITE = {
   research: [
     {
       title: "Projects",
-      text: "",
-      status: "To be updated",
-      image: "./public/assets/visual-research-projects.svg"
+      text: ""
     },
     {
       title: "Code",
-      text: "",
-      status: "To be updated",
-      image: "./public/assets/visual-research-code.svg"
+      text: ""
     },
     {
       title: "Data",
       text: "A Long-Term Land Surface Hydrologic Fluxes and States Dataset for China.",
-      status: "Dataset",
-      url: "https://zenodo.org/records/6548153",
-      urlLabel: "Open dataset",
-      image: "./public/assets/visual-research-data.svg"
+      url: "https://zenodo.org/records/6548153"
     }
   ],
   publications: [
     {
       title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",
       authors: "Wang, J., Zhang, Q., Bao, H., Yun, X., Chang, Y., and Tang, Q.",
-      authorShort: "Wang, J.; Zhang, Q.; Bao, H.",
       journal: "Journal of Hydrometeorology",
       details: "27(6), 801-821",
       date: "2026-04-21",
       year: 2026,
-      doi: "10.1175/JHM-D-26-0019.1",
-      url: "https://journals.ametsoc.org/view/journals/hydr/27/6/JHM-D-26-0019.1.xml",
-      highlight: ""
+      url: "https://journals.ametsoc.org/view/journals/hydr/27/6/JHM-D-26-0019.1.xml"
     },
     {
       title: "Unravelling global patterns of drought-flood alternations",
       authors: "Haile, G. G., Islam, M. S., Tang, Q., and Wood, D.",
-      authorShort: "Haile, G. G.; Islam, M. S.; Tang, Q.",
       journal: "Journal of Hydrology",
       details: "676, 135718",
       date: "2026-05-20",
       year: 2026,
-      doi: "10.1016/j.jhydrol.2026.135718",
-      url: "https://doi.org/10.1016/j.jhydrol.2026.135718",
-      highlight: ""
+      url: "https://doi.org/10.1016/j.jhydrol.2026.135718"
     },
     {
       title: "Rapid decline of ice thickness across Finnish lakes",
       authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Mahdian, M., Hosseinzadeh, M., Kianmehr, P., Asl-Rousta, B., Zhu, S., Gu, X., Saari, M., Kolehmainen, M., Zhang, Y., Sharma, S., Tang, Q., and Woolway, R. I.",
-      authorShort: "Salamattalab, M. M.; Noori, R.; Shahmohammad, M.",
       journal: "International Journal of Applied Earth Observation and Geoinformation",
       details: "149, 105293",
       date: "2026-05-04",
       year: 2026,
-      doi: "10.1016/j.jag.2026.105293",
-      url: "https://doi.org/10.1016/j.jag.2026.105293",
-      highlight: ""
+      url: "https://doi.org/10.1016/j.jag.2026.105293"
     }
   ],
   news: [
@@ -232,17 +208,12 @@ window.TANG_SITE = {
       date: "2026-06-25",
       type: "Call for Papers",
       title: "Advances in Observation, Modeling, and Prediction of the Hydrosphere",
-      text: "npj Hydrosphere is calling for papers for a Collection on advances in observation, modeling, and prediction of the hydrosphere. Submission deadline: 31 March 2027.",
-      url: "https://www.nature.com/collections/aicidajahb",
-      urlLabel: "URL",
-      flyerUrl: "./public/assets/npj-hydrosphere-aomph-flyer.pdf",
-      image: "./public/assets/news-hydrosphere-satellite.png"
+      url: "https://www.nature.com/collections/aicidajahb"
     },
     {
       date: "2026-06-30 10:30-11:30",
       type: "Seminar",
       title: "Linking Global Cycles Across Scales Based on Ecohydrological Optimality for the Water Balance",
-      text: "Allen Hunt will give a seminar on ecohydrological principles, water balance, and global-scale hydrological fluxes.",
       speaker: "Prof. Allen Hunt",
       image: "./public/assets/seminar-allen-hunt-20260630.jpg"
     },
@@ -250,16 +221,13 @@ window.TANG_SITE = {
       date: "2026-06-15 16:00-17:00",
       type: "Seminar",
       title: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness",
-      text: "Prof. Xu Liang will give Global Change Science Zijing Forum No. 565 on land surface modeling progress, complexity, reliability, and robustness.",
       speaker: "Prof. Xu Liang",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm"
     },
     {
       date: "2026-06-11 15:00-17:00",
       type: "Seminar",
       title: "Cast3: Translating numerical weather prediction principles into data-driven forecasting",
-      text: "Congyi Nai will present Cast3, a generative forecasting framework that absorbs numerical weather prediction knowledge for data-driven Earth system modelling.",
       speaker: "Mr. Congyi Nai",
       image: "./public/assets/seminar-congyi-nai-20260611.jpg"
     },
@@ -267,7 +235,6 @@ window.TANG_SITE = {
       date: "2026-06-11 15:00-17:00",
       type: "Seminar",
       title: "Spatial Generalization Tests for Machine Learning-based Weather Models to Assess Physical Consistency",
-      text: "Maren Hover will discuss spatial generalization tests for machine learning-based weather and climate models.",
       speaker: "Ms. Maren Höver",
       image: "./public/assets/seminar-maren-hover-20260611.jpg"
     },
@@ -275,58 +242,45 @@ window.TANG_SITE = {
       date: "2026-05-29 15:30-17:00",
       type: "Seminar",
       title: "Two Decades of Hydrological Forecasting in Australia: Responses and Lessons from Drought to Flood",
-      text: "Prof. Quanjun Wang will give Global Change Science Zijing Forum No. 563 on two decades of hydrological forecasting in Australia.",
       speaker: "Prof. Quanjun Wang",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm"
     },
     {
       date: "2026-05-21 16:40-17:40",
       type: "Seminar",
       title: "The Common Land Model (CoLM): Recent Advances in Hydrological and Agricultural Process Simulation",
-      text: "Associate Prof. Shulei Zhang will give Global Change Science Zijing Forum No. 562 on recent advances in hydrological and agricultural process simulation with CoLM.",
       speaker: "Prof. Shulei Zhang",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm"
     },
     {
       date: "2026-05-21 15:30-16:30",
       type: "Seminar",
       title: "From Information Aggregation to Knowledge Co-creation: Exploring New Modes of Youth Hydrology Research",
-      text: "Dr. Xudong Zhou will give Global Change Science Zijing Forum No. 561 on new modes of youth hydrology research collaboration.",
       speaker: "Dr. Xudong Zhou",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm"
     },
     {
       date: "2026-02-02 10:00-12:00",
       type: "Seminar",
       title: "Coupled Riverine Lateral Carbon Transport and Greenhouse Gas Evasion: Processes and Assessment",
-      text: "Dr. Yang Gao will give Global Change Science Zijing Forum No. 549 on riverine lateral carbon transport and greenhouse gas evasion.",
       speaker: "Dr. Yang Gao",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm"
     },
     {
       date: "2025-12-01 10:00-11:30",
       type: "Seminar",
       title: "Simulation and Data Assimilation of Water and Heat Transfer Across the Land-Atmosphere Interface",
-      text: "Prof. Jianzhi Dong will give Global Change Science Zijing Forum No. 539 on simulation and data assimilation of water and heat transfer across the land-atmosphere interface.",
       speaker: "Prof. Jianzhi Dong",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm",
-      urlLabel: "Read announcement"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm"
     },
     {
       date: "2026-06-10",
       type: "Congratulations",
       title: "Dr. Ruiyu Zhao selected as the Shuimu Tsinghua Scholar",
-      text: "Congratulations to Dr. Ruiyu Zhao on being selected as a Shuimu Tsinghua Scholar.",
-      url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174",
-      urlLabel: "Read announcement"
+      url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174"
     }
   ],
   join: {
-    title: "How to join?",
     text: "The Tsinghua University Global Research Program provides a 6+ week immersive research experience for outstanding undergraduates and graduate students from top universities outside the Chinese Mainland, including those in Hong Kong, Macao, and Taiwan.",
     program: "2026 Tsinghua University Global Research Program",
     programUrl: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",

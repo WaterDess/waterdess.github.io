@@ -70,10 +70,9 @@
     });
   }
 
-  function pageIntro(title, kicker, summary = "") {
+  function pageIntro(title) {
     return `
       <header class="section page-intro">
-        <span>${esc(kicker)}</span>
         <h1>${esc(title)}</h1>
       </header>
     `;
@@ -119,7 +118,6 @@
 
   function renderAbout() {
     return `
-      ${pageIntro("About", "Group", "THU Global Change Hydrology Group")}
       <section class="section about-layout">
         <article class="large-copy">
           <p>${esc(data.site.summary)}</p>
@@ -144,7 +142,6 @@
     const researchAssociates = members.filter((person) => (person.group || "").toLowerCase() === "research-associate");
 
     return `
-      ${pageIntro("People", "Directory", "Faculty, postdoctoral fellows, research associates, and students")}
       <section class="section people-layout">
         ${renderToc([
           { id: "faculty", label: "Faculty" },
@@ -218,7 +215,7 @@
   function renderPersonDetail() {
     const person = data.people.find((item) => item.slug === personSlug) || data.people[0];
     return `
-      ${pageIntro(person.name, "People", person.position || "")}
+      ${pageIntro(person.name)}
       <section class="section person-detail">
         <aside class="profile-summary">
           ${person.photo ? `<img src="${esc(assetUrl(person.photo))}" alt="${esc(person.name)}" />` : `<div class="avatar-placeholder large">${esc(person.name.charAt(0))}</div>`}
@@ -280,7 +277,6 @@
     }));
 
     return `
-      ${pageIntro("Research", "Work", "Projects, code, and shared hydrologic datasets")}
       ${renderTocLayout(tocItems, list(data.research, (item, index) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
           ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
@@ -298,7 +294,6 @@
     const tocItems = years.map((year) => ({ id: `year-${year}`, label: String(year) }));
 
     return `
-      ${pageIntro("Publications", "Archive", "A curated list will be updated manually")}
       ${renderTocLayout(tocItems, list(years, (year) => `
         <section class="content-section publication-year" id="year-${esc(year)}">
           <div class="publication-list">
@@ -349,7 +344,6 @@
   function renderNews() {
     const items = [...(data.news || [])].sort((a, b) => newsDateValue(b.date) - newsDateValue(a.date));
     return `
-      ${pageIntro("News", "Updates", "Seminars, calls, and group announcements")}
       <section class="section news-layout compact-news-layout">
         <div class="news-lines">
           ${list(items, renderNewsLine)}
@@ -378,7 +372,6 @@
   function newsLinkTarget(item) {
     if (item.url) return item.url;
     if (item.image) return assetUrl(item.image);
-    if (item.flyerUrl) return assetUrl(item.flyerUrl);
     return "";
   }
   function renderNewsLine(item) {
@@ -425,13 +418,11 @@
     const tocItems = joinItems.map((item) => ({ id: item.id, label: item.label }));
 
     return `
-      ${pageIntro("How to join?", "Openings", "Research programs, admission, and visitor opportunities")}
       ${renderTocLayout(tocItems, list(joinItems, (item, index) => `
         <article class="content-section join-section" id="${esc(item.id)}">
           ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
           ${item.text ? `<p>${esc(item.text)}</p>` : ""}
           ${item.url ? `<p><a class="inline-detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>` : ""}
-          ${item.email ? `<p class="plain-email join-email">${esc(item.email)}</p>` : ""}
         </article>
       `))}
     `;

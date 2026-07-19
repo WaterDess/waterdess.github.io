@@ -1,72 +1,51 @@
 # Global Change Hydrology Group Website
 
-This folder contains the GitHub Pages website for the Global Change Hydrology Group.
+Static GitHub Pages website for the Global Change Hydrology Group at Tsinghua University.
 
-The website is separate from `tv-showcase/`:
+Live site: <https://waterdess.github.io/>
 
-- `tv-showcase/`: offline, full-screen TV display with automatic looping.
-- `github-pages-site/`: public website with independent pages, navigation, profile pages, news, and publications.
-
-## Current Structure
+## Structure
 
 ```text
-index.html          # Home
-about.html          # About
-people.html         # People
-research.html       # Research
-publications.html   # Publications
-news.html           # News
-join.html           # How to join?
-contact.html        # Contact page
-person-*.html       # Member profile pages
-data/site.js        # Editable site content
-public/assets/      # Local images, SVG visuals, and PDF assets
-styles.css          # Site styles
-app.js              # Static rendering logic
+index.html                 Home entry
+about/, news/, people/     Clean-route page entries
+person-*/                  Member profile entries
+data/site.js               Site content
+site.css                   Site styles
+site.js                    Rendering and route logic
+public/assets/             Images, documents, and archived themes
 ```
 
-## Local Preview
+The root-level `*.html` files support direct local preview. Matching route folders support clean GitHub Pages URLs such as `/news/` and `/people/`.
 
-Open `index.html` directly in a browser, or run a local static server:
+## Development
 
-```bash
+This project has no build step, backend, package manager, or online runtime dependency.
+
+Most content changes belong in `data/site.js`. Visual changes belong in `site.css`, and rendering changes belong in `site.js`.
+
+Run a local server from this directory:
+
+```powershell
 python -m http.server 8123
 ```
 
-Then visit:
+Then open <http://127.0.0.1:8123/>.
 
-```text
-http://127.0.0.1:8123/index.html
+Validate JavaScript before deployment:
+
+```powershell
+node --check site.js
+node --check data/site.js
+git diff --check
 ```
 
-## Editing Content
+## Assets
 
-Most editable content is stored in:
+The homepage uses `public/assets/home-earth-static.jpg`. The previous mountain homepage image is intentionally retained under `public/assets/themes/mountain/` as an inactive theme backup.
 
-```text
-data/site.js
-```
-
-Editable content includes:
-
-- Group name and summary
-- People and profile fields
-- Research cards
-- Publications
-- News
-- How to join information
-- Local visual assets
-
-## Visual Direction
-
-The current design is an English-only, image-led academic lab website:
-
-- Large hydrosphere hero visual
-- Three homepage entry cards for Research, News, and Publications
-- Clean white background
-- Minimal UI decoration
-- Local offline assets only
+Production pages should use local assets only. Add new images and PDFs under `public/assets/` and reference them from `data/site.js`.
 
 ## Deployment
 
-This is a pure static site. Push the folder contents to the configured GitHub Pages repository and serve from the main branch root.
+The repository publishes the `main` branch through GitHub Pages. There is no generated output directory; committed files are the deployed site.

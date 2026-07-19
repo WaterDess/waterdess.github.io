@@ -258,8 +258,6 @@ li {
   width: 100%;
   margin: 0;
   padding: 0;
-  animation: intro 0.3s both;
-  animation-delay: 0.06s;
 }
 
 .image-hero img {
@@ -297,10 +295,6 @@ body[data-page="home"] .image-hero img {
   transform: translateY(clamp(12px, 2.2vh, 24px)) scale(1.03);
 }
 
-.image-hero::after {
-  display: none;
-}
-
 .image-hero-content {
   position: absolute;
   inset: 0;
@@ -312,22 +306,6 @@ body[data-page="home"] .image-hero img {
   text-align: center;
   pointer-events: none;
   z-index: 3;
-}
-
-.image-hero-content::before {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background:
-    radial-gradient(circle at center, rgba(21, 53, 50, 0.34) 0%, rgba(21, 53, 50, 0.2) 32%, rgba(21, 53, 50, 0.08) 62%),
-    linear-gradient(180deg, rgba(247, 250, 248, 0.02) 0%, rgba(20, 49, 47, 0.24) 100%);
-  content: "";
-}
-
-body[data-page="home"] .home-landing .image-hero-content::before {
-  background:
-    radial-gradient(circle at center, rgba(11, 35, 36, 0.16) 0%, rgba(11, 35, 36, 0.07) 48%, transparent 78%),
-    linear-gradient(180deg, transparent 0%, rgba(4, 18, 20, 0.12) 100%);
 }
 
 .image-hero-content h1,
@@ -483,15 +461,6 @@ body[data-page="home"] .home-landing .image-hero-content strong {
   min-height: 60vh;
   place-items: center;
   color: var(--muted);
-}
-
-@keyframes intro {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 @media (min-width: 37.5em) {
@@ -661,27 +630,6 @@ body:not([data-page="home"]) main a:hover {
   padding: clamp(3.2rem, 7vw, 5.6rem) 0 clamp(1.35rem, 2.8vw, 2.1rem);
 }
 
-.page-intro span {
-  position: relative;
-  align-self: start;
-  padding-top: 0.2rem;
-  color: var(--ink-faint);
-  font-size: 0.58rem;
-  font-weight: 620;
-  line-height: 1.2;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.page-intro span::before {
-  content: "";
-  display: block;
-  width: 1.6rem;
-  height: 1px;
-  margin-bottom: 0.78rem;
-  background: var(--mark);
-}
-
 .page-intro h1 {
   margin: 0;
   color: var(--ink);
@@ -689,22 +637,6 @@ body:not([data-page="home"]) main a:hover {
   font-weight: 560;
   line-height: 1.04;
   letter-spacing: 0;
-}
-
-.page-intro p {
-  max-width: 34rem;
-  margin: 0.72rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.78rem;
-  line-height: 1.72;
-}
-
-body:not([data-page="home"]):not([data-page="person"]) .page-intro {
-  display: none;
-}
-
-body[data-page="person"] .page-intro span {
-  display: none;
 }
 
 body[data-page="person"] .page-intro {
@@ -1358,11 +1290,6 @@ body[data-page="research"] .research-data-row h2 a:hover {
     padding-top: 2.45rem;
   }
 
-  .page-intro span {
-    display: block;
-    margin-bottom: 0.75rem;
-  }
-
   .toc-sidebar {
     position: static;
     margin-bottom: 1.2rem;
@@ -1429,8 +1356,6 @@ body:not([data-page="home"]) a {
 }
 
 /* Center standalone editorial pages without side navigation */
-body[data-page="news"] .page-intro,
-body[data-page="about"] .page-intro,
 body[data-page="news"] .news-layout,
 body[data-page="about"] .about-layout {
   width: min(100% - 2rem, 42rem);
@@ -1438,8 +1363,6 @@ body[data-page="about"] .about-layout {
   margin-left: auto;
 }
 
-body[data-page="news"] .page-intro,
-body[data-page="about"] .page-intro,
 body[data-page="about"] .about-layout {
   display: block;
 }
@@ -1447,12 +1370,6 @@ body[data-page="about"] .about-layout {
 body[data-page="news"] .news-lines,
 body[data-page="publications"] .publication-list {
   border-top: 0 !important;
-}
-
-body[data-page="news"] .page-intro span,
-body[data-page="about"] .page-intro span {
-  display: block;
-  margin-bottom: 0.75rem;
 }
 
 body[data-page="news"] .news-line,
@@ -1510,14 +1427,7 @@ body[data-page="join"] .join-section p + p {
   margin-top: 0.24rem;
 }
 
-body[data-page="join"] .join-email {
-  justify-self: start;
-  margin-top: 0.18rem;
-  text-align: left;
-}
-
 /* Remove decorative short rules from content pages. */
-.page-intro span::before,
 .compact-news-line h3::before,
 .research-section::before,
 .join-section::before,
