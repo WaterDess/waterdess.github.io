@@ -207,13 +207,21 @@
 
   async function setupHomeEarth() {
     const globe = document.querySelector("[data-earth-globe]");
+    if (!globe) return;
+
+    const landing = globe.closest(".home-landing");
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!globe || IS_FILE_PREVIEW || prefersReducedMotion) return;
+    if (IS_FILE_PREVIEW || prefersReducedMotion) {
+      landing?.classList.add("earth-static");
+      return;
+    }
 
     try {
       const { mountEarthGlobe } = await import(assetUrl("./src/earth-globe.js"));
-      mountEarthGlobe(globe, { textureUrl: globe.dataset.texture });
+      const mounted = mountEarthGlobe(globe, { textureUrl: globe.dataset.texture });
+      if (!mounted) landing?.classList.add("earth-static");
     } catch (error) {
+      landing?.classList.add("earth-static");
       console.warn("The animated Earth could not be loaded; using the static image instead.", error);
     }
   }

@@ -294,13 +294,14 @@ body[data-page="home"] .image-hero img {
 
 .home-earth-fallback {
   z-index: 0;
-  opacity: 1;
+  opacity: 0;
+  visibility: hidden;
   object-fit: contain !important;
 }
 
 .earth-globe {
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
 }
 
@@ -317,6 +318,15 @@ body[data-page="home"] .image-hero img {
 
 .home-landing.earth-ready .earth-globe {
   opacity: 1;
+}
+
+.home-landing.earth-static .home-earth-fallback {
+  opacity: 1;
+  visibility: visible;
+}
+
+.home-landing.earth-static .earth-globe {
+  opacity: 0;
 }
 
 .image-hero::after {
