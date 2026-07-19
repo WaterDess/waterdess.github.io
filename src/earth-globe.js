@@ -30,32 +30,6 @@ function createStars({ count, opacity, seed, size }) {
   return new THREE.Points(geometry, material);
 }
 
-function createAtmosphere(geometry) {
-  return new THREE.Mesh(
-    geometry,
-    new THREE.ShaderMaterial({
-      vertexShader: `
-        varying vec3 vNormal;
-        void main() {
-          vNormal = normalize(normalMatrix * normal);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-      `,
-      fragmentShader: `
-        varying vec3 vNormal;
-        void main() {
-          float rim = pow(0.72 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.4);
-          gl_FragColor = vec4(0.16, 0.48, 0.78, rim * 0.32);
-        }
-      `,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false,
-      side: THREE.BackSide,
-      transparent: true
-    })
-  );
-}
-
 export function mountEarthGlobe(container, { textureUrl }) {
   if (!container || !textureUrl || !window.WebGLRenderingContext) return false;
 
@@ -92,7 +66,6 @@ export function mountEarthGlobe(container, { textureUrl }) {
     textureUrl,
     () => {
       earth.visible = true;
-      atmosphere.visible = true;
       container.closest(".home-landing")?.classList.add("earth-ready");
     },
     undefined,
@@ -101,11 +74,6 @@ export function mountEarthGlobe(container, { textureUrl }) {
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
   earthMaterial.map = texture;
-
-  const atmosphereGeometry = new THREE.SphereGeometry(1.035, 72, 48);
-  const atmosphere = createAtmosphere(atmosphereGeometry);
-  atmosphere.visible = false;
-  globeGroup.add(atmosphere);
 
   const resize = () => {
     const { width, height } = container.getBoundingClientRect();
