@@ -205,6 +205,13 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-08-11 10:00-11:30",
+      type: "Seminar",
+      title: "Development and Basin-Scale Evaluation of Global Coupled Land–Atmosphere Snow Data Assimilation System at NCEP",
+      speaker: "Prof. Youlong Xia",
+      image: "./public/assets/seminar-youlong-xia-20260811.jpg"
+    },
+    {
       date: "2026-06-25",
       type: "Call for Papers",
       title: "Advances in Observation, Modeling, and Prediction of the Hydrosphere",
