@@ -174,6 +174,21 @@ window.TANG_SITE = {
       url: "https://zenodo.org/records/6548153"
     }
   ],
+  // ----- education -----
+  education: [
+    {
+      shortLabel: "Course",
+      title: "Global Change Hydrology (Undergraduate & Graduate Course)",
+      text: "",
+      url: "https://mp.weixin.qq.com/s?__biz=MzI0MDA5MTQzMA==&&mid=2650744146&&idx=1&&sn=9711e026061b7a53e5a57c53a01d8ad5&&chksm=f01e3bc75a227f46b21c9df83b5900fe5506f934db4e1ebb542376ff7a8b8432c7e98e397749&&scene=27"
+    },
+    {
+      shortLabel: "Summer Program",
+      title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
+      text: "",
+      url: "./public/assets/GCH_Summer_Training.html"
+    }
+  ],
   publications: [
     {
       title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",

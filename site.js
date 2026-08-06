@@ -17,6 +17,7 @@
     ["people", "People"],
     ["publications", "Publications"],
     ["research", "Research"],
+    ["education", "Education"],
     ["about", "About"],
     ["join", "How to join?"]
   ];
@@ -38,7 +39,6 @@
     if (IS_FILE_PREVIEW) {
       return pageName === "home" ? "index.html" : `${pageName}.html`;
     }
-
     return `${PUBLIC_BASE}${pageName === "home" ? "" : `${pageName}/`}`;
   }
 
@@ -50,7 +50,6 @@
     if (!url || IS_FILE_PREVIEW || /^(https?:|#)/.test(url)) return url;
     return url.startsWith("./") ? `${PUBLIC_BASE}${url.slice(2)}` : url;
   }
-
 
   function displayEmail(email) {
     return String(email || "");
@@ -77,6 +76,7 @@
       </header>
     `;
   }
+
   function renderToc(items) {
     return `
       <aside class="toc-sidebar" aria-label="Section navigation">
@@ -266,7 +266,6 @@
         : esc(text);
       return `<li>${content}</li>`;
     }
-
     return `<li>${esc(item)}</li>`;
   }
 
@@ -285,6 +284,39 @@
             : `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`}
         </section>
       `))}
+    `;
+  }
+
+  // ----- 使用独立结构的 Education 渲染 -----
+  function renderEducation() {
+    const items = data.education || [];
+    const tocItems = items.map((item, index) => ({
+      id: `education-${index}`,
+      label: item.shortLabel || item.title
+    }));
+
+    const content = items.map((item, index) => {
+      const titleHtml = item.url
+        ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>`
+        : esc(item.title);
+      return `
+        <section class="content-section education-section" id="education-${index}">
+          <header class="education-heading" aria-label="${esc(item.title)}">
+            <span class="education-index">${String(index + 1).padStart(2, "0")}</span>
+            <h2 class="education-title">${titleHtml}</h2>
+          </header>
+          ${item.text ? `<p class="education-text">${esc(item.text)}</p>` : ''}
+        </section>
+      `;
+    }).join('');
+
+    return `
+      <section class="section toc-layout">
+        ${renderToc(tocItems)}
+        <div class="toc-content">
+          ${content}
+        </div>
+      </section>
     `;
   }
 
@@ -360,6 +392,7 @@
     const parts = [item.type, item.date ? displayNewsDate(item.date) : "", item.speaker || ""].filter(Boolean);
     return parts.join(" / ");
   }
+
   function newsDateValue(date) {
     const source = String(date || "");
     const full = source.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -374,6 +407,7 @@
     if (item.image) return assetUrl(item.image);
     return "";
   }
+
   function renderNewsLine(item) {
     return `
       <article class="news-line compact-news-line">
@@ -450,6 +484,7 @@
       window.__plainEmailFitTimer = window.setTimeout(fitPlainEmails, 90);
     });
   }
+
   const renderers = {
     home: renderHome,
     about: renderAbout,
@@ -458,7 +493,8 @@
     research: renderResearch,
     publications: renderPublications,
     news: renderNews,
-    join: renderJoin
+    join: renderJoin,
+    education: renderEducation
   };
 
   if (!data) {
