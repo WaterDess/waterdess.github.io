@@ -220,6 +220,12 @@ window.TANG_SITE = {
   ],
   news: [
     {
+        date: "2026-08-06",
+        type: "Call for Participants",
+        title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
+        url: "./public/assets/GCH_Summer_Training.html"
+    },
+    {
       date: "2026-08-11 10:00-11:30",
       type: "Seminar",
       title: "Development and Basin-Scale Evaluation of Global Coupled Land–Atmosphere Snow Data Assimilation System at NCEP",

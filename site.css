@@ -1510,3 +1510,16 @@ body[data-page="education"] .education-title a:hover {
   color: var(--link-hover);
   text-shadow: 0 0 0.65em var(--link-glow);
 }
+/* Education 序号行样式 */
+.education-index-row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+
+.education-index-row .education-index {
+  color: rgba(12, 36, 31, 0.36);
+  font-size: 0.62rem;
+  font-weight: 560;
+  line-height: 1;
+}

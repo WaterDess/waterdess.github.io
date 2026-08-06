@@ -287,38 +287,51 @@
     `;
   }
 
-  // ----- 使用独立结构的 Education 渲染 -----
-  function renderEducation() {
-    const items = data.education || [];
-    const tocItems = items.map((item, index) => ({
-      id: `education-${index}`,
-      label: item.shortLabel || item.title
-    }));
+function renderEducation() {
+  const items = data.education || [];
+  // 侧边栏使用短标签作为显示文本，并基于短标签生成锚点 ID
+  const tocItems = items.map((item) => ({
+    id: sectionId("education", item.shortLabel || item.title),
+    label: item.shortLabel || item.title
+  }));
 
-    const content = items.map((item, index) => {
-      const titleHtml = item.url
-        ? `<a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>`
-        : esc(item.title);
-      return `
-        <section class="content-section education-section" id="education-${index}">
-          <header class="education-heading" aria-label="${esc(item.title)}">
-            <span class="education-index">${String(index + 1).padStart(2, "0")}</span>
-            <h2 class="education-title">${titleHtml}</h2>
-          </header>
-          ${item.text ? `<p class="education-text">${esc(item.text)}</p>` : ''}
-        </section>
+  const content = items.map((item, index) => {
+    const blockTitle = item.shortLabel || item.title;   // 短标签（用于生成 ID）
+    const contentText = item.title;                     // 完整标题（用于显示）
+
+    let linkHtml = '';
+    if (item.url) {
+      linkHtml = `
+        <h2>
+          <a href="${esc(item.url)}" target="_blank" rel="noopener">
+            <span class="link-icon" aria-hidden="true">&#128279;</span>${esc(contentText)}
+          </a>
+        </h2>
       `;
-    }).join('');
+    } else {
+      linkHtml = `<p class="empty-note">${esc(contentText || "To be updated.")}</p>`;
+    }
 
+    const sectionIdValue = sectionId("education", blockTitle);   // 内容区 ID 与侧边栏一致
     return `
-      <section class="section toc-layout">
-        ${renderToc(tocItems)}
-        <div class="toc-content">
-          ${content}
+      <section class="content-section education-section" id="${sectionIdValue}">
+        <div class="education-row compact-person-row">
+          <span class="education-index">${String(index + 1).padStart(2, "0")}</span>
+          ${linkHtml}
         </div>
       </section>
     `;
-  }
+  }).join('');
+
+  return `
+    <section class="section toc-layout">
+      ${renderToc(tocItems)}
+      <div class="toc-content">
+        ${content}
+      </div>
+    </section>
+  `;
+}
 
   function renderPublications() {
     const papers = [...(data.publications || [])].sort((a, b) => newsDateValue(b.date || b.year) - newsDateValue(a.date || a.year));
