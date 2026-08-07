@@ -1522,11 +1522,12 @@ body:not([data-page="home"]) .person-detail {
   height: 3.4rem;
 }
 
-.summer-training-day-meta {
-  margin: 0 0 0.4rem;
-  color: rgba(12, 36, 31, 0.52);
-  font-size: 0.72rem;
-  line-height: 1.5;
+.summer-training-day-title {
+  margin: 0 0 0.3em;
+  color: var(--ink);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.45;
 }
 
 .summer-training-day ul {

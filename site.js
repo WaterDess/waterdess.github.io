@@ -339,21 +339,22 @@ function renderEducation() {
       : "";
 
     const scheduleHtml = list(st.schedule || [], (entry) => {
-  // 构建标题：日期: 标题 (Venue: 地点) —— 地点可选
-  let titleLine = esc(entry.day) + ": " + esc(entry.title);
-  if (entry.venue) {
-    titleLine += " (Venue: " + esc(entry.venue) + ")";
-  }
-  const itemsHtml = (entry.items || []).length
-    ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
-    : "";
-  return `
-    <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
-      <h2 style="margin-top:0; margin-bottom:0.3em;">${titleLine}</h2>
-      ${itemsHtml}
-    </article>
-  `;
-});
+      let titleLine = `${esc(entry.day)}: ${esc(entry.title)}`;
+      if (entry.venue) {
+        titleLine += ` (Venue: ${esc(entry.venue)})`;
+      }
+
+      const itemsHtml = (entry.items || []).length
+        ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
+        : "";
+
+      return `
+        <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
+          <h3 class="summer-training-day-title">${titleLine}</h3>
+          ${itemsHtml}
+        </article>
+      `;
+    });
 
     const registrationHtml = st.registration && st.registration.url
       ? `<p><a class="inline-detail-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(st.registration.deadline)}</a></p>`
