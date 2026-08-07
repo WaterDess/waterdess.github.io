@@ -321,7 +321,7 @@ function renderEducation() {
   function renderSummerTraining() {
     const st = data.summerTraining || {};
     const tocItems = [
-      { id: "overview", label: "Overview" },
+      { id: "overview", label: "Program Theme" },
       { id: "objectives", label: "Objectives" },
       { id: "sponsors", label: "Sponsors" },
       { id: "faculty", label: "Faculty" },
@@ -366,6 +366,7 @@ function renderEducation() {
     const content = `
       ${heroHtml}
       <section class="content-section" id="overview">
+        <h2>Program Theme</h2>
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
       </section>
       <section class="content-section" id="objectives">
