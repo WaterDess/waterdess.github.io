@@ -380,10 +380,13 @@ function renderEducation() {
     const registrationHtml = st.registration && st.registration.url
       ? `
         ${countdownHtml}
-        ${renderDetailAction(st.registration.url, "register online", true, "registration-link")}
         <p class="registration-deadline">${esc(st.registration.deadline || "")}</p>
       `
       : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
+
+    const registrationHeading = st.registration && st.registration.url
+      ? `<a class="registration-heading-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener noreferrer">Registration</a>`
+      : "Registration";
 
     const content = `
       <section class="content-section program-section" id="overview">
@@ -391,7 +394,7 @@ function renderEducation() {
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
       </section>
       <section class="content-section program-section program-registration" id="registration">
-        <h2>Registration</h2>
+        <h2>${registrationHeading}</h2>
         ${registrationHtml}
       </section>
       <section class="content-section program-section" id="objectives">

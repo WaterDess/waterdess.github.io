@@ -1534,6 +1534,18 @@ body:not([data-page="home"]) .person-detail {
   color: #087f82;
 }
 
+.program-registration .registration-heading-link {
+  color: inherit;
+  text-decoration: none;
+  background-image: none;
+}
+
+.program-registration .registration-heading-link:hover,
+.program-registration .registration-heading-link:focus-visible {
+  color: var(--link-hover);
+  text-shadow: 0 0 0.75em var(--link-glow);
+}
+
 .program-registration {
   padding-left: 0.9rem;
   border-left: 2px solid rgba(8, 127, 130, 0.38);
