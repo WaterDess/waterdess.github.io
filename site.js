@@ -102,12 +102,13 @@
     return `${prefix}-${String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
   }
 
-  function renderDetailAction(url, label = "see details", external = true) {
+  function renderDetailAction(url, label = "see details", external = true, variant = "") {
     if (!url) return "";
     const externalAttrs = external ? ' target="_blank" rel="noopener"' : "";
+    const variantClass = variant ? ` ${esc(variant)}` : "";
     return `
       <p class="detail-action">
-        <a class="inline-detail-link" href="${esc(url)}"${externalAttrs}>
+        <a class="inline-detail-link${variantClass}" href="${esc(url)}"${externalAttrs}>
           <span class="link-icon" aria-hidden="true">&#128279;</span>${esc(label)}
         </a>
       </p>
@@ -308,14 +309,21 @@ function renderEducation() {
 
   const content = items.map((item, index) => {
     const blockTitle = item.shortLabel || item.title;
-    const linkHtml = item.route
+    const detailsAction = item.route
       ? renderDetailAction(href(item.route), "see details", false)
       : renderDetailAction(assetUrl(item.url));
+    const registrationUrl = item.route === "summer-training"
+      ? data.summerTraining?.registration?.url
+      : "";
+    const registrationAction = renderDetailAction(registrationUrl, "registration", true, "registration-link");
 
     return `
       <article class="content-section indexed-section education-section" id="${esc(sectionId("education", blockTitle))}">
         ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
-        ${linkHtml}
+        <div class="detail-actions">
+          ${detailsAction}
+          ${registrationAction}
+        </div>
       </article>
     `;
   }).join("");
@@ -329,12 +337,12 @@ function renderEducation() {
     const st = data.summerTraining || {};
     const tocItems = [
       { id: "overview", label: "Program Theme" },
+      { id: "registration", label: "Registration" },
       { id: "objectives", label: "Objectives" },
       { id: "sponsors", label: "Sponsors" },
       { id: "faculty", label: "Faculty" },
       { id: "participants", label: "Participants" },
-      { id: "schedule", label: "Schedule" },
-      { id: "registration", label: "Registration" }
+      { id: "schedule", label: "Schedule" }
     ];
 
     const logosHtml = (st.sponsorLogos || []).length
@@ -360,14 +368,31 @@ function renderEducation() {
       `;
     });
 
+    const countdownHtml = st.registration?.closesAt
+      ? `
+        <div class="registration-countdown" data-registration-deadline="${esc(st.registration.closesAt)}">
+          <span>Registration closes in</span>
+          <strong data-registration-countdown>Calculating...</strong>
+        </div>
+      `
+      : "";
+
     const registrationHtml = st.registration && st.registration.url
-      ? renderDetailAction(st.registration.url, st.registration.deadline)
+      ? `
+        ${countdownHtml}
+        ${renderDetailAction(st.registration.url, "register online", true, "registration-link")}
+        <p class="registration-deadline">${esc(st.registration.deadline || "")}</p>
+      `
       : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
 
     const content = `
       <section class="content-section program-section" id="overview">
         <h2>Program Theme</h2>
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
+      </section>
+      <section class="content-section program-section program-registration" id="registration">
+        <h2>Registration</h2>
+        ${registrationHtml}
       </section>
       <section class="content-section program-section" id="objectives">
         <h2>Program Objectives</h2>
@@ -389,21 +414,17 @@ function renderEducation() {
         <h2>Detailed Daily Schedule</h2>
         ${scheduleHtml}
       </section>
-      <section class="content-section program-section" id="registration">
-        <h2>Registration</h2>
-        ${registrationHtml}
-      </section>
     `;
 
     return `
-      <header class="section summer-training-header">
-        <div class="summer-training-header-main">
-          <h1>${esc(st.title || "")}</h1>
-          <p class="summer-training-when">${esc(st.subtitle || "")}</p>
-          ${logosHtml}
-        </div>
+      ${renderTocLayout(tocItems, `
+      <header class="summer-training-intro">
+        <h1>${esc(st.title || "")}</h1>
+        <p class="summer-training-when">${esc(st.subtitle || "")}</p>
+        ${logosHtml}
       </header>
-      ${renderTocLayout(tocItems, content)}
+      ${content}
+      `)}
     `;
   }
 
@@ -575,6 +596,39 @@ function renderEducation() {
     });
   }
 
+  function setupRegistrationCountdown() {
+    const countdown = document.querySelector("[data-registration-deadline]");
+    const value = countdown?.querySelector("[data-registration-countdown]");
+    if (!countdown || !value) return;
+
+    const deadline = Date.parse(countdown.dataset.registrationDeadline || "");
+    if (!Number.isFinite(deadline)) {
+      countdown.hidden = true;
+      return;
+    }
+
+    let timer = 0;
+    const update = () => {
+      const remaining = deadline - Date.now();
+      if (remaining <= 0) {
+        value.textContent = "Registration has closed";
+        if (timer) window.clearInterval(timer);
+        return;
+      }
+
+      const totalSeconds = Math.floor(remaining / 1000);
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      const pad = (part) => String(part).padStart(2, "0");
+      value.textContent = `${days} days ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+    };
+
+    update();
+    timer = window.setInterval(update, 1000);
+  }
+
   const renderers = {
     home: renderHome,
     about: renderAbout,
@@ -596,4 +650,5 @@ function renderEducation() {
   setupChrome();
   app.innerHTML = (renderers[page] || renderHome)();
   setupResponsiveEmailFit();
+  setupRegistrationCountdown();
 })();

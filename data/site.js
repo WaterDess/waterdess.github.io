@@ -211,6 +211,7 @@ window.TANG_SITE = {
     eligibility: "Advanced Bachelor's, Master's and PhD students, as well as postdoctoral researchers, from the collaborative groups at Tsinghua University and IGSNRR, CAS. A limited number of spots are open to external students (Register online before 20 August 2026. Selected students will be notified before 25 August 2026). External students should be self-funded, as no financial support will be provided.",
     registration: {
       url: "https://tovrhloc.jsjform.com/f/fUb4Zc",
+      closesAt: "2026-08-20T23:59:59+08:00",
       deadline: "Register online before 20 August 2026. Selected students will be notified before 25 August 2026."
     },
     schedule: [

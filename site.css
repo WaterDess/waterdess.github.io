@@ -1054,7 +1054,7 @@ body[data-page="research"] .research-data-row h2 a:hover {
   text-shadow: 0 0 0.75em var(--link-glow);
 }
 
-.inline-detail-link {
+.detail-action .inline-detail-link {
   display: inline-flex;
   align-items: baseline;
   gap: 0.28em;
@@ -1065,11 +1065,33 @@ body[data-page="research"] .research-data-row h2 a:hover {
   background-image: none;
 }
 
-.inline-detail-link:hover,
-.inline-detail-link:focus-visible {
+.detail-action .inline-detail-link:hover,
+.detail-action .inline-detail-link:focus-visible {
   color: var(--link-hover);
   text-decoration: none;
   text-shadow: 0 0 0.75em var(--link-glow);
+}
+
+.detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.24rem 0.9rem;
+}
+
+.detail-actions .detail-action {
+  margin: 0;
+}
+
+.detail-action .registration-link {
+  color: #087f82;
+  font-weight: 620;
+  text-shadow: 0 0 0.58em rgba(8, 127, 130, 0.12);
+}
+
+.registration-link .link-icon {
+  color: currentColor;
+  opacity: 0.78;
 }
 
 .research-section figure,
@@ -1475,29 +1497,22 @@ body:not([data-page="home"]) .person-detail {
 }
 
 /* ===== Summer Training detail page ===== */
-.summer-training-header {
-  width: var(--rail);
-  display: grid;
-  grid-template-columns: var(--side) minmax(0, var(--measure));
-  gap: var(--gap);
-  margin-right: auto;
-  margin-left: auto;
-  padding: clamp(1.7rem, 3.6vw, 2.55rem) 0 0;
+.summer-training-intro {
+  min-width: 0;
+  margin: 0 0 1.35rem;
+  padding: 0 0 1.1rem;
   text-align: left;
 }
 
-.summer-training-header-main {
-  grid-column: 2;
-  min-width: 0;
-}
-
-.summer-training-header h1 {
+.summer-training-intro h1 {
+  max-width: 35rem;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.35rem, 2.3vw, 1.72rem);
+  font-size: clamp(1.18rem, 1.85vw, 1.48rem);
   font-weight: 560;
-  line-height: 1.22;
+  line-height: 1.28;
   letter-spacing: 0;
+  text-wrap: balance;
 }
 
 .summer-training-when {
@@ -1513,6 +1528,43 @@ body:not([data-page="home"]) .person-detail {
   font-size: 0.92rem;
   font-weight: 610;
   line-height: 1.42;
+}
+
+.program-registration h2 {
+  color: #087f82;
+}
+
+.program-registration {
+  padding-left: 0.9rem;
+  border-left: 2px solid rgba(8, 127, 130, 0.38);
+}
+
+.registration-countdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.22rem 0.7rem;
+  margin: 0.48rem 0 0.36rem;
+  color: var(--ink-soft);
+}
+
+.registration-countdown span {
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.registration-countdown strong {
+  color: #087f82;
+  font-size: 1.02rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.program-section .registration-deadline {
+  margin-top: 0.28rem;
+  color: var(--ink-faint);
+  font-size: 0.72rem;
+  line-height: 1.55;
 }
 
 .program-section p,
@@ -1548,11 +1600,11 @@ body:not([data-page="home"]) .person-detail {
 
 .summer-training-logos img {
   width: auto;
-  max-width: 7rem;
-  height: 2rem;
+  max-width: 8.6rem;
+  height: 2.65rem;
   object-fit: contain;
-  filter: saturate(0.72);
-  opacity: 0.78;
+  filter: saturate(0.82);
+  opacity: 0.88;
 }
 
 .summer-training-day {
@@ -1591,9 +1643,12 @@ body:not([data-page="home"]) .person-detail {
 }
 
 @media (max-width: 760px) {
-  .summer-training-header {
-    display: block;
-    padding-top: 2.45rem;
+  .summer-training-intro {
+    margin-bottom: 1.1rem;
+  }
+
+  .summer-training-intro h1 {
+    font-size: 1.18rem;
   }
 
   .summer-training-logos {
@@ -1601,7 +1656,7 @@ body:not([data-page="home"]) .person-detail {
   }
 
   .summer-training-logos img {
-    max-width: 5.8rem;
-    height: 1.65rem;
+    max-width: 6.8rem;
+    height: 2rem;
   }
 }
