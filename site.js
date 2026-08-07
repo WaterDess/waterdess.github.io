@@ -17,6 +17,7 @@
     ["people", "People"],
     ["publications", "Publications"],
     ["research", "Research"],
+    ["education", "Education"],
     ["about", "About"],
     ["join", "How to join?"]
   ];
@@ -38,7 +39,6 @@
     if (IS_FILE_PREVIEW) {
       return pageName === "home" ? "index.html" : `${pageName}.html`;
     }
-
     return `${PUBLIC_BASE}${pageName === "home" ? "" : `${pageName}/`}`;
   }
 
@@ -50,7 +50,6 @@
     if (!url || IS_FILE_PREVIEW || /^(https?:|#)/.test(url)) return url;
     return url.startsWith("./") ? `${PUBLIC_BASE}${url.slice(2)}` : url;
   }
-
 
   function displayEmail(email) {
     return String(email || "");
@@ -77,6 +76,7 @@
       </header>
     `;
   }
+
   function renderToc(items) {
     return `
       <aside class="toc-sidebar" aria-label="Section navigation">
@@ -266,7 +266,6 @@
         : esc(text);
       return `<li>${content}</li>`;
     }
-
     return `<li>${esc(item)}</li>`;
   }
 
@@ -285,6 +284,120 @@
             : `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`}
         </section>
       `))}
+    `;
+  }
+
+function renderEducation() {
+  const items = data.education || [];
+  const tocItems = items.map((item) => ({
+    id: sectionId("education", item.shortLabel || item.title),
+    label: item.shortLabel || item.title
+  }));
+
+  const content = items.map((item, index) => {
+    const blockTitle = item.shortLabel || item.title;
+    const contentText = item.title;
+    const heading = `<header class="people-block-heading"><span>${String(index + 1).padStart(2, "0")}</span><h2>${esc(contentText)}</h2></header>`;
+    let linkHtml = "";
+    if (item.route) {
+      linkHtml = `<p><a class="inline-detail-link" href="${esc(href(item.route))}"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
+    } else if (item.url) {
+      linkHtml = `<p><a class="inline-detail-link" href="${esc(assetUrl(item.url))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
+    }
+
+    return `
+      <article class="content-section education-section" id="${esc(sectionId("education", blockTitle))}">
+        ${heading}
+        ${linkHtml}
+      </article>
+    `;
+  }).join("");
+
+  return `
+    ${renderTocLayout(tocItems, content)}
+  `;
+}
+
+  function renderSummerTraining() {
+    const st = data.summerTraining || {};
+    const tocItems = [
+      { id: "overview", label: "Program Theme" },
+      { id: "objectives", label: "Objectives" },
+      { id: "sponsors", label: "Sponsors" },
+      { id: "faculty", label: "Faculty" },
+      { id: "participants", label: "Participants" },
+      { id: "schedule", label: "Schedule" },
+      { id: "registration", label: "Registration" }
+    ];
+
+    const logosHtml = (st.sponsorLogos || []).length
+      ? `<div class="summer-training-logos" aria-label="Sponsoring institutions">${list(st.sponsorLogos, (logo) => `<img src="${esc(assetUrl(logo))}" alt="" loading="lazy" />`)}</div>`
+      : "";
+
+    const objectivesHtml = (st.objectives || []).length
+      ? `<ul>${list(st.objectives, (item) => `<li>${esc(item)}</li>`)}</ul>`
+      : "";
+
+    const scheduleHtml = list(st.schedule || [], (entry) => {
+  // 构建标题：日期: 标题 (Venue: 地点) —— 地点可选
+  let titleLine = esc(entry.day) + ": " + esc(entry.title);
+  if (entry.venue) {
+    titleLine += " (Venue: " + esc(entry.venue) + ")";
+  }
+  const itemsHtml = (entry.items || []).length
+    ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
+    : "";
+  return `
+    <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
+      <h2 style="margin-top:0; margin-bottom:0.3em;">${titleLine}</h2>
+      ${itemsHtml}
+    </article>
+  `;
+});
+
+    const registrationHtml = st.registration && st.registration.url
+      ? `<p><a class="inline-detail-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(st.registration.deadline)}</a></p>`
+      : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
+
+    const content = `
+      <section class="content-section" id="overview">
+        <h2>Program Theme</h2>
+        <p class="summer-training-lead">${esc(st.theme || "")}</p>
+      </section>
+      <section class="content-section" id="objectives">
+        <h2>Program Objectives</h2>
+        ${objectivesHtml}
+      </section>
+      <section class="content-section" id="sponsors">
+        <h2>Sponsors and Acknowledgements</h2>
+        <p>${esc(st.sponsors || "")}</p>
+      </section>
+      <section class="content-section" id="faculty">
+        <h2>Faculty &amp; Lecturers</h2>
+        <p>${esc(st.faculty || "")}</p>
+      </section>
+      <section class="content-section" id="participants">
+        <h2>Eligible Participants</h2>
+        <p>${esc(st.eligibility || "")}</p>
+      </section>
+      <section class="content-section" id="schedule">
+        <h2>Detailed Daily Schedule</h2>
+        ${scheduleHtml}
+      </section>
+      <section class="content-section" id="registration">
+        <h2>Registration</h2>
+        ${registrationHtml}
+      </section>
+    `;
+
+    return `
+      <header class="summer-training-header">
+        ${logosHtml}
+        <p class="summer-training-eyebrow">Summer Training &amp; Practical Program</p>
+        <h1>${esc(st.title || "")}</h1>
+        <p class="summer-training-when">${esc(st.subtitle || "")}</p>
+      </header>
+      ${renderTocLayout(tocItems, content)}
     `;
   }
 
@@ -360,6 +473,7 @@
     const parts = [item.type, item.date ? displayNewsDate(item.date) : "", item.speaker || ""].filter(Boolean);
     return parts.join(" / ");
   }
+
   function newsDateValue(date) {
     const source = String(date || "");
     const full = source.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -370,16 +484,20 @@
   }
 
   function newsLinkTarget(item) {
-    if (item.url) return item.url;
+    if (item.route) return href(item.route);
+    if (item.url) return assetUrl(item.url);
     if (item.image) return assetUrl(item.image);
     return "";
   }
+
   function renderNewsLine(item) {
+    const target = newsLinkTarget(item);
+    const isExternal = !item.route;
     return `
       <article class="news-line compact-news-line">
         <div>
           <span>${esc(renderNewsMeta(item))}</span>
-          <h3>${newsLinkTarget(item) ? `<a href="${esc(newsLinkTarget(item))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
+          <h3>${target ? `<a href="${esc(target)}"${isExternal ? ' target="_blank" rel="noopener"' : ""}><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
         </div>
       </article>
     `;
@@ -450,6 +568,7 @@
       window.__plainEmailFitTimer = window.setTimeout(fitPlainEmails, 90);
     });
   }
+
   const renderers = {
     home: renderHome,
     about: renderAbout,
@@ -458,7 +577,9 @@
     research: renderResearch,
     publications: renderPublications,
     news: renderNews,
-    join: renderJoin
+    join: renderJoin,
+    education: renderEducation,
+    "summer-training": renderSummerTraining
   };
 
   if (!data) {
