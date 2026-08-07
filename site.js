@@ -366,8 +366,7 @@ function renderEducation() {
     const content = `
       ${heroHtml}
       <section class="content-section" id="overview">
-        <p class="summer-training-theme">${esc(st.theme || "")}</p>
-        <p class="summer-training-subtitle">${esc(st.subtitle || "")}</p>
+        <p class="summer-training-lead">${esc(st.theme || "")}</p>
       </section>
       <section class="content-section" id="objectives">
         <h2>Program Objectives</h2>
@@ -397,7 +396,11 @@ function renderEducation() {
     `;
 
     return `
-      ${pageIntro(st.title)}
+      <header class="summer-training-header">
+        <p class="summer-training-eyebrow">Summer Training &amp; Practical Program</p>
+        <h1>${esc(st.title || "")}</h1>
+        <p class="summer-training-when">${esc(st.subtitle || "")}</p>
+      </header>
       ${renderTocLayout(tocItems, content)}
     `;
   }
