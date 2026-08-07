@@ -102,6 +102,18 @@
     return `${prefix}-${String(value).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
   }
 
+  function renderDetailAction(url, label = "see details", external = true) {
+    if (!url) return "";
+    const externalAttrs = external ? ' target="_blank" rel="noopener"' : "";
+    return `
+      <p class="detail-action">
+        <a class="inline-detail-link" href="${esc(url)}"${externalAttrs}>
+          <span class="link-icon" aria-hidden="true">&#128279;</span>${esc(label)}
+        </a>
+      </p>
+    `;
+  }
+
   function renderHome() {
     return `
       <section class="image-hero home-landing">
@@ -296,18 +308,13 @@ function renderEducation() {
 
   const content = items.map((item, index) => {
     const blockTitle = item.shortLabel || item.title;
-    const contentText = item.title;
-    const heading = `<header class="people-block-heading"><span>${String(index + 1).padStart(2, "0")}</span><h2>${esc(contentText)}</h2></header>`;
-    let linkHtml = "";
-    if (item.route) {
-      linkHtml = `<p><a class="inline-detail-link" href="${esc(href(item.route))}"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
-    } else if (item.url) {
-      linkHtml = `<p><a class="inline-detail-link" href="${esc(assetUrl(item.url))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
-    }
+    const linkHtml = item.route
+      ? renderDetailAction(href(item.route), "see details", false)
+      : renderDetailAction(assetUrl(item.url));
 
     return `
-      <article class="content-section education-section" id="${esc(sectionId("education", blockTitle))}">
-        ${heading}
+      <article class="content-section indexed-section education-section" id="${esc(sectionId("education", blockTitle))}">
+        ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
         ${linkHtml}
       </article>
     `;
@@ -339,64 +346,62 @@ function renderEducation() {
       : "";
 
     const scheduleHtml = list(st.schedule || [], (entry) => {
-      let titleLine = `${esc(entry.day)}: ${esc(entry.title)}`;
-      if (entry.venue) {
-        titleLine += ` (Venue: ${esc(entry.venue)})`;
-      }
-
+      const meta = [entry.day, entry.venue ? `Venue: ${entry.venue}` : ""].filter(Boolean).join(" / ");
       const itemsHtml = (entry.items || []).length
         ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
         : "";
 
       return `
-        <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
-          <h3 class="summer-training-day-title">${titleLine}</h3>
+        <article class="summer-training-day">
+          <p class="summer-training-day-meta">${esc(meta)}</p>
+          <h3 class="summer-training-day-title">${esc(entry.title)}</h3>
           ${itemsHtml}
         </article>
       `;
     });
 
     const registrationHtml = st.registration && st.registration.url
-      ? `<p><a class="inline-detail-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(st.registration.deadline)}</a></p>`
+      ? renderDetailAction(st.registration.url, st.registration.deadline)
       : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
 
     const content = `
-      <section class="content-section" id="overview">
+      <section class="content-section program-section" id="overview">
         <h2>Program Theme</h2>
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
       </section>
-      <section class="content-section" id="objectives">
+      <section class="content-section program-section" id="objectives">
         <h2>Program Objectives</h2>
         ${objectivesHtml}
       </section>
-      <section class="content-section" id="sponsors">
+      <section class="content-section program-section" id="sponsors">
         <h2>Sponsors and Acknowledgements</h2>
         <p>${esc(st.sponsors || "")}</p>
       </section>
-      <section class="content-section" id="faculty">
+      <section class="content-section program-section" id="faculty">
         <h2>Faculty &amp; Lecturers</h2>
         <p>${esc(st.faculty || "")}</p>
       </section>
-      <section class="content-section" id="participants">
+      <section class="content-section program-section" id="participants">
         <h2>Eligible Participants</h2>
         <p>${esc(st.eligibility || "")}</p>
       </section>
-      <section class="content-section" id="schedule">
+      <section class="content-section program-section" id="schedule">
         <h2>Detailed Daily Schedule</h2>
         ${scheduleHtml}
       </section>
-      <section class="content-section" id="registration">
+      <section class="content-section program-section" id="registration">
         <h2>Registration</h2>
         ${registrationHtml}
       </section>
     `;
 
     return `
-      <header class="summer-training-header">
-        ${logosHtml}
-        <p class="summer-training-eyebrow">Summer Training &amp; Practical Program</p>
-        <h1>${esc(st.title || "")}</h1>
-        <p class="summer-training-when">${esc(st.subtitle || "")}</p>
+      <header class="section summer-training-header">
+        <div class="summer-training-header-main">
+          <h1>${esc(st.title || "")}</h1>
+          <p class="summer-training-when">${esc(st.subtitle || "")}</p>
+          ${logosHtml}
+        </div>
       </header>
       ${renderTocLayout(tocItems, content)}
     `;
@@ -538,10 +543,10 @@ function renderEducation() {
 
     return `
       ${renderTocLayout(tocItems, list(joinItems, (item, index) => `
-        <article class="content-section join-section" id="${esc(item.id)}">
+        <article class="content-section indexed-section join-section" id="${esc(item.id)}">
           ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
           ${item.text ? `<p>${esc(item.text)}</p>` : ""}
-          ${item.url ? `<p><a class="inline-detail-link" href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>` : ""}
+          ${renderDetailAction(item.url)}
         </article>
       `))}
     `;

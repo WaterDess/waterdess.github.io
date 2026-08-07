@@ -1058,8 +1058,8 @@ body[data-page="research"] .research-data-row h2 a:hover {
   display: inline-flex;
   align-items: baseline;
   gap: 0.28em;
-  margin-left: 0.36em;
   color: rgba(46, 111, 115, 0.92);
+  font-size: 0.78rem;
   font-weight: 520;
   text-decoration: none;
   background-image: none;
@@ -1409,26 +1409,34 @@ body[data-page="about"] .mission-list {
   grid-column: auto;
 }
 
-body[data-page="join"] .join-section {
+.indexed-section {
   display: block;
   padding: 0 0 1.45rem;
 }
 
-body[data-page="join"] .join-section + .join-section {
+.indexed-section + .indexed-section {
   margin-top: 0.6rem;
 }
 
-body[data-page="join"] .join-section .people-block-heading {
+.indexed-section .people-block-heading {
   margin-bottom: 0.72rem;
 }
 
-body[data-page="join"] .join-section p {
+.indexed-section p {
   max-width: 42rem;
   margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.72;
   text-align: left;
 }
 
-body[data-page="join"] .join-section p + p {
+.indexed-section p + p {
+  margin-top: 0.24rem;
+}
+
+.indexed-section .detail-action,
+.program-section .detail-action {
   margin-top: 0.24rem;
 }
 
@@ -1469,43 +1477,64 @@ body:not([data-page="home"]) .person-detail {
 /* ===== Summer Training detail page ===== */
 .summer-training-header {
   width: var(--rail);
-  max-width: var(--measure);
-  margin: clamp(2.2rem, 5vw, 3.4rem) auto clamp(1.4rem, 3vw, 2rem);
-  padding: 0;
+  display: grid;
+  grid-template-columns: var(--side) minmax(0, var(--measure));
+  gap: var(--gap);
+  margin-right: auto;
+  margin-left: auto;
+  padding: clamp(1.7rem, 3.6vw, 2.55rem) 0 0;
   text-align: left;
 }
 
-.summer-training-eyebrow {
-  margin: 0 0 0.5rem;
-  color: rgba(12, 36, 31, 0.5);
-  font-size: 0.72rem;
-  font-weight: 620;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+.summer-training-header-main {
+  grid-column: 2;
+  min-width: 0;
 }
 
 .summer-training-header h1 {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
-  font-weight: 600;
-  line-height: 1.18;
+  font-size: clamp(1.35rem, 2.3vw, 1.72rem);
+  font-weight: 560;
+  line-height: 1.22;
   letter-spacing: 0;
 }
 
 .summer-training-when {
-  margin: 0.6rem 0 0;
-  color: var(--ink-soft);
-  font-size: 0.86rem;
+  margin: 0.5rem 0 0;
+  color: var(--ink-faint);
+  font-size: 0.76rem;
   line-height: 1.5;
 }
 
-.summer-training-lead {
+.program-section h2 {
   margin: 0;
   color: var(--ink);
-  font-size: 0.96rem;
-  font-weight: 560;
-  line-height: 1.55;
+  font-size: 0.92rem;
+  font-weight: 610;
+  line-height: 1.42;
+}
+
+.program-section p,
+.program-section li {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.72;
+}
+
+.program-section p {
+  max-width: 42rem;
+  margin: 0.52rem 0 0;
+}
+
+.program-section > ul {
+  margin: 0.52rem 0 0;
+  padding-left: 1rem;
+}
+
+.program-section .summer-training-lead {
+  color: var(--ink);
+  font-weight: 540;
 }
 
 .summer-training-logos {
@@ -1513,25 +1542,44 @@ body:not([data-page="home"]) .person-detail {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.9rem 1.6rem;
-  margin: 0 0 1.4rem;
+  gap: 0.55rem 1rem;
+  margin: 1rem 0 0;
 }
 
 .summer-training-logos img {
   width: auto;
-  height: 3.4rem;
+  max-width: 7rem;
+  height: 2rem;
+  object-fit: contain;
+  filter: saturate(0.72);
+  opacity: 0.78;
+}
+
+.summer-training-day {
+  margin-top: 0.9rem;
+}
+
+.summer-training-day + .summer-training-day {
+  margin-top: 1.15rem;
+}
+
+.program-section .summer-training-day-meta {
+  margin: 0 0 0.18rem;
+  color: var(--ink-faint);
+  font-size: 0.68rem;
+  line-height: 1.45;
 }
 
 .summer-training-day-title {
-  margin: 0 0 0.3em;
+  margin: 0;
   color: var(--ink);
   font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 560;
   line-height: 1.45;
 }
 
 .summer-training-day ul {
-  margin: 0.4rem 0 0;
+  margin: 0.32rem 0 0;
   padding-left: 1rem;
   color: var(--ink-soft);
   font-size: 0.84rem;
@@ -1543,11 +1591,17 @@ body:not([data-page="home"]) .person-detail {
 }
 
 @media (max-width: 760px) {
+  .summer-training-header {
+    display: block;
+    padding-top: 2.45rem;
+  }
+
   .summer-training-logos {
-    gap: 0.7rem 1.1rem;
+    gap: 0.5rem 0.8rem;
   }
 
   .summer-training-logos img {
-    height: 2.4rem;
+    max-width: 5.8rem;
+    height: 1.65rem;
   }
 }
