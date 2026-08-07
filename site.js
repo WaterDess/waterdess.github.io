@@ -289,49 +289,118 @@
 
 function renderEducation() {
   const items = data.education || [];
-  // 侧边栏使用短标签作为显示文本，并基于短标签生成锚点 ID
   const tocItems = items.map((item) => ({
     id: sectionId("education", item.shortLabel || item.title),
     label: item.shortLabel || item.title
   }));
 
   const content = items.map((item, index) => {
-    const blockTitle = item.shortLabel || item.title;   // 短标签（用于生成 ID）
-    const contentText = item.title;                     // 完整标题（用于显示）
-
-    let linkHtml = '';
-    if (item.url) {
-      linkHtml = `
-        <h2>
-          <a href="${esc(item.url)}" target="_blank" rel="noopener">
-            <span class="link-icon" aria-hidden="true">&#128279;</span>${esc(contentText)}
-          </a>
-        </h2>
-      `;
-    } else {
-      linkHtml = `<p class="empty-note">${esc(contentText || "To be updated.")}</p>`;
+    const blockTitle = item.shortLabel || item.title;
+    const contentText = item.title;
+    const heading = `<header class="people-block-heading"><span>${String(index + 1).padStart(2, "0")}</span><h2>${esc(contentText)}</h2></header>`;
+    let linkHtml = "";
+    if (item.route) {
+      linkHtml = `<p><a class="inline-detail-link" href="${esc(href(item.route))}"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
+    } else if (item.url) {
+      linkHtml = `<p><a class="inline-detail-link" href="${esc(assetUrl(item.url))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>see details</a></p>`;
     }
 
-    const sectionIdValue = sectionId("education", blockTitle);   // 内容区 ID 与侧边栏一致
     return `
-      <section class="content-section education-section" id="${sectionIdValue}">
-        <div class="education-row compact-person-row">
-          <span class="education-index">${String(index + 1).padStart(2, "0")}</span>
-          ${linkHtml}
-        </div>
-      </section>
+      <article class="content-section education-section" id="${esc(sectionId("education", blockTitle))}">
+        ${heading}
+        ${linkHtml}
+      </article>
     `;
-  }).join('');
+  }).join("");
 
   return `
-    <section class="section toc-layout">
-      ${renderToc(tocItems)}
-      <div class="toc-content">
-        ${content}
-      </div>
-    </section>
+    ${renderTocLayout(tocItems, content)}
   `;
 }
+
+  function renderSummerTraining() {
+    const st = data.summerTraining || {};
+    const tocItems = [
+      { id: "overview", label: "Overview" },
+      { id: "objectives", label: "Objectives" },
+      { id: "sponsors", label: "Sponsors" },
+      { id: "faculty", label: "Faculty" },
+      { id: "participants", label: "Participants" },
+      { id: "schedule", label: "Schedule" },
+      { id: "registration", label: "Registration" }
+    ];
+
+    const heroHtml = st.hero
+      ? `<img class="summer-training-hero" src="${esc(assetUrl(st.hero))}" alt="${esc(st.title)}" decoding="async" />`
+      : "";
+
+    const objectivesHtml = (st.objectives || []).length
+      ? `<ul>${list(st.objectives, (item) => `<li>${esc(item)}</li>`)}</ul>`
+      : "";
+
+    const sponsorLogosHtml = (st.sponsorLogos || []).length
+      ? `<div class="summer-training-logos" aria-label="Sponsoring institutions">${list(st.sponsorLogos, (logo) => `<img src="${esc(assetUrl(logo))}" alt="" loading="lazy" />`)}</div>`
+      : "";
+
+    const scheduleHtml = list(st.schedule || [], (entry) => {
+      const meta = [entry.day, entry.venue].filter(Boolean).map(esc).join(" / ");
+      const itemsHtml = (entry.items || []).length
+        ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
+        : "";
+      return `
+        <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
+          <header class="people-block-heading">
+            <span></span>
+            <h2>${esc(entry.title)}</h2>
+          </header>
+          <p class="summer-training-day-meta">${meta}</p>
+          ${itemsHtml}
+        </article>
+      `;
+    });
+
+    const registrationHtml = st.registration && st.registration.url
+      ? `<p><a class="inline-detail-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(st.registration.deadline)}</a></p>`
+      : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
+
+    const content = `
+      ${heroHtml}
+      <section class="content-section" id="overview">
+        <p class="summer-training-theme">${esc(st.theme || "")}</p>
+        <p class="summer-training-subtitle">${esc(st.subtitle || "")}</p>
+      </section>
+      <section class="content-section" id="objectives">
+        <h2>Program Objectives</h2>
+        ${objectivesHtml}
+      </section>
+      <section class="content-section" id="sponsors">
+        <h2>Sponsors and Acknowledgements</h2>
+        <p>${esc(st.sponsors || "")}</p>
+        ${sponsorLogosHtml}
+      </section>
+      <section class="content-section" id="faculty">
+        <h2>Faculty &amp; Lecturers</h2>
+        <p>${esc(st.faculty || "")}</p>
+      </section>
+      <section class="content-section" id="participants">
+        <h2>Eligible Participants</h2>
+        <p>${esc(st.eligibility || "")}</p>
+      </section>
+      <section class="content-section" id="schedule">
+        <h2>Detailed Daily Schedule</h2>
+        ${scheduleHtml}
+      </section>
+      <section class="content-section" id="registration">
+        <h2>Registration</h2>
+        ${registrationHtml}
+      </section>
+    `;
+
+    return `
+      ${pageIntro(st.title)}
+      ${renderTocLayout(tocItems, content)}
+    `;
+  }
 
   function renderPublications() {
     const papers = [...(data.publications || [])].sort((a, b) => newsDateValue(b.date || b.year) - newsDateValue(a.date || a.year));
@@ -416,17 +485,20 @@ function renderEducation() {
   }
 
   function newsLinkTarget(item) {
-    if (item.url) return item.url;
+    if (item.route) return href(item.route);
+    if (item.url) return assetUrl(item.url);
     if (item.image) return assetUrl(item.image);
     return "";
   }
 
   function renderNewsLine(item) {
+    const target = newsLinkTarget(item);
+    const isExternal = !item.route;
     return `
       <article class="news-line compact-news-line">
         <div>
           <span>${esc(renderNewsMeta(item))}</span>
-          <h3>${newsLinkTarget(item) ? `<a href="${esc(newsLinkTarget(item))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
+          <h3>${target ? `<a href="${esc(target)}"${isExternal ? ' target="_blank" rel="noopener"' : ""}><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
         </div>
       </article>
     `;
@@ -507,7 +579,8 @@ function renderEducation() {
     publications: renderPublications,
     news: renderNews,
     join: renderJoin,
-    education: renderEducation
+    education: renderEducation,
+    "summer-training": renderSummerTraining
   };
 
   if (!data) {

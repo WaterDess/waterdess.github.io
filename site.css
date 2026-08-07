@@ -166,9 +166,9 @@ li {
 
 .site-header {
   position: relative;
-  display: grid;
-  place-items: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   height: var(--masthead-height);
   min-height: var(--masthead-height);
@@ -208,13 +208,14 @@ li {
 .site-header nav {
   display: flex;
   flex: none;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  gap: clamp(1.12rem, 1.95vw, 1.6rem);
+  gap: clamp(0.9rem, 1.7vw, 1.6rem);
   margin: 0;
-  padding: 0 14rem;
+  padding: 0;
   font-size: 1.02rem;
   font-weight: 720;
+  white-space: nowrap;
 }
 
 .site-header nav a {
@@ -495,11 +496,13 @@ body[data-page="home"] .home-landing .image-hero-content strong {
   }
 
   .site-header nav {
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     gap: 0.4rem 1.05rem;
     padding: 0;
     font-size: 0.92rem;
+    white-space: normal;
   }
 }
 
@@ -526,11 +529,13 @@ body[data-page="home"] .home-landing .image-hero-content strong {
   }
 
   .site-header nav {
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 0.5rem 1rem;
     margin: 0.75rem 0 0;
     padding: 0;
     font-size: 0.84rem;
+    white-space: normal;
   }
 
   .image-hero-content h1 {
@@ -1461,65 +1466,63 @@ body:not([data-page="home"]) .person-detail {
   text-align: left;
 }
 
-/* ===== Education 页面防止标题字符拆分 ===== */
-body[data-page="education"] .education-section {
-  padding: 0 0 1.55rem;
-  border-bottom: 0;
-  scroll-margin-top: calc(var(--masthead-height) + 1rem);
+/* ===== Summer Training detail page ===== */
+.summer-training-hero {
+  width: 100%;
+  max-width: var(--measure);
+  margin: 0 0 1.6rem;
+  border-radius: 2px;
 }
 
-body[data-page="education"] .education-section + .education-section {
-  margin-top: 0.55rem;
-}
-
-body[data-page="education"] .education-heading {
-  display: grid;
-  grid-template-columns: 2.1rem minmax(0, 1fr);
-  gap: 0.9rem;
-  align-items: baseline;
-  margin: 0 0 0.72rem;
-}
-
-body[data-page="education"] .education-index {
-  color: rgba(12, 36, 31, 0.36);
-  font-size: 0.62rem;
+.summer-training-theme {
+  margin: 0 0 0.6rem;
+  color: var(--ink);
+  font-size: 0.96rem;
   font-weight: 560;
-  line-height: 1;
+  line-height: 1.5;
 }
 
-body[data-page="education"] .education-title {
+.summer-training-subtitle {
   margin: 0;
-  color: var(--ink);
-  font-size: 0.92rem;
-  font-weight: 560;
-  line-height: 1.42;
-  letter-spacing: 0;
-  word-break: keep-all;
-  overflow-wrap: normal;
-  white-space: normal;
-  word-spacing: normal;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.6;
 }
 
-body[data-page="education"] .education-title a {
-  color: var(--ink);
-  text-decoration: none;
-  background-image: none;
-}
-
-body[data-page="education"] .education-title a:hover {
-  color: var(--link-hover);
-  text-shadow: 0 0 0.65em var(--link-glow);
-}
-/* Education 序号行样式 */
-.education-index-row {
+.summer-training-logos {
   display: flex;
-  align-items: baseline;
-  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.4rem;
+  margin: 1.1rem 0 0;
 }
 
-.education-index-row .education-index {
-  color: rgba(12, 36, 31, 0.36);
-  font-size: 0.62rem;
-  font-weight: 560;
-  line-height: 1;
+.summer-training-logos img {
+  width: auto;
+  height: 2.6rem;
+}
+
+.summer-training-day-meta {
+  margin: 0 0 0.4rem;
+  color: rgba(12, 36, 31, 0.52);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.summer-training-day ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1rem;
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.summer-training-day li {
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 760px) {
+  .summer-training-logos img {
+    height: 2.1rem;
+  }
 }

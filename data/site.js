@@ -186,9 +186,71 @@ window.TANG_SITE = {
       shortLabel: "Summer Program",
       title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
       text: "",
-      url: "./public/assets/GCH_Summer_Training.html"
+      route: "summer-training"
     }
   ],
+  summerTraining: {
+    title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
+    subtitle: "Beijing | September 1-11, 2026",
+    hero: "./public/assets/summer-training-hero.jpg",
+    theme: "Exploring Impacts of Global Change on the Water Systems and Corresponding Mitigation Solutions",
+    objectives: [
+      "Systematically consolidate hydrogeochemical expertise covering water pollutant characteristics, monitoring techniques, and target pollutant analytical methodologies.",
+      "Equip participants with technical capabilities for large-scale water quantity & quality simulation as well as flood modelling.",
+      "Develop proficiency in processing large hydrological datasets and applying machine learning techniques to water research.",
+      "Cultivate scientific thinking and enhance collaborative research capabilities across teams."
+    ],
+    sponsors: "The Sino-German Mobility Programme (M-0468) \u2018Upscaling processes to improve global water resource models (APPLAUD)\u2019, Tsinghua University, and the Institute of Geographic Sciences and Natural Resources Research (IGSNRR), Chinese Academy of Sciences (CAS).",
+    sponsorLogos: [
+      "./public/assets/summer-training-logo-1.png",
+      "./public/assets/summer-training-logo-2.png",
+      "./public/assets/summer-training-logo-3.jpg",
+      "./public/assets/summer-training-logo-4.png"
+    ],
+    faculty: "Martina Fl\u00f6rke, Kan Lei, Tobias Licha, Jens Prothmann, Katrin Schweden, Qiuhong Tang, Nigel Wright, Xilin Xia, Gang Zhao, et al.",
+    eligibility: "Advanced Bachelor's, Master's and PhD students, as well as postdoctoral researchers, from the collaborative groups at Tsinghua University and IGSNRR, CAS. A limited number of spots are open to external students (Register online before 20 August 2026. Selected students will be notified before 25 August 2026). External students should be self-funded, as no financial support will be provided.",
+    registration: {
+      url: "https://tovrhloc.jsjform.com/f/fUb4Zc",
+      deadline: "Register online before 20 August 2026. Selected students will be notified before 25 August 2026."
+    },
+    schedule: [
+      { day: "Tuesday 1 September", title: "Arrival & Check-in", items: [] },
+      { day: "Wednesday 2 September", title: "Opening Session & Theoretical Foundations", venue: "Tsinghua University", items: [
+        "Morning: Opening (Program introduction, faculty introduction, participant self-introduction)",
+        "Morning & Afternoon: Lecture \u2013 Properties and partition equilibria of organic compounds in the environment (Speaker: Tobias Licha)",
+        "Evening: Self-study & Assignments"
+      ]},
+      { day: "Thursday 3 September", title: "Research Methodology Workshop", venue: "Tsinghua University", items: [
+        "Lecture \u2013 Chemical analysis of organic compounds & Environmental forensics using microcontaminants (Speakers: Tobias Licha, Jens Prothmann)"
+      ]},
+      { day: "Friday 4 September", title: "Research Exchange", venue: "Tsinghua University", items: [
+        "Project meetings, laboratory visit and student discussion"
+      ]},
+      { day: "Saturday & Sunday, 5-6 September", title: "Optional Off-Campus Field Campaign", items: [
+        "Field investigation can be arranged as an optional weekend activity for interested participants."
+      ]},
+      { day: "Monday 7 September", title: "Academic Exchange Workshop", venue: "Tsinghua University", items: [
+        "Morning: Water Quality Research Frontiers (Speakers: Martina Fl\u00f6rke, Tobias Licha, Siao Sun, et al.)",
+        "Afternoon: Flood Modelling and Climate Risk Research Frontiers (Speakers: Nigel Wright, Xilin Xia, et al.)",
+        "Evening: Group Dinner & Academic Networking"
+      ]},
+      { day: "Tuesday 8 September", title: "Modelling Methodology Training", venue: "CAS", items: [
+        "Lecture and exercises \u2013 Introduction to large-scale water quality modelling (Martina Fl\u00f6rke, Katrin Schweden)"
+      ]},
+      { day: "Wednesday 9 September", title: "Hydrological Modelling & Big Data Analytics", venue: "CAS", items: [
+        "Lecture and exercises \u2013 Large-scale hydrological modelling (Martina Fl\u00f6rke, Kan Lei)"
+      ]},
+      { day: "Thursday 10 September", title: "Summary Commendation", venue: "CAS", items: [
+        "Group presentation and defense of practical research outputs",
+        "Faculty feedback, comprehensive program recap and follow-up academic research guidance",
+        "Overall program exchange summary"
+      ]},
+      { day: "Friday 11 September", title: "Publication Course", venue: "CAS", items: [
+        "Workshop on how to publish scientific papers (Prof. Nigel Wright)",
+        "Departure"
+      ]}
+    ]
+  },
   publications: [
     {
       title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",
@@ -223,7 +285,7 @@ window.TANG_SITE = {
         date: "2026-08-06",
         type: "Call for Participants",
         title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
-        url: "./public/assets/GCH_Summer_Training.html"
+        route: "summer-training"
     },
     {
       date: "2026-08-11 10:00-11:30",
