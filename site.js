@@ -330,41 +330,36 @@ function renderEducation() {
       { id: "registration", label: "Registration" }
     ];
 
-    const heroHtml = st.hero
-      ? `<img class="summer-training-hero" src="${esc(assetUrl(st.hero))}" alt="${esc(st.title)}" decoding="async" />`
+    const logosHtml = (st.sponsorLogos || []).length
+      ? `<div class="summer-training-logos" aria-label="Sponsoring institutions">${list(st.sponsorLogos, (logo) => `<img src="${esc(assetUrl(logo))}" alt="" loading="lazy" />`)}</div>`
       : "";
 
     const objectivesHtml = (st.objectives || []).length
       ? `<ul>${list(st.objectives, (item) => `<li>${esc(item)}</li>`)}</ul>`
       : "";
 
-    const sponsorLogosHtml = (st.sponsorLogos || []).length
-      ? `<div class="summer-training-logos" aria-label="Sponsoring institutions">${list(st.sponsorLogos, (logo) => `<img src="${esc(assetUrl(logo))}" alt="" loading="lazy" />`)}</div>`
-      : "";
-
     const scheduleHtml = list(st.schedule || [], (entry) => {
-      const meta = [entry.day, entry.venue].filter(Boolean).map(esc).join(" / ");
-      const itemsHtml = (entry.items || []).length
-        ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
-        : "";
-      return `
-        <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
-          <header class="people-block-heading">
-            <span></span>
-            <h2>${esc(entry.title)}</h2>
-          </header>
-          <p class="summer-training-day-meta">${meta}</p>
-          ${itemsHtml}
-        </article>
-      `;
-    });
+  // 构建标题：日期: 标题 (Venue: 地点) —— 地点可选
+  let titleLine = esc(entry.day) + ": " + esc(entry.title);
+  if (entry.venue) {
+    titleLine += " (Venue: " + esc(entry.venue) + ")";
+  }
+  const itemsHtml = (entry.items || []).length
+    ? `<ul>${list(entry.items, (item) => `<li>${esc(item)}</li>`)}</ul>`
+    : "";
+  return `
+    <article class="content-section summer-training-day" id="${esc(sectionId("schedule", entry.day))}">
+      <h2 style="margin-top:0; margin-bottom:0.3em;">${titleLine}</h2>
+      ${itemsHtml}
+    </article>
+  `;
+});
 
     const registrationHtml = st.registration && st.registration.url
       ? `<p><a class="inline-detail-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(st.registration.deadline)}</a></p>`
       : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
 
     const content = `
-      ${heroHtml}
       <section class="content-section" id="overview">
         <h2>Program Theme</h2>
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
@@ -376,7 +371,6 @@ function renderEducation() {
       <section class="content-section" id="sponsors">
         <h2>Sponsors and Acknowledgements</h2>
         <p>${esc(st.sponsors || "")}</p>
-        ${sponsorLogosHtml}
       </section>
       <section class="content-section" id="faculty">
         <h2>Faculty &amp; Lecturers</h2>
@@ -398,6 +392,7 @@ function renderEducation() {
 
     return `
       <header class="summer-training-header">
+        ${logosHtml}
         <p class="summer-training-eyebrow">Summer Training &amp; Practical Program</p>
         <h1>${esc(st.title || "")}</h1>
         <p class="summer-training-when">${esc(st.subtitle || "")}</p>

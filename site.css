@@ -1500,13 +1500,6 @@ body:not([data-page="home"]) .person-detail {
   line-height: 1.5;
 }
 
-.summer-training-hero {
-  width: 100%;
-  max-width: var(--measure);
-  margin: 0 0 1.6rem;
-  border-radius: 2px;
-}
-
 .summer-training-lead {
   margin: 0;
   color: var(--ink);
@@ -1519,13 +1512,14 @@ body:not([data-page="home"]) .person-detail {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.9rem 1.4rem;
-  margin: 1.1rem 0 0;
+  justify-content: flex-start;
+  gap: 0.9rem 1.6rem;
+  margin: 0 0 1.4rem;
 }
 
 .summer-training-logos img {
   width: auto;
-  height: 2.6rem;
+  height: 3.4rem;
 }
 
 .summer-training-day-meta {
@@ -1548,7 +1542,11 @@ body:not([data-page="home"]) .person-detail {
 }
 
 @media (max-width: 760px) {
+  .summer-training-logos {
+    gap: 0.7rem 1.1rem;
+  }
+
   .summer-training-logos img {
-    height: 2.1rem;
+    height: 2.4rem;
   }
 }

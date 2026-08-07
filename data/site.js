@@ -192,7 +192,6 @@ window.TANG_SITE = {
   summerTraining: {
     title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
     subtitle: "Beijing | September 1-11, 2026",
-    hero: "./public/assets/summer-training-hero.jpg",
     theme: "Exploring Impacts of Global Change on the Water Systems and Corresponding Mitigation Solutions",
     objectives: [
       "Systematically consolidate hydrogeochemical expertise covering water pollutant characteristics, monitoring techniques, and target pollutant analytical methodologies.",
@@ -204,6 +203,7 @@ window.TANG_SITE = {
     sponsorLogos: [
       "./public/assets/summer-training-logo-1.png",
       "./public/assets/summer-training-logo-2.png",
+      "./public/assets/summer-training-logo-5.jpg",
       "./public/assets/summer-training-logo-3.jpg",
       "./public/assets/summer-training-logo-4.png"
     ],
