@@ -315,7 +315,7 @@ function renderEducation() {
     const registrationUrl = item.route === "summer-training"
       ? data.summerTraining?.registration?.url
       : "";
-    const registrationAction = renderDetailAction(registrationUrl, "registration", true, "registration-link");
+    const registrationAction = renderDetailAction(registrationUrl, "registration", true);
 
     return `
       <article class="content-section indexed-section education-section" id="${esc(sectionId("education", blockTitle))}">

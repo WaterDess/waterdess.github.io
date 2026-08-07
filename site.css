@@ -1083,16 +1083,6 @@ body[data-page="research"] .research-data-row h2 a:hover {
   margin: 0;
 }
 
-.detail-action .registration-link {
-  color: #087f82;
-  font-weight: 620;
-  text-shadow: 0 0 0.58em rgba(8, 127, 130, 0.12);
-}
-
-.registration-link .link-icon {
-  color: currentColor;
-  opacity: 0.78;
-}
 
 .research-section figure,
 .research-section img {
