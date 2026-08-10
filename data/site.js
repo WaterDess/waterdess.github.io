@@ -293,6 +293,7 @@ window.TANG_SITE = {
       type: "Seminar",
       title: "Development and Basin-Scale Evaluation of Global Coupled Land–Atmosphere Snow Data Assimilation System at NCEP",
       speaker: "Prof. Youlong Xia",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6991.htm",
       image: "./public/assets/seminar-youlong-xia-20260811.jpg"
     },
     {
