@@ -283,18 +283,24 @@ window.TANG_SITE = {
   ],
   news: [
     {
-        date: "2026-08-06",
-        type: "Call for Participants",
-        title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
-        route: "summer-training"
+      date: "2026-08-14 14:00-15:00",
+      type: "Seminar",
+      title: "Some aspects of changes in hydrologic extremes over the Western U.S.",
+      speaker: "Prof. Dennis P. Lettenmaier",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6992.htm"
+    },
+    {
+      date: "2026-08-06",
+      type: "Call for Participants",
+      title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
+      route: "summer-training"
     },
     {
       date: "2026-08-11 10:00-11:30",
       type: "Seminar",
       title: "Development and Basin-Scale Evaluation of Global Coupled Land–Atmosphere Snow Data Assimilation System at NCEP",
       speaker: "Prof. Youlong Xia",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/6991.htm",
-      image: "./public/assets/seminar-youlong-xia-20260811.jpg"
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6991.htm"
     },
     {
       date: "2026-06-25",
