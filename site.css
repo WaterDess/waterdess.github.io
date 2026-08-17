@@ -1577,33 +1577,23 @@ body[data-page="genuine-earth-hydrosphere"] #app {
   color: #f2f5f3;
 }
 
-.project-preview-earth {
+.project-preview-art {
   position: absolute;
-  z-index: -3;
-  top: calc(23% - 41vw);
-  left: 50%;
-  width: 700vw;
-  max-width: none;
-  height: auto;
-  opacity: 0.54;
-  filter: saturate(0.68) contrast(1.12) brightness(0.8);
-  transform: translateX(-50%);
-}
-
-.project-preview-shade {
-  position: absolute;
-  z-index: -2;
+  z-index: -1;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(1, 4, 6, 0.38) 0%, rgba(1, 5, 7, 0.22) 28%, rgba(1, 4, 6, 0.58) 72%, rgba(0, 2, 4, 0.94) 100%),
-    radial-gradient(ellipse at 50% 34%, rgba(32, 90, 122, 0.04) 0%, rgba(1, 7, 9, 0.2) 48%, rgba(0, 3, 5, 0.76) 100%);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project-preview-copy {
   position: absolute;
-  top: 51%;
+  top: 54%;
   left: 50%;
-  width: min(61rem, calc(100% - 3rem));
+  width: min(66rem, calc(100% - 3rem));
   color: #f2f5f3;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -1612,59 +1602,24 @@ body[data-page="genuine-earth-hydrosphere"] #app {
 .project-preview-copy h1 {
   margin: 0;
   color: inherit;
-  font-family: "Helvetica Neue", "Aptos Display", "Segoe UI Variable Display", "Segoe UI", Arial, sans-serif;
-  font-size: clamp(3.5rem, 6.1vw, 6.2rem);
+  font-family: inherit;
+  font-size: clamp(3rem, 4.25vw, 5rem);
   font-weight: 400;
-  line-height: 0.9;
+  line-height: 1.08;
   letter-spacing: 0;
   text-wrap: balance;
-  text-shadow: 0 0.12em 1.2em rgba(0, 0, 0, 0.74);
-}
-
-.project-preview-copy h1 span {
-  display: block;
-}
-
-.project-preview-copy h1 span:last-child {
-  color: rgba(225, 232, 232, 0.42);
-  font-weight: 300;
-}
-
-.project-preview-copy p,
-.project-preview-coordinate,
-.project-preview-meta {
-  font-family: "SFMono-Regular", "Cascadia Code", Consolas, monospace;
-  text-transform: uppercase;
+  text-shadow: 0 0.12em 1.2em rgba(0, 0, 0, 0.72);
 }
 
 .project-preview-copy p {
-  margin: 0 0 clamp(1.35rem, 2.6vw, 2.15rem);
-  color: #79c9ee;
-  font-size: clamp(0.66rem, 0.78vw, 0.78rem);
-  font-weight: 600;
+  margin: 1.6rem 0 0;
+  color: rgba(242, 245, 243, 0.74);
+  font-family: inherit;
+  font-size: clamp(0.72rem, 0.88vw, 0.9rem);
+  font-weight: 500;
   line-height: 1;
-  letter-spacing: 0;
-}
-
-.project-preview-coordinate,
-.project-preview-meta {
-  position: absolute;
-  right: clamp(1.25rem, 4vw, 4.75rem);
-  left: clamp(1.25rem, 4vw, 4.75rem);
-  display: flex;
-  justify-content: space-between;
-  color: rgba(178, 194, 199, 0.38);
-  font-size: clamp(0.56rem, 0.7vw, 0.68rem);
-  line-height: 1;
-  letter-spacing: 0;
-}
-
-.project-preview-coordinate {
-  top: 2rem;
-}
-
-.project-preview-meta {
-  bottom: 1.8rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 760px) {
@@ -1672,38 +1627,22 @@ body[data-page="genuine-earth-hydrosphere"] #app {
     min-height: 24rem;
   }
 
-  .project-preview-earth {
-    top: calc(23% - 22.2vw);
-    width: 380vw;
-    opacity: 0.61;
-    filter: saturate(0.62) contrast(1.12) brightness(0.82);
-  }
-
-  .project-preview-shade {
-    background:
-      linear-gradient(180deg, rgba(1, 5, 7, 0.46) 0%, rgba(1, 7, 10, 0.22) 34%, rgba(1, 6, 8, 0.46) 72%, rgba(0, 3, 5, 0.78) 100%),
-      radial-gradient(ellipse at 50% 30%, rgba(36, 95, 124, 0.02) 0%, rgba(2, 9, 12, 0.14) 56%, rgba(0, 4, 6, 0.58) 100%);
+  .project-preview-art {
+    object-position: center;
   }
 
   .project-preview-copy {
-    top: 48%;
-    width: min(31rem, calc(100% - 2.4rem));
+    top: 54%;
+    width: min(31rem, calc(100% - 2rem));
   }
 
   .project-preview-copy h1 {
-    font-size: clamp(2.65rem, 11.2vw, 3.25rem);
+    font-size: clamp(2.15rem, 9.8vw, 3rem);
   }
 
-  .project-preview-coordinate {
-    display: none;
-  }
-
-  .project-preview-meta {
-    bottom: 1.35rem;
-    gap: 0.8rem;
-    align-items: start;
-    display: grid;
-    text-align: left;
+  .project-preview-copy p {
+    margin-top: 1.25rem;
+    font-size: 0.68rem;
   }
 }
 
