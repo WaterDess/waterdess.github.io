@@ -1580,14 +1580,13 @@ body[data-page="genuine-earth-hydrosphere"] #app {
 .project-preview-earth {
   position: absolute;
   z-index: -3;
-  top: 82%;
+  top: calc(29% - 41vw);
   left: 50%;
-  width: max(82rem, 186vw);
+  width: 700vw;
   max-width: none;
   height: auto;
-  opacity: 0.46;
-  transform: translate(-50%, -50%);
-  transform-origin: center;
+  opacity: 0.68;
+  transform: translateX(-50%);
 }
 
 .project-preview-shade {
@@ -1595,8 +1594,8 @@ body[data-page="genuine-earth-hydrosphere"] #app {
   z-index: -2;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(1, 6, 7, 0.82) 0%, rgba(2, 8, 9, 0.5) 38%, rgba(1, 5, 6, 0.76) 100%),
-    radial-gradient(circle at 50% 47%, rgba(5, 18, 20, 0.08) 0%, rgba(1, 6, 7, 0.4) 68%, rgba(1, 5, 6, 0.8) 100%);
+    linear-gradient(180deg, rgba(1, 5, 7, 0.54) 0%, rgba(1, 7, 10, 0.26) 32%, rgba(1, 6, 8, 0.48) 72%, rgba(0, 3, 5, 0.82) 100%),
+    radial-gradient(ellipse at 50% 30%, rgba(36, 95, 124, 0.03) 0%, rgba(2, 9, 12, 0.16) 54%, rgba(0, 4, 6, 0.62) 100%);
 }
 
 .project-preview-copy {
@@ -1612,8 +1611,8 @@ body[data-page="genuine-earth-hydrosphere"] #app {
 .project-preview-copy h1 {
   margin: 0;
   color: inherit;
-  font-family: "Segoe UI Variable Display", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
-  font-size: clamp(2rem, 4.8vw, 4.6rem);
+  font-family: "Corbel Light", Corbel, "Aptos Display", "Segoe UI Variable Display", sans-serif;
+  font-size: clamp(2rem, 4.25vw, 4.15rem);
   font-weight: 300;
   line-height: 1.08;
   letter-spacing: 0;
@@ -1623,8 +1622,8 @@ body[data-page="genuine-earth-hydrosphere"] #app {
 
 .project-preview-copy p {
   margin: clamp(1.25rem, 2.4vw, 2rem) 0 0;
-  color: rgba(226, 235, 232, 0.62);
-  font-family: "Segoe UI Variable Text", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  color: rgba(216, 229, 229, 0.56);
+  font-family: "Corbel", "Aptos", "Segoe UI Variable Text", sans-serif;
   font-size: clamp(0.72rem, 1vw, 0.9rem);
   font-weight: 430;
   line-height: 1;
@@ -1638,8 +1637,15 @@ body[data-page="genuine-earth-hydrosphere"] #app {
   }
 
   .project-preview-earth {
-    top: 78%;
-    width: max(66rem, 285vw);
+    top: calc(28% - 26.4vw);
+    width: 450vw;
+    opacity: 0.74;
+  }
+
+  .project-preview-shade {
+    background:
+      linear-gradient(180deg, rgba(1, 5, 7, 0.42) 0%, rgba(1, 7, 10, 0.18) 34%, rgba(1, 6, 8, 0.38) 72%, rgba(0, 3, 5, 0.7) 100%),
+      radial-gradient(ellipse at 50% 30%, rgba(36, 95, 124, 0.02) 0%, rgba(2, 9, 12, 0.1) 56%, rgba(0, 4, 6, 0.5) 100%);
   }
 
   .project-preview-copy {
