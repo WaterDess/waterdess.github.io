@@ -64,7 +64,9 @@
 
     const navEl = document.querySelector(".site-header nav");
     navEl.innerHTML = list(nav, ([key, label]) => {
-      const active = key === page || (page === "person" && key === "people");
+      const active = key === page
+        || (page === "person" && key === "people")
+        || (page === "genuine-earth-hydrosphere" && key === "research");
       return `<a class="${active ? "active" : ""}" href="${href(key)}">${esc(label)}</a>`;
     });
   }
@@ -288,15 +290,38 @@
       label: item.title
     }));
 
+    const renderResearchItem = (item) => {
+      if (item.route) {
+        return `<article class="research-data-row compact-person-row"><h2><a href="${href(item.route)}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
+      }
+
+      if (item.url) {
+        return `<article class="research-data-row compact-person-row"><h2><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
+      }
+
+      return `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`;
+    };
+
     return `
       ${renderTocLayout(tocItems, list(data.research, (item, index) => `
         <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
           ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
-          ${item.url
-            ? `<article class="research-data-row compact-person-row"><h2><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`
-            : `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`}
+          ${renderResearchItem(item)}
         </section>
       `))}
+    `;
+  }
+
+  function renderGenuineEarthHydrosphere() {
+    return `
+      <section class="project-preview" aria-labelledby="genuine-earth-title">
+        <img class="project-preview-earth" src="${esc(assetUrl(data.visuals.hero))}" alt="" fetchpriority="high" decoding="async" />
+        <div class="project-preview-shade" aria-hidden="true"></div>
+        <div class="project-preview-copy">
+          <h1 id="genuine-earth-title">Genuine Earth: Hydrosphere</h1>
+          <p>Coming soon</p>
+        </div>
+      </section>
     `;
   }
 
@@ -642,7 +667,8 @@ function renderEducation() {
     news: renderNews,
     join: renderJoin,
     education: renderEducation,
-    "summer-training": renderSummerTraining
+    "summer-training": renderSummerTraining,
+    "genuine-earth-hydrosphere": renderGenuineEarthHydrosphere
   };
 
   if (!data) {

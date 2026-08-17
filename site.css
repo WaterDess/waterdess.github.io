@@ -69,6 +69,12 @@ body[data-page="home"] {
   overflow: hidden;
 }
 
+body[data-page="genuine-earth-hydrosphere"] {
+  background: #020707;
+  height: 100vh;
+  overflow: hidden;
+}
+
 body[data-page="people"] {
   --toc-main: 860px;
 }
@@ -1553,6 +1559,97 @@ body:not([data-page="home"]) .person-detail {
 .registration-countdown span {
   font-size: 0.76rem;
   line-height: 1.45;
+}
+
+/* Genuine Earth project preview */
+body[data-page="genuine-earth-hydrosphere"] #app {
+  min-height: 0;
+}
+
+.project-preview {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: calc(100vh - var(--masthead-height));
+  min-height: 28rem;
+  overflow: hidden;
+  background: #020707;
+  color: #f2f5f3;
+}
+
+.project-preview-earth {
+  position: absolute;
+  z-index: -3;
+  top: 82%;
+  left: 50%;
+  width: max(82rem, 186vw);
+  max-width: none;
+  height: auto;
+  opacity: 0.46;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+.project-preview-shade {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(1, 6, 7, 0.82) 0%, rgba(2, 8, 9, 0.5) 38%, rgba(1, 5, 6, 0.76) 100%),
+    radial-gradient(circle at 50% 47%, rgba(5, 18, 20, 0.08) 0%, rgba(1, 6, 7, 0.4) 68%, rgba(1, 5, 6, 0.8) 100%);
+}
+
+.project-preview-copy {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: min(72rem, calc(100% - 3rem));
+  color: #f2f5f3;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.project-preview-copy h1 {
+  margin: 0;
+  color: inherit;
+  font-family: "Segoe UI Variable Display", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4.8vw, 4.6rem);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0;
+  text-wrap: balance;
+  text-shadow: 0 0.12em 1.15em rgba(0, 0, 0, 0.62);
+}
+
+.project-preview-copy p {
+  margin: clamp(1.25rem, 2.4vw, 2rem) 0 0;
+  color: rgba(226, 235, 232, 0.62);
+  font-family: "Segoe UI Variable Text", "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  font-size: clamp(0.72rem, 1vw, 0.9rem);
+  font-weight: 430;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .project-preview {
+    min-height: 24rem;
+  }
+
+  .project-preview-earth {
+    top: 78%;
+    width: max(66rem, 285vw);
+  }
+
+  .project-preview-copy {
+    top: 44%;
+    width: min(31rem, calc(100% - 2.4rem));
+  }
+
+  .project-preview-copy h1 {
+    font-size: clamp(1.85rem, 10vw, 3rem);
+  }
 }
 
 .registration-countdown strong {

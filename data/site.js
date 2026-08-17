@@ -162,7 +162,8 @@ window.TANG_SITE = {
   research: [
     {
       title: "Projects",
-      text: ""
+      text: "Genuine Earth: Hydrosphere",
+      route: "genuine-earth-hydrosphere"
     },
     {
       title: "Code",
