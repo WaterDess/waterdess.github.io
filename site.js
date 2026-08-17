@@ -317,9 +317,20 @@
       <section class="project-preview" aria-labelledby="genuine-earth-title">
         <img class="project-preview-earth" src="${esc(assetUrl(data.visuals.hero))}" alt="" fetchpriority="high" decoding="async" />
         <div class="project-preview-shade" aria-hidden="true"></div>
+        <div class="project-preview-coordinate" aria-hidden="true">
+          <span>40.00&deg; N</span>
+          <span>116.33&deg; E</span>
+        </div>
         <div class="project-preview-copy">
-          <h1 id="genuine-earth-title">Genuine Earth: Hydrosphere</h1>
-          <p>Coming soon</p>
+          <p>Project 01 &middot; Coming soon</p>
+          <h1 id="genuine-earth-title">
+            <span>Genuine Earth:</span>
+            <span>Hydrosphere</span>
+          </h1>
+        </div>
+        <div class="project-preview-meta" aria-hidden="true">
+          <span>Global Change Hydrology Group</span>
+          <span>Planetary water systems</span>
         </div>
       </section>
     `;
