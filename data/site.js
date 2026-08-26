@@ -255,6 +255,15 @@ window.TANG_SITE = {
   },
   publications: [
     {
+      title: "Alarming decline of Iran's Ramsar convention wetlands",
+      authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Kim, D., Jun, C., Bateni, S. M., Mahdian, M., Hosseinzadeh, M., Siadatmousavi, S. M., Naseh, M. V., Mohammadi, K., Bhattarai, R., Kianmehr, P., Huneau, F., Zhang, Y., Abolfathi, S., and Tang, Q.",
+      journal: "Journal of Hydrology: Regional Studies",
+      details: "67, 103860",
+      date: "2026-08-25",
+      year: 2026,
+      url: "https://www.sciencedirect.com/science/article/pii/S2214581826007585"
+    },
+    {
       title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",
       authors: "Wang, J., Zhang, Q., Bao, H., Yun, X., Chang, Y., and Tang, Q.",
       journal: "Journal of Hydrometeorology",
