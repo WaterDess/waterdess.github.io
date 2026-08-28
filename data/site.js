@@ -295,7 +295,7 @@ window.TANG_SITE = {
     {
       date: "2026-08-28",
       type: "Media Coverage",
-      title: "Global Times: Will AI Create 10,000 Einsteins in the 21st Century?",
+      title: "Global Times: Could AI Produce 10,000 Einsteins in the 21st Century?",
       url: "./public/assets/global-times-ai-for-science-20260828.pdf"
     },
     {
