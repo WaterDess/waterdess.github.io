@@ -293,6 +293,12 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-08-28",
+      type: "Media Coverage",
+      title: "《环球时报》：21世纪，AI会催生1万个爱因斯坦吗？",
+      url: "https://news.china.com/domestic/945/20260828/49704399.html"
+    },
+    {
       date: "2026-08-14 14:00-15:00",
       type: "Seminar",
       title: "Some aspects of changes in hydrologic extremes over the Western U.S.",
