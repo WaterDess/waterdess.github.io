@@ -295,8 +295,8 @@ window.TANG_SITE = {
     {
       date: "2026-08-28",
       type: "Media Coverage",
-      title: "《环球时报》：21世纪，AI会催生1万个爱因斯坦吗？",
-      url: "https://news.china.com/domestic/945/20260828/49704399.html"
+      title: "Global Times: Will AI Create 10,000 Einsteins in the 21st Century?",
+      url: "./public/assets/global-times-ai-for-science-20260828.pdf"
     },
     {
       date: "2026-08-14 14:00-15:00",
