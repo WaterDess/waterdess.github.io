@@ -293,6 +293,12 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-09-03",
+      type: "Publication",
+      title: "Beyond the \u201cArtificial Lakes\u201d Paradigm: Recognizing Reservoirs as Impounded Rivers in Evaporation Estimation",
+      url: "https://doi.org/10.1002/wat2.70088"
+    },
+    {
       date: "2026-08-28",
       type: "Media Coverage",
       title: "Global Times: Could AI Produce 10,000 Einsteins in the 21st Century?",
