@@ -255,6 +255,15 @@ window.TANG_SITE = {
   },
   publications: [
     {
+      title: "Beyond the \u201cArtificial Lakes\u201d Paradigm: Recognizing Reservoirs as Impounded Rivers in Evaporation Estimation",
+      authors: "Han, S., Tang, Q., Guo, M., Zhao, G., and Zhang, B.",
+      journal: "WIREs Water",
+      details: "13, e70088",
+      date: "2026-09-03",
+      year: 2026,
+      url: "https://doi.org/10.1002/wat2.70088"
+    },
+    {
       title: "Alarming decline of Iran's Ramsar convention wetlands",
       authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Kim, D., Jun, C., Bateni, S. M., Mahdian, M., Hosseinzadeh, M., Siadatmousavi, S. M., Naseh, M. V., Mohammadi, K., Bhattarai, R., Kianmehr, P., Huneau, F., Zhang, Y., Abolfathi, S., and Tang, Q.",
       journal: "Journal of Hydrology: Regional Studies",
@@ -294,9 +303,9 @@ window.TANG_SITE = {
   news: [
     {
       date: "2026-09-03",
-      type: "Publication",
-      title: "Beyond the \u201cArtificial Lakes\u201d Paradigm: Recognizing Reservoirs as Impounded Rivers in Evaporation Estimation",
-      url: "https://doi.org/10.1002/wat2.70088"
+      type: "Media Coverage",
+      title: "Global Times: How Should We Respond to Ice-Rock Avalanches?",
+      url: "./public/assets/global-times-ice-rock-avalanche-20260903.pdf"
     },
     {
       date: "2026-08-28",
