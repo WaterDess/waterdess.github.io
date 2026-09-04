@@ -302,6 +302,13 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-09-04",
+      type: "Keynote",
+      title: "Flood Crosscutting Initiative Monthly Meeting",
+      speaker: "Prof. Qiuhong Tang",
+      url: "https://www.gewex.org/floods-cc/"
+    },
+    {
       date: "2026-09-03",
       type: "Media Coverage",
       title: "Global Times: How Should We Respond to Ice-Rock Avalanches?",
