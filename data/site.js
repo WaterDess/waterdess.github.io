@@ -176,10 +176,10 @@ window.TANG_SITE = {
         "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
       ],
       publications: [
-        "Ding, B., Zhu, J., Ge, J., et al. (2026). Assessing Sustainable Adaptation Strategies for Water Productivity and Crop Yields Under Future Climate Scenarios in a Water-Stressed Watershed. Land, 15(8), 1493.",
-        "Ding, B., Li, Y., Marek, G., et al. (2024). Impacts of land use changes on water conservation in the Songhuajiang River Basin in Northeast China using the SWAT model. Agricultural Water Management, 306, 109185.",
-        "Zhang, X.*#, Ding, B.#, Hou, Y., et al. (2024). Assessing the feasibility of sprinkler irrigation schemes and their adaptation to future climate change in groundwater over-exploitation regions. Agricultural Water Management, 292, 108674.",
-        "Ding, B., Liu, H., Li, Y., et al. (2022). Post-processing R tool for SWAT efficiently studying climate change impacts on hydrology, water quality, and crop growth. Environmental Modelling & Software, 156, 105492."
+        { text: "Ding, B., Zhu, J., Ge, J., et al. (2026). Assessing Sustainable Adaptation Strategies for Water Productivity and Crop Yields Under Future Climate Scenarios in a Water-Stressed Watershed. Land, 15(8), 1493.", url: "https://doi.org/10.3390/land15081493" },
+        { text: "Ding, B., Li, Y., Marek, G., et al. (2024). Impacts of land use changes on water conservation in the Songhuajiang River Basin in Northeast China using the SWAT model. Agricultural Water Management, 306, 109185.", url: "https://doi.org/10.1016/j.agwat.2024.109185" },
+        { text: "Zhang, X.*#, Ding, B.#, Hou, Y., et al. (2024). Assessing the feasibility of sprinkler irrigation schemes and their adaptation to future climate change in groundwater over-exploitation regions. Agricultural Water Management, 292, 108674.", url: "https://doi.org/10.1016/j.agwat.2024.108674" },
+        { text: "Ding, B., Liu, H., Li, Y., et al. (2022). Post-processing R tool for SWAT efficiently studying climate change impacts on hydrology, water quality, and crop growth. Environmental Modelling & Software, 156, 105492.", url: "https://doi.org/10.1016/j.envsoft.2022.105492" }
       ]
     }
   ],
