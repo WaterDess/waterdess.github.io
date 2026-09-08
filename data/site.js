@@ -157,6 +157,30 @@ window.TANG_SITE = {
         { text: "杨晓柳, 王平, 高大威, 等. (2020). 1979-2014年秦巴山区MSWEP降水数据精度评估及变化特征分析. 水土保持研究, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.", url: "https://doi.org/10.13869/j.cnki.rswc.2020.06.020" },
         { text: "杨晓柳, 王平, 高大威. (2019). 1971-2015年乌蒙山国家级自然保护区气候变化特征. 东北林业大学学报, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013.", url: "https://doi.org/10.13759/j.cnki.dlxb.2019.09.013" }
       ]
+    },
+    {
+      slug: "beibei-ding",
+      name: "Beibei Ding",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "dingbeibei (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/beibei-ding.png",
+      interests: ["Hydrological modeling", "Soil erosion", "Agricultural water management"],
+      education: [
+        "Ph.D. in College of Land Science and Technology, China Agricultural University, 2026",
+        "M.S. in College of Land Science and Technology, China Agricultural University, 2022",
+        "B.S. in College of Resources and Environment, Shandong Agricultural University, 2020"
+      ],
+      positions: [
+        "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: [
+        "Ding, B., Zhu, J., Ge, J., et al. (2026). Assessing Sustainable Adaptation Strategies for Water Productivity and Crop Yields Under Future Climate Scenarios in a Water-Stressed Watershed. Land, 15(8), 1493.",
+        "Ding, B., Li, Y., Marek, G., et al. (2024). Impacts of land use changes on water conservation in the Songhuajiang River Basin in Northeast China using the SWAT model. Agricultural Water Management, 306, 109185.",
+        "Zhang, X.*#, Ding, B.#, Hou, Y., et al. (2024). Assessing the feasibility of sprinkler irrigation schemes and their adaptation to future climate change in groundwater over-exploitation regions. Agricultural Water Management, 292, 108674.",
+        "Ding, B., Liu, H., Li, Y., et al. (2022). Post-processing R tool for SWAT efficiently studying climate change impacts on hydrology, water quality, and crop growth. Environmental Modelling & Software, 156, 105492."
+      ]
     }
   ],
   research: [
