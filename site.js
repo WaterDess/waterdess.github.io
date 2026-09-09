@@ -336,17 +336,12 @@ function renderEducation() {
     const detailsAction = item.route
       ? renderDetailAction(href(item.route), "see details", false)
       : renderDetailAction(assetUrl(item.url));
-    const registrationUrl = item.route === "summer-training"
-      ? data.summerTraining?.registration?.url
-      : "";
-    const registrationAction = renderDetailAction(registrationUrl, "registration", true);
 
     return `
       <article class="content-section indexed-section education-section" id="${esc(sectionId("education", blockTitle))}">
         ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
         <div class="detail-actions">
           ${detailsAction}
-          ${registrationAction}
         </div>
       </article>
     `;
@@ -408,17 +403,13 @@ function renderEducation() {
       `
       : (st.registration ? `<p>${esc(st.registration.deadline || "")}</p>` : "");
 
-    const registrationHeading = st.registration && st.registration.url
-      ? `<a class="registration-heading-link" href="${esc(st.registration.url)}" target="_blank" rel="noopener noreferrer">Registration</a>`
-      : "Registration";
-
     const content = `
       <section class="content-section program-section" id="overview">
         <h2>Program Theme</h2>
         <p class="summer-training-lead">${esc(st.theme || "")}</p>
       </section>
       <section class="content-section program-section program-registration" id="registration">
-        <h2>${registrationHeading}</h2>
+        <h2>Registration</h2>
         ${registrationHtml}
       </section>
       <section class="content-section program-section" id="objectives">
