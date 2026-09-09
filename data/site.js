@@ -165,7 +165,7 @@ window.TANG_SITE = {
       group: "postdoctoral-fellow",
       address: "Department of Earth System Science, Tsinghua University",
       email: "dingbeibei (at) mail.tsinghua.edu.cn",
-      photo: "./public/assets/beibei-ding.png",
+      photo: "./public/assets/beibei-ding.jpg",
       interests: ["Hydrological modeling", "Soil erosion", "Agricultural water management"],
       education: [
         "Ph.D. in College of Land Science and Technology, China Agricultural University, 2026",
