@@ -285,32 +285,32 @@
   }
 
   function renderResearch() {
-    const tocItems = data.research.map((item) => ({
-      id: sectionId("research", item.title),
-      label: item.title
-    }));
-
-    const renderResearchItem = (item) => {
-      if (item.route) {
-        return `<article class="research-data-row compact-person-row"><h2><a href="${href(item.route)}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
-      }
-
-      if (item.url) {
-        return `<article class="research-data-row compact-person-row"><h2><a href="${esc(item.url)}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
-      }
-
-      return `<p class="empty-note">${esc(item.text || "To be updated.")}</p>`;
-    };
-
-    return `
-      ${renderTocLayout(tocItems, list(data.research, (item, index) => `
-        <section class="content-section research-section" id="${esc(sectionId("research", item.title))}">
-          ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
-          ${renderResearchItem(item)}
-        </section>
-      `))}
-    `;
+  const groups = new Map();
+  for (const item of data.research) {
+    if (!groups.has(item.title)) groups.set(item.title, []);
+    groups.get(item.title).push(item);
   }
+  const sections = [...groups].map(([title, items]) => {
+    const content = items.filter(item => item.route || item.url || item.text);
+    return { title, items: content.length ? content : [items[0]] };
+  });
+  const tocItems = sections.map(item => ({ id: sectionId('research', item.title), label: item.title }));
+  const renderResearchItem = item => {
+    if (item.route) {
+      return `<article class="research-data-row compact-person-row"><h2><a href="${href(item.route)}"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
+    }
+    if (item.url) {
+      return `<article class="research-data-row compact-person-row"><h2><a href="${esc(assetUrl(item.url))}" target="_blank" rel="noopener"><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.text || item.title)}</a></h2></article>`;
+    }
+    return `<p class="empty-note">${esc(item.text || 'To be updated.')}</p>`;
+  };
+  return renderTocLayout(tocItems, list(sections, (section, index) => `
+    <section class="content-section research-section" id="${esc(sectionId('research', section.title))}">
+      ${renderPeopleBlockHeading(String(index + 1).padStart(2, '0'), section.title)}
+      ${list(section.items, renderResearchItem)}
+    </section>
+  `));
+}
 
   function renderGenuineEarthHydrosphere() {
     return `
