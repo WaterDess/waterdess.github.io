@@ -326,6 +326,13 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-09-18 10:00-11:30",
+      type: "Seminar",
+      title: "Tidally Driven Deep-Ocean Turbulence",
+      speaker: "Assistant Prof. Yidongfang Si",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/7023.htm"
+    },
+    {
       date: "2026-09-04",
       type: "Keynote",
       title: "Flood Crosscutting Initiative Monthly Meeting",
