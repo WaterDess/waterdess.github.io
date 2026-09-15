@@ -192,7 +192,7 @@ window.TANG_SITE = {
       photo: "./public/assets/songjie-huang.jpg",
       interests: ["Hydrological simulation in the Third Pole region", "Global water cycle changes"],
       education: [
-        "Ph.D. Candidate, Department of Earth System Science, Tsinghua University, 2026-present",
+        "Ph.D. Candidate, Department of Earth System Science, Tsinghua University, present",
         "B.S. in College of Water Resources and Hydropower Engineering, Wuhan University, 2026"
       ],
       publications: []
