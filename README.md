@@ -49,3 +49,13 @@ Production pages should use local assets only. Add new images and PDFs under `pu
 ## Deployment
 
 The repository publishes the `main` branch through GitHub Pages. There is no generated output directory; committed files are the deployed site.
+
+## Refresh browser assets before deployment
+
+After editing `site.js`, `site.css`, or `data/site.js`, run:
+
+```powershell
+python scripts/refresh-static-assets.py
+```
+
+This creates content-addressed copies and updates every HTML entry shell to load a matching release. Commit the updated shells and generated assets together with the source changes. Keep previous generated assets available for browsers with an older cached HTML page. Page URLs remain unchanged and use no cache-busting query parameters.
