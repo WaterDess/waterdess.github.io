@@ -1814,3 +1814,22 @@ body[data-page="genuine-earth-hydrosphere"] #app {
 }
 .srt-page { max-width: 880px; padding-top: 2.4rem; }
 body[data-page="education"] .publication-list { border-top: 0 !important; }
+
+/* Neutral text for education and undergraduate recruitment. */
+body[data-page="education"],
+body[data-page="srt"] {
+  --link: #293532;
+  --link-hover: #101916;
+  --link-glow: transparent;
+  --link-underline: #66716c;
+}
+body[data-page="education"] .publication-title,
+body[data-page="education"] .publication h2 a:hover .publication-title {
+  color: var(--text);
+  text-shadow: none;
+}
+body[data-page="education"] .publication h2 a:hover .publication-title {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+body[data-page="srt"] .srt-registration-row { color: var(--text); }
