@@ -229,11 +229,10 @@ window.TANG_SITE = {
             "learning": "Learn sandbox design, projection calibration, code testing, and software configuration while connecting physical terrain with interactive hydrological visualizations.",
             "outcome": "Develop an improved augmented reality landscape sandbox for teaching. A working prototype, workspace, reference materials, and supplies are already available.",
             "plan": [
-                "Nov-Dec 2026: Design the approach and purchase equipment and materials.",
+                "Nov-Dec 2026: Explore the existing sandbox and design your improvements.",
                 "Jan-May 2027: Improve gesture interaction and rainfall-runoff simulation.",
                 "Jun-Oct 2027: Improve terrain displays for selected river basins."
-            ],
-            "budget": "Requested budget: RMB 5,000 (equipment and consumables: RMB 3,500; software updates: RMB 1,500)."
+            ]
         },
         {
             "title": "AI for Identifying Global Water-Cycle Imbalance Hotspots",
@@ -251,39 +250,8 @@ window.TANG_SITE = {
                 "Nov-Dec 2026: Design the approach and prepare data.",
                 "Jan-May 2027: Analyze data and identify imbalance hotspots.",
                 "Jun-Oct 2027: Produce the global hotspot map."
-            ],
-            "budget": "Requested budget: RMB 5,000 (computing and storage equipment: RMB 4,000; mapping and presentation: RMB 1,000)."
+            ]
         }
-    ],
-    "dates": [
-        [
-            "Project proposals",
-            "14-27 September"
-        ],
-        [
-            "Supervisor review of student proposals",
-            "14-29 September"
-        ],
-        [
-            "Department review",
-            "30 September-11 October"
-        ],
-        [
-            "University review",
-            "12-14 October"
-        ],
-        [
-            "Student applications",
-            "15-25 October"
-        ],
-        [
-            "Project leader review of applications",
-            "15-29 October"
-        ],
-        [
-            "Project launch",
-            "30 October"
-        ]
     ]
 },
   // ----- education -----
