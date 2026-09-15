@@ -1833,3 +1833,27 @@ body[data-page="education"] .publication h2 a:hover .publication-title {
   text-underline-offset: .2em;
 }
 body[data-page="srt"] .srt-registration-row { color: var(--text); }
+
+/* Keep all recruitment copy legible, including captions and notices. */
+.srt-section p,
+.srt-section h3,
+.srt-section details,
+.srt-section table,
+.srt-facts,
+.srt-actions a,
+.srt-callout a,
+.srt-callout strong,
+.srt-figure strong { font-size: 1rem; }
+.srt-section .srt-eyebrow,
+.srt-section .srt-source,
+.srt-figure figcaption,
+.srt-media figcaption { font-size: .9rem; line-height: 1.65; }
+.srt-media video { display: block; width: 100%; height: auto; background: #101916; }
+.srt-back { margin-bottom: 1.4rem; }
+.srt-section .srt-eyebrow,
+.srt-section .srt-source,
+.srt-figure figcaption,
+.srt-media figcaption { font-size: max(.9rem, 16px); }
+.srt-figure { background: #25302c; color: #f4f6f4; }
+.srt-figure span, .srt-figure figcaption { color: #d0d5d1; }
+.srt-figure li { border-color: #758079; }

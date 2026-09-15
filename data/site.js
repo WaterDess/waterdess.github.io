@@ -215,38 +215,88 @@ window.TANG_SITE = {
     }
   ],
   srt: {
-    title: "用双手塑造流域，用 AI 探索全球水循环",
-    intro: "从互动沙盘到全球地图，把对地球与水的好奇变成一次完整的研究实践。全球变化水文学课题组拟推出两项 2026—2027 学年秋季 SRT 项目，欢迎清华本科生了解并关注后续报名。",
-    projects: [
-      {
-        title: "增强现实互动景观沙盘教具功能提升",
-        question: "如果用手改变一座山，雨水会流向哪里？",
-        text: "课题组已基于 MagicSand 开源项目与投影设备搭建可运行的沙盘原型。本项目将在此基础上更新软硬件，提升手势响应，探索降雨—产汇流模拟，以及特定流域地形展示功能。",
-        steps: ["塑造地形", "手势交互", "模拟降雨", "观察汇流"],
-        learning: "学习沙盒设计、画面校准、代码测试与程序设置，连接地形、水流与交互展示。",
-        outcome: "形成改进型增强现实互动景观沙盘教具。已有可运行设备原型，相关场地、资料与材料齐备。",
-        plan: ["2026.11—12：方案设计和设备／材料购置", "2027.01—05：增强手势响应与降雨—产汇流功能", "2027.06—10：增强特定流域地形展示功能"],
-        budget: "申请经费 5,000 元：设备与耗材 3,500 元，软件更新 1,500 元。"
-      },
-      {
-        title: "AI+全球水循环失衡热点地区精准识别",
-        question: "全球水循环在哪里失衡？让数据与 AI 帮我们寻找答案。",
-        text: "基于全球水循环观测和模式数据，探索基于人工智能的水循环失衡指标体系及辨识方法，识别全球热点地区并制图。",
-        steps: ["全球观测与模式", "AI 指标与辨识", "识别热点地区", "编制成果地图"],
-        learning: "系统学习水循环大数据分析方法、智能体构建与地图编制技能，体验从科学问题到数据分析和成果表达的研究过程。",
-        outcome: "识别全球水循环失衡热点地区，绘制全球水循环失衡热点地图。已有相关数据资料及地图范例，具备研究场地与资料基础。",
-        plan: ["2026.11—12：方案设计和数据准备", "2027.01—05：数据分析与热点地区辨识", "2027.06—10：编制全球水循环失衡热点地图"],
-        budget: "申请经费 5,000 元：算力与存储设备 4,000 元，地图编制与展示 1,000 元。"
-      }
+    "projects": [
+        {
+            "title": "Enhancing an Augmented Reality Landscape Sandbox",
+            "question": "If you reshape a mountain with your hands, where will the rainwater go?",
+            "text": "Our group has a working sandbox prototype built with the open-source MagicSand project and projection equipment. This project will update its hardware and software to improve gesture interaction, explore rainfall-runoff simulation, and display the terrain of selected river basins.",
+            "steps": [
+                "Shape the terrain",
+                "Interact with gestures",
+                "Simulate rainfall",
+                "Trace water flow"
+            ],
+            "learning": "Learn sandbox design, projection calibration, code testing, and software configuration while connecting physical terrain with interactive hydrological visualizations.",
+            "outcome": "Develop an improved augmented reality landscape sandbox for teaching. A working prototype, workspace, reference materials, and supplies are already available.",
+            "plan": [
+                "Nov-Dec 2026: Design the approach and purchase equipment and materials.",
+                "Jan-May 2027: Improve gesture interaction and rainfall-runoff simulation.",
+                "Jun-Oct 2027: Improve terrain displays for selected river basins."
+            ],
+            "budget": "Requested budget: RMB 5,000 (equipment and consumables: RMB 3,500; software updates: RMB 1,500)."
+        },
+        {
+            "title": "AI for Identifying Global Water-Cycle Imbalance Hotspots",
+            "question": "Where is the global water cycle falling out of balance? Explore the answer with data and AI.",
+            "text": "Use global water-cycle observations and model data to develop an AI-based indicator framework and identification methods, locate regions of water-cycle imbalance, and map the resulting hotspots.",
+            "steps": [
+                "Global observations and models",
+                "AI indicators and analysis",
+                "Identify hotspot regions",
+                "Create the map"
+            ],
+            "learning": "Develop skills in large-scale water-cycle data analysis, AI agent development, and map production. Experience the research process from a scientific question to data analysis and communication.",
+            "outcome": "Identify global water-cycle imbalance hotspots and produce a global hotspot map. Relevant datasets, example maps, and workspace are already available.",
+            "plan": [
+                "Nov-Dec 2026: Design the approach and prepare data.",
+                "Jan-May 2027: Analyze data and identify imbalance hotspots.",
+                "Jun-Oct 2027: Produce the global hotspot map."
+            ],
+            "budget": "Requested budget: RMB 5,000 (computing and storage equipment: RMB 4,000; mapping and presentation: RMB 1,000)."
+        }
     ],
-    dates: [["立项申请", "9 月 14—27 日"], ["指导教师审核学生立项", "9 月 14—29 日"], ["院系审核", "9 月 30 日—10 月 11 日"], ["教务处审核", "10 月 12—14 日"], ["学生报名", "10 月 15—25 日"], ["立项人审核报名", "10 月 15—29 日"], ["项目启动", "10 月 30 日"]]
-  },
+    "dates": [
+        [
+            "Project proposals",
+            "14-27 September"
+        ],
+        [
+            "Supervisor review of student proposals",
+            "14-29 September"
+        ],
+        [
+            "Department review",
+            "30 September-11 October"
+        ],
+        [
+            "University review",
+            "12-14 October"
+        ],
+        [
+            "Student applications",
+            "15-25 October"
+        ],
+        [
+            "Project leader review of applications",
+            "15-29 October"
+        ],
+        [
+            "Project launch",
+            "30 October"
+        ]
+    ]
+},
   // ----- education -----
   education: [
     {
       year: 2026,
-      title: "SRT 本科生研究训练计划：增强现实互动沙盘与 AI+全球水循环",
-      route: "srt"
+      title: "SRT: Enhancing an Augmented Reality Landscape Sandbox",
+      route: "srt-sandbox"
+    },
+    {
+      year: 2026,
+      title: "SRT: AI for Identifying Global Water-Cycle Imbalance Hotspots",
+      route: "srt-water-ai"
     },
     {
       year: 2026,
