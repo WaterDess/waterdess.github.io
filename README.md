@@ -59,3 +59,7 @@ python scripts/refresh-static-assets.py
 ```
 
 This creates content-addressed copies and updates every HTML entry shell to load a matching release. Commit the updated shells and generated assets together with the source changes. Keep previous generated assets available for browsers with an older cached HTML page. Page URLs remain unchanged and use no cache-busting query parameters.
+
+## Shared visual styles
+
+Reuse existing page templates and shared interaction styles for new content. Education uses the Publications listing template. Education and SRT use neutral resting text while inheriting the site's existing link hover color and glow; do not replace them with page-specific hover behavior.
