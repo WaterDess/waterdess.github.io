@@ -181,6 +181,23 @@ window.TANG_SITE = {
         { text: "Zhang, X., Ding, B., Hou, Y., et al. (2024). Assessing the feasibility of sprinkler irrigation schemes and their adaptation to future climate change in groundwater over-exploitation regions. Agricultural Water Management, 292, 108674.", url: "https://doi.org/10.1016/j.agwat.2024.108674" },
         { text: "Ding, B., Liu, H., Li, Y., et al. (2022). Post-processing R tool for SWAT efficiently studying climate change impacts on hydrology, water quality, and crop growth. Environmental Modelling & Software, 156, 105492.", url: "https://doi.org/10.1016/j.envsoft.2022.105492" }
       ]
+    },
+    {
+      slug: "songjie-huang",
+      name: "Songjie Huang",
+      position: "Ph.D. Candidate",
+      group: "graduate-student",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "sj-huang26 (at) mails.tsinghua.edu.cn",
+      photo: "./public/assets/songjie-huang.jpg",
+      interests: ["Hydrological simulation in the Third Pole region", "Global water cycle changes"],
+      education: [
+        "B.S. in College of Water Resources and Hydropower Engineering, Wuhan University, 2026"
+      ],
+      positions: [
+        "2026.09-present: Ph.D. Candidate, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: []
     }
   ],
   research: [

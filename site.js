@@ -155,6 +155,7 @@
     const members = data.people.filter((person) => person !== lead);
     const postdoctoralFellows = members.filter((person) => (person.group || "").toLowerCase() === "postdoctoral-fellow");
     const researchAssociates = members.filter((person) => (person.group || "").toLowerCase() === "research-associate");
+    const graduateStudents = members.filter((person) => (person.group || "").toLowerCase() === "graduate-student");
 
     return `
       <section class="section people-layout">
@@ -189,7 +190,11 @@
         ` : ""}
         <section class="people-block" id="graduate-student">
           ${renderPeopleBlockHeading(researchAssociates.length ? "04" : "03", "Graduate Student")}
-          <p class="empty-note">To be updated.</p>
+          ${graduateStudents.length ? `
+            <div class="member-grid compact-member-list" aria-label="Graduate Student">
+              ${list(graduateStudents, renderMemberRow)}
+            </div>
+          ` : `<p class="empty-note">To be updated.</p>`}
         </section>
         </div>
       </section>
@@ -243,7 +248,7 @@
           ${renderDetailBlock("Education", person.education)}
           ${renderDetailBlock("Positions Held", person.positions)}
           ${renderDetailBlock("Research Interests", person.interests)}
-          ${renderDetailBlock("Publications", person.publications)}
+          ${person.publications?.length ? renderDetailBlock("Publications", person.publications) : ""}
         </div>
       </section>
     `;
