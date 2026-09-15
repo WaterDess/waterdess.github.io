@@ -1770,3 +1770,47 @@ body[data-page="genuine-earth-hydrosphere"] #app {
     height: 2rem;
   }
 }
+
+/* Undergraduate research recruitment */
+.srt-section { line-height: 1.85; font-family: inherit; }
+.srt-intro h1 { font-size: clamp(1.55rem, 3vw, 2.1rem); line-height: 1.45; letter-spacing: -.035em; margin: .5rem 0 1rem; }
+.srt-section p { font-size: .85rem; color: var(--muted); }
+.srt-section .srt-eyebrow { font-size: .62rem; letter-spacing: .14em; color: var(--link); font-weight: 650; }
+.srt-facts { display: flex; flex-wrap: wrap; gap: .45rem 1.3rem; margin: 1.3rem 0; font-size: .76rem; font-weight: 600; }
+.srt-callout { padding: 1.15rem 1.3rem; background: #e9f1ee; border-left: 3px solid var(--link); margin: 1.5rem 0 2.4rem; }
+.srt-callout strong { font-size: .9rem; }
+.srt-callout p { margin: .4rem 0; }
+.srt-callout a { font-size: .8rem; }
+.srt-project, .srt-apply { border-top: 1px solid var(--border); padding: 1.8rem 0; }
+.srt-section h2 { font-size: 1.2rem; line-height: 1.6; margin: .2rem 0 .6rem; }
+.srt-section h3 { font-size: .87rem; margin: .7rem 0 .3rem; }
+.srt-section .srt-question { color: var(--text); }
+.srt-figure { margin: 1.2rem 0; padding: 1.3rem; background: #102d31; color: #e8f4ee; border-radius: 2px; }
+.srt-figure ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.srt-figure li { border-top: 1px solid #648687; padding-top: .6rem; }
+.srt-figure span { display: block; color: #a4c9bd; font-size: 1.4rem; }
+.srt-figure strong { font-size: .75rem; font-weight: 500; }
+.srt-figure figcaption { color: #adc6c3; font-size: .6rem; margin-top: 1rem; }
+.srt-outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; }
+.srt-outcomes p { margin-top: 0; }
+.srt-section details { margin-top: 1rem; font-size: .78rem; }
+.srt-section summary { cursor: pointer; color: var(--link); padding: .3rem 0; }
+.srt-section details li { margin: .35rem 0; }
+.srt-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1rem 0; }
+.srt-actions a { padding: .55rem .8rem; border: 1px solid var(--border-dark); font-size: .8rem; }
+.srt-actions a:first-child { background: var(--link); color: white; }
+.srt-section table { width: 100%; border-collapse: collapse; font-size: .78rem; margin: 1rem 0; }
+.srt-section th, .srt-section td { padding: .65rem .5rem; border-bottom: 1px solid var(--border); text-align: left; }
+.srt-section tbody th { font-weight: 400; }
+.srt-registration-row { background: #e9f1ee; color: #1b5459; }
+.srt-section .srt-source { font-size: .65rem; margin-top: 1.3rem; }
+.srt-media { margin: 1.2rem 0; }
+.srt-media img { display: block; width: 100%; height: auto; }
+.srt-media figcaption { font-size: .65rem; color: var(--muted); margin: .5rem 0; }
+@media (max-width: 600px) {
+  .srt-outcomes { grid-template-columns: 1fr; gap: 0; }
+  .srt-figure ol { grid-template-columns: repeat(2, 1fr); }
+  .srt-callout { padding: 1rem; }
+}
+.srt-page { max-width: 880px; padding-top: 2.4rem; }
+body[data-page="education"] .publication-list { border-top: 0 !important; }

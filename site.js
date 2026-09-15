@@ -56,7 +56,7 @@
   }
 
   function setupChrome() {
-    document.documentElement.lang = "en";
+    document.documentElement.lang = page === "srt" ? "zh-CN" : "en";
     const brandLogo = document.querySelector(".brand-logo");
     brandLogo.src = assetUrl(data.visuals.logo);
     brandLogo.alt = data.site.shortName || data.site.name;
@@ -66,6 +66,7 @@
     navEl.innerHTML = list(nav, ([key, label]) => {
       const active = key === page
         || (page === "person" && key === "people")
+        || (["srt", "summer-training"].includes(page) && key === "education")
         || (page === "genuine-earth-hydrosphere" && key === "research");
       return `<a class="${active ? "active" : ""}" href="${href(key)}">${esc(label)}</a>`;
     });
@@ -329,32 +330,36 @@
     `;
   }
 
+function renderSrt() {
+  const srt = data.srt;
+  return `<section id="education-srt" class="srt-section indexed-section" lang="zh-CN">
+    <header class="srt-intro"><p class="srt-eyebrow">UNDERGRADUATE RESEARCH · SRT 2026–2027</p>
+      <h1>${esc(srt.title)}</h1><p>${esc(srt.intro)}</p>
+      <p>指导教师：汤秋鸿｜清华大学地球系统科学系长聘教授</p>
+      <div class="srt-facts"><span>本科生研究训练</span><span>每项拟招 5 人</span><span>每项 3 学分</span><span>周期 1 年</span></div>
+      <div class="srt-callout"><strong>学生报名参考时间：2026 年 10 月 15—25 日</strong><p>9 月 14—27 日为立项申请阶段。项目获批情况、名额及实际时间以 SRT 系统和教务处实践办通知为准。</p><a href="#srt-apply">查看参与方式 ↓</a></div>
+    </header>
+    ${list(srt.projects, (project, index) => `<article class="srt-project"><h2>${esc(project.title)}</h2><p class="srt-question">${esc(project.question)}</p>
+      ${index === 0 ? `<figure class="srt-media"><img src="${esc(assetUrl('./public/assets/srt/magic-sand-setup.jpg'))}" width="2560" height="1920" alt="MagicSand 原项目示例：真实沙面上投影出不同高程的地形色彩" loading="lazy" /><figcaption>外部案例，非课题组实拍。图片来源：<a href="https://github.com/thomwolf/Magic-Sand" target="_blank" rel="noopener">Thomas Wolf / Magic-Sand</a>（仓库 GPL-2.0 许可，<a href="${esc(assetUrl('./public/assets/srt/Magic-Sand-COPYING.txt'))}">许可文本</a>）。</figcaption></figure><p class="srt-demo"><a href="https://www.youtube.com/watch?v=j9JXtTj0mzE" target="_blank" rel="noopener">▶ 观看 UC Davis 地形交互与水流演示</a> · <a href="https://www.youtube.com/watch?v=d_ZHsgKjNNk" target="_blank" rel="noopener">溃坝与堤防漫溢演示</a></p><p class="srt-source">演示来自 <a href="https://web.cs.ucdavis.edu/~okreylos/ResDev/SARndbox/Movies.html" target="_blank" rel="noopener">UC Davis / Oliver Kreylos 的 AR Sandbox 项目</a>，用于展示同类技术的可能性，并非本组当前设备效果。视频托管于 YouTube。</p>` : ""}
+      <figure class="srt-figure"><ol>${list(project.steps, (step, i) => `<li><span aria-hidden="true">0${i + 1}</span><strong>${esc(step)}</strong></li>`)}</ol><figcaption>研究流程示意，不代表已完成成果</figcaption></figure>
+      <p>${esc(project.text)}</p><div class="srt-outcomes"><div><h3>你将学到什么</h3><p>${esc(project.learning)}</p></div><div><h3>一起完成什么</h3><p>${esc(project.outcome)}</p></div></div>
+      <details><summary>研究进度与经费安排</summary><ul>${list(project.plan, item => `<li>${esc(item)}</li>`)}</ul><p>${esc(project.budget)}</p><p>经费为项目申请预算，非学生个人补助，最终以审批为准。</p></details>
+    </article>`)}
+    <section id="srt-apply" class="srt-apply indexed-section"><h2>如何参与</h2><p>SRT 是清华大学大学生研究训练计划。感兴趣的本科生可先联系指导教师咨询研究内容；学生报名阶段请登录清华大学信息门户，在 SRT 系统查询获批项目及具体接纳要求后报名。</p>
+      <div class="srt-actions"><a href="https://info2021.tsinghua.edu.cn/" target="_blank" rel="noopener">进入清华大学信息门户 ↗</a><a href="mailto:tangqh@tsinghua.edu.cn">联系指导教师</a></div><p>咨询邮箱：tangqh (at) tsinghua.edu.cn</p>
+      <h3>2026 年秋季学期参考时间表</h3><table><thead><tr><th scope="col">环节</th><th scope="col">参考时间（2026 年）</th></tr></thead><tbody>${list(srt.dates, ([label, date]) => `<tr${label === "学生报名" ? ' class="srt-registration-row"' : ""}><th scope="row">${esc(label)}</th><td>${esc(date)}</td></tr>`)}</tbody></table>
+      <details><summary>立项、经费与成绩说明</summary><p>本学期仅 1 个立项批次，每位教师立项不超过 2 项，每位学生立项不超过 1 项，每个项目最多接收 5 名学生。学生立项提交后，须由指导教师及时审核。</p><p>项目经费不超过 5,000 元／项；不申请经费的项目不支持经费；经费不得用于发放勤工助学费。2026—2027 学年启动项目的经费于该学年春季学期下拨。</p><p>指导教师可根据实际结题情况提交成绩，提交后原则上不得更改。成绩通常于春、秋学期的学期中和学期末同步至成绩单，无需师生操作。请及时核查成绩；如有异议，须在规定复议期内向指导教师所在院系提出申请，按学校成绩管理流程办理。</p></details>
+      <p class="srt-source">通知来源：教务处实践教学办公室，2026 年 9 月 14 日。实际节点以教务处实践办通知为准。教务咨询：010-62785589；jwcsjk (at) mailoa.tsinghua.edu.cn。</p>
+    </section></section>`;
+}
+
 function renderEducation() {
   const items = data.education || [];
-  const tocItems = items.map((item) => ({
-    id: sectionId("education", item.shortLabel || item.title),
-    label: item.shortLabel || item.title
-  }));
-
-  const content = items.map((item, index) => {
-    const blockTitle = item.shortLabel || item.title;
-    const detailsAction = item.route
-      ? renderDetailAction(href(item.route), "see details", false)
-      : renderDetailAction(assetUrl(item.url));
-
-    return `
-      <article class="content-section indexed-section education-section" id="${esc(sectionId("education", blockTitle))}">
-        ${renderPeopleBlockHeading(String(index + 1).padStart(2, "0"), item.title)}
-        <div class="detail-actions">
-          ${detailsAction}
-        </div>
-      </article>
-    `;
-  }).join("");
-
-  return `
-    ${renderTocLayout(tocItems, content)}
-  `;
+  const years = [...new Set(items.map(item => item.year))].sort((a, b) => b - a);
+  return renderTocLayout(years.map(year => ({ id: `year-${year}`, label: String(year) })), list(years, year => `
+    <section class="content-section publication-year" id="year-${esc(year)}"><div class="publication-list">
+      ${list(items.filter(item => item.year === year), item => `<article class="publication"><h2><a href="${esc(item.route ? href(item.route) : assetUrl(item.url))}"${item.route ? "" : ' target="_blank" rel="noopener"'}><strong class="publication-title">${esc(item.title)}</strong></a></h2></article>`)}
+    </div></section>`));
 }
 
   function renderSummerTraining() {
@@ -662,6 +667,7 @@ function renderEducation() {
     news: renderNews,
     join: renderJoin,
     education: renderEducation,
+    srt: () => `<div class="section srt-page">${renderSrt()}</div>`,
     "summer-training": renderSummerTraining,
     "genuine-earth-hydrosphere": renderGenuineEarthHydrosphere
   };
