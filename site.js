@@ -246,7 +246,7 @@
         </aside>
         <div class="detail-sections">
           ${renderDetailBlock("Education", person.education)}
-          ${renderDetailBlock("Positions Held", person.positions)}
+          ${(person.group || "").toLowerCase() !== "graduate-student" ? renderDetailBlock("Positions Held", person.positions) : ""}
           ${renderDetailBlock("Research Interests", person.interests)}
           ${person.publications?.length ? renderDetailBlock("Publications", person.publications) : ""}
         </div>
