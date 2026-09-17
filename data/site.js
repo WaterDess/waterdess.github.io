@@ -205,6 +205,7 @@ window.TANG_SITE = {
       address: "Department of Earth System Science, Tsinghua University",
       email: "z-hy22 (at) mails.tsinghua.edu.cn",
       photo: "./public/assets/ai-bot-photo-f717871ea803345a47c7458a67eac135d0040a9670a979a0f04364cb240f9bb1.png",
+      interests: ["Catchment hydrological modeling", "Extreme weather events", "Coupled ocean-atmosphere modeling"],
       education: [
         "Ph.D. Candidate, Department of Earth System Science, Tsinghua University, present",
         "B.S. in Department of Hydraulic Engineering, Tsinghua University, 2026"
