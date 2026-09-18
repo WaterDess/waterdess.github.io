@@ -1,0 +1,10 @@
+/* Keep the original Earth pixels, image sizing and transform; reveal only its background. */
+body[data-page="home"] .home-landing {
+  background:linear-gradient(#02051088,#010308bb),url('./public/assets/earth-preview/milkyway.jpg') center/cover;
+}
+.home-landing .home-earth-image {
+  -webkit-mask:url('./public/assets/home-earth-mask.svg') center/cover no-repeat;
+  mask:url('./public/assets/home-earth-mask.svg') center/cover no-repeat;
+}
+.home-space-credit { background:#020408; padding:12px 20px; text-align:center; font:10px/1.5 Arial,sans-serif; }
+.home-space-credit a { color:#8995a7; text-decoration:none; }
