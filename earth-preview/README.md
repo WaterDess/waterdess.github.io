@@ -5,7 +5,7 @@ The live homepage and shared assets are unchanged. Both shells reuse the current
 site renderer, then add this preview's sphere renderer and styles.
 
 Native WebGL renders a textured analytical sphere with lighting and atmosphere.
-Rotation takes approximately three minutes. Pause/resume is keyboard accessible;
+Rotation takes approximately six minutes. Pause/resume is keyboard accessible;
 reduced-motion preference starts paused; hidden tabs stop rendering. Missing
 WebGL, context loss, or failed textures retain the original static Earth.
 

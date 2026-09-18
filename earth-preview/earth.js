@@ -76,7 +76,7 @@
     function draw(now) {
       frame=0;
       if(!ready || document.hidden) return;
-      if(!paused && last) angle += Math.min(now-last,100)*.000035;
+      if(!paused && last) angle += Math.min(now-last,100)*.0000175;
       last=now;
       gl.uniform1f(rotation,angle); gl.clear(gl.COLOR_BUFFER_BIT); gl.drawArrays(gl.TRIANGLES,0,6);
       if(!paused) frame=requestAnimationFrame(draw);
