@@ -1,0 +1,14 @@
+body[data-page="home"] .image-hero { background: #020408; height: calc(100svh - var(--masthead-height)); min-height: 480px; }
+.earth-space { position:absolute; inset:0; background: linear-gradient(#02051088,#010308bb),url('../public/assets/earth-preview/milkyway.jpg') center/cover; }
+.earth-canvas { position:absolute; inset:0; width:100%; height:100%; opacity:0; transition:opacity 1s; }
+.earth-ready .earth-canvas { opacity:1; }
+.earth-ready .home-earth-image { opacity:0; }
+.preview-tools { position:absolute; z-index:5; bottom:26px; left:clamp(20px,4vw,64px); right:clamp(20px,4vw,64px); display:flex; align-items:center; justify-content:space-between; gap:16px; color:#aeb9c9; font:11px/1.5 Arial,sans-serif; letter-spacing:.14em; }
+.preview-tools button,.preview-tools a { color:#d8e0ec; background:#07101caa; border:1px solid #ffffff30; border-radius:3px; padding:10px 15px; font:12px Arial,sans-serif; letter-spacing:.03em; text-decoration:none; cursor:pointer; }
+.preview-tools button:hover,.preview-tools a:hover { background:#23344c; }
+.preview-tools button:focus-visible,.preview-tools a:focus-visible { outline:2px solid white; outline-offset:4px; }
+.preview-actions { display:flex; gap:8px; }
+.space-credit { position:absolute; z-index:5; left:clamp(20px,4vw,64px); bottom:8px; color:#96a2b6; font:9px Arial,sans-serif; text-decoration:none; }
+@media(max-width:600px) { .space-credit { bottom:3px; font-size:8px; } }
+@media(max-width:600px) { .preview-tools { bottom:18px; flex-wrap:wrap; gap:10px; } .preview-tools span { font-size:9px; } }
+@media(prefers-reduced-motion:reduce) { .earth-canvas { transition:none; } }
