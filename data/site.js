@@ -183,6 +183,36 @@ window.TANG_SITE = {
       ]
     },
     {
+      "slug": "zhou-han",
+      "name": "Zhou Han",
+      "position": "Postdoctoral Fellow",
+      "group": "postdoctoral-fellow",
+      "address": "Department of Earth System Science, Tsinghua University",
+      "email": "hanzhou (at) mail.tsinghua.edu.cn",
+      "photo": "./public/assets/zhou-han.jpg",
+      "interests": [
+        "Remote sensing in hydrology",
+        "Water body connectivity",
+        "Effect of human activity"
+      ],
+      "education": [
+        "Ph.D. in College of Water Resources and Intelligence Engineering, China Agricultural University, 2026",
+        "M.S. in College of Water Resources and Intelligence Engineering, China Agricultural University, 2022",
+        "B.S. in College of Engineering, Ocean University of China, 2020"
+      ],
+      "positions": [
+        "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      "publications": [
+        "Zhou, H., Qiu, J., Lu, H. L., & Li, F. F. (2023). Intelligent monitoring of water quality based on image analytics. Journal of Contaminant Hydrology, 258, 104234.",
+        "Zhou, H., Qiu, J., Li, M., Lu, H., & Li, F. (2025). Assessment of large\u2010scale reservoirs' impact on the local precipitation. Water Resources Research, 61(5), e2025WR039938.",
+        "Zhou, H., Qiu, J., Liang, D., & Li, F. (2026). Tracking industrial relocation and air pollution redistribution in China: a multi-dimensional satellite-based assessment framework. Environment International, 110317.",
+        "Lu, H. L., Zhou, H., Zuo, H. M., Jiao, Y. F., & Hu, B. X. (2025). Analysis of the evolutionary patterns and drivers of Capturability of Atmospheric Water (CAW) on the Qinghai-Tibet Plateau. Atmospheric Research, 108484.",
+        "Lu, H., Zuo, H., Zhou, H., Jiao, Y., & Hu, X. (2025). Variability of long-term terrestrial water storage changes and its environmental effects in the Three Rivers Source Region, China. Journal of Mountain Science, 22(7), 2439-2457.",
+        "Li, F., Liang, D., Zhou, H., Ai, L., Li, Y., & Qiu, J. (2026). An uncertainty-aware multi-source remote sensing framework for integrated inland water monitoring: linking water level, surface extent, storage, and water quality. Science of Remote Sensing, 100470."
+      ]
+    },
+    {
       slug: "songjie-huang",
       name: "Songjie Huang",
       position: "Ph.D. Candidate",
