@@ -204,12 +204,12 @@ window.TANG_SITE = {
         "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
       ],
       "publications": [
-        "Zhou, H., Qiu, J., Lu, H. L., & Li, F. F. (2023). Intelligent monitoring of water quality based on image analytics. Journal of Contaminant Hydrology, 258, 104234.",
-        "Zhou, H., Qiu, J., Li, M., Lu, H., & Li, F. (2025). Assessment of large\u2010scale reservoirs' impact on the local precipitation. Water Resources Research, 61(5), e2025WR039938.",
-        "Zhou, H., Qiu, J., Liang, D., & Li, F. (2026). Tracking industrial relocation and air pollution redistribution in China: a multi-dimensional satellite-based assessment framework. Environment International, 110317.",
-        "Lu, H. L., Zhou, H., Zuo, H. M., Jiao, Y. F., & Hu, B. X. (2025). Analysis of the evolutionary patterns and drivers of Capturability of Atmospheric Water (CAW) on the Qinghai-Tibet Plateau. Atmospheric Research, 108484.",
-        "Lu, H., Zuo, H., Zhou, H., Jiao, Y., & Hu, X. (2025). Variability of long-term terrestrial water storage changes and its environmental effects in the Three Rivers Source Region, China. Journal of Mountain Science, 22(7), 2439-2457.",
-        "Li, F., Liang, D., Zhou, H., Ai, L., Li, Y., & Qiu, J. (2026). An uncertainty-aware multi-source remote sensing framework for integrated inland water monitoring: linking water level, surface extent, storage, and water quality. Science of Remote Sensing, 100470."
+        { text: "Zhou, H., Qiu, J., Liang, D., & Li, F. (2026). Tracking industrial relocation and air pollution redistribution in China: a multi-dimensional satellite-based assessment framework. Environment International, 212, 110317.", url: "https://doi.org/10.1016/j.envint.2026.110317" },
+        { text: "Lu, H.-L., Zhou, H., Zuo, H.-M., Jiao, Y.-F., & Hu, B. X. (2026). Analysis of the evolutionary patterns and drivers of Capturability of Atmospheric Water (CAW) on the Qinghai-Tibet Plateau. Atmospheric Research, 329, 108484.", url: "https://doi.org/10.1016/j.atmosres.2025.108484" },
+        { text: "Li, F., Liang, D., Zhou, H., Ai, L., Li, Y., & Qiu, J. (2026). An uncertainty-aware multi-source remote sensing framework for integrated inland water monitoring: linking water level, surface extent, storage, and water quality. Science of Remote Sensing, 14, 100470.", url: "https://doi.org/10.1016/j.srs.2026.100470" },
+        { text: "Zhou, H., Qiu, J., Li, M., Lu, H., & Li, F. (2025). Assessment of large-scale reservoirs' impact on the local precipitation. Water Resources Research, 61(5), e2025WR039938.", url: "https://doi.org/10.1029/2025WR039938" },
+        { text: "Lu, H., Zuo, H., Zhou, H., Jiao, Y., & Hu, X. (2025). Variability of long-term terrestrial water storage changes and its environmental effects in the Three Rivers Source Region, China. Journal of Mountain Science, 22(7), 2439-2457.", url: "https://doi.org/10.1007/s11629-024-9446-6" },
+        { text: "Zhou, H., Qiu, J., Lu, H.-L., & Li, F.-F. (2023). Intelligent monitoring of water quality based on image analytics. Journal of Contaminant Hydrology, 258, 104234.", url: "https://doi.org/10.1016/j.jconhyd.2023.104234" }
       ]
     },
     {
