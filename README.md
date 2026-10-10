@@ -62,6 +62,8 @@ This creates content-addressed copies and updates every HTML entry shell to load
 
 ## Shared visual styles
 
+The Summer Training carousel starts automatically with a five-second interval. Keep the arrows and centered slide selectors; do not add a separate Play/Pause button. Pause rotation while the user hovers over or focuses the carousel, opens a photo, or switches to another tab; respect reduced-motion preferences.
+
 Reuse `renderPeopleBlockHeading()` and `.people-block-heading` for numbered section headings in People, Research, Education and How to join?. Its heading size is shared at `1rem`, at least as large as the list item titles. Research, Education and How to join? item titles use regular weight.
 
 The completed 2026 Summer Training page is an English event retrospective with a four-photo carousel showing only group photos, faded neighboring previews, and direct slide selectors. All 24 supplied photos are grouped in this order: Workshop sessions, Completion memories, Group photos. The original handbook is a downloadable PDF and the source for the brief schedule introduction. Photo viewing supports keyboard navigation; the carousel pauses for interaction and respects reduced-motion preferences. Keep visible copy factual and concise, with descriptive image alt text. Only the three research themes use Roman numerals; the main sections retain 01–04. Content and photo metadata are in `summerTraining`; event assets are under `public/assets/summer-2026/`.
