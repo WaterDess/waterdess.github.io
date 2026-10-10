@@ -334,66 +334,354 @@ window.TANG_SITE = {
     }
   ],
   summerTraining: {
-    title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
-    subtitle: "Beijing | September 1-11, 2026",
-    theme: "Exploring Impacts of Global Change on the Water Systems and Corresponding Mitigation Solutions",
-    objectives: [
-      "Systematically consolidate hydrogeochemical expertise covering water pollutant characteristics, monitoring techniques, and target pollutant analytical methodologies.",
-      "Equip participants with technical capabilities for large-scale water quantity & quality simulation as well as flood modelling.",
-      "Develop proficiency in processing large hydrological datasets and applying machine learning techniques to water research.",
-      "Cultivate scientific thinking and enhance collaborative research capabilities across teams."
+    "title": "Global Change Hydrology",
+    "subtitle": "Summer Training & Practical Program 2026",
+    "dates": "1–11 September 2026",
+    "location": "Beijing, China",
+    "intro": "Eleven days of practical learning and scientific exchange in Beijing.",
+    "overview": "The Global Change Hydrology Summer Training & Practical Program concluded successfully in September 2026, bringing together colleagues from China, Germany and the United Kingdom. Hosted at Tsinghua University and the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences (IGSNRR, CAS), the program combined technical courses, research discussions and student presentations.",
+    "theme": "Exploring the impacts of global change on water systems and corresponding mitigation solutions.",
+    "themes": [
+      {
+        "title": "Environmental chemistry",
+        "text": "Organic pollutants, partition equilibria, chemical analysis and environmental forensics using microcontaminants."
+      },
+      {
+        "title": "Water systems and models",
+        "text": "Hands-on training with WaterGAP3 and WorldQual, from input data and model workflows to water-quality scenarios."
+      },
+      {
+        "title": "Floods and climate risk",
+        "text": "Research exchange on compound flooding, flood modelling, climate adaptation and opportunities for collaboration."
+      }
     ],
-    sponsors: "The Sino-German Mobility Programme (M-0468) \u2018Upscaling processes to improve global water resource models (APPLAUD)\u2019, Tsinghua University, and the Institute of Geographic Sciences and Natural Resources Research (IGSNRR), Chinese Academy of Sciences (CAS).",
-    sponsorLogos: [
-      "./public/assets/summer-training-logo-1.png",
-      "./public/assets/summer-training-logo-2.png",
-      "./public/assets/summer-training-logo-5.jpg",
-      "./public/assets/summer-training-logo-3.jpg",
-      "./public/assets/summer-training-logo-4.png"
+    "journey": [
+      {
+        "date": "2–3 Sep",
+        "title": "Foundations and practical methods",
+        "text": "Courses on organic compounds, chemical analysis and environmental forensics, led by Tobias Licha and Jens Prothmann.",
+        "venue": "Tsinghua University"
+      },
+      {
+        "date": "4 & 7 Sep",
+        "title": "Research exchange and joint workshop",
+        "text": "Scientific presentations, APPLAUD project discussions and a joint workshop spanning water quality, flood modelling and climate risk.",
+        "venue": "Tsinghua University"
+      },
+      {
+        "date": "8–9 Sep",
+        "title": "From data to models",
+        "text": "Large-scale hydrological modelling on 8 September with Martina Flörke and Kan Lei, followed by water-quality modelling on 9 September with Martina Flörke and Katrin Schweden.",
+        "venue": "IGSNRR, CAS"
+      },
+      {
+        "date": "10–11 Sep",
+        "title": "Present, reflect and publish",
+        "text": "Student presentations, faculty feedback and the closing ceremony on 10 September, followed by Nigel Wright’s scientific publishing workshop on 11 September.",
+        "venue": "IGSNRR, CAS"
+      }
     ],
-    faculty: "Martina Fl\u00f6rke, Kan Lei, Tobias Licha, Jens Prothmann, Katrin Schweden, Qiuhong Tang, Nigel Wright, Xilin Xia, Gang Zhao, et al.",
-    eligibility: "Advanced Bachelor's, Master's and PhD students, as well as postdoctoral researchers, from the collaborative groups at Tsinghua University and IGSNRR, CAS. A limited number of spots are open to external students (Register online before 20 August 2026. Selected students will be notified before 25 August 2026). External students should be self-funded, as no financial support will be provided.",
-    registration: {
-      url: "https://tovrhloc.jsjform.com/f/fUb4Zc",
-      closesAt: "2026-08-20T23:59:59+08:00",
-      deadline: "Register online before 20 August 2026. Selected students will be notified before 25 August 2026."
+    "handbook": {
+      "url": "./public/assets/summer-2026/applaud-beijing-workshop-handbook-2026.pdf",
+      "cover": "./public/assets/summer-2026/handbook-cover.webp",
+      "description": "The complete program, course schedules, workshop sessions and participant information in one downloadable handbook."
     },
-    schedule: [
-      { day: "Tuesday 1 September", title: "Arrival & Check-in", items: [] },
-      { day: "Wednesday 2 September", title: "Opening Session & Theoretical Foundations", venue: "Tsinghua University", items: [
-        "Morning: Opening (Program introduction, faculty introduction, participant self-introduction)",
-        "Morning & Afternoon: Lecture \u2013 Properties and partition equilibria of organic compounds in the environment (Speaker: Tobias Licha)",
-        "Evening: Self-study & Assignments"
-      ]},
-      { day: "Thursday 3 September", title: "Research Methodology Workshop", venue: "Tsinghua University", items: [
-        "Lecture \u2013 Chemical analysis of organic compounds & Environmental forensics using microcontaminants (Speakers: Tobias Licha, Jens Prothmann)"
-      ]},
-      { day: "Friday 4 September", title: "Research Exchange", venue: "Tsinghua University", items: [
-        "Project meetings, laboratory visit and student discussion"
-      ]},
-      { day: "Saturday & Sunday, 5-6 September", title: "Optional Off-Campus Field Campaign", items: [
-        "Field investigation can be arranged as an optional weekend activity for interested participants."
-      ]},
-      { day: "Monday 7 September", title: "Academic Exchange Workshop", venue: "Tsinghua University", items: [
-        "Morning: Water Quality Research Frontiers (Speakers: Martina Fl\u00f6rke, Tobias Licha, Siao Sun, et al.)",
-        "Afternoon: Flood Modelling and Climate Risk Research Frontiers (Speakers: Nigel Wright, Xilin Xia, et al.)",
-        "Evening: Group Dinner & Academic Networking"
-      ]},
-      { day: "Tuesday 8 September", title: "Modelling Methodology Training", venue: "CAS", items: [
-        "Lecture and exercises \u2013 Introduction to large-scale water quality modelling (Martina Fl\u00f6rke, Katrin Schweden)"
-      ]},
-      { day: "Wednesday 9 September", title: "Hydrological Modelling & Big Data Analytics", venue: "CAS", items: [
-        "Lecture and exercises \u2013 Large-scale hydrological modelling (Martina Fl\u00f6rke, Kan Lei)"
-      ]},
-      { day: "Thursday 10 September", title: "Summary Commendation", venue: "CAS", items: [
-        "Group presentation and defense of practical research outputs",
-        "Faculty feedback, comprehensive program recap and follow-up academic research guidance",
-        "Overall program exchange summary"
-      ]},
-      { day: "Friday 11 September", title: "Publication Course", venue: "CAS", items: [
-        "Workshop on how to publish scientific papers (Prof. Nigel Wright)",
-        "Departure"
-      ]}
+    "acknowledgement": "Supported by the Sino-German Center Mobility Program (M-0468), “Upscaling processes to improve global water resource models” (APPLAUD). Our thanks to the instructors, participants and organizing teams who made this exchange possible.",
+    "partners": [
+      {
+        "name": "Sino-German Center for Research Promotion",
+        "logo": "./public/assets/summer-training-logo-1.png"
+      },
+      {
+        "name": "Tsinghua University",
+        "logo": "./public/assets/summer-training-logo-2.png"
+      },
+      {
+        "name": "Ruhr University Bochum",
+        "logo": "./public/assets/summer-training-logo-5.jpg"
+      },
+      {
+        "name": "IGSNRR, Chinese Academy of Sciences",
+        "logo": "./public/assets/summer-training-logo-3.jpg"
+      },
+      {
+        "name": "University of Birmingham",
+        "logo": "./public/assets/summer-training-logo-4.png"
+      }
+    ],
+    "carousel": [
+      24,
+      17,
+      18,
+      20,
+      21,
+      23
+    ],
+    "photos": [
+      {
+        "id": 24,
+        "src": "./public/assets/summer-2026/photos/workshop-group.webp",
+        "thumb": "./public/assets/summer-2026/photos/workshop-group-thumb.webp",
+        "width": 1681,
+        "height": 1038,
+        "title": "The workshop community",
+        "caption": "Workshop participants together in the classroom.",
+        "alt": "Group photograph of workshop participants seated and standing in a classroom.",
+        "category": "highlights"
+      },
+      {
+        "id": 17,
+        "src": "./public/assets/summer-2026/photos/water-quality-exercise.webp",
+        "thumb": "./public/assets/summer-2026/photos/water-quality-exercise-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Water-quality exercise",
+        "caption": "Working with water-quality monitoring data.",
+        "alt": "Workshop participants with laptops during a water-quality exercise.",
+        "category": "highlights"
+      },
+      {
+        "id": 18,
+        "src": "./public/assets/summer-2026/photos/results-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/results-discussion-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Presenting results",
+        "caption": "Presenting and discussing results.",
+        "alt": "A participant presents a chart while the group discusses the results.",
+        "category": "highlights"
+      },
+      {
+        "id": 16,
+        "src": "./public/assets/summer-2026/photos/lecture-session.webp",
+        "thumb": "./public/assets/summer-2026/photos/lecture-session-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Learning together",
+        "caption": "A lecture and exchange of ideas.",
+        "alt": "A presenter addresses workshop participants beside a projected slide.",
+        "category": "highlights"
+      },
+      {
+        "id": 15,
+        "src": "./public/assets/summer-2026/photos/mapping-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/mapping-discussion-thumb.webp",
+        "width": 1440,
+        "height": 1080,
+        "title": "Mapping water",
+        "caption": "Exploring data through maps.",
+        "alt": "Participants discuss a projected map at a workshop table.",
+        "category": "highlights"
+      },
+      {
+        "id": 19,
+        "src": "./public/assets/summer-2026/photos/study-region-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/study-region-discussion-thumb.webp",
+        "width": 1600,
+        "height": 1105,
+        "title": "Research in discussion",
+        "caption": "Research questions around the table.",
+        "alt": "Participants discuss a presentation showing a study-region map.",
+        "category": "highlights"
+      },
+      {
+        "id": 20,
+        "src": "./public/assets/summer-2026/photos/research-exchange.webp",
+        "thumb": "./public/assets/summer-2026/photos/research-exchange-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Exchanging perspectives",
+        "caption": "Sharing research and perspectives.",
+        "alt": "Participants exchange ideas during a projected research presentation.",
+        "category": "highlights"
+      },
+      {
+        "id": 21,
+        "src": "./public/assets/summer-2026/photos/completion-group.webp",
+        "thumb": "./public/assets/summer-2026/photos/completion-group-thumb.webp",
+        "width": 2000,
+        "height": 1193,
+        "title": "Program completion",
+        "caption": "Together at the close of the program.",
+        "alt": "Workshop participants gather for a group photograph in front of the program banner.",
+        "category": "highlights"
+      },
+      {
+        "id": 23,
+        "src": "./public/assets/summer-2026/photos/informal-gathering.webp",
+        "thumb": "./public/assets/summer-2026/photos/informal-gathering-thumb.webp",
+        "width": 1600,
+        "height": 897,
+        "title": "Beyond the classroom",
+        "caption": "Connections beyond the classroom.",
+        "alt": "Workshop participants pose for an informal indoor group photograph.",
+        "category": "highlights"
+      },
+      {
+        "id": 22,
+        "src": "./public/assets/summer-2026/photos/group-moment.webp",
+        "thumb": "./public/assets/summer-2026/photos/group-moment-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "A shared moment",
+        "caption": "A shared moment in Beijing.",
+        "alt": "A small group poses together indoors.",
+        "category": "highlights"
+      },
+      {
+        "id": 1,
+        "src": "./public/assets/summer-2026/photos/certificate-01.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-01-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 2,
+        "src": "./public/assets/summer-2026/photos/certificate-02.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-02-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 3,
+        "src": "./public/assets/summer-2026/photos/certificate-presentation-01.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-presentation-01-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 4,
+        "src": "./public/assets/summer-2026/photos/certificate-04.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-04-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 5,
+        "src": "./public/assets/summer-2026/photos/certificate-05.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-05-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 6,
+        "src": "./public/assets/summer-2026/photos/certificate-06.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-06-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 7,
+        "src": "./public/assets/summer-2026/photos/certificate-presentation-02.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-presentation-02-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "A moment of recognition.",
+        "alt": "A participant and instructor pose together with a certificate.",
+        "category": "certificates"
+      },
+      {
+        "id": 8,
+        "src": "./public/assets/summer-2026/photos/certificate-08.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-08-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 9,
+        "src": "./public/assets/summer-2026/photos/certificate-09.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-09-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 10,
+        "src": "./public/assets/summer-2026/photos/certificate-10.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-10-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 11,
+        "src": "./public/assets/summer-2026/photos/certificate-11.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-11-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 12,
+        "src": "./public/assets/summer-2026/photos/certificate-12.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-12-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 13,
+        "src": "./public/assets/summer-2026/photos/certificate-13.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-13-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 14,
+        "src": "./public/assets/summer-2026/photos/certificate-14.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-14-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      }
     ]
   },
   publications: [

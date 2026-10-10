@@ -62,4 +62,6 @@ This creates content-addressed copies and updates every HTML entry shell to load
 
 ## Shared visual styles
 
+The completed 2026 Summer Training page is an English event retrospective with a six-photo slideshow, all 24 supplied photos in two gallery collections, keyboard-accessible image viewing, and the original handbook as a downloadable PDF. The slideshow pauses for interaction and respects reduced-motion preferences. Content and photo metadata are in `summerTraining`; event assets are under `public/assets/summer-2026/`.
+
 Reuse existing page templates and shared interaction styles for new content. Education and How to join? share the Ongoing / Archive listing renderer and News item format, with newer items first within each group. Education uses the Research/People numbered section headings (01 Ongoing, 02 Archive). Education item dates identify first publication on this website; actual program dates belong in the description. Set `status: "archive"` for completed education programs. Education and SRT use neutral resting text while inheriting the site's existing link hover color and glow; do not replace them with page-specific hover behavior.

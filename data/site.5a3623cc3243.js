@@ -1,0 +1,967 @@
+window.TANG_SITE = {
+  site: {
+    name: "Global Change Hydrology Group",
+    shortName: "GCHG",
+    tagline: "Advancing water sciences for planetary health and sustainable development",
+    summary: "THU Global Change Hydrology (GCH) Group is an interdisciplinary research group at the Department of Earth System Science, Tsinghua University, dedicated to deepening understanding of the impacts of global change on water systems and solutions.",
+    missionIntro: "Our mission is to advance water sciences for planetary health and sustainable development. To deliver on this mission and achieve our core objectives, we commit to the following priorities:"
+  },
+  visuals: {
+    logo: "./public/assets/logo-gchg-wordmark.png",
+    hero: "./public/assets/home-earth-static.jpg"
+  },
+  mission: [
+    "Pursue rigorous, impactful water science research",
+    "Develop innovative technologies and datasets for hydrosphere research",
+    "Cultivate the next generation of hydrologists and Earth system scientists",
+    "Co-create actionable solutions to address global water crises"
+  ],
+  people: [
+    {
+      slug: "qiuhong-tang",
+      name: "Qiuhong Tang",
+      position: "Professor",
+      group: "faculty",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "tangqh (at) tsinghua.edu.cn",
+      photo: "./public/assets/tang-qiuhong-1.jpg",
+      links: [
+        { label: "Google Scholar", url: "https://scholar.google.com/citations?user=6TXH9AwAAAAJ" },
+        { label: "ORCID", url: "https://orcid.org/0000-0002-0886-6699" }
+      ],
+      interests: [
+        "Global change hydrology",
+        "Water-cycle imbalance",
+        "Water-risk monitoring and prediction",
+        "Transboundary water governance"
+      ],
+      education: [
+        "Ph.D. in Civil Engineering, The University of Tokyo, 2006",
+        "M.E. in Hydrology and Water Resources, Tsinghua University, 2003",
+        "B.E. in Hydraulic Engineering, Tsinghua University, 2001"
+      ],
+      positions: [
+        "2026-present: Professor, Department of Earth System Science, Tsinghua University",
+        "2010-2025: Professor, Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences",
+        "2006-2010: Research Associate, Department of Civil and Environmental Engineering, University of Washington"
+      ],
+      publications: ["To be updated"]
+    },
+    {
+      slug: "ruiyu-zhao",
+      name: "Ruiyu Zhao",
+      position: "Shuimu Tsinghua Scholar",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "zhaoruiyu (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/ruiyu-zhao.jpg",
+      links: [
+        { label: "ORCID", url: "https://orcid.org/0009-0000-4819-5423" }
+      ],
+      interests: ["Extreme precipitation events", "Atmospheric hydrological cycle"],
+      education: [
+        "Ph.D. in Atmospheric Science, Fudan University, 2025",
+        "M.S. in Atmospheric Science, Chinese Academy of Meteorological Sciences, 2021",
+        "B.S. in Applied Meteorology, Nanjing University of Information Science & Technology, 2018"
+      ],
+      positions: [
+        "2026.5-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University",
+        "2025.7-2026.4: Research Associate, Institute of Plateau Meteorology, CMA, Chengdu"
+      ],
+      publications: [
+        { text: "Zhao, R., Chen, B., Zhang, W., Yu, Y., Huo, J., Xu, X. (2026). Upstream evaporative moisture sources anchor strong persistent heavy precipitation events over Southeastern Tibetan Plateau. Climate Dynamics, 64, 23.", url: "https://doi.org/10.1007/s00382-025-07995-z" },
+        { text: "Chen, B., Zhao, R. A multi-source-data-fusion-based method and system for identifying southwest vortices. Chinese invention patent CN121234129B, authorized 2026-04-10.", url: "https://patents.google.com/patent/CN121234129B/en" },
+        { text: "Zhao, R., Chen, B., Zhao, Y., Zhang, W., Xu, X., & Li, Y. (2025). Rapid Intensification of Persistent Extreme Precipitation Over the Eastern Periphery of the Tibetan Plateau After 2000: The Role of Southwest Vortices. Geophysical Research Letters, 52(18), e2025GL115511.", url: "https://doi.org/10.1029/2025GL115511" },
+        { text: "Chen, B., Zhao, R., Zhang, W., Yang, S., Xu, X., Wang, C., and Huo, J. (2025). Modulation of Anomalous Moisture Uptakes on Weather-Type-Based Daily Extreme Precipitation Events over the Southeastern Edge of the Tibetan Plateau. Journal of Hydrometeorology, 26, 781-799.", url: "https://doi.org/10.1175/JHM-D-24-0066.1" },
+        { text: "Zhao, R., Chen, B., Zhang, W. et al. (2024). Revisiting the dry-to-wet shift of summer precipitation over the Three-River Headwaters region, hinterland of the Tibetan Plateau: a perspective of moisture sources changes. Climate Dynamics, 62, 8827-8847.", url: "https://doi.org/10.1007/s00382-024-07362-4" },
+        { text: "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2024). Formation mechanisms of persistent extreme precipitation events over the eastern periphery of the Tibetan Plateau: Synoptic conditions, moisture transport and the effect of steep terrain. Atmospheric Research, 304, 107341.", url: "https://doi.org/10.1016/j.atmosres.2024.107341" },
+        { text: "Zhao, R., Chen, B., Zhang, W., Yang, S., & Xu, X. (2023). Moisture source anomalies connected to flood-drought changes over the three-rivers headwater region of Tibetan Plateau. International Journal of Climatology, 43(12), 5303-5316.", url: "https://doi.org/10.1002/joc.8147" },
+        { text: "Zhao, R., Chen, B., & Xu, X. (2021). Intensified Moisture Sources of Heavy Precipitation Events Contributed to Interannual Trend in Precipitation Over the Three-Rivers-Headwater Region in China. Frontiers in Earth Science, 9, 674037.", url: "https://doi.org/10.3389/feart.2021.674037" }
+      ]
+    },
+    {
+      slug: "dawei-peng",
+      name: "Dawei Peng",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "dpeng (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/dawei-peng.jpg",
+      links: [
+        { label: "ORCID", url: "https://orcid.org/0000-0003-3424-9165" }
+      ],
+      interests: ["Hydrological modeling", "Vegetation-water interaction", "Evapotranspiration partitioning"],
+      education: [
+        "Ph.D. in Faculty of Geographical Science, Beijing Normal University, 2026",
+        "M.E. in School of Geography and Environmental Science, Guizhou Normal University, 2022",
+        "B.E. in School of Geography and Environmental Science, Guizhou Normal University, 2019"
+      ],
+      positions: [
+        "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: [
+        { text: "Peng, D., Xie, X., et al. (2024). Improving evapotranspiration partitioning by integrating satellite vegetation parameters into a land surface model. Journal of Hydrology, 643, 131928.", url: "https://doi.org/10.1016/j.jhydrol.2024.131928" },
+        { text: "Peng, D., Zhou, Q., et al. (2022). Changes in soil moisture caused solely by vegetation restoration in the karst region of southwest China. Journal of Hydrology, 613, 128460.", url: "https://doi.org/10.1016/j.jhydrol.2022.128460" }
+      ]
+    },
+    {
+      slug: "ying",
+      name: "Ying Yan",
+      position: "Research Associate",
+      group: "research-associate",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "yanying (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/ying-yan.jpg",
+      links: [
+        { label: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=gc-TisYAAAAJ" }
+      ],
+      interests: ["Hydrology", "Numerical modeling", "Deep learning", "AI agents"],
+      education: [
+        "M.S. in Urban Water Affairs, Hohai University, 2024",
+        "B.S. in Water Engineering, Hohai University, 2021"
+      ],
+      positions: [
+        "2026.4-present: Research Associate, Department of Earth System Science, Tsinghua University",
+        "2024.6-2025.7: Algorithm Engineer, Seck Intelligent Technology Co., Ltd., Hangzhou"
+      ],
+      publications: [
+        { text: "Yan, Y., Chen, C., Yang, W., Zheng, Y., Zhao, Y., Zhang, Y., Liu, Y., and Zhang, W. (2024). Enhancing Basin-scale Hydrological Time Series Processing and Modeling with Masked Pre-Trained Encoder. ESS Open Archive. doi: 10.22541/au.172417537.74282767/v1.", url: "https://doi.org/10.22541/au.172417537.74282767/v1" },
+        { text: "Yan, Y., Zhang, W., Liu, Y., and Li, Z. (2023). Simulated annealing algorithm optimized GRU neural network for urban rainfall-inundation prediction. Journal of Hydroinformatics. doi: 10.2166/hydro.2023.006.", url: "https://doi.org/10.2166/hydro.2023.006" },
+        { text: "Liu, Y., Zhang, W., Yan, Y., Li, Z., Xia, Y., and Song, S. (2022). An Effective Rainfall-Ponding Multi-Step Prediction Model Based on LSTM for Urban Waterlogging Points. Applied Sciences, 12(23), 12334. doi: 10.3390/app122312334.", url: "https://doi.org/10.3390/app122312334" }
+      ]
+    },
+    {
+      slug: "xiaoliu-yang",
+      name: "Xiaoliu Yang",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "xiaoliu-yang (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/xiaoliu-yang.jpg",
+      interests: ["Natural hazard risk assessment", "Tropical cyclone-induced compound flood risk and exposure assessment"],
+      education: [
+        "Ph.D. in Physical Geography, Fujian Normal University, 2026",
+        "M.S. in Mountain Environment and Natural Disasters, Yunnan Normal University, 2020",
+        "B.S. in Physical Geography and Resource Environment, Yuxi Normal University, 2017"
+      ],
+      positions: [
+        "2026.06-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: [
+        { text: "Yang, X., Qin, X., and Gao, L. (2026). A Copula-XAI framework for assessing compound typhoon disaster-chain risks and driving mechanisms in coastal mountainous cities: Evidence from Fujian, China. Journal of Hydrology: Regional Studies, 64, 103284. doi: 10.1016/j.ejrh.2026.103284.", url: "https://doi.org/10.1016/j.ejrh.2026.103284" },
+        { text: "Yang, X., Zhu, L., Qin, X., et al. (2026). Spatiotemporal dynamics and multi-scale diagnosis of urban resilience to typhoon disaster chains in Fujian, China. International Journal of Disaster Risk Science. doi: 10.1007/s13753-026-00763-5.", url: "https://doi.org/10.1007/s13753-026-00763-5" },
+        { text: "Yang, X., Zhu, L., Qin, X., et al. (2026). Compound patterns and environmental drivers of typhoon disaster chains in southeast coastal China: A multiscale framework. Climate Services, 44, 100706. doi: 10.1016/j.cliser.2026.100706.", url: "https://doi.org/10.1016/j.cliser.2026.100706" },
+        { text: "Yang, X., Yan, Y., and Gao, L. (2025). Risk of Compound Typhoon Disaster Chains: Insights from Southeastern China. International Journal of Disaster Risk Science, 16, 870-887. doi: 10.1007/s13753-025-00674-x.", url: "https://doi.org/10.1007/s13753-025-00674-x" },
+        { text: "Yang, X., Qin, X., and Gao, L. (2024). Assessment of disaster mitigation capability oriented to typhoon disaster chains: A case study of Fujian Province, China. Ecological Indicators, 112621. doi: 10.1016/j.ecolind.2024.112621.", url: "https://doi.org/10.1016/j.ecolind.2024.112621" },
+        { text: "Yang, X., Li, Y., and Gao, L. (2024). Spatiotemporal pattern of climate change in the China-Myanmar Economic Corridor from 1901 to 2018. Journal of Mountain Science, 21(1), 131-145. doi: 10.1007/s11629-023-8028-3.", url: "https://doi.org/10.1007/s11629-023-8028-3" },
+        { text: "杨晓柳, 王平, 高大威, 等. (2020). 1979-2014年秦巴山区MSWEP降水数据精度评估及变化特征分析. 水土保持研究, 27(6), 146-152. doi: 10.13869/j.cnki.rswc.2020.06.020.", url: "https://doi.org/10.13869/j.cnki.rswc.2020.06.020" },
+        { text: "杨晓柳, 王平, 高大威. (2019). 1971-2015年乌蒙山国家级自然保护区气候变化特征. 东北林业大学学报, 47(9), 71-75. doi: 10.13759/j.cnki.dlxb.2019.09.013.", url: "https://doi.org/10.13759/j.cnki.dlxb.2019.09.013" }
+      ]
+    },
+    {
+      slug: "beibei-ding",
+      name: "Beibei Ding",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "dingbeibei (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/beibei-ding.jpg",
+      interests: ["Hydrological modeling", "Soil erosion", "Agricultural water management"],
+      education: [
+        "Ph.D. in College of Land Science and Technology, China Agricultural University, 2026",
+        "M.S. in College of Land Science and Technology, China Agricultural University, 2022",
+        "B.S. in College of Resources and Environment, Shandong Agricultural University, 2020"
+      ],
+      positions: [
+        "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: [
+        { text: "Ding, B., Zhu, J., Ge, J., et al. (2026). Assessing sustainable adaptation strategies for water productivity and crop yields under future climate scenarios in a water-stressed watershed. Land, 15(8), 1493.", url: "https://doi.org/10.3390/land15081493" },
+        { text: "Ding, B., Li, Y., Marek, G. W., et al. (2024). Impacts of land use changes on water conservation in the Songhuajiang River basin in Northeast China using the SWAT model. Agricultural Water Management, 306, 109185.", url: "https://doi.org/10.1016/j.agwat.2024.109185" },
+        { text: "Zhang, X., Ding, B., Hou, Y., et al. (2024). Assessing the feasibility of sprinkler irrigation schemes and their adaptation to future climate change in groundwater over-exploitation regions. Agricultural Water Management, 292, 108674.", url: "https://doi.org/10.1016/j.agwat.2024.108674" },
+        { text: "Ding, B., Liu, H., Li, Y., et al. (2022). Post-processing R tool for SWAT efficiently studying climate change impacts on hydrology, water quality, and crop growth. Environmental Modelling & Software, 156, 105492.", url: "https://doi.org/10.1016/j.envsoft.2022.105492" }
+      ]
+    },
+    {
+      "slug": "zhou-han",
+      "name": "Han Zhou",
+      "position": "Postdoctoral Fellow",
+      "group": "postdoctoral-fellow",
+      "address": "Department of Earth System Science, Tsinghua University",
+      "email": "hanzhou (at) mail.tsinghua.edu.cn",
+      "photo": "./public/assets/zhou-han.jpg",
+      "interests": [
+        "Remote sensing in hydrology",
+        "Water body connectivity",
+        "Effect of human activity"
+      ],
+      "education": [
+        "Ph.D. in College of Water Resources and Intelligence Engineering, China Agricultural University, 2026",
+        "M.S. in College of Water Resources and Intelligence Engineering, China Agricultural University, 2022",
+        "B.S. in College of Engineering, Ocean University of China, 2020"
+      ],
+      "positions": [
+        "2026-present: Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      "publications": [
+        { text: "Zhou, H., Qiu, J., Liang, D., & Li, F. (2026). Tracking industrial relocation and air pollution redistribution in China: a multi-dimensional satellite-based assessment framework. Environment International, 212, 110317.", url: "https://doi.org/10.1016/j.envint.2026.110317" },
+        { text: "Lu, H.-L., Zhou, H., Zuo, H.-M., Jiao, Y.-F., & Hu, B. X. (2026). Analysis of the evolutionary patterns and drivers of Capturability of Atmospheric Water (CAW) on the Qinghai-Tibet Plateau. Atmospheric Research, 329, 108484.", url: "https://doi.org/10.1016/j.atmosres.2025.108484" },
+        { text: "Li, F., Liang, D., Zhou, H., Ai, L., Li, Y., & Qiu, J. (2026). An uncertainty-aware multi-source remote sensing framework for integrated inland water monitoring: linking water level, surface extent, storage, and water quality. Science of Remote Sensing, 14, 100470.", url: "https://doi.org/10.1016/j.srs.2026.100470" },
+        { text: "Zhou, H., Qiu, J., Li, M., Lu, H., & Li, F. (2025). Assessment of large-scale reservoirs' impact on the local precipitation. Water Resources Research, 61(5), e2025WR039938.", url: "https://doi.org/10.1029/2025WR039938" },
+        { text: "Lu, H., Zuo, H., Zhou, H., Jiao, Y., & Hu, X. (2025). Variability of long-term terrestrial water storage changes and its environmental effects in the Three Rivers Source Region, China. Journal of Mountain Science, 22(7), 2439-2457.", url: "https://doi.org/10.1007/s11629-024-9446-6" },
+        { text: "Zhou, H., Qiu, J., Lu, H.-L., & Li, F.-F. (2023). Intelligent monitoring of water quality based on image analytics. Journal of Contaminant Hydrology, 258, 104234.", url: "https://doi.org/10.1016/j.jconhyd.2023.104234" }
+      ]
+    },
+    {
+      slug: "songjie-huang",
+      name: "Songjie Huang",
+      position: "Ph.D. Candidate",
+      group: "graduate-student",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "sj-huang26 (at) mails.tsinghua.edu.cn",
+      photo: "./public/assets/songjie-huang.jpg",
+      interests: ["Hydrological simulation in the Third Pole region", "Global water cycle changes"],
+      education: [
+        "Ph.D. Candidate, Department of Earth System Science, Tsinghua University, present",
+        "B.S. in College of Water Resources and Hydropower Engineering, Wuhan University, 2026"
+      ],
+      publications: []
+    },
+    {
+      slug: "zhou-hongyu",
+      name: "Hongyu Zhou",
+      position: "Ph.D. Candidate",
+      group: "graduate-student",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "z-hy22 (at) mails.tsinghua.edu.cn",
+      photo: "./public/assets/ai-bot-photo-f717871ea803345a47c7458a67eac135d0040a9670a979a0f04364cb240f9bb1.png",
+      interests: ["Catchment hydrological modeling", "Extreme weather events", "Coupled ocean-atmosphere modeling"],
+      education: [
+        "Ph.D. Candidate, Department of Earth System Science, Tsinghua University, present",
+        "B.S. in Department of Hydraulic Engineering, Tsinghua University, 2026"
+      ],
+      publications: []
+    }
+  ],
+  research: [
+    {
+      title: "Projects",
+      text: "Genuine Earth: Hydrosphere",
+      description: "Internal access only.",
+      url: "https://waterdess.duckdns.org/genuine-earth/"
+    },
+    {
+      title: "Code",
+      text: ""
+    },
+    {
+      title: "Data",
+      text: "A Long-Term Land Surface Hydrologic Fluxes and States Dataset for China.",
+      url: "https://zenodo.org/records/6548153"
+    }
+  ],
+  srt: {
+    "projects": [
+        {
+            "title": "Enhancing an Augmented Reality Landscape Sandbox",
+            "question": "If you reshape a mountain with your hands, where will the rainwater go?",
+            "text": "Our group has a working sandbox prototype built with the open-source MagicSand project and projection equipment. This project will update its hardware and software to improve gesture interaction, explore rainfall-runoff simulation, and display the terrain of selected river basins.",
+            "steps": [
+                "Shape the terrain",
+                "Interact with gestures",
+                "Simulate rainfall",
+                "Trace water flow"
+            ],
+            "learning": "Learn sandbox design, projection calibration, code testing, and software configuration while connecting physical terrain with interactive hydrological visualizations.",
+            "outcome": "Develop an improved augmented reality landscape sandbox for teaching. A working prototype, workspace, reference materials, and supplies are already available.",
+            "plan": [
+                "Nov-Dec 2026: Explore the existing sandbox and design your improvements.",
+                "Jan-May 2027: Improve gesture interaction and rainfall-runoff simulation.",
+                "Jun-Oct 2027: Improve terrain displays for selected river basins."
+            ]
+        },
+        {
+            "title": "AI for Identifying Global Water-Cycle Imbalance Hotspots",
+            "question": "Where is the global water cycle falling out of balance? Explore the answer with data and AI.",
+            "text": "Use global water-cycle observations and model data to develop an AI-based indicator framework and identification methods, locate regions of water-cycle imbalance, and map the resulting hotspots.",
+            "steps": [
+                "Global observations and models",
+                "AI indicators and analysis",
+                "Identify hotspot regions",
+                "Create the map"
+            ],
+            "learning": "Develop skills in large-scale water-cycle data analysis, AI agent development, and map production. Experience the research process from a scientific question to data analysis and communication.",
+            "outcome": "Identify global water-cycle imbalance hotspots and produce a global hotspot map. Relevant datasets, example maps, and workspace are already available.",
+            "plan": [
+                "Nov-Dec 2026: Design the approach and prepare data.",
+                "Jan-May 2027: Analyze data and identify imbalance hotspots.",
+                "Jun-Oct 2027: Produce the global hotspot map."
+            ]
+        }
+    ]
+},
+  // ----- education -----
+  // Dates are first publication dates on this website, not course or program start dates.
+  education: [
+    {
+      type: "SRT Project",
+      date: "2026-09-15",
+      title: "SRT: Enhancing an Augmented Reality Landscape Sandbox",
+      text: "An undergraduate research project exploring gesture interaction, rainfall-runoff simulation, and terrain visualization. Student applications: 15–25 October 2026.",
+      route: "srt-sandbox"
+    },
+    {
+      type: "SRT Project",
+      date: "2026-09-15",
+      title: "SRT: AI for Identifying Global Water-Cycle Imbalance Hotspots",
+      text: "An undergraduate research project combining water-cycle data, AI, and mapping to identify global hotspots. Student applications: 15–25 October 2026.",
+      route: "srt-water-ai"
+    },
+    {
+      type: "Course",
+      date: "2026-08-06",
+      title: "Undergraduate & Graduate Course",
+      text: "An introduction to the Global Change Hydrology course for undergraduate and graduate students.",
+      url: "https://mp.weixin.qq.com/s?__biz=MzI0MDA5MTQzMA==&&mid=2650744146&&idx=1&&sn=9711e026061b7a53e5a57c53a01d8ad5&&chksm=f01e3bc75a227f46b21c9df83b5900fe5506f934db4e1ebb542376ff7a8b8432c7e98e397749&&scene=27"
+    },
+    {
+      type: "Summer Program",
+      date: "2026-08-06",
+      title: "Summer Training & Practical Program 2026",
+      text: "Held in Beijing on 1–11 September 2026, with training in hydrology, water quality, modeling, and data analysis.",
+      route: "summer-training",
+      status: "archive"
+    }
+  ],
+  summerTraining: {
+    "title": "Global Change Hydrology",
+    "subtitle": "Summer Training & Practical Program 2026",
+    "dates": "1–11 September 2026",
+    "location": "Beijing, China",
+    "intro": "Eleven days of practical learning and scientific exchange in Beijing.",
+    "overview": "The Global Change Hydrology Summer Training & Practical Program concluded successfully in September 2026, bringing together colleagues from China, Germany and the United Kingdom. Hosted at Tsinghua University and the Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences (IGSNRR, CAS), the program combined technical courses, research discussions and student presentations.",
+    "theme": "Exploring the impacts of global change on water systems and corresponding mitigation solutions.",
+    "themes": [
+      {
+        "title": "Environmental chemistry",
+        "text": "Organic pollutants, partition equilibria, chemical analysis and environmental forensics using microcontaminants."
+      },
+      {
+        "title": "Water systems and models",
+        "text": "Hands-on training with WaterGAP3 and WorldQual, from input data and model workflows to water-quality scenarios."
+      },
+      {
+        "title": "Floods and climate risk",
+        "text": "Research exchange on compound flooding, flood modelling, climate adaptation and opportunities for collaboration."
+      }
+    ],
+    "journey": [
+      {
+        "date": "2–3 Sep",
+        "title": "Foundations and practical methods",
+        "text": "Courses on organic compounds, chemical analysis and environmental forensics, led by Tobias Licha and Jens Prothmann.",
+        "venue": "Tsinghua University"
+      },
+      {
+        "date": "4 & 7 Sep",
+        "title": "Research exchange and joint workshop",
+        "text": "Scientific presentations, APPLAUD project discussions and a joint workshop spanning water quality, flood modelling and climate risk.",
+        "venue": "Tsinghua University"
+      },
+      {
+        "date": "8–9 Sep",
+        "title": "From data to models",
+        "text": "Large-scale hydrological modelling on 8 September with Martina Flörke and Kan Lei, followed by water-quality modelling on 9 September with Martina Flörke and Katrin Schweden.",
+        "venue": "IGSNRR, CAS"
+      },
+      {
+        "date": "10–11 Sep",
+        "title": "Present, reflect and publish",
+        "text": "Student presentations, faculty feedback and the closing ceremony on 10 September, followed by Nigel Wright’s scientific publishing workshop on 11 September.",
+        "venue": "IGSNRR, CAS"
+      }
+    ],
+    "handbook": {
+      "url": "./public/assets/summer-2026/applaud-beijing-workshop-handbook-2026.pdf",
+      "cover": "./public/assets/summer-2026/handbook-cover.webp",
+      "description": "The complete program, course schedules, workshop sessions and participant information in one downloadable handbook."
+    },
+    "acknowledgement": "Supported by the Sino-German Center Mobility Program (M-0468), “Upscaling processes to improve global water resource models” (APPLAUD). Our thanks to the instructors, participants and organizing teams who made this exchange possible.",
+    "partners": [
+      {
+        "name": "Sino-German Center for Research Promotion",
+        "logo": "./public/assets/summer-training-logo-1.png"
+      },
+      {
+        "name": "Tsinghua University",
+        "logo": "./public/assets/summer-training-logo-2.png"
+      },
+      {
+        "name": "Ruhr University Bochum",
+        "logo": "./public/assets/summer-training-logo-5.jpg"
+      },
+      {
+        "name": "IGSNRR, Chinese Academy of Sciences",
+        "logo": "./public/assets/summer-training-logo-3.jpg"
+      },
+      {
+        "name": "University of Birmingham",
+        "logo": "./public/assets/summer-training-logo-4.png"
+      }
+    ],
+    "carousel": [
+      24,
+      17,
+      18,
+      20,
+      21,
+      23
+    ],
+    "photos": [
+      {
+        "id": 24,
+        "src": "./public/assets/summer-2026/photos/workshop-group.webp",
+        "thumb": "./public/assets/summer-2026/photos/workshop-group-thumb.webp",
+        "width": 1681,
+        "height": 1038,
+        "title": "The workshop community",
+        "caption": "Workshop participants together in the classroom.",
+        "alt": "Group photograph of workshop participants seated and standing in a classroom.",
+        "category": "highlights"
+      },
+      {
+        "id": 17,
+        "src": "./public/assets/summer-2026/photos/water-quality-exercise.webp",
+        "thumb": "./public/assets/summer-2026/photos/water-quality-exercise-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Water-quality exercise",
+        "caption": "Working with water-quality monitoring data.",
+        "alt": "Workshop participants with laptops during a water-quality exercise.",
+        "category": "highlights"
+      },
+      {
+        "id": 18,
+        "src": "./public/assets/summer-2026/photos/results-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/results-discussion-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Presenting results",
+        "caption": "Presenting and discussing results.",
+        "alt": "A participant presents a chart while the group discusses the results.",
+        "category": "highlights"
+      },
+      {
+        "id": 16,
+        "src": "./public/assets/summer-2026/photos/lecture-session.webp",
+        "thumb": "./public/assets/summer-2026/photos/lecture-session-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Learning together",
+        "caption": "A lecture and exchange of ideas.",
+        "alt": "A presenter addresses workshop participants beside a projected slide.",
+        "category": "highlights"
+      },
+      {
+        "id": 15,
+        "src": "./public/assets/summer-2026/photos/mapping-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/mapping-discussion-thumb.webp",
+        "width": 1440,
+        "height": 1080,
+        "title": "Mapping water",
+        "caption": "Exploring data through maps.",
+        "alt": "Participants discuss a projected map at a workshop table.",
+        "category": "highlights"
+      },
+      {
+        "id": 19,
+        "src": "./public/assets/summer-2026/photos/study-region-discussion.webp",
+        "thumb": "./public/assets/summer-2026/photos/study-region-discussion-thumb.webp",
+        "width": 1600,
+        "height": 1105,
+        "title": "Research in discussion",
+        "caption": "Research questions around the table.",
+        "alt": "Participants discuss a presentation showing a study-region map.",
+        "category": "highlights"
+      },
+      {
+        "id": 20,
+        "src": "./public/assets/summer-2026/photos/research-exchange.webp",
+        "thumb": "./public/assets/summer-2026/photos/research-exchange-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "Exchanging perspectives",
+        "caption": "Sharing research and perspectives.",
+        "alt": "Participants exchange ideas during a projected research presentation.",
+        "category": "highlights"
+      },
+      {
+        "id": 21,
+        "src": "./public/assets/summer-2026/photos/completion-group.webp",
+        "thumb": "./public/assets/summer-2026/photos/completion-group-thumb.webp",
+        "width": 2000,
+        "height": 1193,
+        "title": "Program completion",
+        "caption": "Together at the close of the program.",
+        "alt": "Workshop participants gather for a group photograph in front of the program banner.",
+        "category": "highlights"
+      },
+      {
+        "id": 23,
+        "src": "./public/assets/summer-2026/photos/informal-gathering.webp",
+        "thumb": "./public/assets/summer-2026/photos/informal-gathering-thumb.webp",
+        "width": 1600,
+        "height": 897,
+        "title": "Beyond the classroom",
+        "caption": "Connections beyond the classroom.",
+        "alt": "Workshop participants pose for an informal indoor group photograph.",
+        "category": "highlights"
+      },
+      {
+        "id": 22,
+        "src": "./public/assets/summer-2026/photos/group-moment.webp",
+        "thumb": "./public/assets/summer-2026/photos/group-moment-thumb.webp",
+        "width": 1600,
+        "height": 1200,
+        "title": "A shared moment",
+        "caption": "A shared moment in Beijing.",
+        "alt": "A small group poses together indoors.",
+        "category": "highlights"
+      },
+      {
+        "id": 1,
+        "src": "./public/assets/summer-2026/photos/certificate-01.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-01-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 2,
+        "src": "./public/assets/summer-2026/photos/certificate-02.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-02-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 3,
+        "src": "./public/assets/summer-2026/photos/certificate-presentation-01.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-presentation-01-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 4,
+        "src": "./public/assets/summer-2026/photos/certificate-04.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-04-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 5,
+        "src": "./public/assets/summer-2026/photos/certificate-05.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-05-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 6,
+        "src": "./public/assets/summer-2026/photos/certificate-06.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-06-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 7,
+        "src": "./public/assets/summer-2026/photos/certificate-presentation-02.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-presentation-02-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "A moment of recognition.",
+        "alt": "A participant and instructor pose together with a certificate.",
+        "category": "certificates"
+      },
+      {
+        "id": 8,
+        "src": "./public/assets/summer-2026/photos/certificate-08.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-08-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 9,
+        "src": "./public/assets/summer-2026/photos/certificate-09.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-09-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 10,
+        "src": "./public/assets/summer-2026/photos/certificate-10.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-10-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 11,
+        "src": "./public/assets/summer-2026/photos/certificate-11.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-11-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 12,
+        "src": "./public/assets/summer-2026/photos/certificate-12.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-12-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 13,
+        "src": "./public/assets/summer-2026/photos/certificate-13.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-13-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      },
+      {
+        "id": 14,
+        "src": "./public/assets/summer-2026/photos/certificate-14.webp",
+        "thumb": "./public/assets/summer-2026/photos/certificate-14-thumb.webp",
+        "width": 1600,
+        "height": 1067,
+        "title": "Certificate presentation",
+        "caption": "Celebrating completion of the program.",
+        "alt": "A participant holds a certificate beside a program instructor.",
+        "category": "certificates"
+      }
+    ]
+  },
+  publications: [
+    {
+      "title": "Hydrological extremes increase water-resource constraints under climate change",
+      "authors": "Sun, S., Liu, H., Franca, M., Pourzangbar, A., and Tang, Q.",
+      "journal": "Geophysical Research Letters",
+      "details": "53(19), e2026GL122652",
+      "date": "2026-10-07",
+      "year": 2026,
+      "url": "https://doi.org/10.1029/2026GL122652"
+    },
+    {
+      title: "Beyond the \u201cArtificial Lakes\u201d Paradigm: Recognizing Reservoirs as Impounded Rivers in Evaporation Estimation",
+      authors: "Han, S., Tang, Q., Guo, M., Zhao, G., and Zhang, B.",
+      journal: "WIREs Water",
+      details: "13, e70088",
+      date: "2026-09-03",
+      year: 2026,
+      url: "https://doi.org/10.1002/wat2.70088"
+    },
+    {
+      title: "Alarming decline of Iran's Ramsar convention wetlands",
+      authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Kim, D., Jun, C., Bateni, S. M., Mahdian, M., Hosseinzadeh, M., Siadatmousavi, S. M., Naseh, M. V., Mohammadi, K., Bhattarai, R., Kianmehr, P., Huneau, F., Zhang, Y., Abolfathi, S., and Tang, Q.",
+      journal: "Journal of Hydrology: Regional Studies",
+      details: "67, 103860",
+      date: "2026-08-25",
+      year: 2026,
+      url: "https://www.sciencedirect.com/science/article/pii/S2214581826007585"
+    },
+    {
+      title: "Multidimensional Evaluation of the Gridded Precipitation Datasets over the Source Region of the Yellow River",
+      authors: "Wang, J., Zhang, Q., Bao, H., Yun, X., Chang, Y., and Tang, Q.",
+      journal: "Journal of Hydrometeorology",
+      details: "27(6), 801-821",
+      date: "2026-04-21",
+      year: 2026,
+      url: "https://journals.ametsoc.org/view/journals/hydr/27/6/JHM-D-26-0019.1.xml"
+    },
+    {
+      title: "Unravelling global patterns of drought-flood alternations",
+      authors: "Haile, G. G., Islam, M. S., Tang, Q., and Wood, D.",
+      journal: "Journal of Hydrology",
+      details: "676, 135718",
+      date: "2026-05-20",
+      year: 2026,
+      url: "https://doi.org/10.1016/j.jhydrol.2026.135718"
+    },
+    {
+      title: "Rapid decline of ice thickness across Finnish lakes",
+      authors: "Salamattalab, M. M., Noori, R., Shahmohammad, M., Mahdian, M., Hosseinzadeh, M., Kianmehr, P., Asl-Rousta, B., Zhu, S., Gu, X., Saari, M., Kolehmainen, M., Zhang, Y., Sharma, S., Tang, Q., and Woolway, R. I.",
+      journal: "International Journal of Applied Earth Observation and Geoinformation",
+      details: "149, 105293",
+      date: "2026-05-04",
+      year: 2026,
+      url: "https://doi.org/10.1016/j.jag.2026.105293"
+    }
+  ],
+  news: [
+    {
+      date: "2026-09-28",
+      type: "Recruitment",
+      title: "2027 PhD Recruitment in Global Change Hydrology — Submit Materials by 31 October 2026",
+      route: "phd-admission-2027"
+    },
+    {
+      date: "2026-09-04",
+      type: "Keynote",
+      title: "Flood Crosscutting Initiative Monthly Meeting",
+      speaker: "Prof. Qiuhong Tang",
+      url: "https://www.gewex.org/floods-cc/"
+    },
+    {
+      date: "2026-09-03",
+      type: "Media Coverage",
+      title: "Global Times: How Should We Respond to Ice-Rock Avalanches?",
+      url: "./public/assets/global-times-ice-rock-avalanche-20260903.pdf"
+    },
+    {
+      date: "2026-08-28",
+      type: "Media Coverage",
+      title: "Global Times: Could AI Produce 10,000 Einsteins in the 21st Century?",
+      url: "./public/assets/global-times-ai-for-science-20260828.pdf"
+    },
+    {
+      date: "2026-08-14 14:00-15:00",
+      type: "Seminar",
+      title: "Some aspects of changes in hydrologic extremes over the Western U.S.",
+      speaker: "Prof. Dennis P. Lettenmaier",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6992.htm"
+    },
+    {
+      date: "2026-08-06",
+      type: "Call for Participants",
+      title: "Global Change Hydrology (GCH) Summer Training & Practical Program 2026",
+      route: "summer-training"
+    },
+    {
+      date: "2026-08-11 10:00-11:30",
+      type: "Seminar",
+      title: "Development and Basin-Scale Evaluation of Global Coupled Land–Atmosphere Snow Data Assimilation System at NCEP",
+      speaker: "Prof. Youlong Xia",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6991.htm"
+    },
+    {
+      date: "2026-06-25",
+      type: "Call for Papers",
+      title: "Advances in Observation, Modeling, and Prediction of the Hydrosphere",
+      url: "https://www.nature.com/collections/aicidajahb"
+    },
+    {
+      date: "2026-06-30 10:30-11:30",
+      type: "Seminar",
+      title: "Linking Global Cycles Across Scales Based on Ecohydrological Optimality for the Water Balance",
+      speaker: "Prof. Allen Hunt",
+      image: "./public/assets/seminar-allen-hunt-20260630.jpg"
+    },
+    {
+      date: "2026-06-15 16:00-17:00",
+      type: "Seminar",
+      title: "Land Surface Modeling at a Crossroads: Progress, Complexity, and the Road to Reliability and Robustness",
+      speaker: "Prof. Xu Liang",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6962.htm"
+    },
+    {
+      date: "2026-06-11 15:00-17:00",
+      type: "Seminar",
+      title: "Cast3: Translating numerical weather prediction principles into data-driven forecasting",
+      speaker: "Mr. Congyi Nai",
+      image: "./public/assets/seminar-congyi-nai-20260611.jpg"
+    },
+    {
+      date: "2026-06-11 15:00-17:00",
+      type: "Seminar",
+      title: "Spatial Generalization Tests for Machine Learning-based Weather Models to Assess Physical Consistency",
+      speaker: "Ms. Maren Höver",
+      image: "./public/assets/seminar-maren-hover-20260611.jpg"
+    },
+    {
+      date: "2026-05-29 15:30-17:00",
+      type: "Seminar",
+      title: "Two Decades of Hydrological Forecasting in Australia: Responses and Lessons from Drought to Flood",
+      speaker: "Prof. Quanjun Wang",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6940.htm"
+    },
+    {
+      date: "2026-05-21 16:40-17:40",
+      type: "Seminar",
+      title: "The Common Land Model (CoLM): Recent Advances in Hydrological and Agricultural Process Simulation",
+      speaker: "Prof. Shulei Zhang",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6936.htm"
+    },
+    {
+      date: "2026-05-21 15:30-16:30",
+      type: "Seminar",
+      title: "From Information Aggregation to Knowledge Co-creation: Exploring New Modes of Youth Hydrology Research",
+      speaker: "Dr. Xudong Zhou",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6934.htm"
+    },
+    {
+      date: "2026-02-02 10:00-12:00",
+      type: "Seminar",
+      title: "Coupled Riverine Lateral Carbon Transport and Greenhouse Gas Evasion: Processes and Assessment",
+      speaker: "Dr. Yang Gao",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6818.htm"
+    },
+    {
+      date: "2025-12-01 10:00-11:30",
+      type: "Seminar",
+      title: "Simulation and Data Assimilation of Water and Heat Transfer Across the Land-Atmosphere Interface",
+      speaker: "Prof. Jianzhi Dong",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/6696.htm"
+    },
+    {
+      date: "2026-06-10",
+      type: "Congratulations",
+      title: "Dr. Ruiyu Zhao selected as the Shuimu Tsinghua Scholar",
+      url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174"
+    }
+  ],
+  phdRecruitment: {
+    title: "2027 PhD Recruitment",
+    subtitle: "Global Change Hydrology · Regular doctoral admission",
+    introduction: "Prof. Qiuhong Tang's Global Change Hydrology Group in the Department of Earth System Science at Tsinghua University welcomes expressions of interest from prospective PhD applicants for 2027 entry through the regular doctoral admission route. Our research focuses on the water cycle and water security under global change, with particular emphasis on the intersection of artificial intelligence, water science, and Earth system science.",
+    deadline: "31 October 2026",
+    researchAreas: [
+      {
+        title: "AI for Water Sustainability",
+        text: "Explore neural networks and deep learning for hydrological process modeling, water cycle prediction, and extreme-event detection, integrating physical understanding with data-driven methods. Investigate AI agents for scientific data analysis, model execution, and research workflows."
+      },
+      {
+        title: "Global Change and the Water Cycle",
+        text: "Study the impacts of climate change and human activities on the terrestrial water cycle. Combine observations from multiple sources, remote sensing, and numerical models to observe, simulate, and project global water systems across scales."
+      },
+      {
+        title: "Water Risk and Water Security",
+        text: "Develop monitoring, forecasting, and early-warning methods for floods, droughts, and compound extreme events. Investigate the socioeconomic impacts of water cycle imbalance and ways to strengthen water security and resilience at the catchment scale."
+      }
+    ],
+    researchNote: "Specific research topics can be discussed within these areas to match applicants' research experience and interests.",
+    eligibility: [
+      "Hold a master's degree, or expect to obtain one before enrollment in 2027, and meet the university's and department's admission requirements.",
+      "Applicants from Earth system science, hydrology and water resources, atmospheric science, remote sensing, geography, ecology, environmental science, computer science, mathematics and statistics, econometrics, and related interdisciplinary backgrounds are welcome.",
+      "Have at least one published first-author paper in an SCI-indexed journal.",
+      "Demonstrate enthusiasm for research, academic integrity, initiative, and strong communication and collaboration skills, together with a solid foundation in data analysis, programming, and modeling. Experience with neural networks, deep learning, AI agent development, or related research projects is preferred."
+    ],
+    materialsIntroduction: "Please email the following materials to help us understand your research background and fit with the group. Materials may be in Chinese or English; papers and supporting documents may remain in their original language.",
+    materials: [
+      {
+        title: "Curriculum vitae (CV)",
+        text: "Recommended length: 1–2 pages. Include your education, research experience, publications and other outputs, programming and modeling skills, and contact details."
+      },
+      {
+        title: "Transcripts and academic qualifications",
+        text: "Provide undergraduate and master's transcripts. Graduates should include their master's graduation and degree certificates; current students should provide proof of enrollment or state their expected graduation date."
+      },
+      {
+        title: "Statement of research experience and interests",
+        text: "Recommended length: 1–2 pages. Briefly describe your previous research, your own contributions, the scientific questions you hope to explore, and their connection to the group's work. If you have AI-related experience, explain the methods used and the problems addressed."
+      },
+      {
+        title: "Representative research outputs",
+        text: "Include representative papers, specifying author order and your contribution. You may also include a thesis abstract, project reports, public code repositories, or other evidence of research ability."
+      },
+      {
+        title: "Proof of foreign-language proficiency",
+        text: "Provide language test results or other supporting evidence of foreign-language proficiency."
+      }
+    ],
+    email: "tangqh (at) tsinghua.edu.cn",
+    emailSubject: "2027 Regular PhD Application + Name + University",
+    applicationInstructions: "Briefly introduce your research background and interest in joining the group in the email body. We recommend combining your materials into a single PDF in the order listed above, using the filename below. Replace Name and University with your details; code repositories and projects may be shared as links.",
+    fileName: "Name-University-Regular PhD Application Materials.pdf",
+    followUp: "The group will contact suitable applicants for further discussion based on the submitted materials.",
+    admissionsNotice: "Email correspondence with the group is for preliminary discussion of research interests and fit. Whether formal admissions open for this intake, as well as the application schedule, eligibility criteria, required materials, assessment, and admission arrangements, will be governed by the relevant admissions plans and notices issued by Tsinghua University and the Department of Earth System Science.",
+    admissionsUrl: "https://www.dess.tsinghua.edu.cn/zs.htm",
+    supervisor: "Qiuhong Tang is a Tenured Professor in the Department of Earth System Science at Tsinghua University. His research focuses on global change hydrology, water cycle imbalance, water risk monitoring and early warning, and transboundary catchment water management.",
+    group: "The Global Change Hydrology Group investigates the impacts of global change on water systems and develops methods for water cycle observation, modeling, and prediction to provide a scientific basis for addressing water security challenges."
+  },
+  // Dates identify publication/update dates; the GRP date is its application opening date.
+  // Opportunities with a closing time move to Archive after that time (China Standard Time).
+  join: [
+    {
+      type: "PhD Recruitment",
+      date: "2026-09-28",
+      title: "2027 PhD Recruitment in Global Change Hydrology",
+      text: "We welcome expressions of interest for 2027 entry through the regular PhD admission route. Submit your materials to the group by 31 October 2026. Applicants must hold a master's degree or expect to obtain one before enrollment.",
+      route: "phd-admission-2027",
+      closesAt: "2026-10-31T23:59:59.999+08:00"
+    },
+    {
+      type: "Postdoctoral Recruitment",
+      date: "2026-07-19", // Current notice first published on the group website on this date.
+      title: "Postdoctoral Opportunities in Global Change Hydrology",
+      text: "The notice advertises 1–3 postdoctoral positions. Contact the group for current availability.",
+      url: "./public/assets/water-dessthu-phd-postdoc.pdf"
+    },
+    {
+      type: "PhD Recruitment",
+      date: "2026-07-19",
+      title: "2027 PhD Recruitment — Previous Round",
+      text: "The previous recruitment round for 2027 entry closed on 28 July 2026.",
+      url: "./public/assets/water-dessthu-phd-postdoc.pdf",
+      status: "archive"
+    },
+    {
+      type: "Visiting Scholar",
+      date: "2026-03-25",
+      title: "2026–2027 Domestic Visiting Scholar Program",
+      text: "Applications for the 2026–2027 intake closed on 10 May 2026.",
+      url: "https://www.tsinghua.edu.cn/zsjyc/info/1056/1251.htm",
+      status: "archive"
+    },
+    {
+      type: "Research Program",
+      date: "2026-02-24",
+      title: "2026 Tsinghua University Global Research Program",
+      text: "A research experience of at least six weeks for undergraduate and graduate students at universities outside the Chinese Mainland, including Hong Kong, Macao, and Taiwan. Applications closed on 31 March 2026.",
+      url: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
+      status: "archive"
+    }
+  ]
+};

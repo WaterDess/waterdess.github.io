@@ -1,0 +1,9 @@
+# Summer program retrospective assets
+
+Photos were supplied by the group in `照片集.zip` for this event retrospective. All 24 photographs are included: 10 workshop/group images and 14 certificate presentations. WebP derivatives retain the original composition; the full images and 600px thumbnails are resized and compressed, with EXIF metadata removed. The website uses local assets only.
+
+The downloadable `applaud-beijing-workshop-handbook-2026.pdf` preserves the supplied `APPLAUD_Beijing_Workshop_Handbook_20260831(1).docx`. It was rendered by Microsoft Word and printed from the resulting vector pages to PDF. It contains 11 A4 pages with selectable text. `handbook-cover.webp` is the first page.
+
+The final handbook is the source for the retrospective schedule: hydrological modelling on 8 September, water-quality modelling on 9 September, closing/student session on 10 September, scientific publishing on 11 September. Original handbook text is retained, including its printed weekday typo for 11 September.
+
+Captions describe visible activities without assigning unverified identities. Photo titles, alt text, categories and carousel order are maintained in `data/site.js` under `summerTraining`.
