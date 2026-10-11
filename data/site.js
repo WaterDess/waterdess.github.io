@@ -125,6 +125,7 @@ window.TANG_SITE = {
         "2024.6-2025.7: Algorithm Engineer, Seck Intelligent Technology Co., Ltd., Hangzhou"
       ],
       publications: [
+        { text: "Yan, Y., Sharif, H., and Ameli, A. A. (2026). Catchment hydrologic function is widely time-variant. Communications Earth & Environment. doi: 10.1038/s43247-026-04079-6.", url: "https://doi.org/10.1038/s43247-026-04079-6" },
         { text: "Yan, Y., Chen, C., Yang, W., Zheng, Y., Zhao, Y., Zhang, Y., Liu, Y., and Zhang, W. (2024). Enhancing Basin-scale Hydrological Time Series Processing and Modeling with Masked Pre-Trained Encoder. ESS Open Archive. doi: 10.22541/au.172417537.74282767/v1.", url: "https://doi.org/10.22541/au.172417537.74282767/v1" },
         { text: "Yan, Y., Zhang, W., Liu, Y., and Li, Z. (2023). Simulated annealing algorithm optimized GRU neural network for urban rainfall-inundation prediction. Journal of Hydroinformatics. doi: 10.2166/hydro.2023.006.", url: "https://doi.org/10.2166/hydro.2023.006" },
         { text: "Liu, Y., Zhang, W., Yan, Y., Li, Z., Xia, Y., and Song, S. (2022). An Effective Rainfall-Ponding Multi-Step Prediction Model Based on LSTM for Urban Waterlogging Points. Applied Sciences, 12(23), 12334. doi: 10.3390/app122312334.", url: "https://doi.org/10.3390/app122312334" }
