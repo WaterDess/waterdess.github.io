@@ -750,6 +750,20 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-10-14 09:15-10:15",
+      type: "Seminar",
+      title: "Water in a changing environment: too much, too little, too hot",
+      speaker: "Prof. David M. Hannah",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/7053.htm"
+    },
+    {
+      date: "2026-10-14 10:30-11:30",
+      type: "Seminar",
+      title: "Hydrological extremes and pollution hotspots and hot moments as drivers of global One Health challenges",
+      speaker: "Prof. Stefan Krause",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/7054.htm"
+    },
+    {
       date: "2026-09-28",
       type: "Recruitment",
       title: "2027 PhD Recruitment in Global Change Hydrology — Submit Materials by 31 October 2026",
