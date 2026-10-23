@@ -385,6 +385,95 @@ window.TANG_SITE = {
       "cover": "./public/assets/summer-2026/handbook-cover.webp",
       "description": "The complete program, course schedules, workshop sessions and participant information in one downloadable handbook."
     },
+    "lectureMaterials": {
+      "url": "./public/assets/summer-2026/lecture-materials/summerschool-2026-materials.zip",
+      "downloadName": "Summer-School-2026-Lecture-Materials.zip",
+      "cover": "./public/assets/summer-2026/lecture-materials/lecture-cover.webp",
+      "coverWidth": 1200,
+      "coverHeight": 675,
+      "previewUrl": "./public/assets/summer-2026/lecture-materials/water-quality-fundamentals.pdf",
+      "description": "Lecture slides and practical exercises in hydrology, water quality and environmental chemistry, including five lectures by Martina Flörke.",
+      "metadata": "ZIP · 37.9 MB · 10 PDFs + 1 exercise guide",
+      "files": [
+        {
+          "title": "Overview of WaterGAP3 Model",
+          "author": "Martina Flörke",
+          "url": "./public/assets/summer-2026/lecture-materials/watergap3-overview.pdf",
+          "downloadName": "watergap3-overview.pdf",
+          "metadata": "PDF · 17 pages · 7.4 MB"
+        },
+        {
+          "title": "Water Quality in the Water Cycle: Why It Matters",
+          "author": "Martina Flörke",
+          "url": "./public/assets/summer-2026/lecture-materials/water-quality-fundamentals.pdf",
+          "downloadName": "water-quality-fundamentals.pdf",
+          "metadata": "PDF · 16 pages · 7.0 MB"
+        },
+        {
+          "title": "Processes in Water Quality",
+          "author": "Martina Flörke",
+          "url": "./public/assets/summer-2026/lecture-materials/water-quality-processes.pdf",
+          "downloadName": "water-quality-processes.pdf",
+          "metadata": "PDF · 21 pages · 3.9 MB"
+        },
+        {
+          "title": "The WorldQual Model: A Short Introduction",
+          "author": "Martina Flörke",
+          "url": "./public/assets/summer-2026/lecture-materials/worldqual-introduction.pdf",
+          "downloadName": "worldqual-introduction.pdf",
+          "metadata": "PDF · 10 pages · 1.9 MB"
+        },
+        {
+          "title": "Water Quality Scenarios",
+          "author": "Martina Flörke",
+          "url": "./public/assets/summer-2026/lecture-materials/water-quality-scenarios.pdf",
+          "downloadName": "water-quality-scenarios.pdf",
+          "metadata": "PDF · 15 pages · 3.7 MB"
+        },
+        {
+          "title": "Nutrients, Eutrophication, and Total Phosphorus Modelling",
+          "author": "Katrin Schweden",
+          "url": "./public/assets/summer-2026/lecture-materials/nutrients-and-phosphorus-modelling.pdf",
+          "downloadName": "nutrients-and-phosphorus-modelling.pdf",
+          "metadata": "PDF · 14 pages · 1.5 MB"
+        },
+        {
+          "title": "Water Quality Exercise: Monitoring Data from the River Main",
+          "author": "Katrin Schweden",
+          "url": "./public/assets/summer-2026/lecture-materials/water-quality-monitoring-exercise.pdf",
+          "downloadName": "water-quality-monitoring-exercise.pdf",
+          "metadata": "PDF · 13 pages · 1.6 MB"
+        },
+        {
+          "title": "WorldQual Light Exercise: TP Loadings in the Möhne Lake Catchment",
+          "author": "Katrin Schweden",
+          "url": "./public/assets/summer-2026/lecture-materials/worldqual-light-exercise.pdf",
+          "downloadName": "worldqual-light-exercise.pdf",
+          "metadata": "PDF · 14 pages · 862.6 KB"
+        },
+        {
+          "title": "Properties and Partition Equilibria of Organic Compounds in the Environment",
+          "author": "Tobias Licha and Jens Prothmann",
+          "url": "./public/assets/summer-2026/lecture-materials/hydrochemistry-organic-compounds.pdf",
+          "downloadName": "hydrochemistry-organic-compounds.pdf",
+          "metadata": "PDF · 57 pages · 3.7 MB"
+        },
+        {
+          "title": "Chemical Analysis of Organic Compounds",
+          "author": "Jens Prothmann",
+          "url": "./public/assets/summer-2026/lecture-materials/chemical-analysis-organic-compounds.pdf",
+          "downloadName": "chemical-analysis-organic-compounds.pdf",
+          "metadata": "PDF · 152 pages · 8.2 MB"
+        },
+        {
+          "title": "WaterGAP3 Exercises: A Practical Guide",
+          "author": "",
+          "url": "./public/assets/summer-2026/lecture-materials/watergap3-exercises.md",
+          "downloadName": "watergap3-exercises.md",
+          "metadata": "Markdown · Exercise guide · 2.3 KB"
+        }
+      ]
+    },
     "acknowledgement": "Supported by the Sino-German Center Mobility Program (M-0468), “Upscaling processes to improve global water resource models” (APPLAUD), and Tsinghua University.",
     "partners": [
       {

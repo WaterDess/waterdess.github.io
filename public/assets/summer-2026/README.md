@@ -11,3 +11,7 @@ The downloadable `applaud-beijing-workshop-handbook-2026.pdf` preserves the supp
 The final handbook is the source for the retrospective schedule: hydrological modelling on 8 September, water-quality modelling on 9 September, closing/student session on 10 September, scientific publishing on 11 September. Original handbook text is retained, including its printed weekday typo for 11 September.
 
 Captions describe visible activities without assigning unverified identities. Photo titles, alt text, categories and carousel order are maintained in `data/site.js` under `summerTraining`.
+
+The `lecture-materials/` directory contains the 10 PDFs and one Markdown exercise guide supplied by the group in `Summerschool26.zip` on 23 October 2026. The downloadable archive is byte-for-byte identical to that supplied ZIP (SHA-256 `c53bf5202625358825219e1cd08ab048a5e3833389e041bfa95be20a30bf32b1`). Individual downloads preserve each original file's bytes under descriptive ASCII filenames. `lecture-cover.webp` is a rendering of the first page of Martina Flörke's water-quality fundamentals lecture, with the full slide composition retained.
+
+File titles and authors come from the supplied documents: five lectures by Martina Flörke; three presentations and exercises by Katrin Schweden; chemical analysis by Jens Prothmann; and hydrochemistry by Tobias Licha and Jens Prothmann. The WaterGAP3 Markdown guide does not identify an author and is listed without attribution. Download labels and file sizes are maintained in `summerTraining.lectureMaterials`.

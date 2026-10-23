@@ -411,7 +411,7 @@ function renderEducation() {
           </div>
         </section>
 
-        <nav class="event-section-nav event-shell" aria-label="On this page"><a href="#recap">The program</a><a href="#journey">The journey</a><a href="#photographs">Photographs</a><a href="#handbook">Handbook</a></nav>
+        <nav class="event-section-nav event-shell" aria-label="On this page"><a href="#recap">The program</a><a href="#journey">The journey</a><a href="#photographs">Photographs</a><a href="#handbook">Handbook</a>${st.lectureMaterials ? '<a href="#lecture-materials">Lecture materials</a>' : ''}</nav>
 
         <section class="event-overview event-shell" id="recap">
           <div class="event-section-heading"><p class="event-kicker">01 / The program</p><h2>Program overview</h2><p class="event-section-copy">${esc(st.overview)}</p></div>
@@ -433,6 +433,12 @@ function renderEducation() {
           <div class="event-handbook-cover"><a href="${esc(assetUrl(st.handbook?.url))}" target="_blank" rel="noopener" aria-label="Open the program handbook PDF"><img src="${esc(assetUrl(st.handbook?.cover))}" alt="Cover of the 2026 Global Change Hydrology program handbook" width="720" height="1018" loading="lazy" /></a></div>
           <div class="event-handbook-copy"><p class="event-kicker">04 / The handbook</p><h2>Program handbook</h2><a class="event-download" href="${esc(assetUrl(st.handbook?.url))}" download="Summer-Training-and-Practical-Program-2026-Handbook.pdf">Download handbook <span aria-hidden="true">↓</span></a><p class="event-document-meta">PDF · 11 pages · 0.9 MB</p></div>
         </section>
+
+        ${st.lectureMaterials ? `<section class="event-handbook event-lecture-materials event-shell" id="lecture-materials" aria-labelledby="lecture-materials-title">
+          <div class="event-handbook-cover"><a href="${esc(assetUrl(st.lectureMaterials.previewUrl))}" target="_blank" rel="noopener" aria-label="Open Martina Flörke's water-quality lecture PDF"><img src="${esc(assetUrl(st.lectureMaterials.cover))}" alt="Title slide of Water Quality in the Water Cycle: Why It Matters, by Martina Flörke" width="${st.lectureMaterials.coverWidth}" height="${st.lectureMaterials.coverHeight}" loading="lazy" /></a></div>
+          <div class="event-handbook-copy"><p class="event-kicker">05 / Lecture materials</p><h2 id="lecture-materials-title">Lectures &amp; exercises</h2><p class="event-material-description">${esc(st.lectureMaterials.description)}</p><a class="event-download" href="${esc(assetUrl(st.lectureMaterials.url))}" download="${esc(st.lectureMaterials.downloadName)}">Download all materials <span aria-hidden="true">↓</span></a><p class="event-document-meta">${esc(st.lectureMaterials.metadata)}</p></div>
+          <details class="event-material-files"><summary>Browse individual files (${st.lectureMaterials.files.length})</summary><ul>${list(st.lectureMaterials.files, file => `<li><a href="${esc(assetUrl(file.url))}" download="${esc(file.downloadName)}"><span class="event-material-title">${esc(file.title)}</span><span class="event-material-meta">${file.author ? `${esc(file.author)} · ` : ''}${esc(file.metadata)}</span><span class="event-material-arrow" aria-hidden="true">↓</span></a></li>`)}</ul></details>
+        </section>` : ''}
 
         <footer class="event-credits event-shell"><p>${esc(st.acknowledgement)}</p><div class="event-partners">${list(st.partners, partner => `<img src="${esc(assetUrl(partner.logo))}" alt="${esc(partner.name)}" loading="lazy" />`)}</div></footer>
       </article>
