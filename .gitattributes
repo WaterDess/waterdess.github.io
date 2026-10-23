@@ -1,0 +1,2 @@
+# Preserve the supplied exercise guide exactly for direct downloads.
+/public/assets/summer-2026/lecture-materials/watergap3-exercises.md -text
