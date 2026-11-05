@@ -783,6 +783,15 @@ window.TANG_SITE = {
   },
   publications: [
     {
+      "title": "An open-source Python framework for the flexible deployment and advanced applications of the Variable Infiltration Capacity (VIC) model",
+      "authors": "Zheng, X., Liu, D., Tang, Q., Li, Q., Liao, H., and Wang, H.",
+      "journal": "Geoscientific Model Development",
+      "details": "19, 10503–10531",
+      "date": "2026-11-05",
+      "year": 2026,
+      "url": "https://gmd.copernicus.org/articles/19/10503/2026/gmd-19-10503-2026.pdf"
+    },
+    {
       "title": "Hydrological extremes increase water-resource constraints under climate change",
       "authors": "Sun, S., Liu, H., Franca, M., Pourzangbar, A., and Tang, Q.",
       "journal": "Geophysical Research Letters",
