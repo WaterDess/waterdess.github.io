@@ -214,6 +214,38 @@ window.TANG_SITE = {
       ]
     },
     {
+      slug: "xudong-zheng",
+      name: "Xudong Zheng",
+      position: "Postdoctoral Fellow",
+      group: "postdoctoral-fellow",
+      address: "Department of Earth System Science, Tsinghua University",
+      email: "zheng-xd (at) mail.tsinghua.edu.cn",
+      photo: "./public/assets/xudong-zheng.webp",
+      links: [
+        { label: "ORCID", url: "https://orcid.org/0000-0001-9235-5033" },
+        { label: "ResearchGate", url: "https://www.researchgate.net/profile/Xudong-Zheng-7" }
+      ],
+      interests: [
+        "Data-driven and physical hydrological modeling",
+        "Terrestrial water budget closure",
+        "Hydrometeorological extremes"
+      ],
+      education: [
+        "Ph.D. in Hydrology and Water Resources, Xi’an University of Technology, 2026",
+        "M.E. in Hydrology and Water Resources, Xi’an University of Technology, 2022",
+        "B.E. in Hydrology and Water Resources Engineering, Xi’an University of Technology, 2019"
+      ],
+      positions: [
+        "Postdoctoral Researcher, Department of Earth System Science, Tsinghua University"
+      ],
+      publications: [
+        { text: "Zheng, X., Liu, D., Tang, Q., Li, Q., Liao, H., and Wang, H. (2026). An open-source Python framework for the flexible deployment and advanced applications of the Variable Infiltration Capacity (VIC) model. Geoscientific Model Development, 19(21), 10503–10531.", url: "https://gmd.copernicus.org/articles/19/10503/2026/gmd-19-10503-2026.pdf" },
+        { text: "Zheng, X., Liu, D., Wang, H., Ma, C., Liu, H., Ming, G., Li, Q., Khan, M. Y. A., and Hussain, F. (2026). What can hydrological modelling gain from spatially explicit parameterization and multi-gauge calibration? Hydrology and Earth System Sciences, 30(8), 2493–2521.", url: "https://doi.org/10.5194/hess-30-2493-2026" },
+        { text: "Zheng, X., Liu, D., Huang, S., Wang, H., and Meng, X. (2025). Achieving water budget closure through physical hydrological process modelling: insights from a large-sample study. Hydrology and Earth System Sciences, 29(3), 627–653.", url: "https://doi.org/10.5194/hess-29-627-2025" },
+        { text: "Zheng, X., Huang, S., Peng, J., Leng, G., Huang, Q., Fang, W., and Guo, Y. (2022). Flash Droughts Identification Based on an Improved Framework and Their Contrasting Impacts on Vegetation Over the Loess Plateau, China. Water Resources Research, 58(9), e2021WR031464.", url: "https://doi.org/10.1029/2021WR031464" }
+      ]
+    },
+    {
       slug: "songjie-huang",
       name: "Songjie Huang",
       position: "Ph.D. Candidate",
