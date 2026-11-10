@@ -880,6 +880,17 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      type: "Academic Exchange",
+      title: "Academic Exchange with Prof. Lu Zhang",
+      speaker: "Prof. Lu Zhang",
+      url: "./public/assets/lu-zhang-group-exchange-03.jpg",
+      photos: [
+        "./public/assets/lu-zhang-group-exchange-01.jpg",
+        "./public/assets/lu-zhang-group-exchange-02.jpg",
+        "./public/assets/lu-zhang-group-exchange-03.jpg"
+      ]
+    },
+    {
       date: "2026-10-14 09:15-10:15",
       type: "Seminar",
       title: "Water in a changing environment: too much, too little, too hot",

@@ -684,6 +684,7 @@ function renderEducation() {
         <div>
           <span>${esc(renderNewsMeta(item))}</span>
           <h3>${target ? `<a href="${esc(target)}"${isExternal ? ' target="_blank" rel="noopener"' : ""}><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
+          ${item.photos?.length ? `<p class="news-summary">Photos: ${item.photos.map((photo, index) => `<a href="${esc(assetUrl(photo))}" target="_blank" rel="noopener">Photo ${index + 1}</a>`).join(" · ")}</p>` : ""}
           ${showSummary && item.text ? `<p class="news-summary">${esc(item.text)}</p>` : ""}
         </div>
       </article>
