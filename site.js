@@ -376,6 +376,7 @@ function renderEducation() {
 
   function renderEventCarousel(st, label) {
     const photos = st.photos || [];
+    const slides = (st.carousel || []).map(id => photos.find(photo => photo.id === id)).filter(Boolean);
     const arrow = (direction) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${direction === 'left' ? 'M19 12H5m6-6-6 6 6 6' : 'M5 12h14m-6-6 6 6-6 6'}"/></svg>`;
     return `
       <section class="event-carousel event-shell" aria-label="${esc(label)}" aria-roledescription="carousel" data-event-carousel>
