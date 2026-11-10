@@ -884,12 +884,7 @@ window.TANG_SITE = {
       type: "Academic Exchange",
       title: "Academic Exchange with Prof. Lu Zhang",
       speaker: "Prof. Lu Zhang",
-      url: "./public/assets/lu-zhang-group-exchange-03.jpg",
-      photos: [
-        "./public/assets/lu-zhang-group-exchange-01.jpg",
-        "./public/assets/lu-zhang-group-exchange-02.jpg",
-        "./public/assets/lu-zhang-group-exchange-03.jpg"
-      ]
+      route: "lu-zhang-exchange"
     },
     {
       date: "2026-10-14 09:15-10:15",
@@ -1026,6 +1021,16 @@ window.TANG_SITE = {
       url: "https://postdoctor.tsinghua.edu.cn/info/zxtz/2174"
     }
   ],
+  luZhangExchange: {
+    title: "Academic Exchange with Prof. Lu Zhang",
+    date: "10 November 2026",
+    carousel: [1, 2, 3],
+    photos: [
+      { id: 1, src: "./public/assets/lu-zhang-group-exchange-01.jpg", width: 4032, height: 3024, alt: "Prof. Lu Zhang and group members discuss a research presentation." },
+      { id: 2, src: "./public/assets/lu-zhang-group-exchange-02.jpg", width: 1707, height: 1280, alt: "Prof. Lu Zhang listens as a group member presents research on hydrological connectivity." },
+      { id: 3, src: "./public/assets/lu-zhang-group-exchange-03.jpg", width: 5712, height: 4284, alt: "Prof. Lu Zhang exchanges ideas with members of the Global Change Hydrology Group." }
+    ]
+  },
   phdRecruitment: {
     title: "2027 PhD Recruitment",
     subtitle: "Global Change Hydrology · Regular doctoral admission",

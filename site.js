@@ -66,6 +66,7 @@
     navEl.innerHTML = list(nav, ([key, label]) => {
       const active = key === page
         || (page === "person" && key === "people")
+        || (page === "lu-zhang-exchange" && key === "news")
         || (["srt", "summer-training"].includes(page) && key === "education")
         || (page === "phd-admission-2027" && key === "join")
         || (page === "genuine-earth-hydrosphere" && key === "research");
@@ -373,6 +374,42 @@ function renderEducation() {
   });
 }
 
+  function renderEventCarousel(st, label) {
+    const photos = st.photos || [];
+    const arrow = (direction) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${direction === 'left' ? 'M19 12H5m6-6-6 6 6 6' : 'M5 12h14m-6-6 6 6-6 6'}"/></svg>`;
+    return `
+      <section class="event-carousel event-shell" aria-label="${esc(label)}" aria-roledescription="carousel" data-event-carousel>
+        <div class="event-carousel-stage">
+          <div class="event-slides" id="event-slides">
+            ${list(slides, (photo, i) => {
+              const offset = i > slides.length / 2 ? i - slides.length : i;
+              const carouselImage = photo.carouselImage || photo;
+              return `
+              <figure class="event-slide ${i === 0 ? 'is-current' : ''} ${Math.abs(offset) === 1 ? 'is-adjacent' : ''}" data-event-slide style="--slide-offset: ${offset}" aria-hidden="${i !== 0}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">
+                <button type="button" class="event-photo-open" data-event-photo="${photo.id}" tabindex="${i === 0 ? '0' : '-1'}" aria-label="View photograph ${i + 1}: ${esc(photo.alt)}">
+                  <img src="${esc(assetUrl(carouselImage.src))}" width="${carouselImage.width}" height="${carouselImage.height}" alt="${esc(photo.alt)}"${photo.objectPosition ? ` style="object-position: ${esc(photo.objectPosition)}"` : ''} ${i ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async" />
+                </button>
+              </figure>`; })}
+          </div>
+          <button type="button" class="event-icon-button event-stage-prev" data-event-prev aria-label="Previous slide" aria-controls="event-slides">${arrow('left')}</button>
+          <button type="button" class="event-icon-button event-stage-next" data-event-next aria-label="Next slide" aria-controls="event-slides">${arrow('right')}</button>
+        </div>
+        <div class="event-carousel-footer">
+          <span class="event-screen-reader" role="status" aria-live="polite" aria-atomic="true" data-event-announcement></span>
+          <div class="event-carousel-dots" role="group" aria-label="Choose a photograph">${list(slides, (photo, i) => `<button type="button" data-event-dot="${i}" aria-label="Go to slide ${i + 1}" aria-current="${i === 0}" aria-controls="event-slides"><span></span></button>`)}</div>
+        </div>
+      </section>`;
+  }
+
+  function renderEventLightbox(label) {
+    const arrow = (direction) => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${direction === 'left' ? 'M19 12H5m6-6-6 6 6 6' : 'M5 12h14m-6-6 6 6-6 6'}"/></svg>`;
+    return `<dialog class="event-lightbox" aria-label="${esc(label)}" data-event-lightbox>
+      <div class="event-lightbox-top"><span data-event-photo-count aria-live="polite"></span><button type="button" data-event-close aria-label="Close photograph viewer">Close <span aria-hidden="true">\u00d7</span></button></div>
+      <figure><img data-event-full-photo alt="" /></figure>
+      <div class="event-lightbox-controls"><button type="button" class="event-icon-button" data-event-photo-prev aria-label="Previous photograph">${arrow('left')}</button><button type="button" class="event-icon-button" data-event-photo-next aria-label="Next photograph">${arrow('right')}</button></div>
+    </dialog>`;
+  }
+
   function renderSummerTraining() {
     const st = data.summerTraining || {};
     const photos = st.photos || [];
@@ -389,27 +426,7 @@ function renderEducation() {
           <div class="event-facts"><span>${esc(st.dates)}</span><span>Tsinghua University &amp; IGSNRR, CAS</span><span class="event-completed">Successfully concluded</span></div>
         </header>
 
-        <section class="event-carousel event-shell" aria-label="Program highlights" aria-roledescription="carousel" data-event-carousel>
-          <div class="event-carousel-stage">
-          <div class="event-slides" id="event-slides">
-            ${list(slides, (photo, i) => {
-              const offset = i > slides.length / 2 ? i - slides.length : i;
-              const carouselImage = photo.carouselImage || photo;
-              return `
-              <figure class="event-slide ${i === 0 ? 'is-current' : ''} ${Math.abs(offset) === 1 ? 'is-adjacent' : ''}" data-event-slide style="--slide-offset: ${offset}" aria-hidden="${i !== 0}" role="group" aria-roledescription="slide" aria-label="${i + 1} of ${slides.length}">
-                <button type="button" class="event-photo-open" data-event-photo="${photo.id}" tabindex="${i === 0 ? '0' : '-1'}" aria-label="View photograph ${i + 1}: ${esc(photo.alt)}">
-                  <img src="${esc(assetUrl(carouselImage.src))}" width="${carouselImage.width}" height="${carouselImage.height}" alt="${esc(photo.alt)}"${photo.objectPosition ? ` style="object-position: ${esc(photo.objectPosition)}"` : ''} ${i ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async" />
-                </button>
-              </figure>`; })}
-          </div>
-          <button type="button" class="event-icon-button event-stage-prev" data-event-prev aria-label="Previous slide" aria-controls="event-slides">${arrow('left')}</button>
-          <button type="button" class="event-icon-button event-stage-next" data-event-next aria-label="Next slide" aria-controls="event-slides">${arrow('right')}</button>
-          </div>
-          <div class="event-carousel-footer">
-            <span class="event-screen-reader" role="status" aria-live="polite" aria-atomic="true" data-event-announcement></span>
-            <div class="event-carousel-dots" role="group" aria-label="Choose a photograph">${list(slides, (photo, i) => `<button type="button" data-event-dot="${i}" aria-label="Go to slide ${i + 1}" aria-current="${i === 0}" aria-controls="event-slides"><span></span></button>`)}</div>
-          </div>
-        </section>
+        ${renderEventCarousel(st, "Program highlights")}
 
         <nav class="event-section-nav event-shell" aria-label="On this page"><a href="#recap">The program</a><a href="#journey">The journey</a><a href="#photographs">Photographs</a><a href="#handbook">Handbook</a>${st.lectureMaterials ? '<a href="#lecture-materials">Lecture materials</a>' : ''}</nav>
 
@@ -450,11 +467,27 @@ function renderEducation() {
     `;
   }
 
+  function renderLuZhangExchange() {
+    const exchange = data.luZhangExchange || {};
+    return `
+      <article class="event-retrospective">
+        <header class="event-intro event-shell">
+          <div class="event-eyebrow"><span>Academic exchange</span><span>Tsinghua University</span></div>
+          <div class="event-title-grid"><h1>${esc(exchange.title)}</h1></div>
+          <div class="event-facts"><span>${esc(exchange.date)}</span><span>Global Change Hydrology Group</span><span>${esc("Prof. Lu Zhang")}</span></div>
+        </header>
+        ${renderEventCarousel(exchange, "Academic exchange photographs")}
+      </article>
+      ${renderEventLightbox("Academic exchange photograph viewer")}
+    `;
+  }
+
   function setupSummerGallery() {
     const carousel = document.querySelector('[data-event-carousel]');
     if (!carousel) return;
     document.documentElement.classList.add('event-smooth-scroll');
-    const st = data.summerTraining;
+    const st = page === "summer-training" ? data.summerTraining : data.luZhangExchange;
+    if (!st) return;
     const photos = st.photos;
     const slides = Array.from(carousel.querySelectorAll('[data-event-slide]'));
     const dots = Array.from(carousel.querySelectorAll('[data-event-dot]'));
@@ -684,7 +717,6 @@ function renderEducation() {
         <div>
           <span>${esc(renderNewsMeta(item))}</span>
           <h3>${target ? `<a href="${esc(target)}"${isExternal ? ' target="_blank" rel="noopener"' : ""}><span class="link-icon" aria-hidden="true">&#128279;</span>${esc(item.title)}</a>` : esc(item.title)}</h3>
-          ${item.photos?.length ? `<p class="news-summary">Photos: ${item.photos.map((photo, index) => `<a href="${esc(assetUrl(photo))}" target="_blank" rel="noopener">Photo ${index + 1}</a>`).join(" · ")}</p>` : ""}
           ${showSummary && item.text ? `<p class="news-summary">${esc(item.text)}</p>` : ""}
         </div>
       </article>
@@ -836,6 +868,7 @@ function renderEducation() {
     education: renderEducation,
     srt: () => `<div class="section srt-page">${renderSrt()}</div>`,
     "summer-training": renderSummerTraining,
+    "lu-zhang-exchange": renderLuZhangExchange,
     "genuine-earth-hydrosphere": renderGenuineEarthHydrosphere
   };
 
