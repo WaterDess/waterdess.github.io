@@ -880,6 +880,7 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-11-10",
       type: "Academic Exchange",
       title: "Academic Exchange with Prof. Lu Zhang",
       speaker: "Prof. Lu Zhang",
