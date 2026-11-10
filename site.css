@@ -1879,6 +1879,7 @@ html.event-smooth-scroll { scroll-behavior: smooth; }
 .event-photo-open { position: relative; display: block; width: 100%; padding: 0; border: 0; background: #e6ebe6; overflow: hidden; text-align: left; }
 .event-slide .event-photo-open { border-radius: 4px; }
 .event-slide img { width: 100%; aspect-ratio: 1.8; object-fit: cover; object-position: center 47%; }
+.lu-zhang-exchange-page .event-slide img { object-position: center bottom; }
 .event-carousel-footer { display: flex; align-items: center; justify-content: center; padding: 0.65rem 0; border-bottom: 1px solid var(--line); }
 .event-carousel-dots { display: flex; align-items: center; justify-content: center; }
 .event-carousel-dots button { display: grid; place-items: center; width: 38px; min-height: 44px; padding: 0; border: 0; background: transparent; }

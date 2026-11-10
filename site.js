@@ -471,7 +471,7 @@ function renderEducation() {
   function renderLuZhangExchange() {
     const exchange = data.luZhangExchange || {};
     return `
-      <article class="event-retrospective">
+      <article class="event-retrospective lu-zhang-exchange-page">
         <header class="event-intro event-shell">
           <div class="event-eyebrow"><span>Academic exchange</span><span>Tsinghua University</span></div>
           <div class="event-title-grid"><h1>${esc(exchange.title)}</h1></div>
