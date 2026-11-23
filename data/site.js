@@ -880,6 +880,20 @@ window.TANG_SITE = {
   ],
   news: [
     {
+      date: "2026-11-19 14:00-16:00",
+      type: "Seminar",
+      title: "Droughts, Heatwaves, and the Land-Atmosphere System",
+      speaker: "Prof. Zhiyan Zuo",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/7129.htm"
+    },
+    {
+      date: "2026-11-16 10:00-11:30",
+      type: "Seminar",
+      title: "Glacier Ecosystems under Global Change",
+      speaker: "Prof. Yongqin Liu",
+      url: "https://www.dess.tsinghua.edu.cn/info/1176/7128.htm"
+    },
+    {
       date: "2026-11-10",
       type: "Academic Exchange",
       title: "Academic Exchange with Prof. Lu Zhang",
