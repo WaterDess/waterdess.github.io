@@ -815,6 +815,15 @@ window.TANG_SITE = {
   },
   publications: [
     {
+      title: "Resilience as a governing principle in water governance",
+      authors: "Tortajada, C., Hartley, K., Biswas, A. K., Grafton, R. Q., Varis, O., and Tang, Q.",
+      journal: "Nature Sustainability",
+      details: "9, 1705–1707",
+      date: "2026-11-17",
+      year: 2026,
+      url: "https://rdcu.be/cAJ18UaxLRya"
+    },
+    {
       "title": "An open-source Python framework for the flexible deployment and advanced applications of the Variable Infiltration Capacity (VIC) model",
       "authors": "Zheng, X., Liu, D., Tang, Q., Li, Q., Liao, H., and Wang, H.",
       "journal": "Geoscientific Model Development",
@@ -880,11 +889,11 @@ window.TANG_SITE = {
   ],
   news: [
     {
-      date: "2026-11-19 14:00-16:00",
-      type: "Seminar",
-      title: "Droughts, Heatwaves, and the Land-Atmosphere System",
+      date: "2026-11-19",
+      type: "Academic Exchange",
+      title: "Academic Exchange with Prof. Zhiyan Zuo",
       speaker: "Prof. Zhiyan Zuo",
-      url: "https://www.dess.tsinghua.edu.cn/info/1176/7129.htm"
+      route: "zhiyan-zuo-exchange"
     },
     {
       date: "2026-11-16 10:00-11:30",
@@ -1043,6 +1052,17 @@ window.TANG_SITE = {
       { id: 1, src: "./public/assets/lu-zhang-group-exchange-01.jpg", width: 4032, height: 3024, alt: "Prof. Lu Zhang and group members discuss a research presentation." },
       { id: 2, src: "./public/assets/lu-zhang-group-exchange-02.jpg", width: 1707, height: 1280, alt: "Prof. Lu Zhang listens as a group member presents research on hydrological connectivity." },
       { id: 3, src: "./public/assets/lu-zhang-group-exchange-03.jpg", width: 5712, height: 4284, alt: "Prof. Lu Zhang exchanges ideas with members of the Global Change Hydrology Group." }
+    ]
+  },
+  zhiyanZuoExchange: {
+    title: "Academic Exchange with Prof. Zhiyan Zuo",
+    date: "19 November 2026",
+    carousel: [1, 2, 3, 4],
+    photos: [
+      { id: 1, src: "./public/assets/zhiyan-zuo-group-exchange-01.jpg", width: 1702, height: 1276, alt: "Participants applaud after a presentation on projected streamflow in the Vakhsh River Basin." },
+      { id: 2, src: "./public/assets/zhiyan-zuo-group-exchange-02.jpg", width: 1702, height: 1276, alt: "Participants discuss research around the meeting table." },
+      { id: 3, src: "./public/assets/zhiyan-zuo-group-exchange-03.jpg", width: 4096, height: 3072, alt: "Participants follow a research presentation during the academic exchange." },
+      { id: 4, src: "./public/assets/zhiyan-zuo-group-exchange-04.jpg", width: 4096, height: 3072, alt: "Participants view a slide comparing heatwaves in western North America, eastern Europe, and northeast Asia." }
     ]
   },
   phdRecruitment: {
