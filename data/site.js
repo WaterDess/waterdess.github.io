@@ -1160,9 +1160,9 @@ window.TANG_SITE = {
     },
     {
       type: "Research Program",
-      date: "2026-02-24",
-      title: "2026 Tsinghua University Global Research Program",
-      text: "A research experience of at least six weeks for undergraduate and graduate students at universities outside the Chinese Mainland, including Hong Kong, Macao, and Taiwan. Applications closed on 31 March 2026.",
+      date: "2027-01-20",
+      title: "2027 Tsinghua University Global Research Program",
+      text: "A research experience of at least six weeks for undergraduate and graduate students at universities outside the Chinese Mainland, including Hong Kong, Macao, and Taiwan. The application period runs from 20 January to 31 March 2027.",
       url: "https://www.tsinghua.edu.cn/gjhz/dqyjyxx.htm",
       status: "ongoing"
     }
