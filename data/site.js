@@ -1057,12 +1057,13 @@ window.TANG_SITE = {
   zhiyanZuoExchange: {
     title: "Academic Exchange with Prof. Zhiyan Zuo",
     date: "19 November 2026",
-    carousel: [1, 2, 3, 4],
+    carousel: [1, 2, 3, 4, 5],
     photos: [
       { id: 1, src: "./public/assets/zhiyan-zuo-group-exchange-01.jpg", width: 1702, height: 1276, alt: "Participants applaud after a presentation on projected streamflow in the Vakhsh River Basin." },
       { id: 2, src: "./public/assets/zhiyan-zuo-group-exchange-02.jpg", width: 1702, height: 1276, alt: "Participants discuss research around the meeting table." },
       { id: 3, src: "./public/assets/zhiyan-zuo-group-exchange-03.jpg", width: 4096, height: 3072, alt: "Participants follow a research presentation during the academic exchange." },
-      { id: 4, src: "./public/assets/zhiyan-zuo-group-exchange-04.jpg", width: 4096, height: 3072, alt: "Participants view a slide comparing heatwaves in western North America, eastern Europe, and northeast Asia." }
+      { id: 4, src: "./public/assets/zhiyan-zuo-group-exchange-04.jpg", width: 4096, height: 3072, alt: "Participants view a slide comparing heatwaves in western North America, eastern Europe, and northeast Asia." },
+      { id: 5, src: "./public/assets/zhiyan-zuo-group-exchange-05.jpg", width: 1707, height: 1280, alt: "Participants gather around a demonstration during the academic exchange." }
     ]
   },
   phdRecruitment: {
