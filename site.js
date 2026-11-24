@@ -12,6 +12,11 @@
     return index >= 0 ? path.slice(0, index + marker.length) : "/";
   })();
 
+  const academicExchanges = {
+    "lu-zhang-exchange": data?.luZhangExchange,
+    "zhiyan-zuo-exchange": data?.zhiyanZuoExchange
+  };
+
   const nav = [
     ["news", "News"],
     ["people", "People"],
@@ -66,7 +71,7 @@
     navEl.innerHTML = list(nav, ([key, label]) => {
       const active = key === page
         || (page === "person" && key === "people")
-        || (page === "lu-zhang-exchange" && key === "news")
+        || (academicExchanges[page] && key === "news")
         || (["srt", "summer-training"].includes(page) && key === "education")
         || (page === "phd-admission-2027" && key === "join")
         || (page === "genuine-earth-hydrosphere" && key === "research");
@@ -468,14 +473,14 @@ function renderEducation() {
     `;
   }
 
-  function renderLuZhangExchange() {
-    const exchange = data.luZhangExchange || {};
+  function renderAcademicExchange(speaker) {
+    const exchange = academicExchanges[page] || {};
     return `
-      <article class="event-retrospective lu-zhang-exchange-page">
+      <article class="event-retrospective ${esc(page)}-page">
         <header class="event-intro event-shell">
           <div class="event-eyebrow"><span>Academic exchange</span><span>Tsinghua University</span></div>
           <div class="event-title-grid"><h1>${esc(exchange.title)}</h1></div>
-          <div class="event-facts"><span>${esc(exchange.date)}</span><span>Global Change Hydrology Group</span><span>${esc("Prof. Lu Zhang")}</span></div>
+          <div class="event-facts"><span>${esc(exchange.date)}</span><span>Global Change Hydrology Group</span><span>${esc(speaker)}</span></div>
         </header>
         ${renderEventCarousel(exchange, "Academic exchange photographs")}
       </article>
@@ -487,7 +492,7 @@ function renderEducation() {
     const carousel = document.querySelector('[data-event-carousel]');
     if (!carousel) return;
     document.documentElement.classList.add('event-smooth-scroll');
-    const st = page === "summer-training" ? data.summerTraining : data.luZhangExchange;
+    const st = page === "summer-training" ? data.summerTraining : academicExchanges[page];
     if (!st) return;
     const photos = st.photos;
     const slides = Array.from(carousel.querySelectorAll('[data-event-slide]'));
@@ -869,7 +874,8 @@ function renderEducation() {
     education: renderEducation,
     srt: () => `<div class="section srt-page">${renderSrt()}</div>`,
     "summer-training": renderSummerTraining,
-    "lu-zhang-exchange": renderLuZhangExchange,
+    "lu-zhang-exchange": () => renderAcademicExchange("Prof. Lu Zhang"),
+    "zhiyan-zuo-exchange": () => renderAcademicExchange("Prof. Zhiyan Zuo"),
     "genuine-earth-hydrosphere": renderGenuineEarthHydrosphere
   };
 
