@@ -815,6 +815,15 @@ window.TANG_SITE = {
   },
   publications: [
     {
+      title: "Inaugural editorial: freshwater in the Earth system",
+      authors: "Tang, Q., and Rulli, M. C.",
+      journal: "npj Hydrosphere",
+      details: "1, 3",
+      date: "2026-11-26",
+      year: 2026,
+      url: "https://www.nature.com/articles/s44592-026-00005-4"
+    },
+    {
       title: "Resilience as a governing principle in water governance",
       authors: "Tortajada, C., Hartley, K., Biswas, A. K., Grafton, R. Q., Varis, O., and Tang, Q.",
       journal: "Nature Sustainability",
